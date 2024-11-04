@@ -99,7 +99,7 @@ class MdDialogComponent extends MdComponent {
         this.style.setProperty("--md-comp-dialog-animation", "none");
         await this.updateComplete;
 
-        const rect=this.getBoundingClientRect()
+        const rect = this.getBoundingClientRect();
         this.style.setProperty(`--md-comp-dialog-height`, rect.height + "px");
     }
 

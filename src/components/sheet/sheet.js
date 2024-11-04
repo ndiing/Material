@@ -104,7 +104,7 @@ class MdSheetComponent extends MdComponent {
         this.style.setProperty("--md-comp-sheet-animation", "none");
         await this.updateComplete;
 
-        const rect=this.getBoundingClientRect()
+        const rect = this.getBoundingClientRect();
         if (["north", "south"].includes(this.region)) {
             this.style.setProperty(`--md-comp-sheet-height`, rect.height + "px");
         } else if (["east", "west"].includes(this.region)) {

@@ -101,7 +101,7 @@ class MdTooltipComponent extends MdComponent {
         this.style.setProperty("--md-comp-tooltip-animation", "none");
         await this.updateComplete;
 
-        const rect=this.getBoundingClientRect()
+        const rect = this.getBoundingClientRect();
         this.style.setProperty(`--md-comp-tooltip-height`, rect.height + "px");
     }
 

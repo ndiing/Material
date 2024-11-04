@@ -103,7 +103,7 @@ class MdSideSheetComponent extends MdComponent {
         this.classList.toggle(`md-border__item--east`, true);
         await this.updateComplete;
 
-        const rect=this.getBoundingClientRect()
+        const rect = this.getBoundingClientRect();
         this.style.setProperty(`--md-comp-side-sheet-width`, rect.width + "px");
     }
 

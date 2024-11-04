@@ -110,7 +110,7 @@ class MdNavigationRailComponent extends MdComponent {
         this.classList.toggle(`md-border__item--west`, true);
         await this.updateComplete;
 
-        const rect=this.getBoundingClientRect()
+        const rect = this.getBoundingClientRect();
         this.style.setProperty(`--md-comp-navigation-rail-width`, rect.width + "px");
     }
 

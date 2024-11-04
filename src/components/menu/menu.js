@@ -38,7 +38,7 @@ class MdMenuComponent extends MdComponent {
         this.style.setProperty("--md-comp-menu-animation", "none");
         await this.updateComplete;
 
-        const rect=this.getBoundingClientRect()
+        const rect = this.getBoundingClientRect();
         this.style.setProperty(`--md-comp-menu-height`, rect.height + "px");
     }
 

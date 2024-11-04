@@ -125,7 +125,7 @@ class MdTopAppBarComponent extends MdComponent {
         this.classList.toggle(`md-border__item--north`, true);
         await this.updateComplete;
 
-        const rect=this.getBoundingClientRect()
+        const rect = this.getBoundingClientRect();
         this.style.setProperty(`--md-comp-top-app-bar-height`, rect.height + "px");
     }
 

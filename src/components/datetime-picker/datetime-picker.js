@@ -356,7 +356,7 @@ class MdDatetimePickerComponent extends MdComponent {
         this.style.setProperty("--md-comp-datetime-picker-animation", "none");
         await this.updateComplete;
 
-        const rect=this.getBoundingClientRect()
+        const rect = this.getBoundingClientRect();
         this.style.setProperty(`--md-comp-datetime-picker-height`, rect.Height + "px");
     }
 

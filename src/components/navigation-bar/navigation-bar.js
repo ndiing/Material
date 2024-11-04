@@ -110,7 +110,7 @@ class MdNavigationBarComponent extends MdComponent {
         this.classList.toggle(`md-border__item--south`, true);
         await this.updateComplete;
 
-        const rect=this.getBoundingClientRect()
+        const rect = this.getBoundingClientRect();
         this.style.setProperty(`--md-comp-navigation-bar-height`, rect.height + "px");
     }
 

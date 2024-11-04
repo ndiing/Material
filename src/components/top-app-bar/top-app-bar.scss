@@ -1,6 +1,5 @@
 @use "../mixins/mixins.scss";
 
-
 @keyframes top-app-bar-north-in {
     0% {
         visibility: visible;
@@ -11,7 +10,6 @@
         margin-top: 0;
     }
 }
-
 
 @keyframes top-app-bar-north-out {
     0% {
@@ -25,7 +23,6 @@
     }
 }
 
-
 @keyframes top-app-bar-north-modal-in {
     0% {
         visibility: visible;
@@ -36,7 +33,6 @@
         transform: translate3d(0%, 0%, 0);
     }
 }
-
 
 @keyframes top-app-bar-north-modal-out {
     0% {
@@ -75,7 +71,6 @@
             animation-name: var(--md-comp-top-app-bar-animation, top-app-bar-north-in);
         }
     }
-
 }
 
 .md-top-app-bar__header {
@@ -196,5 +191,4 @@
             animation-name: var(--md-comp-top-app-bar-animation, top-app-bar-north-modal-in);
         }
     }
-
 }
