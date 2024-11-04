@@ -6,7 +6,7 @@
     "scripts": {
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
-        "nodemon": "nodemon src/index.js",
+        "dev": "nodemon src/index.js",
         "build": "webpack --mode=production --node-env=production --config webpack.renderer.config.js",
         "build:dev": "webpack --mode=development --config webpack.renderer.config.js",
         "build:prod": "webpack --mode=production --node-env=production --config webpack.renderer.config.js",
