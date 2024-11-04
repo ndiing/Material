@@ -14,11 +14,15 @@ class DemoBottomSheetComponent extends MdComponent {
                     region="center"
                     style="padding:24px;"
                 >
-                    <md-button
-                        variant="filled-tonal"
-                        label="Toggle Bottom Sheet"
-                        @click="${() => bottomSheet.toggle()}"
-                    ></md-button>
+                    <div class="md-grid">
+                        <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
+                            <md-button
+                                variant="filled-tonal"
+                                label="Toggle Bottom Sheet"
+                                @click="${() => bottomSheet.toggle()}"
+                            ></md-button>
+                        </div>
+                    </div>
                 </md-sheet>
             </div>
         `;

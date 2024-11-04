@@ -37,7 +37,7 @@ class DemoSwitchComponent extends MdComponent {
                                     checked
                                 ></md-switch>
                             </div>
-                            <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
+                            <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
                                 <md-button
                                     variant="filled-tonal"
                                     label="Reset"

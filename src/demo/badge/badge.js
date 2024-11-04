@@ -10,8 +10,14 @@ class DemoBadgeComponent extends MdComponent {
             >
                 <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-badge></md-badge>
+                </div>
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-badge label="3"></md-badge>
+                </div>
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-badge label="10"></md-badge>
+                </div>
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-badge label="9999"></md-badge>
                 </div>
                 <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4"></div>

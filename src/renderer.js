@@ -104,23 +104,32 @@ Router.init([
 
             { path: "card", component: DemoCardComponent },
             { path: "scrim", component: DemoScrimComponent },
+
             { path: "sheet", component: DemoSheetComponent },
             { path: "sheet2", component: DemoSheet2Component },
+
             { path: "bottom-sheet", component: DemoBottomSheetComponent },
             { path: "bottom-sheet2", component: DemoBottomSheet2Component },
+
             { path: "side-sheet", component: DemoSideSheetComponent },
             { path: "side-sheet2", component: DemoSideSheet2Component },
+
             { path: "bottom-app-bar", component: DemoBottomAppBarComponent },
             { path: "bottom-app-bar2", component: DemoBottomAppBar2Component },
+
             { path: "top-app-bar", component: DemoTopAppBarComponent },
+
             { path: "navigation-bar", component: DemoNavigationBarComponent },
             { path: "navigation-bar2", component: DemoNavigationBar2Component },
+
             { path: "navigation-drawer", component: DemoNavigationDrawerComponent },
             { path: "navigation-drawer2", component: DemoNavigationDrawer2Component },
             { path: "navigation-drawer3", component: DemoNavigationDrawer3Component },
             { path: "navigation-drawer4", component: DemoNavigationDrawer4Component },
+
             { path: "navigation-rail", component: DemoNavigationRailComponent },
             { path: "navigation-rail2", component: DemoNavigationRail2Component },
+
             { path: "dialog", component: DemoDialogComponent },
             { path: "tooltip", component: DemoTooltipComponent },
             { path: "datetime-picker", component: DemoDatetimePickerComponent },

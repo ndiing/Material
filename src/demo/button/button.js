@@ -13,6 +13,8 @@ class DemoButtonComponent extends MdComponent {
                         variant="elevated"
                         label="Elevated button"
                     ></md-button>
+                </div>
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-button
                         variant="elevated"
                         label="Elevated button"
@@ -24,6 +26,8 @@ class DemoButtonComponent extends MdComponent {
                         variant="filled"
                         label="Filled button"
                     ></md-button>
+                </div>
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-button
                         variant="filled"
                         label="Filled button"
@@ -35,6 +39,8 @@ class DemoButtonComponent extends MdComponent {
                         variant="filled-tonal"
                         label="Filled filled-tonal button"
                     ></md-button>
+                </div>
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-button
                         variant="filled-tonal"
                         label="Filled filled-tonal button"
@@ -46,6 +52,8 @@ class DemoButtonComponent extends MdComponent {
                         variant="outlined"
                         label="Outlined button"
                     ></md-button>
+                </div>
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-button
                         variant="outlined"
                         label="Outlined button"
@@ -54,6 +62,8 @@ class DemoButtonComponent extends MdComponent {
                 </div>
                 <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-button label="Text button"></md-button>
+                </div>
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-button
                         label="Text button"
                         icon="add"
