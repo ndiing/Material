@@ -8,7 +8,7 @@ class DemoTabsComponent extends MdComponent {
                 class="md-grid"
                 style="margin:24px;"
             >
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-tabs
                         selection="single"
                         variant="primary"
@@ -21,7 +21,7 @@ class DemoTabsComponent extends MdComponent {
                         ]}"
                     ></md-tabs>
                 </div>
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-tabs
                         selection="single"
                         variant="primary"
@@ -35,7 +35,7 @@ class DemoTabsComponent extends MdComponent {
                     ></md-tabs>
                 </div>
 
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-tabs
                         selection="single"
                         variant="secondary"
@@ -48,7 +48,7 @@ class DemoTabsComponent extends MdComponent {
                         ]}"
                     ></md-tabs>
                 </div>
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-tabs
                         selection="single"
                         variant="secondary"

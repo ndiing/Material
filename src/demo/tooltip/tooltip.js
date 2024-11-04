@@ -8,7 +8,7 @@ class DemoTooltipComponent extends MdComponent {
                 class="md-grid"
                 style="margin:24px;"
             >
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-tooltip
                         id="tooltip"
                         style="width:314px;"
@@ -26,7 +26,7 @@ class DemoTooltipComponent extends MdComponent {
                         @pointerenter="${() => tooltip.show({ button })}"
                     ></md-button>
                 </div>
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-tooltip
                         id="tooltip2"
                         style="width:314px;"
@@ -44,7 +44,7 @@ class DemoTooltipComponent extends MdComponent {
                         @pointerenter="${() => tooltip2.show({ button: button2 })}"
                     ></md-button>
                 </div>
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-tooltip
                         id="tooltip3"
                         style="width:314px;"
@@ -60,7 +60,7 @@ class DemoTooltipComponent extends MdComponent {
                         @pointerenter="${() => tooltip3.show({ button: button3 })}"
                     ></md-button>
                 </div>
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-tooltip
                         id="tooltip4"
                         style="width:314px;"
@@ -77,7 +77,7 @@ class DemoTooltipComponent extends MdComponent {
                         @pointerenter="${() => tooltip4.show({ button: button4 })}"
                     ></md-button>
                 </div>
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-tooltip
                         id="tooltip5"
                         style="width:314px;"
@@ -94,7 +94,7 @@ class DemoTooltipComponent extends MdComponent {
                         @pointerenter="${() => tooltip5.show({ button: button5 })}"
                     ></md-button>
                 </div>
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-tooltip
                         id="tooltip6"
                         variant="plain"
@@ -109,7 +109,7 @@ class DemoTooltipComponent extends MdComponent {
                         @pointerleave="${() => tooltip6.close()}"
                     ></md-button>
                 </div>
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-tooltip
                         id="tooltip7"
                         style="width:214px;"
@@ -125,8 +125,8 @@ class DemoTooltipComponent extends MdComponent {
                         @pointerleave="${() => tooltip7.close()}"
                     ></md-button>
                 </div>
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4"></div>
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4"></div>
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4"></div>
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4"></div>
             </div>
         `;
     }

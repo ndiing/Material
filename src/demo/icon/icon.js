@@ -8,11 +8,11 @@ class DemoIconComponent extends MdComponent {
                 class="md-grid"
                 style="margin:24px;"
             >
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-icon>add</md-icon>
                 </div>
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4"></div>
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4"></div>
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4"></div>
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4"></div>
             </div>
         `;
     }

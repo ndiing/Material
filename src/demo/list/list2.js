@@ -8,7 +8,7 @@ class DemoList2Component extends MdComponent {
                 class="md-grid"
                 style="margin:24px;"
             >
-                <div class="md-grid__item--expanded6 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-list
                         selection="single"
                         class="md-menu__list"
@@ -21,7 +21,7 @@ class DemoList2Component extends MdComponent {
                         ]}"
                     ></md-list>
                 </div>
-                <div class="md-grid__item--expanded6 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-list
                         selection="single"
                         class="md-menu__list"
@@ -35,7 +35,7 @@ class DemoList2Component extends MdComponent {
                     ></md-list>
                 </div>
 
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-list
                         selection="single"
                         class="md-navigation-bar__list"
@@ -49,7 +49,7 @@ class DemoList2Component extends MdComponent {
                         ]}"
                     ></md-list>
                 </div>
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-list
                         selection="single"
                         class="md-navigation-bar__list"
@@ -64,7 +64,7 @@ class DemoList2Component extends MdComponent {
                     ></md-list>
                 </div>
 
-                <div class="md-grid__item--expanded6 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-list
                         selection="single"
                         class="md-navigation-drawer__list"
@@ -77,7 +77,7 @@ class DemoList2Component extends MdComponent {
                         ]}"
                     ></md-list>
                 </div>
-                <div class="md-grid__item--expanded6 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-list
                         selection="single"
                         class="md-navigation-drawer__list"
@@ -91,7 +91,7 @@ class DemoList2Component extends MdComponent {
                     ></md-list>
                 </div>
 
-                <div class="md-grid__item--expanded6 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-list
                         style="width:80px;"
                         selection="single"
@@ -106,7 +106,7 @@ class DemoList2Component extends MdComponent {
                         ]}"
                     ></md-list>
                 </div>
-                <div class="md-grid__item--expanded6 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-list
                         style="width:80px;"
                         selection="single"
@@ -122,7 +122,7 @@ class DemoList2Component extends MdComponent {
                     ></md-list>
                 </div>
 
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-list
                         selection="single"
                         class="md-tabs__list md-tabs__list--primary"
@@ -135,7 +135,7 @@ class DemoList2Component extends MdComponent {
                         ]}"
                     ></md-list>
                 </div>
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-list
                         selection="single"
                         class="md-tabs__list md-tabs__list--primary"
@@ -149,7 +149,7 @@ class DemoList2Component extends MdComponent {
                     ></md-list>
                 </div>
 
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-list
                         selection="single"
                         class="md-tabs__list md-tabs__list--secondary"
@@ -162,7 +162,7 @@ class DemoList2Component extends MdComponent {
                         ]}"
                     ></md-list>
                 </div>
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-list
                         selection="single"
                         class="md-tabs__list md-tabs__list--secondary"

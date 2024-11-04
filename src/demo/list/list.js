@@ -8,7 +8,7 @@ class DemoListComponent extends MdComponent {
                 class="md-grid"
                 style="margin:24px;"
             >
-                <div class="md-grid__item--expanded6 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-list
                         .items="${[
                             {
@@ -28,7 +28,7 @@ class DemoListComponent extends MdComponent {
                         ]}"
                     ></md-list>
                 </div>
-                <div class="md-grid__item--expanded6 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-list
                         .items="${[
                             {
@@ -51,7 +51,7 @@ class DemoListComponent extends MdComponent {
                         ]}"
                     ></md-list>
                 </div>
-                <div class="md-grid__item--expanded6 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-list
                         .items="${[
                             {
@@ -71,7 +71,7 @@ class DemoListComponent extends MdComponent {
                         ]}"
                     ></md-list>
                 </div>
-                <div class="md-grid__item--expanded6 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-list
                         .items="${[
                             {
@@ -94,7 +94,7 @@ class DemoListComponent extends MdComponent {
                         ]}"
                     ></md-list>
                 </div>
-                <div class="md-grid__item--expanded6 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-list
                         .items="${[
                             {
@@ -114,7 +114,7 @@ class DemoListComponent extends MdComponent {
                         ]}"
                     ></md-list>
                 </div>
-                <div class="md-grid__item--expanded6 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-list
                         .items="${[
                             {
@@ -137,7 +137,7 @@ class DemoListComponent extends MdComponent {
                         ]}"
                     ></md-list>
                 </div>
-                <div class="md-grid__item--expanded6 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-list
                         .items="${[
                             {
@@ -154,7 +154,7 @@ class DemoListComponent extends MdComponent {
                         ]}"
                     ></md-list>
                 </div>
-                <div class="md-grid__item--expanded6 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-list
                         .items="${[
                             {
@@ -177,7 +177,7 @@ class DemoListComponent extends MdComponent {
                         ]}"
                     ></md-list>
                 </div>
-                <div class="md-grid__item--expanded6 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-list
                         .items="${[
                             {
@@ -189,7 +189,7 @@ class DemoListComponent extends MdComponent {
                         ]}"
                     ></md-list>
                 </div>
-                <div class="md-grid__item--expanded6 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-list
                         .items="${[
                             {
@@ -206,7 +206,7 @@ class DemoListComponent extends MdComponent {
                         ]}"
                     ></md-list>
                 </div>
-                <div class="md-grid__item--expanded6 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-list
                         selection="multiple"
                         .items="${[
@@ -219,7 +219,7 @@ class DemoListComponent extends MdComponent {
                         ]}"
                     ></md-list>
                 </div>
-                <div class="md-grid__item--expanded6 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-list
                         selection="multiple"
                         .items="${[
@@ -237,7 +237,7 @@ class DemoListComponent extends MdComponent {
                         ]}"
                     ></md-list>
                 </div>
-                <div class="md-grid__item--expanded6 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-list
                         .items="${[
                             {
@@ -254,7 +254,7 @@ class DemoListComponent extends MdComponent {
                         ]}"
                     ></md-list>
                 </div>
-                <div class="md-grid__item--expanded6 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-list
                         .items="${[
                             {
@@ -277,7 +277,7 @@ class DemoListComponent extends MdComponent {
                         ]}"
                     ></md-list>
                 </div>
-                <div class="md-grid__item--expanded6 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-list
                         .items="${[
                             {
@@ -294,7 +294,7 @@ class DemoListComponent extends MdComponent {
                         ]}"
                     ></md-list>
                 </div>
-                <div class="md-grid__item--expanded6 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-list
                         .items="${[
                             {
@@ -317,7 +317,7 @@ class DemoListComponent extends MdComponent {
                         ]}"
                     ></md-list>
                 </div>
-                <div class="md-grid__item--expanded6 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-list
                         .items="${[
                             {
@@ -334,7 +334,7 @@ class DemoListComponent extends MdComponent {
                         ]}"
                     ></md-list>
                 </div>
-                <div class="md-grid__item--expanded6 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-list
                         .items="${[
                             {
@@ -357,8 +357,8 @@ class DemoListComponent extends MdComponent {
                         ]}"
                     ></md-list>
                 </div>
-                <div class="md-grid__item--expanded6 md-grid__item--medium4 md-grid__item--compact4"></div>
-                <div class="md-grid__item--expanded6 md-grid__item--medium4 md-grid__item--compact4"></div>
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4"></div>
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4"></div>
             </div>
         `;
     }

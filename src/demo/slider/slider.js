@@ -16,7 +16,7 @@ class DemoSliderComponent extends MdComponent {
                         @onFormData="${(event) => console.log(event.detail.event.body)}"
                     >
                         <div class="md-grid">
-                            <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                            <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                                 <md-slider
                                     name="slider0"
                                     min="-50"
@@ -24,26 +24,26 @@ class DemoSliderComponent extends MdComponent {
                                     value="0"
                                 ></md-slider>
                             </div>
-                            <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                            <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                                 <md-slider
                                     name="slider1"
                                     value="50"
                                 ></md-slider>
                             </div>
-                            <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                            <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                                 <md-slider
                                     name="slider2"
                                     step="10"
                                     value="50"
                                 ></md-slider>
                             </div>
-                            <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                            <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                                 <md-slider
                                     name="slider3"
                                     value="[25,75]"
                                 ></md-slider>
                             </div>
-                            <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                            <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                                 <md-slider
                                     .format="${format}"
                                     name="slider4"
@@ -52,7 +52,7 @@ class DemoSliderComponent extends MdComponent {
                                     value="0"
                                 ></md-slider>
                             </div>
-                            <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                            <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                                 <md-slider
                                     .format="${format}"
                                     name="slider5"
@@ -60,7 +60,7 @@ class DemoSliderComponent extends MdComponent {
                                     value="500000"
                                 ></md-slider>
                             </div>
-                            <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                            <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                                 <md-slider
                                     .format="${format}"
                                     name="slider6"
@@ -69,7 +69,7 @@ class DemoSliderComponent extends MdComponent {
                                     value="500000"
                                 ></md-slider>
                             </div>
-                            <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                            <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                                 <md-slider
                                     .format="${format}"
                                     name="slider7"
@@ -77,7 +77,7 @@ class DemoSliderComponent extends MdComponent {
                                     value="[250000,750000]"
                                 ></md-slider>
                             </div>
-                            <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                            <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                                 <md-button
                                     variant="filled-tonal"
                                     label="Reset"
@@ -92,8 +92,8 @@ class DemoSliderComponent extends MdComponent {
                         </div>
                     </md-form>
                 </div>
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4"></div>
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4"></div>
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4"></div>
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4"></div>
             </div>
         `;
     }

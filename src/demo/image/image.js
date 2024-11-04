@@ -8,32 +8,32 @@ class DemoImageComponent extends MdComponent {
                 class="md-grid"
                 style="margin:24px;"
             >
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-image src="https://placehold.co/64x64"></md-image>
                 </div>
 
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-image
                         style="width:64px;"
                         src="https://placehold.co/64x64"
                     ></md-image>
                 </div>
 
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-image
                         style="height:64px;"
                         src="https://placehold.co/64x64"
                     ></md-image>
                 </div>
 
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-image
                         variant="circular"
                         src="https://placehold.co/64x64"
                     ></md-image>
                 </div>
 
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-image
                         variant="circular"
                         style="width:64px;"
@@ -41,7 +41,7 @@ class DemoImageComponent extends MdComponent {
                     ></md-image>
                 </div>
 
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-image
                         variant="circular"
                         style="height:64px;"
@@ -49,7 +49,7 @@ class DemoImageComponent extends MdComponent {
                     ></md-image>
                 </div>
 
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-image
                         ratio="16/9"
                         style="width:64px;"
@@ -82,7 +82,7 @@ class DemoImageComponent extends MdComponent {
                     ></md-image>
                 </div>
 
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-image
                         ratio="16/9"
                         style="height:64px;"
@@ -115,7 +115,7 @@ class DemoImageComponent extends MdComponent {
                     ></md-image>
                 </div>
 
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-image
                         variant="circular"
                         ratio="16/9"
@@ -154,7 +154,7 @@ class DemoImageComponent extends MdComponent {
                     ></md-image>
                 </div>
 
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                     <md-image
                         variant="circular"
                         ratio="16/9"
@@ -193,8 +193,8 @@ class DemoImageComponent extends MdComponent {
                     ></md-image>
                 </div>
 
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4"></div>
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4"></div>
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4"></div>
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4"></div>
             </div>
         `;
     }

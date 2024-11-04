@@ -15,29 +15,29 @@ class DemoSwitchComponent extends MdComponent {
                         @onFormData="${(event) => console.log(event.detail.event.body)}"
                     >
                         <div class="md-grid">
-                            <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                            <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                                 <md-switch name="switch"></md-switch>
                             </div>
-                            <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                            <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                                 <md-switch
                                     name="switch"
                                     checked
                                 ></md-switch>
                             </div>
-                            <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                            <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                                 <md-switch
                                     .icons="${["close", "check"]}"
                                     name="switch"
                                 ></md-switch>
                             </div>
-                            <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                            <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                                 <md-switch
                                     .icons="${["close", "check"]}"
                                     name="switch"
                                     checked
                                 ></md-switch>
                             </div>
-                            <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                            <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                                 <md-button
                                     variant="filled-tonal"
                                     label="Reset"
@@ -52,8 +52,8 @@ class DemoSwitchComponent extends MdComponent {
                         </div>
                     </md-form>
                 </div>
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4"></div>
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4"></div>
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4"></div>
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4"></div>
             </div>
         `;
     }

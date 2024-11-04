@@ -15,22 +15,22 @@ class DemoCheckboxComponent extends MdComponent {
                         @onFormData="${(event) => console.log(event.detail.event.body)}"
                     >
                         <div class="md-grid">
-                            <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                            <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                                 <md-checkbox name="checkbox"></md-checkbox>
                             </div>
-                            <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                            <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                                 <md-checkbox
                                     name="checkbox"
                                     indeterminate
                                 ></md-checkbox>
                             </div>
-                            <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                            <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                                 <md-checkbox
                                     name="checkbox"
                                     checked
                                 ></md-checkbox>
                             </div>
-                            <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
+                            <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
                                 <md-button
                                     variant="filled-tonal"
                                     label="Reset"
@@ -45,8 +45,8 @@ class DemoCheckboxComponent extends MdComponent {
                         </div>
                     </md-form>
                 </div>
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4"></div>
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4"></div>
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4"></div>
+                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4"></div>
             </div>
         `;
     }
