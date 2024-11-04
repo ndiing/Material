@@ -10,6 +10,46 @@ const DemoMissingComponent = () => import("./demo/missing/missing.js").then((m) 
 const beforeLoad = (next) => {
     next();
 };
+
+import DemoIconComponent from "./demo/icon/icon.js"
+import DemoButtonComponent from "./demo/button/button.js"
+import DemoSegmentedButtonComponent from "./demo/segmented-button/segmented-button.js"
+import DemoIconButtonComponent from "./demo/icon-button/icon-button.js"
+import DemoFabComponent from "./demo/fab/fab.js"
+import DemoExtendedFabComponent from "./demo/extended-fab/extended-fab.js"
+import DemoCheckboxComponent from "./demo/checkbox/checkbox.js"
+import DemoRadioButtonComponent from "./demo/radio-button/radio-button.js"
+import DemoSwitchComponent from "./demo/switch/switch.js"
+import DemoSliderComponent from "./demo/slider/slider.js"
+import DemoImageComponent from "./demo/image/image.js"
+import DemoBadgeComponent from "./demo/badge/badge.js"
+import DemoListComponent from "./demo/list/list.js"
+import DemoList2Component from "./demo/list/list2.js"
+import DemoCardComponent from "./demo/card/card.js"
+import DemoScrimComponent from "./demo/scrim/scrim.js"
+import DemoSheetComponent from "./demo/sheet/sheet.js"
+import DemoSheet2Component from "./demo/sheet/sheet2.js"
+import DemoBottomSheetComponent from "./demo/bottom-sheet/bottom-sheet.js"
+import DemoBottomSheet2Component from "./demo/bottom-sheet/bottom-sheet2.js"
+import DemoSideSheetComponent from "./demo/side-sheet/side-sheet.js"
+import DemoSideSheet2Component from "./demo/side-sheet/side-sheet2.js"
+import DemoBottomAppBarComponent from "./demo/bottom-app-bar/bottom-app-bar.js"
+import DemoBottomAppBar2Component from "./demo/bottom-app-bar/bottom-app-bar2.js"
+import DemoTopAppBarComponent from "./demo/top-app-bar/top-app-bar.js"
+import DemoNavigationBarComponent from "./demo/navigation-bar/navigation-bar.js"
+import DemoNavigationBar2Component from "./demo/navigation-bar/navigation-bar2.js"
+import DemoNavigationDrawerComponent from "./demo/navigation-drawer/navigation-drawer.js"
+import DemoNavigationDrawer2Component from "./demo/navigation-drawer/navigation-drawer2.js"
+import DemoNavigationDrawer3Component from "./demo/navigation-drawer/navigation-drawer3.js"
+import DemoNavigationDrawer4Component from "./demo/navigation-drawer/navigation-drawer4.js"
+import DemoNavigationRailComponent from "./demo/navigation-drawer/navigation-rail.js"
+import DemoNavigationRail2Component from "./demo/navigation-drawer/navigation-rail2.js"
+import DemoDialogComponent from "./demo/dialog/dialog.js"
+import DemoTooltipComponent from "./demo/tooltip/tooltip.js"
+import DemoDatetimePickerComponent from "./demo/datetime-picker/datetime-picker.js"
+import DemoMenuComponent from "./demo/menu/menu.js"
+import DemoFormComponent from "./demo/form/form.js"
+
 Router.init([
     {
         path: "",
@@ -39,44 +79,44 @@ Router.init([
                     },
                 ],
             },
-            { path: "icon", load: () => import("./demo/icon/icon.js").then((m) => m.default) },
-            { path: "button", load: () => import("./demo/button/button.js").then((m) => m.default) },
-            { path: "segmented-button", load: () => import("./demo/segmented-button/segmented-button.js").then((m) => m.default) },
-            { path: "icon-button", load: () => import("./demo/icon-button/icon-button.js").then((m) => m.default) },
-            { path: "fab", load: () => import("./demo/fab/fab.js").then((m) => m.default) },
-            { path: "extended-fab", load: () => import("./demo/extended-fab/extended-fab.js").then((m) => m.default) },
-            { path: "checkbox", load: () => import("./demo/checkbox/checkbox.js").then((m) => m.default) },
-            { path: "radio-button", load: () => import("./demo/radio-button/radio-button.js").then((m) => m.default) },
-            { path: "switch", load: () => import("./demo/switch/switch.js").then((m) => m.default) },
-            { path: "slider", load: () => import("./demo/slider/slider.js").then((m) => m.default) },
-            { path: "image", load: () => import("./demo/image/image.js").then((m) => m.default) },
-            { path: "badge", load: () => import("./demo/badge/badge.js").then((m) => m.default) },
-            { path: "list", load: () => import("./demo/list/list.js").then((m) => m.default) },
-            { path: "list2", load: () => import("./demo/list/list2.js").then((m) => m.default) },
-            { path: "card", load: () => import("./demo/card/card.js").then((m) => m.default) },
-            { path: "scrim", load: () => import("./demo/scrim/scrim.js").then((m) => m.default) },
-            { path: "sheet", load: () => import("./demo/sheet/sheet.js").then((m) => m.default) },
-            { path: "sheet2", load: () => import("./demo/sheet/sheet2.js").then((m) => m.default) },
-            { path: "bottom-sheet", load: () => import("./demo/bottom-sheet/bottom-sheet.js").then((m) => m.default) },
-            { path: "bottom-sheet2", load: () => import("./demo/bottom-sheet/bottom-sheet2.js").then((m) => m.default) },
-            { path: "side-sheet", load: () => import("./demo/side-sheet/side-sheet.js").then((m) => m.default) },
-            { path: "side-sheet2", load: () => import("./demo/side-sheet/side-sheet2.js").then((m) => m.default) },
-            { path: "bottom-app-bar", load: () => import("./demo/bottom-app-bar/bottom-app-bar.js").then((m) => m.default) },
-            { path: "bottom-app-bar2", load: () => import("./demo/bottom-app-bar/bottom-app-bar2.js").then((m) => m.default) },
-            { path: "top-app-bar", load: () => import("./demo/top-app-bar/top-app-bar.js").then((m) => m.default) },
-            { path: "navigation-bar", load: () => import("./demo/navigation-bar/navigation-bar.js").then((m) => m.default) },
-            { path: "navigation-bar2", load: () => import("./demo/navigation-bar/navigation-bar2.js").then((m) => m.default) },
-            { path: "navigation-drawer", load: () => import("./demo/navigation-drawer/navigation-drawer.js").then((m) => m.default) },
-            { path: "navigation-drawer2", load: () => import("./demo/navigation-drawer/navigation-drawer2.js").then((m) => m.default) },
-            { path: "navigation-drawer3", load: () => import("./demo/navigation-drawer/navigation-drawer3.js").then((m) => m.default) },
-            { path: "navigation-drawer4", load: () => import("./demo/navigation-drawer/navigation-drawer4.js").then((m) => m.default) },
-            { path: "navigation-rail", load: () => import("./demo/navigation-drawer/navigation-rail.js").then((m) => m.default) },
-            { path: "navigation-rail2", load: () => import("./demo/navigation-drawer/navigation-rail2.js").then((m) => m.default) },
-            { path: "dialog", load: () => import("./demo/dialog/dialog.js").then((m) => m.default) },
-            { path: "tooltip", load: () => import("./demo/tooltip/tooltip.js").then((m) => m.default) },
-            { path: "datetime-picker", load: () => import("./demo/datetime-picker/datetime-picker.js").then((m) => m.default) },
-            { path: "menu", load: () => import("./demo/menu/menu.js").then((m) => m.default) },
-            { path: "form", load: () => import("./demo/form/form.js").then((m) => m.default) },
+            { path: "icon", component: DemoIconComponent },
+            { path: "button", component: DemoButtonComponent },
+            { path: "segmented-button", component: DemoSegmentedButtonComponent },
+            { path: "icon-button", component: DemoIconButtonComponent },
+            { path: "fab", component: DemoFabComponent },
+            { path: "extended-fab", component: DemoExtendedFabComponent },
+            { path: "checkbox", component: DemoCheckboxComponent },
+            { path: "radio-button", component: DemoRadioButtonComponent },
+            { path: "switch", component: DemoSwitchComponent },
+            { path: "slider", component: DemoSliderComponent },
+            { path: "image", component: DemoImageComponent },
+            { path: "badge", component: DemoBadgeComponent },
+            { path: "list", component: DemoListComponent },
+            { path: "list2", component: DemoList2Component },
+            { path: "card", component: DemoCardComponent },
+            { path: "scrim", component: DemoScrimComponent },
+            { path: "sheet", component: DemoSheetComponent },
+            { path: "sheet2", component: DemoSheet2Component },
+            { path: "bottom-sheet", component: DemoBottomSheetComponent },
+            { path: "bottom-sheet2", component: DemoBottomSheet2Component },
+            { path: "side-sheet", component: DemoSideSheetComponent },
+            { path: "side-sheet2", component: DemoSideSheet2Component },
+            { path: "bottom-app-bar", component: DemoBottomAppBarComponent },
+            { path: "bottom-app-bar2", component: DemoBottomAppBar2Component },
+            { path: "top-app-bar", component: DemoTopAppBarComponent },
+            { path: "navigation-bar", component: DemoNavigationBarComponent },
+            { path: "navigation-bar2", component: DemoNavigationBar2Component },
+            { path: "navigation-drawer", component: DemoNavigationDrawerComponent },
+            { path: "navigation-drawer2", component: DemoNavigationDrawer2Component },
+            { path: "navigation-drawer3", component: DemoNavigationDrawer3Component },
+            { path: "navigation-drawer4", component: DemoNavigationDrawer4Component },
+            { path: "navigation-rail", component: DemoNavigationRailComponent },
+            { path: "navigation-rail2", component: DemoNavigationRail2Component },
+            { path: "dialog", component: DemoDialogComponent },
+            { path: "tooltip", component: DemoTooltipComponent },
+            { path: "datetime-picker", component: DemoDatetimePickerComponent },
+            { path: "menu", component: DemoMenuComponent },
+            { path: "form", component: DemoFormComponent },
         ],
     },
     {
