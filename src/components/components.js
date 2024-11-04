@@ -34,4 +34,6 @@ import "./dialog/dialog.js";
 import "./tooltip/tooltip.js";
 import "./datetime-picker/datetime-picker.js";
 import "./menu/menu.js";
+import "./tabs/tab.js";
+import "./tabs/tabs.js";
 import "./form/form.js";

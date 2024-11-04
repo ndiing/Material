@@ -11,44 +11,45 @@ const beforeLoad = (next) => {
     next();
 };
 
-import DemoIconComponent from "./demo/icon/icon.js"
-import DemoButtonComponent from "./demo/button/button.js"
-import DemoSegmentedButtonComponent from "./demo/segmented-button/segmented-button.js"
-import DemoIconButtonComponent from "./demo/icon-button/icon-button.js"
-import DemoFabComponent from "./demo/fab/fab.js"
-import DemoExtendedFabComponent from "./demo/extended-fab/extended-fab.js"
-import DemoCheckboxComponent from "./demo/checkbox/checkbox.js"
-import DemoRadioButtonComponent from "./demo/radio-button/radio-button.js"
-import DemoSwitchComponent from "./demo/switch/switch.js"
-import DemoSliderComponent from "./demo/slider/slider.js"
-import DemoImageComponent from "./demo/image/image.js"
-import DemoBadgeComponent from "./demo/badge/badge.js"
-import DemoListComponent from "./demo/list/list.js"
-import DemoList2Component from "./demo/list/list2.js"
-import DemoCardComponent from "./demo/card/card.js"
-import DemoScrimComponent from "./demo/scrim/scrim.js"
-import DemoSheetComponent from "./demo/sheet/sheet.js"
-import DemoSheet2Component from "./demo/sheet/sheet2.js"
-import DemoBottomSheetComponent from "./demo/bottom-sheet/bottom-sheet.js"
-import DemoBottomSheet2Component from "./demo/bottom-sheet/bottom-sheet2.js"
-import DemoSideSheetComponent from "./demo/side-sheet/side-sheet.js"
-import DemoSideSheet2Component from "./demo/side-sheet/side-sheet2.js"
-import DemoBottomAppBarComponent from "./demo/bottom-app-bar/bottom-app-bar.js"
-import DemoBottomAppBar2Component from "./demo/bottom-app-bar/bottom-app-bar2.js"
-import DemoTopAppBarComponent from "./demo/top-app-bar/top-app-bar.js"
-import DemoNavigationBarComponent from "./demo/navigation-bar/navigation-bar.js"
-import DemoNavigationBar2Component from "./demo/navigation-bar/navigation-bar2.js"
-import DemoNavigationDrawerComponent from "./demo/navigation-drawer/navigation-drawer.js"
-import DemoNavigationDrawer2Component from "./demo/navigation-drawer/navigation-drawer2.js"
-import DemoNavigationDrawer3Component from "./demo/navigation-drawer/navigation-drawer3.js"
-import DemoNavigationDrawer4Component from "./demo/navigation-drawer/navigation-drawer4.js"
-import DemoNavigationRailComponent from "./demo/navigation-drawer/navigation-rail.js"
-import DemoNavigationRail2Component from "./demo/navigation-drawer/navigation-rail2.js"
-import DemoDialogComponent from "./demo/dialog/dialog.js"
-import DemoTooltipComponent from "./demo/tooltip/tooltip.js"
-import DemoDatetimePickerComponent from "./demo/datetime-picker/datetime-picker.js"
-import DemoMenuComponent from "./demo/menu/menu.js"
-import DemoFormComponent from "./demo/form/form.js"
+import DemoIconComponent from "./demo/icon/icon.js";
+import DemoButtonComponent from "./demo/button/button.js";
+import DemoSegmentedButtonComponent from "./demo/segmented-button/segmented-button.js";
+import DemoIconButtonComponent from "./demo/icon-button/icon-button.js";
+import DemoFabComponent from "./demo/fab/fab.js";
+import DemoExtendedFabComponent from "./demo/extended-fab/extended-fab.js";
+import DemoCheckboxComponent from "./demo/checkbox/checkbox.js";
+import DemoRadioButtonComponent from "./demo/radio-button/radio-button.js";
+import DemoSwitchComponent from "./demo/switch/switch.js";
+import DemoSliderComponent from "./demo/slider/slider.js";
+import DemoImageComponent from "./demo/image/image.js";
+import DemoBadgeComponent from "./demo/badge/badge.js";
+import DemoListComponent from "./demo/list/list.js";
+import DemoList2Component from "./demo/list/list2.js";
+import DemoCardComponent from "./demo/card/card.js";
+import DemoScrimComponent from "./demo/scrim/scrim.js";
+import DemoSheetComponent from "./demo/sheet/sheet.js";
+import DemoSheet2Component from "./demo/sheet/sheet2.js";
+import DemoBottomSheetComponent from "./demo/bottom-sheet/bottom-sheet.js";
+import DemoBottomSheet2Component from "./demo/bottom-sheet/bottom-sheet2.js";
+import DemoSideSheetComponent from "./demo/side-sheet/side-sheet.js";
+import DemoSideSheet2Component from "./demo/side-sheet/side-sheet2.js";
+import DemoBottomAppBarComponent from "./demo/bottom-app-bar/bottom-app-bar.js";
+import DemoBottomAppBar2Component from "./demo/bottom-app-bar/bottom-app-bar2.js";
+import DemoTopAppBarComponent from "./demo/top-app-bar/top-app-bar.js";
+import DemoNavigationBarComponent from "./demo/navigation-bar/navigation-bar.js";
+import DemoNavigationBar2Component from "./demo/navigation-bar/navigation-bar2.js";
+import DemoNavigationDrawerComponent from "./demo/navigation-drawer/navigation-drawer.js";
+import DemoNavigationDrawer2Component from "./demo/navigation-drawer/navigation-drawer2.js";
+import DemoNavigationDrawer3Component from "./demo/navigation-drawer/navigation-drawer3.js";
+import DemoNavigationDrawer4Component from "./demo/navigation-drawer/navigation-drawer4.js";
+import DemoNavigationRailComponent from "./demo/navigation-drawer/navigation-rail.js";
+import DemoNavigationRail2Component from "./demo/navigation-drawer/navigation-rail2.js";
+import DemoDialogComponent from "./demo/dialog/dialog.js";
+import DemoTooltipComponent from "./demo/tooltip/tooltip.js";
+import DemoDatetimePickerComponent from "./demo/datetime-picker/datetime-picker.js";
+import DemoMenuComponent from "./demo/menu/menu.js";
+import DemoTabsComponent from "./demo/tabs/tabs.js";
+import DemoFormComponent from "./demo/form/form.js";
 
 Router.init([
     {
@@ -116,6 +117,7 @@ Router.init([
             { path: "tooltip", component: DemoTooltipComponent },
             { path: "datetime-picker", component: DemoDatetimePickerComponent },
             { path: "menu", component: DemoMenuComponent },
+            { path: "tabs", component: DemoTabsComponent },
             { path: "form", component: DemoFormComponent },
         ],
     },

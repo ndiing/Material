@@ -48,7 +48,6 @@ class MdListComponent extends MdComponent {
                     @onCheckboxInput="${this.handleListItemCheckboxInput}"
                     @onRadioButtonInput="${this.handleListItemRadioButtonInput}"
                     @onSwitchInput="${this.handleListItemSwitchInput}"
-                    @onListItemSelected="${this.handleListItemSelected}"
                 ></md-list-item>
             </div>
         `;
@@ -106,34 +105,6 @@ class MdListComponent extends MdComponent {
             }
         }
         this.requestUpdate();
-    }
-
-    async handleListItemSelected(event) {
-        if (!this.classList.contains("md-tabs__list")) {
-            return;
-        }
-        const listItem = event.target;
-
-        let width;
-        let left;
-
-        const secondary = this.classList.contains("md-tabs__list--secondary");
-        if (secondary) {
-            width = listItem.clientWidth;
-            left = listItem.offsetLeft;
-        } else {
-            const withIcon = listItem.classList.contains("md-list__item--with-icon");
-            const label = listItem?.querySelector(".md-list__label");
-            width = label.clientWidth;
-            left = listItem.offsetLeft + label.offsetLeft;
-            const badge = listItem?.querySelector(".md-list__badge");
-            if (!withIcon && badge) {
-                width += badge.clientWidth + 4;
-            }
-        }
-
-        this.style.setProperty("--md-comp-tabs-indicator-width", width + "px");
-        this.style.setProperty("--md-comp-tabs-indicator-left", left + "px");
     }
 }
 

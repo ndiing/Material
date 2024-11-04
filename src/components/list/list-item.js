@@ -58,7 +58,7 @@ class MdListItemComponent extends MdComponent {
     async connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-list__item");
-        this.style.setProperty("--md-comp-navigation-bar-animation", "none");
+        // this.style.setProperty("--md-comp-navigation-bar-animation", "none");
 
         if (this.selection) {
             new RippleController(this, this.rippleOptions);

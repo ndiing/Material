@@ -41,6 +41,7 @@ const list = [
     { routerLink: "/tooltip", label: "Tooltip" },
     { routerLink: "/datetime-picker", label: "Datetime Picker" },
     { routerLink: "/menu", label: "Menu" },
+    { routerLink: "/tabs", label: "Tabs" },
     { routerLink: "/form", label: "Form" },
 ].map((item) => {
     item.selected = item.routerLink === Router.pathname;

@@ -5,33 +5,22 @@ class DemoTopAppBarComponent extends MdComponent {
     render() {
         return html`
             <div class="md-border">
-         
-            
                 <md-top-app-bar
                     id="topAppBar"
-                    .leadingActions="${[
-                        "image",
-                    ]}"
+                    .leadingActions="${["image"]}"
                     label="Label"
-                    .trailingActions="${[
-                        "image",
-                        "image",
-                        "image",
-                    ]}"
-                    ></md-top-app-bar
-                >
-                
+                    .trailingActions="${["image", "image", "image"]}"
+                ></md-top-app-bar>
+
                 <md-sheet
                     region="center"
                     style="padding:24px;"
                 >
-                
                     <md-button
                         variant="filled-tonal"
                         label="Toggle Top App Bar"
                         @click="${() => topAppBar.toggle()}"
                     ></md-button>
-                    
                 </md-sheet>
             </div>
         `;

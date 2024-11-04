@@ -12,7 +12,7 @@
         "build:prod": "webpack --mode=production --node-env=production --config webpack.renderer.config.js",
         "watch": "webpack --watch --config webpack.renderer.config.js",
         "serve": "webpack serve --config webpack.renderer.config.js",
-        "prettier": "npx prettier src/components/ --write",
+        "prettier": "npx prettier src/ --write",
         "localize:extract": "lit-localize extract",
         "localize:build": "lit-localize build",
         "jsdoc": "npx jsdoc -c jsdoc.json"
