@@ -1,6 +1,6 @@
 {
     "name": "@ndiinginc/material",
-    "version": "0.37.0",
+    "version": "1.0.0",
     "description": "material",
     "main": ".webpack/main",
     "scripts": {
