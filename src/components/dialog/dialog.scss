@@ -1,0 +1,199 @@
+@use "../mixins/mixins.scss";
+
+@keyframes dialog-in {
+    0% {
+        visibility: visible;
+        height: 72px;
+        opacity: 0;
+        transform: translate3d(-50%, calc(-100% - 72px), 0);
+    }
+
+    100% {
+        height: var(--md-comp-dialog-height);
+        opacity: 1;
+        transform: translate3d(-50%, -50%, 0);
+    }
+}
+
+@keyframes dialog-out {
+    0% {
+        visibility: visible;
+        opacity: 1;
+        transform: translate3d(-50%, -50%, 0);
+    }
+
+    100% {
+        visibility: hidden;
+        opacity: 0;
+        transform: translate3d(-50%, -100%, 0);
+    }
+}
+
+@keyframes dialog-full-screen-in {
+    0% {
+        visibility: visible;
+        transform: translate3d(-50%, -100%, 0);
+    }
+
+    100% {
+        transform: translate3d(-50%, -50%, 0);
+    }
+}
+
+@keyframes dialog-full-screen-out {
+    0% {
+        visibility: visible;
+        transform: translate3d(-50%, -50%, 0);
+    }
+
+    100% {
+        visibility: hidden;
+        transform: translate3d(-50%, 50%, 0);
+    }
+}
+
+.md-dialog {
+    flex-direction: column;
+    display: inline-flex;
+    min-width: 280px;
+    max-width: 560px;
+    border-radius: 28px;
+    background-color: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-on-surface);
+    box-shadow: var(--md-sys-elevation-level3);
+    animation-timing-function: cubic-bezier(var(--md-sys-motion-easing-standard-decelerate));
+    animation-duration: var(--md-sys-motion-duration-short4);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 11;
+    transform: translate3d(-50%, -50%, 0);
+    visibility: hidden;
+    animation-name: var(--md-comp-dialog-animation, dialog-out);
+
+    &[open] {
+        visibility: visible;
+        animation-name: var(--md-comp-dialog-animation, dialog-in);
+    }
+}
+
+.md-dialog__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 20px 16px;
+
+    .md-dialog__icon-button {
+        align-self: center;
+
+        + .md-dialog__label {
+            align-self: center;
+        }
+    }
+
+    + .md-dialog__container {
+        margin-top: -32px;
+    }
+
+    > .md-dialog__label {
+        .md-dialog__label-primary {
+            @include mixins.typescale-headline-small();
+        }
+    }
+}
+
+.md-dialog__label {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.md-dialog__label-primary {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include mixins.typescale-body-large();
+}
+
+.md-dialog__label-secondary {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include mixins.typescale-body-medium();
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.md-dialog__icon-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0 16px;
+}
+
+.md-dialog__icon-button {
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.md-dialog__container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+}
+
+.md-dialog__body {
+    flex: 1;
+    overflow: auto;
+    @include mixins.typescale-body-medium();
+    color: var(--md-sys-color-on-surface-variant);
+    padding: 0 24px;
+    margin: 24px 0;
+
+    + .md-dialog__footer {
+        margin-top: -24px;
+    }
+}
+
+.md-dialog__footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 24px;
+    gap: 0 8px;
+    margin-top: auto;
+}
+
+.md-dialog--full-screen {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    border-radius: 0;
+    background-color: var(--md-sys-color-surface);
+    animation-name: var(--md-comp-dialog-animation, dialog-full-screen-out);
+
+    &[open] {
+        animation-name: var(--md-comp-dialog-animation, dialog-full-screen-in);
+    }
+
+    > .md-dialog__header {
+        flex-direction: row;
+        align-items: center;
+        gap: 0px 16px;
+        padding: 14px 24px;
+
+        + .md-dialog__container {
+            margin-top: -22px;
+        }
+
+        > .md-dialog__label {
+            > .md-dialog__label-primary {
+                @include mixins.typescale-title-large();
+            }
+        }
+    }
+}

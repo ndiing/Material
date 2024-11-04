@@ -1,0 +1,19 @@
+{
+    "source": {
+        "include": ["./src/components"],
+        "includePattern": ".+\\.js(doc|x)?$",
+        "excludePattern": "(node_modules|\\.git)"
+    },
+    "opts": {
+        "destination": "./docs",
+        "recurse": true
+    },
+    "plugins": [],
+    "templates": {
+        "cleverLinks": false,
+        "monospaceLinks": false
+    },
+    "tags": {
+        "allowUnknownTags": true
+    }
+}

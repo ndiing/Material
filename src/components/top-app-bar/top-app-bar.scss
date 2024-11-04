@@ -1,0 +1,200 @@
+@use "../mixins/mixins.scss";
+
+
+@keyframes top-app-bar-north-in {
+    0% {
+        visibility: visible;
+        margin-top: calc(0px - var(--md-comp-top-app-bar-height));
+    }
+
+    100% {
+        margin-top: 0;
+    }
+}
+
+
+@keyframes top-app-bar-north-out {
+    0% {
+        visibility: visible;
+        margin-top: 0;
+    }
+
+    100% {
+        visibility: hidden;
+        margin-top: calc(0px - var(--md-comp-top-app-bar-height));
+    }
+}
+
+
+@keyframes top-app-bar-north-modal-in {
+    0% {
+        visibility: visible;
+        transform: translate3d(0%, -100%, 0);
+    }
+
+    100% {
+        transform: translate3d(0%, 0%, 0);
+    }
+}
+
+
+@keyframes top-app-bar-north-modal-out {
+    0% {
+        visibility: visible;
+        transform: translate3d(0%, 0%, 0);
+    }
+
+    100% {
+        visibility: hidden;
+        transform: translate3d(0%, -100%, 0);
+    }
+}
+
+.md-top-app-bar {
+    --md-comp-top-app-bar-height: 64px;
+    display: inline-flex;
+    flex-direction: column;
+    border-radius: 0;
+    background-color: var(--md-sys-color-surface-container);
+    color: var(--md-sys-color-on-surface);
+    box-shadow: var(--md-sys-elevation-level2);
+    animation-timing-function: cubic-bezier(var(--md-sys-motion-easing-standard-decelerate));
+    animation-duration: var(--md-sys-motion-duration-short4);
+
+    &.md-border__item--north {
+        --md-comp-top-app-bar-animation: top-app-bar-north-out;
+        height: var(--md-comp-top-app-bar-height);
+        margin-top: calc(0px - var(--md-comp-top-app-bar-height));
+        animation-name: var(--md-comp-top-app-bar-animation, top-app-bar-north-out);
+        visibility: hidden;
+
+        &[open] {
+            --md-comp-top-app-bar-animation: top-app-bar-north-in;
+            visibility: visible;
+            margin-top: 0;
+            animation-name: var(--md-comp-top-app-bar-animation, top-app-bar-north-in);
+        }
+    }
+
+}
+
+.md-top-app-bar__header {
+    display: flex;
+    align-items: center;
+    height: var(--md-comp-top-app-bar-height);
+    padding: 18px 16px;
+    gap: 0 16px;
+
+    + .md-top-app-bar__container {
+        // margin-top: -16px;
+        margin-top: 0;
+    }
+}
+
+.md-top-app-bar__actions {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 16px;
+}
+
+// .md-top-app-bar__actions--start {}
+
+.md-top-app-bar__actions--end {
+    margin-left: auto;
+}
+
+.md-top-app-bar__label {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.md-top-app-bar__label-primary {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include mixins.typescale-title-large();
+}
+
+.md-top-app-bar__label-secondary {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include mixins.typescale-body-medium();
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.md-top-app-bar__icon-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0 16px;
+}
+
+.md-top-app-bar__icon-button {
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.md-top-app-bar__container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+}
+
+.md-top-app-bar__body {
+    flex: 1;
+    overflow: auto;
+    @include mixins.typescale-body-medium();
+    color: var(--md-sys-color-on-surface-variant);
+    // padding: 0 16px;
+    // margin: 16px 0;
+    padding: 0;
+    margin: 0;
+
+    + .md-top-app-bar__footer {
+        // margin-top: -16px;
+        margin-top: 0;
+    }
+}
+
+.md-top-app-bar__footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 16px;
+    gap: 0 8px;
+    margin-top: auto;
+}
+
+.md-top-app-bar--modal {
+    background-color: var(--md-sys-color-surface-container-low);
+    box-shadow: var(--md-sys-elevation-level1);
+    position: absolute;
+    z-index: 11;
+
+    &.md-border__item--north {
+        --md-comp-top-app-bar-animation: top-app-bar-north-modal-out;
+        margin-top: 0;
+        border-radius: 0 0 16px 16px;
+        top: 0;
+        left: 0;
+        right: 0;
+        transform: translate3d(0%, -100%, 0);
+        animation-name: var(--md-comp-top-app-bar-animation, top-app-bar-north-modal-out);
+        visibility: hidden;
+
+        &[open] {
+            --md-comp-top-app-bar-animation: top-app-bar-north-modal-in;
+            visibility: visible;
+            transform: translate3d(0, 0, 0);
+            animation-name: var(--md-comp-top-app-bar-animation, top-app-bar-north-modal-in);
+        }
+    }
+
+}

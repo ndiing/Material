@@ -1,0 +1,42 @@
+@keyframes scrim-in {
+    0% {
+        visibility: visible;
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 40%;
+    }
+}
+
+@keyframes scrim-out {
+    0% {
+        visibility: visible;
+        opacity: 40%;
+    }
+
+    100% {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+.md-scrim {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background-color: var(--md-sys-color-scrim);
+    opacity: 40%;
+    visibility: hidden;
+    animation-name: var(--md-comp-scrim-animation, scrim-out);
+    animation-timing-function: cubic-bezier(var(--md-sys-motion-easing-standard-decelerate));
+    animation-duration: var(--md-sys-motion-duration-short4);
+
+    &[open] {
+        visibility: visible;
+        animation-name: var(--md-comp-scrim-animation, scrim-in);
+    }
+}
