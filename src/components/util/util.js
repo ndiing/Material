@@ -102,12 +102,12 @@ class BreakpointObserver {
         }
     }
 }
-
+/* 
 {
-    const bo = new BreakpointObserver(console.log);
-    bo.observe();
+    const breakpoint = new BreakpointObserver(console.log);
+    breakpoint.observe();
 }
-
+ */
 function closestScrollable(tooltip) {
     let container = tooltip.parentElement;
 
