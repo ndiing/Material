@@ -3,6 +3,7 @@
 // @use "./mixins/mixins.scss";
 @use "./styles/styles.scss";
 @use "./ripple/ripple.scss";
+
 @use "./icon/icon.scss";
 @use "./button/button.scss";
 @use "./segmented-button/segmented-button.scss";
@@ -14,7 +15,10 @@
 @use "./slider/slider.scss";
 @use "./image/image.scss";
 @use "./badge/badge.scss";
+
 @use "./list/list.scss";
+@use "./tabs/tabs.scss";
+
 @use "./card/card.scss";
 @use "./scrim/scrim.scss";
 @use "./sheet/sheet.scss";
@@ -29,7 +33,7 @@
 @use "./tooltip/tooltip.scss";
 @use "./datetime-picker/datetime-picker.scss";
 @use "./menu/menu.scss";
-@use "./tabs/tabs.scss";
+
 @use "./form/form.scss";
 
 // [x] progress-indicator

@@ -7,6 +7,7 @@ import "./polyfill/polyfill.js";
 // import "./store/store.js";
 // import "./ripple/ripple.js";
 // import "./popper/popper.js";
+
 import "./icon/icon.js";
 import "./button/button.js";
 import "./segmented-button/segmented-button.js";
@@ -18,8 +19,12 @@ import "./switch/switch.js";
 import "./slider/slider.js";
 import "./image/image.js";
 import "./badge/badge.js";
+
 import "./list/list-item.js";
 import "./list/list.js";
+import "./tabs/tab.js";
+import "./tabs/tabs.js";
+
 import "./card/card.js";
 import "./scrim/scrim.js";
 import "./sheet/sheet.js";
@@ -34,6 +39,5 @@ import "./dialog/dialog.js";
 import "./tooltip/tooltip.js";
 import "./datetime-picker/datetime-picker.js";
 import "./menu/menu.js";
-import "./tabs/tab.js";
-import "./tabs/tabs.js";
+
 import "./form/form.js";

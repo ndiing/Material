@@ -16,8 +16,11 @@ const list = [
     { routerLink: "/slider", label: "Slider" },
     { routerLink: "/image", label: "Image" },
     { routerLink: "/badge", label: "Badge" },
+
     { routerLink: "/list", label: "List" },
     // { routerLink: "/list2", label: "List 2" },
+    { routerLink: "/tabs", label: "Tabs" },
+
     { routerLink: "/card", label: "Card" },
     { routerLink: "/scrim", label: "Scrim" },
     { routerLink: "/sheet", label: "Sheet" },
@@ -41,7 +44,7 @@ const list = [
     { routerLink: "/tooltip", label: "Tooltip" },
     { routerLink: "/datetime-picker", label: "Datetime Picker" },
     { routerLink: "/menu", label: "Menu" },
-    { routerLink: "/tabs", label: "Tabs" },
+
     { routerLink: "/form", label: "Form" },
 ].map((item) => {
     item.selected = item.routerLink === Router.pathname;

@@ -1,15 +1,13 @@
 import "./components/components.scss";
 import "./components/components.js";
 import { Router } from "./components/router/router.js";
+
 import DemoMainComponent from "./demo/main/main.js";
 const DemoUsersComponent = () => import("./demo/users/users.js").then((m) => m.default);
 const DemoUserComponent = () => import("./demo/user/user.js").then((m) => m.default);
 const DemoBlogsComponent = () => import("./demo/blogs/blogs.js").then((m) => m.default);
 const DemoBlogComponent = () => import("./demo/blog/blog.js").then((m) => m.default);
 const DemoMissingComponent = () => import("./demo/missing/missing.js").then((m) => m.default);
-const beforeLoad = (next) => {
-    next();
-};
 
 import DemoIconComponent from "./demo/icon/icon.js";
 import DemoButtonComponent from "./demo/button/button.js";
@@ -23,8 +21,11 @@ import DemoSwitchComponent from "./demo/switch/switch.js";
 import DemoSliderComponent from "./demo/slider/slider.js";
 import DemoImageComponent from "./demo/image/image.js";
 import DemoBadgeComponent from "./demo/badge/badge.js";
+
 import DemoListComponent from "./demo/list/list.js";
 import DemoList2Component from "./demo/list/list2.js";
+import DemoTabsComponent from "./demo/tabs/tabs.js";
+
 import DemoCardComponent from "./demo/card/card.js";
 import DemoScrimComponent from "./demo/scrim/scrim.js";
 import DemoSheetComponent from "./demo/sheet/sheet.js";
@@ -48,8 +49,12 @@ import DemoDialogComponent from "./demo/dialog/dialog.js";
 import DemoTooltipComponent from "./demo/tooltip/tooltip.js";
 import DemoDatetimePickerComponent from "./demo/datetime-picker/datetime-picker.js";
 import DemoMenuComponent from "./demo/menu/menu.js";
-import DemoTabsComponent from "./demo/tabs/tabs.js";
+
 import DemoFormComponent from "./demo/form/form.js";
+
+const beforeLoad = (next) => {
+    next();
+};
 
 Router.init([
     {
@@ -92,8 +97,11 @@ Router.init([
             { path: "slider", component: DemoSliderComponent },
             { path: "image", component: DemoImageComponent },
             { path: "badge", component: DemoBadgeComponent },
+
             { path: "list", component: DemoListComponent },
             { path: "list2", component: DemoList2Component },
+            { path: "tabs", component: DemoTabsComponent },
+
             { path: "card", component: DemoCardComponent },
             { path: "scrim", component: DemoScrimComponent },
             { path: "sheet", component: DemoSheetComponent },
@@ -117,7 +125,7 @@ Router.init([
             { path: "tooltip", component: DemoTooltipComponent },
             { path: "datetime-picker", component: DemoDatetimePickerComponent },
             { path: "menu", component: DemoMenuComponent },
-            { path: "tabs", component: DemoTabsComponent },
+
             { path: "form", component: DemoFormComponent },
         ],
     },

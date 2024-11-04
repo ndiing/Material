@@ -12,7 +12,7 @@ class MdTabsComponent extends MdComponent {
     };
 
     selects = ["single", "multiple"];
-    
+
     variants = ["primary", "secondary"];
 
     constructor() {
@@ -71,6 +71,7 @@ class MdTabsComponent extends MdComponent {
             }
         }
         this.requestUpdate();
+        this.emit("onTabClick", { event });
     }
 
     async handleTabSelected(event) {
