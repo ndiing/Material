@@ -7,8 +7,10 @@ class DemoMain extends MdComponent {
         super();
 
         this.items = [
-            { label: "Layout Grid", routerLink: "/layout-grid" },
-            { label: "Layout Border", routerLink: "/layout-border" },
+            { label: "Layout", children:[
+                { label: "Grid", routerLink: "/layout-grid" },
+                { label: "Border", routerLink: "/layout-border" },
+            ] },
             { label: "Icon", routerLink: "/icon" },
             { label: "Image", routerLink: "/image" },
             { label: "Badge", routerLink: "/badge" },
