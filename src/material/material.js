@@ -36,7 +36,7 @@ import "./bottom-app-bar/bottom-app-bar.js";
 import "./top-app-bar/top-app-bar.js";
 import "./navigation-bar/navigation-bar.js";
 import "./navigation-drawer/navigation-drawer.js";
-// import "./navigation-rail/navigation-rail.js";
+import "./navigation-rail/navigation-rail.js";
 
 // import "./carousel/carousel.js";
 // import "./chip/chip.js";

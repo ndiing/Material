@@ -37,6 +37,8 @@ Router.use([
             { path: "navigation-drawer", load: () => import("./navigation-drawer/navigation-drawer.js").then((m) => m.default) },
             { path: "navigation-drawer-no-icon", load: () => import("./navigation-drawer/navigation-drawer-no-icon.js").then((m) => m.default) },
             { path: "navigation-drawer-modal", load: () => import("./navigation-drawer/navigation-drawer-modal.js").then((m) => m.default) },
+            { path: "navigation-rail", load: () => import("./navigation-rail/navigation-rail.js").then((m) => m.default) },
+            { path: "navigation-rail-no-label", load: () => import("./navigation-rail/navigation-rail-no-label.js").then((m) => m.default) },
         ],
     },
     {

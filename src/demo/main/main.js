@@ -29,7 +29,7 @@ class DemoMain extends MdComponent {
             { label: "Tree", routerLink: "/tree" },
             { label: "Bottom App Bar", routerLink: "/bottom-app-bar" },
             { label: "Top App Bar", routerLink: "/top-app-bar" },
-            { label: "Navigation List", routerLink: "/navigation-list" },
+            // { label: "Navigation List", routerLink: "/navigation-list" },
             { label: "Tabs", routerLink: "/tabs" },
             {
                 label: "Navigation Bar",
@@ -44,6 +44,13 @@ class DemoMain extends MdComponent {
                     { label: "Default", routerLink: "/navigation-drawer" },
                     { label: "No Icon", routerLink: "/navigation-drawer-no-icon" },
                     { label: "Modal", routerLink: "/navigation-drawer-modal" },
+                ],
+            },
+            {
+                label: "Navigation Rail",
+                children: [
+                    { label: "Default", routerLink: "/navigation-rail" },
+                    { label: "No Label", routerLink: "/navigation-rail-no-label" },
                 ],
             },
         ];

@@ -58,16 +58,16 @@ class DemoNavigationList extends MdComponent {
                         </div>
                     </div> -->
 
-                    <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
+                    <!-- <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <div class="md-navigation-rail">
                             <md-navigation-list
                                 .rippleOptions="${{ container: ".md-navigation-list__icon" }}"
                                 .items="${[
-                                    { icon: "image", label: "Item 1", selected: true },
-                                    { icon: "image", label: "Item 2", badge: 0 },
-                                    { icon: "image", label: "Item 3", badge: 1 },
-                                    { icon: "image", label: "Item 4", badge: 1000 },
-                                ]}"
+                        { icon: "image", label: "Item 1", selected: true },
+                        { icon: "image", label: "Item 2", badge: 0 },
+                        { icon: "image", label: "Item 3", badge: 1 },
+                        { icon: "image", label: "Item 4", badge: 1000 },
+                    ]}"
                             ></md-navigation-list>
                         </div>
                     </div>
@@ -76,15 +76,15 @@ class DemoNavigationList extends MdComponent {
                             <md-navigation-list
                                 .rippleOptions="${{ container: ".md-navigation-list__icon" }}"
                                 .items="${[
-                                    //
-                                    { icon: "image", selected: true },
-                                    { icon: "image", badge: 0 },
-                                    { icon: "image", badge: 1 },
-                                    { icon: "image", badge: 1000 },
-                                ]}"
+                        //
+                        { icon: "image", selected: true },
+                        { icon: "image", badge: 0 },
+                        { icon: "image", badge: 1 },
+                        { icon: "image", badge: 1000 },
+                    ]}"
                             ></md-navigation-list>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <div class="md-navigation-bar">
