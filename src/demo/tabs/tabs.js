@@ -1,71 +1,64 @@
 import { html } from "lit";
-import { MdComponent } from "../../components/component/component";
+import { MdComponent } from "../../material/component/component";
 
-class DemoTabsComponent extends MdComponent {
+class DemoTabs extends MdComponent {
     render() {
         return html`
-            <div
-                class="md-grid"
-                style="margin:24px;"
-            >
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-tabs
-                        selection="single"
-                        variant="primary"
-                        .items="${[
-                            //
-                            { icon: "image", label: "Label 1", selected: true, badge: "" },
-                            { icon: "image", label: "Label 2", badge: "3" },
-                            { icon: "image", label: "Label 3", badge: "10" },
-                            { icon: "image", label: "Label 4", badge: "9999" },
-                        ]}"
-                    ></md-tabs>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-tabs
-                        selection="single"
-                        variant="primary"
-                        .items="${[
-                            //
-                            { label: "Label 1", selected: true, badge: "" },
-                            { label: "Label 2", badge: "3" },
-                            { label: "Label 3", badge: "10" },
-                            { label: "Label 4", badge: "9999" },
-                        ]}"
-                    ></md-tabs>
-                </div>
+            <div class="md-layout">
+                <div class="md-layout__grid">
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-tabs
+                            variant="primary"
+                            .items="${[
+                                //
+                                { label: "Item 1", selected: true },
+                                { label: "Item 2", badge: 0 },
+                                { label: "Item 3", badge: 1 },
+                                { label: "Item 4", badge: 1000 },
+                            ]}"
+                        ></md-tabs>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-tabs
+                            variant="primary"
+                            .items="${[
+                                { icon: "image", label: "Item 1", selected: true },
+                                { icon: "image", label: "Item 2", badge: 0 },
+                                { icon: "image", label: "Item 3", badge: 1 },
+                                { icon: "image", label: "Item 4", badge: 1000 },
+                            ]}"
+                        ></md-tabs>
+                    </div>
 
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-tabs
-                        selection="single"
-                        variant="secondary"
-                        .items="${[
-                            //
-                            { icon: "image", label: "Label 1", selected: true, badge: "" },
-                            { icon: "image", label: "Label 2", badge: "3" },
-                            { icon: "image", label: "Label 3", badge: "10" },
-                            { icon: "image", label: "Label 4", badge: "9999" },
-                        ]}"
-                    ></md-tabs>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-tabs
-                        selection="single"
-                        variant="secondary"
-                        .items="${[
-                            //
-                            { label: "Label 1", selected: true, badge: "" },
-                            { label: "Label 2", badge: "3" },
-                            { label: "Label 3", badge: "10" },
-                            { label: "Label 4", badge: "9999" },
-                        ]}"
-                    ></md-tabs>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-tabs
+                            variant="secondary"
+                            .items="${[
+                                //
+                                { label: "Item 1", selected: true },
+                                { label: "Item 2", badge: 0 },
+                                { label: "Item 3", badge: 1 },
+                                { label: "Item 4", badge: 1000 },
+                            ]}"
+                        ></md-tabs>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-tabs
+                            variant="secondary"
+                            .items="${[
+                                { icon: "image", label: "Item 1", selected: true },
+                                { icon: "image", label: "Item 2", badge: 0 },
+                                { icon: "image", label: "Item 3", badge: 1 },
+                                { icon: "image", label: "Item 4", badge: 1000 },
+                            ]}"
+                        ></md-tabs>
+                    </div>
                 </div>
             </div>
         `;
     }
 }
 
-customElements.define("demo-tabs", DemoTabsComponent);
+customElements.define("demo-tabs", DemoTabs);
 
-export default document.createElement("demo-tabs", DemoTabsComponent);
+export default document.createElement("demo-tabs");

@@ -1,60 +1,56 @@
 import { html } from "lit";
-import { MdComponent } from "../../components/component/component";
+import { MdComponent } from "../../material/component/component";
 
-class DemoCardComponent extends MdComponent {
+class DemoCard extends MdComponent {
     render() {
         return html`
-            <div
-                class="md-grid"
-                style="margin:24px;"
-            >
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-card
-                        leadingIconButton="image"
-                        label="Label"
-                        subLabel="Lorem ipsum"
-                        trailingIconButtons='["image","image","more_vert"]'
-                        buttons='["Label","Label"]'
-                        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, sequi?</md-card
-                    >
+            <div class="md-layout">
+                <div class="md-layout__grid">
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-card> body </md-card>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-card label="Label"> body </md-card>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-card label="Label" sublabel="Sublabel"> body </md-card>
+                    </div>
+
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-card .icons="${[{ icon: "image" }]}"> body </md-card>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-card label="Label" .icons="${[{ icon: "image" }]}"> body </md-card>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-card label="Label" sublabel="Sublabel" .icons="${[{ icon: "image" }]}"> body </md-card>
+                    </div>
+
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-card .icons="${[{ icon: "image" }]}" .actions="${[{ icon: "image" }, { icon: "image" }]}"> body </md-card>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-card label="Label" .icons="${[{ icon: "image" }]}" .actions="${[{ icon: "image" }, { icon: "image" }]}"> body </md-card>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-card label="Label" sublabel="Sublabel" .icons="${[{ icon: "image" }]}" .actions="${[{ icon: "image" }, { icon: "image" }]}"> body </md-card>
+                    </div>
+
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-card .icons="${[{ icon: "image" }]}" .actions="${[{ icon: "image" }, { icon: "image" }]}" .buttons="${[{ component: "spacer" }, { label: "Label" }, { label: "Label" }]}"> body </md-card>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-card label="Label" .icons="${[{ icon: "image" }]}" .actions="${[{ icon: "image" }, { icon: "image" }]}" .buttons="${[{ component: "spacer" }, { label: "Label" }, { label: "Label" }]}"> body </md-card>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-card label="Label" sublabel="Sublabel" .icons="${[{ icon: "image" }]}" .actions="${[{ icon: "image" }, { icon: "image" }]}" .buttons="${[{ component: "spacer" }, { label: "Label" }, { label: "Label" }]}"> body </md-card>
+                    </div>
                 </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-card
-                        leadingIconButton="image"
-                        label="Label"
-                        trailingIconButtons='["image","image","more_vert"]'
-                        buttons='["Label","Label"]'
-                        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, sequi?</md-card
-                    >
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-card
-                        leadingIconButton="image"
-                        label="Label"
-                        trailingIconButtons='["image","image","more_vert"]'
-                        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, sequi?</md-card
-                    >
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-card
-                        leadingIconButton="image"
-                        label="Label"
-                        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, sequi?</md-card
-                    >
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-card label="Label">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, sequi?</md-card>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-card>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, sequi?</md-card>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4"></div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4"></div>
             </div>
         `;
     }
 }
 
-customElements.define("demo-card", DemoCardComponent);
+customElements.define("demo-card", DemoCard);
 
-export default document.createElement("demo-card", DemoCardComponent);
+export default document.createElement("demo-card");

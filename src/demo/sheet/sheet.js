@@ -1,79 +1,20 @@
 import { html } from "lit";
-import { MdComponent } from "../../components/component/component";
+import { MdComponent } from "../../material/component/component";
 
-class DemoSheetComponent extends MdComponent {
+class DemoSheet extends MdComponent {
     render() {
         return html`
-            <div class="md-border">
-                <md-sheet
-                    id="north"
-                    region="north"
-                    label="North"
-                    trailingIconButtons='["close"]'
-                    @onSheetIconButtonClick="${() => north.toggle()}"
-                    style=""
-                    >body</md-sheet
-                >
-                <md-sheet
-                    id="east"
-                    region="east"
-                    label="East"
-                    trailingIconButtons='["close"]'
-                    @onSheetIconButtonClick="${() => east.toggle()}"
-                    style="width:256px;"
-                    >body</md-sheet
-                >
-                <md-sheet
-                    id="south"
-                    region="south"
-                    label="South"
-                    trailingIconButtons='["close"]'
-                    @onSheetIconButtonClick="${() => south.toggle()}"
-                    style=""
-                    >body</md-sheet
-                >
-                <md-sheet
-                    id="west"
-                    region="west"
-                    label="West"
-                    trailingIconButtons='["close"]'
-                    @onSheetIconButtonClick="${() => west.toggle()}"
-                    style="width:360px;"
-                    >body</md-sheet
-                >
-                <md-sheet
-                    region="center"
-                    style="padding:24px;"
-                >
-                    <div class="md-grid">
-                        <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                            <md-button
-                                variant="filled-tonal"
-                                label="Toggle North"
-                                @click="${() => north.toggle()}"
-                            ></md-button>
-                        </div>
-                        <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                            <md-button
-                                variant="filled-tonal"
-                                label="Toggle East"
-                                @click="${() => east.toggle()}"
-                            ></md-button>
-                        </div>
-                        <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                            <md-button
-                                variant="filled-tonal"
-                                label="Toggle South"
-                                @click="${() => south.toggle()}"
-                            ></md-button>
-                        </div>
-                        <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                            <md-button
-                                variant="filled-tonal"
-                                label="Toggle West"
-                                @click="${() => west.toggle()}"
-                            ></md-button>
-                        </div>
+            <div class="md-layout__border">
+                <md-sheet style="height:80px;" id="sheet1" region="north" label="North"></md-sheet>
+                <md-sheet style="width:256px;" id="sheet2" region="east" label="East"></md-sheet>
+                <md-sheet style="height:80px;" id="sheet3" region="south" label="South"></md-sheet>
+                <md-sheet style="width:256px;" id="sheet4" region="west" label="West"></md-sheet>
+                <md-sheet region="center">
+                    <div class="md-layout">
+                        <md-button variant="filled-tonal" label="Toggle Sheet North" @click="${() => sheet1.toggle()}"></md-button>
+                        <md-button variant="filled-tonal" label="Toggle Sheet East" @click="${() => sheet2.toggle()}"></md-button>
+                        <md-button variant="filled-tonal" label="Toggle Sheet South" @click="${() => sheet3.toggle()}"></md-button>
+                        <md-button variant="filled-tonal" label="Toggle Sheet West" @click="${() => sheet4.toggle()}"></md-button>
                     </div>
                 </md-sheet>
             </div>
@@ -81,6 +22,6 @@ class DemoSheetComponent extends MdComponent {
     }
 }
 
-customElements.define("demo-sheet", DemoSheetComponent);
+customElements.define("demo-sheet", DemoSheet);
 
-export default document.createElement("demo-sheet", DemoSheetComponent);
+export default document.createElement("demo-sheet");

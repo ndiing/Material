@@ -1,53 +1,48 @@
 import { html } from "lit";
-import { MdComponent } from "../../components/component/component";
+import { MdComponent } from "../../material/component/component";
 
-class DemoFabComponent extends MdComponent {
+class DemoFab extends MdComponent {
     render() {
         return html`
-            <div
-                class="md-grid"
-                style="margin:24px;"
-            >
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-fab
-                        size="small"
-                        icon="add"
-                    ></md-fab>
+            <div class="md-layout">
+                <div class="md-layout__grid">
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-fab icon="image"></md-fab>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-fab size="small" icon="image"></md-fab>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-fab size="large" icon="image"></md-fab>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-fab type="extended" icon="image" label="Label"></md-fab>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-fab type="extended" label="Label"></md-fab>
+                    </div>
+
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-fab variant="unelevated" icon="image"></md-fab>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-fab variant="unelevated" size="small" icon="image"></md-fab>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-fab variant="unelevated" size="large" icon="image"></md-fab>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-fab variant="unelevated" type="extended" icon="image" label="Label"></md-fab>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-fab variant="unelevated" type="extended" label="Label"></md-fab>
+                    </div>
                 </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-fab icon="add"></md-fab>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-fab
-                        size="large"
-                        icon="add"
-                    ></md-fab>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-fab
-                        color="surface"
-                        icon="add"
-                    ></md-fab>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-fab
-                        color="secondary"
-                        icon="add"
-                    ></md-fab>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-fab
-                        color="tertiary"
-                        icon="add"
-                    ></md-fab>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4"></div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4"></div>
             </div>
         `;
     }
 }
 
-customElements.define("demo-fab", DemoFabComponent);
+customElements.define("demo-fab", DemoFab);
 
-export default document.createElement("demo-fab", DemoFabComponent);
+export default document.createElement("demo-fab");

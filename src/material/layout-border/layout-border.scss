@@ -1,0 +1,37 @@
+.md-layout__border {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "north north north"
+        "west center east"
+        "south south south";
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.md-layout__north {
+    grid-area: north;
+    overflow: auto;
+}
+
+.md-layout__east {
+    grid-area: east;
+    overflow: auto;
+}
+
+.md-layout__south {
+    grid-area: south;
+    overflow: auto;
+}
+
+.md-layout__west {
+    grid-area: west;
+    overflow: auto;
+}
+
+.md-layout__center {
+    grid-area: center;
+    overflow: auto;
+}

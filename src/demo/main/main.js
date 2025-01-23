@@ -1,84 +1,77 @@
 import { html } from "lit";
-import { MdComponent } from "../../components/component/component";
-import { Router } from "../../components/router/router";
-import { scrollInto } from "../../components/util/util";
+import { MdComponent } from "../../material/component/component";
+import { Router } from "../../material/router/router";
 
-const list = [
-    { routerLink: "/icon", label: "Icon" },
-    { routerLink: "/button", label: "Button" },
-    { routerLink: "/segmented-button", label: "Segmented Button" },
-    { routerLink: "/icon-button", label: "Icon Button" },
-    { routerLink: "/fab", label: "Fab" },
-    { routerLink: "/extended-fab", label: "Extended Fab" },
-    { routerLink: "/checkbox", label: "Checkbox" },
-    { routerLink: "/radio-button", label: "Radio Button" },
-    { routerLink: "/switch", label: "Switch" },
-    { routerLink: "/slider", label: "Slider" },
-    { routerLink: "/image", label: "Image" },
-    { routerLink: "/badge", label: "Badge" },
+class DemoMain extends MdComponent {
+    constructor() {
+        super();
 
-    { routerLink: "/list", label: "List" },
-    // { routerLink: "/list2", label: "List 2" },
-    { routerLink: "/tabs", label: "Tabs" },
-
-    { routerLink: "/card", label: "Card" },
-    { routerLink: "/scrim", label: "Scrim" },
-    { routerLink: "/sheet", label: "Sheet" },
-    { routerLink: "/sheet2", label: "Sheet Modal" },
-    { routerLink: "/bottom-sheet", label: "Bottom Sheet" },
-    { routerLink: "/bottom-sheet2", label: "Bottom Sheet Modal" },
-    { routerLink: "/side-sheet", label: "Side Sheet" },
-    { routerLink: "/side-sheet2", label: "Side Sheet Modal" },
-    { routerLink: "/bottom-app-bar", label: "Bottom App Bar" },
-    { routerLink: "/bottom-app-bar2", label: "Bottom App Bar No Fab" },
-    { routerLink: "/top-app-bar", label: "Top App Bar" },
-    { routerLink: "/navigation-bar", label: "Navigation Bar" },
-    { routerLink: "/navigation-bar2", label: "Navigation Bar No Label" },
-    { routerLink: "/navigation-drawer", label: "Navigation Drawer" },
-    { routerLink: "/navigation-drawer2", label: "Navigation Drawer No Icon" },
-    { routerLink: "/navigation-drawer3", label: "Navigation Drawer Modal" },
-    { routerLink: "/navigation-drawer4", label: "Navigation Drawer Modal No Icon" },
-    { routerLink: "/navigation-rail", label: "Navigation Rail" },
-    { routerLink: "/navigation-rail2", label: "Navigation Rail No Label" },
-    { routerLink: "/dialog", label: "Dialog" },
-    { routerLink: "/tooltip", label: "Tooltip" },
-    { routerLink: "/datetime-picker", label: "Datetime Picker" },
-    { routerLink: "/menu", label: "Menu" },
-
-    { routerLink: "/form", label: "Form" },
-].map((item) => {
-    item.selected = item.routerLink === Router.pathname;
-    return item;
-});
-
-class DemoMainComponent extends MdComponent {
+        this.items = [
+            { label: "Layout Grid", routerLink: "/layout-grid" },
+            { label: "Layout Border", routerLink: "/layout-border" },
+            { label: "Icon", routerLink: "/icon" },
+            { label: "Image", routerLink: "/image" },
+            { label: "Badge", routerLink: "/badge" },
+            { label: "Button", routerLink: "/button" },
+            { label: "Fab", routerLink: "/fab" },
+            { label: "Icon Button", routerLink: "/icon-button" },
+            { label: "Segmented Button", routerLink: "/segmented-button" },
+            { label: "Checkbox", routerLink: "/checkbox" },
+            { label: "Radio Button", routerLink: "/radio-button" },
+            { label: "Switch", routerLink: "/switch" },
+            { label: "Card", routerLink: "/card" },
+            { label: "Scrim", routerLink: "/scrim" },
+            { label: "Dialog", routerLink: "/dialog" },
+            { label: "Sheet", routerLink: "/sheet" },
+            { label: "Sheet Modal", routerLink: "/sheet-modal" },
+            { label: "List", routerLink: "/list" },
+            { label: "Tooltip", routerLink: "/tooltip" },
+            { label: "Tree", routerLink: "/tree" },
+            { label: "Bottom App Bar", routerLink: "/bottom-app-bar" },
+            { label: "Top App Bar", routerLink: "/top-app-bar" },
+            { label: "Navigation List", routerLink: "/navigation-list" },
+            { label: "Tabs", routerLink: "/tabs" },
+            {
+                label: "Navigation Bar",
+                children: [
+                    { label: "Default", routerLink: "/navigation-bar" },
+                    { label: "No Label", routerLink: "/navigation-bar-no-label" },
+                ],
+            },
+            {
+                label: "Navigation Drawer",
+                children: [
+                    { label: "Default", routerLink: "/navigation-drawer" },
+                    { label: "No Icon", routerLink: "/navigation-drawer-no-icon" },
+                    { label: "Modal", routerLink: "/navigation-drawer-modal" },
+                ],
+            },
+        ];
+        this.items.sort((a, b) => a.label.localeCompare(b.label));
+        function select(items) {
+            items.forEach((item) => {
+                item.selected = item.routerLink === Router.pathname;
+                if (item.children?.length) {
+                    select(item.children);
+                }
+            });
+        }
+        select(this.items);
+        this.leadingActions = [{ icon: "menu" }];
+    }
     render() {
         return html`
-            <div class="md-border">
-                <md-navigation-drawer
-                    id="mainNavigationDrawer"
-                    .items="${list}"
-                    open
-                    @onListItemSelected="${this.handleListItemSelected}"
-                ></md-navigation-drawer>
+            <div class="md-layout__border">
+                <md-top-app-bar class="demo-main-top-app-bar" open label="Material 3" .leadingActions="${this.leadingActions}" @onTopAppBarIconButtonClick="${() => navigationDrawer.toggle()}"></md-top-app-bar>
+                <md-navigation-drawer id="navigationDrawer" view="tree" open .items="${this.items}" @onTreeItemClick="${() => {}}"></md-navigation-drawer>
                 <md-sheet region="center">
                     <md-outlet></md-outlet>
                 </md-sheet>
             </div>
         `;
     }
-
-    handleListItemSelected(event) {
-        const element = event.detail.listItem;
-
-        scrollInto(element, {
-            block: "center",
-            inline: "center",
-            behavior: "smooth",
-        });
-    }
 }
 
-customElements.define("demo-main", DemoMainComponent);
+customElements.define("demo-main", DemoMain);
 
-export default document.createElement("demo-main", DemoMainComponent);
+export default document.createElement("demo-main");

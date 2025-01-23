@@ -1,23 +1,20 @@
 import { html } from "lit";
-import { MdComponent } from "../../components/component/component";
+import { MdComponent } from "../../material/component/component";
 
-class DemoIconComponent extends MdComponent {
+class DemoIcon extends MdComponent {
     render() {
         return html`
-            <div
-                class="md-grid"
-                style="margin:24px;"
-            >
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-icon>add</md-icon>
+            <div class="md-layout">
+                <div class="md-layout__grid">
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-icon>image</md-icon>
+                    </div>
                 </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4"></div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4"></div>
             </div>
         `;
     }
 }
 
-customElements.define("demo-icon", DemoIconComponent);
+customElements.define("demo-icon", DemoIcon);
 
-export default document.createElement("demo-icon", DemoIconComponent);
+export default document.createElement("demo-icon");

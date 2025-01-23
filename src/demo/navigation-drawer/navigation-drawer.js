@@ -1,33 +1,23 @@
 import { html } from "lit";
-import { MdComponent } from "../../components/component/component";
+import { MdComponent } from "../../material/component/component";
 
-class DemoNavigationDrawerComponent extends MdComponent {
+class DemoNavigationDrawer extends MdComponent {
     render() {
         return html`
-            <div class="md-border">
+            <div class="md-layout__border">
                 <md-navigation-drawer
-                    id="navigationDrawer"
-                    @onNavigationDrawerIconButtonClick="${() => navigationDrawer.toggle()}"
+                    open
+                    id="navigationDrawer1"
                     .items="${[
-                        //
-                        { icon: "image", label: "Label 1", selected: true, badge: "" },
-                        { icon: "image", label: "Label 2", badge: "3" },
-                        { icon: "image", label: "Label 3", badge: "10" },
-                        { icon: "image", label: "Label 4", badge: "9999" },
+                        { icon: "image", label: "Item 1", selected: true },
+                        { icon: "image", label: "Item 2", badge: 0 },
+                        { icon: "image", label: "Item 3", badge: 1 },
+                        { icon: "image", label: "Item 4", badge: 1000 },
                     ]}"
                 ></md-navigation-drawer>
-                <md-sheet
-                    region="center"
-                    style="padding:24px;"
-                >
-                    <div class="md-grid">
-                        <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                            <md-button
-                                variant="filled-tonal"
-                                label="Toggle Navigation Drawer"
-                                @click="${() => navigationDrawer.toggle()}"
-                            ></md-button>
-                        </div>
+                <md-sheet region="center">
+                    <div class="md-layout">
+                        <md-button variant="filled-tonal" label="Toggle Navigation Drawer" @click="${() => navigationDrawer1.toggle()}"></md-button>
                     </div>
                 </md-sheet>
             </div>
@@ -35,6 +25,6 @@ class DemoNavigationDrawerComponent extends MdComponent {
     }
 }
 
-customElements.define("demo-navigation-drawer", DemoNavigationDrawerComponent);
+customElements.define("demo-navigation-drawer", DemoNavigationDrawer);
 
-export default document.createElement("demo-navigation-drawer", DemoNavigationDrawerComponent);
+export default document.createElement("demo-navigation-drawer");

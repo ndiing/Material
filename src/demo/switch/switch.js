@@ -1,64 +1,29 @@
 import { html } from "lit";
-import { MdComponent } from "../../components/component/component";
+import { MdComponent } from "../../material/component/component";
 
-class DemoSwitchComponent extends MdComponent {
+class DemoSwitch extends MdComponent {
     render() {
         return html`
-            <div
-                class="md-grid"
-                style="margin:24px;"
-            >
-                <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-form
-                        @onFormReset="${console.log}"
-                        @onFormSubmit="${console.log}"
-                        @onFormData="${(event) => console.log(event.detail.event.body)}"
-                    >
-                        <div class="md-grid">
-                            <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                                <md-switch name="switch"></md-switch>
-                            </div>
-                            <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                                <md-switch
-                                    name="switch"
-                                    checked
-                                ></md-switch>
-                            </div>
-                            <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                                <md-switch
-                                    .icons="${["close", "check"]}"
-                                    name="switch"
-                                ></md-switch>
-                            </div>
-                            <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                                <md-switch
-                                    .icons="${["close", "check"]}"
-                                    name="switch"
-                                    checked
-                                ></md-switch>
-                            </div>
-                            <div class="md-grid__item--expanded12 md-grid__item--medium4 md-grid__item--compact4">
-                                <md-button
-                                    variant="filled-tonal"
-                                    label="Reset"
-                                    type="reset"
-                                ></md-button>
-                                <md-button
-                                    variant="filled"
-                                    label="Submit"
-                                    type="submit"
-                                ></md-button>
-                            </div>
-                        </div>
-                    </md-form>
+            <div class="md-layout">
+                <div class="md-layout__grid">
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-switch></md-switch>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-switch checked></md-switch>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-switch .icons="${["close", "check"]}"></md-switch>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-switch .icons="${["close", "check"]}" checked></md-switch>
+                    </div>
                 </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4"></div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4"></div>
             </div>
         `;
     }
 }
 
-customElements.define("demo-switch", DemoSwitchComponent);
+customElements.define("demo-switch", DemoSwitch);
 
-export default document.createElement("demo-switch", DemoSwitchComponent);
+export default document.createElement("demo-switch");

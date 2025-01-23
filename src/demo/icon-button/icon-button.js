@@ -1,99 +1,41 @@
 import { html } from "lit";
-import { MdComponent } from "../../components/component/component";
+import { MdComponent } from "../../material/component/component";
 
-class DemoIconButtonComponent extends MdComponent {
+class DemoIconButton extends MdComponent {
     render() {
         return html`
-            <div
-                class="md-grid"
-                style="margin:24px;"
-            >
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-icon-button
-                        variant="filled"
-                        icon="add"
-                    ></md-icon-button>
+            <div class="md-layout">
+                <div class="md-layout__grid">
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-icon-button variant="filled" icon="image"></md-icon-button>
+                        <md-icon-button variant="filled" icon="image" toggle></md-icon-button>
+                        <md-icon-button variant="filled" icon="image" toggle selected></md-icon-button>
+                        <md-icon-button variant="filled" icon="image" disabled></md-icon-button>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-icon-button variant="filled-tonal" icon="image"></md-icon-button>
+                        <md-icon-button variant="filled-tonal" icon="image" toggle></md-icon-button>
+                        <md-icon-button variant="filled-tonal" icon="image" toggle selected></md-icon-button>
+                        <md-icon-button variant="filled-tonal" icon="image" disabled></md-icon-button>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-icon-button variant="outlined" icon="image"></md-icon-button>
+                        <md-icon-button variant="outlined" icon="image" toggle></md-icon-button>
+                        <md-icon-button variant="outlined" icon="image" toggle selected></md-icon-button>
+                        <md-icon-button variant="outlined" icon="image" disabled></md-icon-button>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-icon-button icon="image"></md-icon-button>
+                        <md-icon-button icon="image" toggle></md-icon-button>
+                        <md-icon-button icon="image" toggle selected></md-icon-button>
+                        <md-icon-button icon="image" disabled></md-icon-button>
+                    </div>
                 </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-icon-button
-                        variant="filled-tonal"
-                        icon="add"
-                    ></md-icon-button>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-icon-button
-                        variant="outlined"
-                        icon="add"
-                    ></md-icon-button>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-icon-button icon="add"></md-icon-button>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-icon-button
-                        toggle
-                        variant="filled"
-                        icon="add"
-                    ></md-icon-button>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-icon-button
-                        toggle
-                        variant="filled-tonal"
-                        icon="add"
-                    ></md-icon-button>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-icon-button
-                        toggle
-                        variant="outlined"
-                        icon="add"
-                    ></md-icon-button>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-icon-button
-                        toggle
-                        icon="add"
-                    ></md-icon-button>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-icon-button
-                        toggle
-                        selected
-                        variant="filled"
-                        icon="add"
-                    ></md-icon-button>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-icon-button
-                        toggle
-                        selected
-                        variant="filled-tonal"
-                        icon="add"
-                    ></md-icon-button>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-icon-button
-                        toggle
-                        selected
-                        variant="outlined"
-                        icon="add"
-                    ></md-icon-button>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-icon-button
-                        toggle
-                        selected
-                        icon="add"
-                    ></md-icon-button>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4"></div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4"></div>
             </div>
         `;
     }
 }
 
-customElements.define("demo-icon-button", DemoIconButtonComponent);
+customElements.define("demo-icon-button", DemoIconButton);
 
-export default document.createElement("demo-icon-button", DemoIconButtonComponent);
+export default document.createElement("demo-icon-button");

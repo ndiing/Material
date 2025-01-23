@@ -10,6 +10,6 @@
     },
     "interchange": {
         "format": "xliff",
-        "xliffDir": "./src/xliff/"
+        "xliffDir": "./xliff/"
     }
 }

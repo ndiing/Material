@@ -1,7 +1,7 @@
 import { html } from "lit";
-import { MdComponent } from "../../components/component/component";
+import { MdComponent } from "../../material/component/component";
 
-class DemoBlogComponent extends MdComponent {
+class DemoBlog extends MdComponent {
     render() {
         return html`
             <h1>Blog</h1>
@@ -10,6 +10,6 @@ class DemoBlogComponent extends MdComponent {
     }
 }
 
-customElements.define("demo-blog", DemoBlogComponent);
+customElements.define("demo-blog", DemoBlog);
 
-export default document.createElement("demo-blog", DemoBlogComponent);
+export default document.createElement("demo-blog");

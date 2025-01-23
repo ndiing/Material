@@ -1,137 +1,37 @@
 import { html } from "lit";
-import { MdComponent } from "../../components/component/component";
+import { MdComponent } from "../../material/component/component";
 
-class DemoTooltipComponent extends MdComponent {
+class DemoTooltip extends MdComponent {
     render() {
         return html`
-            <div
-                class="md-grid"
-                style="margin:24px;"
-            >
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-tooltip
-                        id="tooltip"
-                        style="width:314px;"
-                        label="Lorem, ipsum"
-                        buttons='["Label","Label"]'
-                        @onTooltipButtonClick="${() => tooltip.close()}"
-                        @pointerleave="${() => tooltip.close()}"
-                    >
-                        Lorem, ipsum dolor. Ducimus, voluptatibus odio. Debitis, explicabo velit?
-                    </md-tooltip>
-                    <md-button
-                        id="button"
-                        variant="filled-tonal"
-                        label="Toggle Tooltip"
-                        @pointerenter="${() => tooltip.show({ button })}"
-                    ></md-button>
+            <div class="md-layout">
+                <div class="md-layout__grid">
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-tooltip style="width:344px;" id="tooltip1" label="Rich tooltip" .buttons="${[{ label: "Action" }, { label: "Action" }]}" @onTooltipButtonClick="${() => tooltip1.toggle({ trigger: button1 })}">Rich tooltips bring attention to particular element of feature that warrants the user's focus.</md-tooltip>
+                        <md-button id="button1" variant="filled-tonal" label="Toggle Rich tooltip 1" @click="${() => tooltip1.toggle({ trigger: button1 })}"></md-button>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-tooltip style="width:344px;" id="tooltip2" label="Rich tooltip" .buttons="${[{ label: "Action" }]}" @onTooltipButtonClick="${() => tooltip2.toggle({ trigger: button2 })}">Rich tooltips bring attention to particular element of feature that warrants the user's focus.</md-tooltip>
+                        <md-button id="button2" variant="filled-tonal" label="Toggle Rich tooltip 2" @click="${() => tooltip2.toggle({ trigger: button2 })}"></md-button>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-tooltip style="width:344px;" id="tooltip3" label="Rich tooltip">Rich tooltips bring attention to particular element of feature that warrants the user's focus.</md-tooltip>
+                        <md-button id="button3" variant="filled-tonal" label="Toggle Rich tooltip 3" @click="${() => tooltip3.toggle({ trigger: button3 })}"></md-button>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-tooltip style="width:344px;" id="tooltip4" .buttons="${[{ label: "Action" }]}" @onTooltipButtonClick="${() => tooltip4.toggle({ trigger: button4 })}">Rich tooltips bring attention to particular element of feature that warrants the user's focus.</md-tooltip>
+                        <md-button id="button4" variant="filled-tonal" label="Toggle Rich tooltip 4" @click="${() => tooltip4.toggle({ trigger: button4 })}"></md-button>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-tooltip style="width:344px;" id="tooltip5" .buttons="${[{ label: "Action" }, { label: "Action" }]}" @onTooltipButtonClick="${() => tooltip5.toggle({ trigger: button5 })}">Rich tooltips bring attention to particular element of feature that warrants the user's focus.</md-tooltip>
+                        <md-button id="button5" variant="filled-tonal" label="Toggle Rich tooltip 5" @click="${() => tooltip5.toggle({ trigger: button5 })}"></md-button>
+                    </div>
                 </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-tooltip
-                        id="tooltip2"
-                        style="width:314px;"
-                        label="Lorem, ipsum"
-                        buttons='["Label"]'
-                        @onTooltipButtonClick="${() => tooltip2.close()}"
-                        @pointerleave="${() => tooltip2.close()}"
-                    >
-                        Lorem, ipsum dolor. Ducimus, voluptatibus odio. Debitis, explicabo velit?
-                    </md-tooltip>
-                    <md-button
-                        id="button2"
-                        variant="filled-tonal"
-                        label="Toggle Tooltip"
-                        @pointerenter="${() => tooltip2.show({ button: button2 })}"
-                    ></md-button>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-tooltip
-                        id="tooltip3"
-                        style="width:314px;"
-                        label="Lorem, ipsum"
-                        @pointerleave="${() => tooltip3.close()}"
-                    >
-                        Lorem, ipsum dolor. Ducimus, voluptatibus odio. Debitis, explicabo velit?
-                    </md-tooltip>
-                    <md-button
-                        id="button3"
-                        variant="filled-tonal"
-                        label="Toggle Tooltip"
-                        @pointerenter="${() => tooltip3.show({ button: button3 })}"
-                    ></md-button>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-tooltip
-                        id="tooltip4"
-                        style="width:314px;"
-                        buttons='["Label"]'
-                        @onTooltipButtonClick="${() => tooltip4.close()}"
-                        @pointerleave="${() => tooltip4.close()}"
-                    >
-                        Lorem, ipsum dolor. Ducimus, voluptatibus odio. Debitis, explicabo velit?
-                    </md-tooltip>
-                    <md-button
-                        id="button4"
-                        variant="filled-tonal"
-                        label="Toggle Tooltip"
-                        @pointerenter="${() => tooltip4.show({ button: button4 })}"
-                    ></md-button>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-tooltip
-                        id="tooltip5"
-                        style="width:314px;"
-                        buttons='["Label","Label"]'
-                        @onTooltipButtonClick="${() => tooltip5.close()}"
-                        @pointerleave="${() => tooltip5.close()}"
-                    >
-                        Lorem, ipsum dolor. Ducimus, voluptatibus odio. Debitis, explicabo velit?
-                    </md-tooltip>
-                    <md-button
-                        id="button5"
-                        variant="filled-tonal"
-                        label="Toggle Tooltip"
-                        @pointerenter="${() => tooltip5.show({ button: button5 })}"
-                    ></md-button>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-tooltip
-                        id="tooltip6"
-                        variant="plain"
-                    >
-                        Lorem, ipsum dolor.
-                    </md-tooltip>
-                    <md-button
-                        id="button6"
-                        variant="filled-tonal"
-                        label="Toggle Tooltip"
-                        @pointerenter="${() => tooltip6.show({ button: button6 })}"
-                        @pointerleave="${() => tooltip6.close()}"
-                    ></md-button>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-tooltip
-                        id="tooltip7"
-                        style="width:214px;"
-                        variant="plain"
-                    >
-                        Lorem, ipsum dolor. Ducimus, voluptatibus odio. Debitis, explicabo velit?
-                    </md-tooltip>
-                    <md-button
-                        id="button7"
-                        variant="filled-tonal"
-                        label="Toggle Tooltip"
-                        @pointerenter="${() => tooltip7.show({ button: button7 })}"
-                        @pointerleave="${() => tooltip7.close()}"
-                    ></md-button>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4"></div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4"></div>
             </div>
         `;
     }
 }
 
-customElements.define("demo-tooltip", DemoTooltipComponent);
+customElements.define("demo-tooltip", DemoTooltip);
 
-export default document.createElement("demo-tooltip", DemoTooltipComponent);
+export default document.createElement("demo-tooltip");

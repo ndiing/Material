@@ -1,205 +1,52 @@
 import { html } from "lit";
-import { MdComponent } from "../../components/component/component";
+import { MdComponent } from "../../material/component/component";
 
-class DemoImageComponent extends MdComponent {
+class DemoImage extends MdComponent {
     render() {
         return html`
-            <div
-                class="md-grid"
-                style="margin:24px;"
-            >
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-image src="https://placehold.co/64x64"></md-image>
+            <div class="md-layout">
+                <div class="md-layout__grid">
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-image style="width:64px;" src="https://api.dicebear.com/9.x/icons/svg?seed=Andrea"></md-image>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-image style="width:64px;" ratio="16/9" src="https://api.dicebear.com/9.x/icons/svg?seed=Andrea"></md-image>
+                        <md-image style="width:64px;" ratio="3/2" src="https://api.dicebear.com/9.x/icons/svg?seed=Andrea"></md-image>
+                        <md-image style="width:64px;" ratio="4/3" src="https://api.dicebear.com/9.x/icons/svg?seed=Andrea"></md-image>
+                        <md-image style="width:64px;" ratio="1/1" src="https://api.dicebear.com/9.x/icons/svg?seed=Andrea"></md-image>
+                        <md-image style="width:64px;" ratio="3/4" src="https://api.dicebear.com/9.x/icons/svg?seed=Andrea"></md-image>
+                        <md-image style="width:64px;" ratio="2/3" src="https://api.dicebear.com/9.x/icons/svg?seed=Andrea"></md-image>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-image style="height:64px;" ratio="16/9" src="https://api.dicebear.com/9.x/icons/svg?seed=Andrea"></md-image>
+                        <md-image style="height:64px;" ratio="3/2" src="https://api.dicebear.com/9.x/icons/svg?seed=Andrea"></md-image>
+                        <md-image style="height:64px;" ratio="4/3" src="https://api.dicebear.com/9.x/icons/svg?seed=Andrea"></md-image>
+                        <md-image style="height:64px;" ratio="1/1" src="https://api.dicebear.com/9.x/icons/svg?seed=Andrea"></md-image>
+                        <md-image style="height:64px;" ratio="3/4" src="https://api.dicebear.com/9.x/icons/svg?seed=Andrea"></md-image>
+                        <md-image style="height:64px;" ratio="2/3" src="https://api.dicebear.com/9.x/icons/svg?seed=Andrea"></md-image>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-image style="width:64px;" ratio="16/9" circular src="https://api.dicebear.com/9.x/icons/svg?seed=Andrea"></md-image>
+                        <md-image style="width:64px;" ratio="3/2" circular src="https://api.dicebear.com/9.x/icons/svg?seed=Andrea"></md-image>
+                        <md-image style="width:64px;" ratio="4/3" circular src="https://api.dicebear.com/9.x/icons/svg?seed=Andrea"></md-image>
+                        <md-image style="width:64px;" ratio="1/1" circular src="https://api.dicebear.com/9.x/icons/svg?seed=Andrea"></md-image>
+                        <md-image style="width:64px;" ratio="3/4" circular src="https://api.dicebear.com/9.x/icons/svg?seed=Andrea"></md-image>
+                        <md-image style="width:64px;" ratio="2/3" circular src="https://api.dicebear.com/9.x/icons/svg?seed=Andrea"></md-image>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-image style="height:64px;" ratio="16/9" circular src="https://api.dicebear.com/9.x/icons/svg?seed=Andrea"></md-image>
+                        <md-image style="height:64px;" ratio="3/2" circular src="https://api.dicebear.com/9.x/icons/svg?seed=Andrea"></md-image>
+                        <md-image style="height:64px;" ratio="4/3" circular src="https://api.dicebear.com/9.x/icons/svg?seed=Andrea"></md-image>
+                        <md-image style="height:64px;" ratio="1/1" circular src="https://api.dicebear.com/9.x/icons/svg?seed=Andrea"></md-image>
+                        <md-image style="height:64px;" ratio="3/4" circular src="https://api.dicebear.com/9.x/icons/svg?seed=Andrea"></md-image>
+                        <md-image style="height:64px;" ratio="2/3" circular src="https://api.dicebear.com/9.x/icons/svg?seed=Andrea"></md-image>
+                    </div>
                 </div>
-
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-image
-                        style="width:64px;"
-                        src="https://placehold.co/64x64"
-                    ></md-image>
-                </div>
-
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-image
-                        style="height:64px;"
-                        src="https://placehold.co/64x64"
-                    ></md-image>
-                </div>
-
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-image
-                        variant="circular"
-                        src="https://placehold.co/64x64"
-                    ></md-image>
-                </div>
-
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-image
-                        variant="circular"
-                        style="width:64px;"
-                        src="https://placehold.co/64x64"
-                    ></md-image>
-                </div>
-
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-image
-                        variant="circular"
-                        style="height:64px;"
-                        src="https://placehold.co/64x64"
-                    ></md-image>
-                </div>
-
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-image
-                        ratio="16/9"
-                        style="width:64px;"
-                        src="https://placehold.co/64x64"
-                    ></md-image>
-                    <md-image
-                        ratio="3/2"
-                        style="width:64px;"
-                        src="https://placehold.co/64x64"
-                    ></md-image>
-                    <md-image
-                        ratio="4/3"
-                        style="width:64px;"
-                        src="https://placehold.co/64x64"
-                    ></md-image>
-                    <md-image
-                        ratio="1/1"
-                        style="width:64px;"
-                        src="https://placehold.co/64x64"
-                    ></md-image>
-                    <md-image
-                        ratio="3/4"
-                        style="width:64px;"
-                        src="https://placehold.co/64x64"
-                    ></md-image>
-                    <md-image
-                        ratio="2/3"
-                        style="width:64px;"
-                        src="https://placehold.co/64x64"
-                    ></md-image>
-                </div>
-
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-image
-                        ratio="16/9"
-                        style="height:64px;"
-                        src="https://placehold.co/64x64"
-                    ></md-image>
-                    <md-image
-                        ratio="3/2"
-                        style="height:64px;"
-                        src="https://placehold.co/64x64"
-                    ></md-image>
-                    <md-image
-                        ratio="4/3"
-                        style="height:64px;"
-                        src="https://placehold.co/64x64"
-                    ></md-image>
-                    <md-image
-                        ratio="1/1"
-                        style="height:64px;"
-                        src="https://placehold.co/64x64"
-                    ></md-image>
-                    <md-image
-                        ratio="3/4"
-                        style="height:64px;"
-                        src="https://placehold.co/64x64"
-                    ></md-image>
-                    <md-image
-                        ratio="2/3"
-                        style="height:64px;"
-                        src="https://placehold.co/64x64"
-                    ></md-image>
-                </div>
-
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-image
-                        variant="circular"
-                        ratio="16/9"
-                        style="width:64px;"
-                        src="https://placehold.co/64x64"
-                    ></md-image>
-                    <md-image
-                        variant="circular"
-                        ratio="3/2"
-                        style="width:64px;"
-                        src="https://placehold.co/64x64"
-                    ></md-image>
-                    <md-image
-                        variant="circular"
-                        ratio="4/3"
-                        style="width:64px;"
-                        src="https://placehold.co/64x64"
-                    ></md-image>
-                    <md-image
-                        variant="circular"
-                        ratio="1/1"
-                        style="width:64px;"
-                        src="https://placehold.co/64x64"
-                    ></md-image>
-                    <md-image
-                        variant="circular"
-                        ratio="3/4"
-                        style="width:64px;"
-                        src="https://placehold.co/64x64"
-                    ></md-image>
-                    <md-image
-                        variant="circular"
-                        ratio="2/3"
-                        style="width:64px;"
-                        src="https://placehold.co/64x64"
-                    ></md-image>
-                </div>
-
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-image
-                        variant="circular"
-                        ratio="16/9"
-                        style="height:64px;"
-                        src="https://placehold.co/64x64"
-                    ></md-image>
-                    <md-image
-                        variant="circular"
-                        ratio="3/2"
-                        style="height:64px;"
-                        src="https://placehold.co/64x64"
-                    ></md-image>
-                    <md-image
-                        variant="circular"
-                        ratio="4/3"
-                        style="height:64px;"
-                        src="https://placehold.co/64x64"
-                    ></md-image>
-                    <md-image
-                        variant="circular"
-                        ratio="1/1"
-                        style="height:64px;"
-                        src="https://placehold.co/64x64"
-                    ></md-image>
-                    <md-image
-                        variant="circular"
-                        ratio="3/4"
-                        style="height:64px;"
-                        src="https://placehold.co/64x64"
-                    ></md-image>
-                    <md-image
-                        variant="circular"
-                        ratio="2/3"
-                        style="height:64px;"
-                        src="https://placehold.co/64x64"
-                    ></md-image>
-                </div>
-
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4"></div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4"></div>
             </div>
         `;
     }
 }
 
-customElements.define("demo-image", DemoImageComponent);
+customElements.define("demo-image", DemoImage);
 
-export default document.createElement("demo-image", DemoImageComponent);
+export default document.createElement("demo-image");

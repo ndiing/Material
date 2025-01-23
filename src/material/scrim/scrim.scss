@@ -1,0 +1,16 @@
+.md-scrim {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background-color: var(--md-sys-color-scrim);
+    opacity: 0%;
+    pointer-events: none;
+
+    &[open] {
+        opacity: 40%;
+        pointer-events: all;
+    }
+}

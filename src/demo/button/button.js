@@ -1,81 +1,42 @@
 import { html } from "lit";
-import { MdComponent } from "../../components/component/component";
+import { MdComponent } from "../../material/component/component";
 
-class DemoButtonComponent extends MdComponent {
+class DemoButton extends MdComponent {
     render() {
         return html`
-            <div
-                class="md-grid"
-                style="margin:24px;"
-            >
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-button
-                        variant="elevated"
-                        label="Elevated button"
-                    ></md-button>
+            <div class="md-layout">
+                <div class="md-layout__grid">
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-button variant="elevated" label="Label"></md-button>
+                        <md-button variant="elevated" icon="image" label="Label"></md-button>
+                        <md-button variant="elevated" disabled label="Label"></md-button>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-button variant="filled" label="Label"></md-button>
+                        <md-button variant="filled" icon="image" label="Label"></md-button>
+                        <md-button variant="filled" disabled label="Label"></md-button>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-button variant="filled-tonal" label="Label"></md-button>
+                        <md-button variant="filled-tonal" icon="image" label="Label"></md-button>
+                        <md-button variant="filled-tonal" disabled label="Label"></md-button>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-button variant="outlined" label="Label"></md-button>
+                        <md-button variant="outlined" icon="image" label="Label"></md-button>
+                        <md-button variant="outlined" disabled label="Label"></md-button>
+                    </div>
+                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                        <md-button label="Label"></md-button>
+                        <md-button icon="image" label="Label"></md-button>
+                        <md-button disabled label="Label"></md-button>
+                    </div>
                 </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-button
-                        variant="elevated"
-                        label="Elevated button"
-                        icon="add"
-                    ></md-button>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-button
-                        variant="filled"
-                        label="Filled button"
-                    ></md-button>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-button
-                        variant="filled"
-                        label="Filled button"
-                        icon="add"
-                    ></md-button>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-button
-                        variant="filled-tonal"
-                        label="Filled filled-tonal button"
-                    ></md-button>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-button
-                        variant="filled-tonal"
-                        label="Filled filled-tonal button"
-                        icon="add"
-                    ></md-button>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-button
-                        variant="outlined"
-                        label="Outlined button"
-                    ></md-button>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-button
-                        variant="outlined"
-                        label="Outlined button"
-                        icon="add"
-                    ></md-button>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-button label="Text button"></md-button>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                    <md-button
-                        label="Text button"
-                        icon="add"
-                    ></md-button>
-                </div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4"></div>
-                <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4"></div>
             </div>
         `;
     }
 }
 
-customElements.define("demo-button", DemoButtonComponent);
+customElements.define("demo-button", DemoButton);
 
-export default document.createElement("demo-button", DemoButtonComponent);
+export default document.createElement("demo-button");

@@ -1,28 +1,14 @@
 import { html } from "lit";
-import { MdComponent } from "../../components/component/component";
+import { MdComponent } from "../../material/component/component";
 
-class DemoBottomAppBarComponent extends MdComponent {
+class DemoBottomAppBar extends MdComponent {
     render() {
         return html`
-            <div class="md-border">
-                <md-bottom-app-bar
-                    id="bottomAppBar"
-                    .leadingActions="${["image", "image", "image", "image"]}"
-                    .trailingActions="${[{ comp: "fab", icon: "add" }]}"
-                ></md-bottom-app-bar>
-
-                <md-sheet
-                    region="center"
-                    style="padding:24px;"
-                >
-                    <div class="md-grid">
-                        <div class="md-grid__item--expanded4 md-grid__item--medium4 md-grid__item--compact4">
-                            <md-button
-                                variant="filled-tonal"
-                                label="Toggle Bottom App Bar"
-                                @click="${() => bottomAppBar.toggle()}"
-                            ></md-button>
-                        </div>
+            <div class="md-layout__border">
+                <md-bottom-app-bar id="bottomAppBar1" open .actions="${[{ icon: "image" }, { icon: "image" }, { icon: "image" }, { icon: "image" }]}" .fab="${"image"}"></md-bottom-app-bar>
+                <md-sheet region="center">
+                    <div class="md-layout">
+                        <md-button variant="filled-tonal" label="Toggle Bottom App Bar" @click="${() => bottomAppBar1.toggle()}"></md-button>
                     </div>
                 </md-sheet>
             </div>
@@ -30,6 +16,6 @@ class DemoBottomAppBarComponent extends MdComponent {
     }
 }
 
-customElements.define("demo-bottom-app-bar", DemoBottomAppBarComponent);
+customElements.define("demo-bottom-app-bar", DemoBottomAppBar);
 
-export default document.createElement("demo-bottom-app-bar", DemoBottomAppBarComponent);
+export default document.createElement("demo-bottom-app-bar");
