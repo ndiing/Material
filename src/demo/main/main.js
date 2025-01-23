@@ -22,8 +22,10 @@ class DemoMain extends MdComponent {
             { label: "Card", routerLink: "/card" },
             { label: "Scrim", routerLink: "/scrim" },
             { label: "Dialog", routerLink: "/dialog" },
-            { label: "Sheet", routerLink: "/sheet" },
-            { label: "Sheet Modal", routerLink: "/sheet-modal" },
+            { label: "Sheet", children:[
+                { label: "Default", routerLink: "/sheet" },
+                { label: "Modal", routerLink: "/sheet-modal" },
+            ] },
             { label: "List", routerLink: "/list" },
             { label: "Tooltip", routerLink: "/tooltip" },
             { label: "Tree", routerLink: "/tree" },

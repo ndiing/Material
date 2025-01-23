@@ -37,18 +37,17 @@
 }
 
 .md-tree__indent {
-    width: 24px;
-    height: 24px;
+    width: 12px;
+    height: 12px;
 }
 
 .md-tree__action {
-    + .md-tree__icon {
+    +.md-tree__icon {
         margin-left: -12px;
     }
 }
 
-// .md-tree__icon {
-// }
+// .md-tree__icon {}
 
 .md-tree__label {
     flex: 1;
