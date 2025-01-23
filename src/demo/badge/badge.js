@@ -6,13 +6,13 @@ class DemoBadge extends MdComponent {
         return html`
             <div class="md-layout">
                 <div class="md-layout__grid">
-                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                    <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <md-badge label=""></md-badge>
                     </div>
-                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                    <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <md-badge label="1"></md-badge>
                     </div>
-                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                    <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <md-badge label="1000"></md-badge>
                     </div>
                 </div>

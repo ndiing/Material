@@ -6,7 +6,7 @@ class DemoNavigationList extends MdComponent {
         return html`
             <div class="md-layout">
                 <div class="md-layout__grid">
-                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                    <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <div class="md-menu">
                             <md-navigation-list
                                 .items="${[
@@ -19,7 +19,7 @@ class DemoNavigationList extends MdComponent {
                             ></md-navigation-list>
                         </div>
                     </div>
-                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                    <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <div class="md-menu">
                             <md-navigation-list
                                 .items="${[
@@ -32,7 +32,7 @@ class DemoNavigationList extends MdComponent {
                         </div>
                     </div>
 
-                    <!-- <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                    <!-- <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <div class="md-navigation-drawer">
                             <md-navigation-list
                                 .items="${[
@@ -45,7 +45,7 @@ class DemoNavigationList extends MdComponent {
                             ></md-navigation-list>
                         </div>
                     </div>
-                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                    <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <div class="md-navigation-drawer">
                             <md-navigation-list
                                 .items="${[
@@ -58,7 +58,7 @@ class DemoNavigationList extends MdComponent {
                         </div>
                     </div> -->
 
-                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                    <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <div class="md-navigation-rail">
                             <md-navigation-list
                                 .rippleOptions="${{ container: ".md-navigation-list__icon" }}"
@@ -71,7 +71,7 @@ class DemoNavigationList extends MdComponent {
                             ></md-navigation-list>
                         </div>
                     </div>
-                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                    <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <div class="md-navigation-rail">
                             <md-navigation-list
                                 .rippleOptions="${{ container: ".md-navigation-list__icon" }}"
@@ -86,7 +86,7 @@ class DemoNavigationList extends MdComponent {
                         </div>
                     </div>
 
-                    <!-- <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                    <!-- <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <div class="md-navigation-bar">
 
                             <md-navigation-list
@@ -100,7 +100,7 @@ class DemoNavigationList extends MdComponent {
                             ></md-navigation-list>
                         </div>
                     </div>
-                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                    <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <div class="md-navigation-bar">
 
                             <md-navigation-list

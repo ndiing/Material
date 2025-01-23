@@ -6,7 +6,7 @@ class DemoList extends MdComponent {
         return html`
             <div class="md-layout">
                 <div class="md-layout__grid">
-                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                    <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <md-list
                             .items="${[
                                 { avatar: "https://api.dicebear.com/9.x/icons/svg?seed=Andrea", label: "Headline", sublabel: "Supporting text that is long enough to fill up multiple lines" },
@@ -15,7 +15,7 @@ class DemoList extends MdComponent {
                             ]}"
                         ></md-list>
                     </div>
-                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                    <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <md-list
                             .items="${[
                                 { trailingCheckbox: true, avatar: "https://api.dicebear.com/9.x/icons/svg?seed=Andrea", label: "Headline", sublabel: "Supporting text that is long enough to fill up multiple lines" },
@@ -26,7 +26,7 @@ class DemoList extends MdComponent {
                         ></md-list>
                     </div>
 
-                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                    <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <md-list
                             .items="${[
                                 { image: "https://api.dicebear.com/9.x/icons/svg?seed=Andrea", label: "Headline", sublabel: "Supporting text that is long enough to fill up multiple lines" },
@@ -35,7 +35,7 @@ class DemoList extends MdComponent {
                             ]}"
                         ></md-list>
                     </div>
-                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                    <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <md-list
                             .items="${[
                                 { trailingCheckbox: true, image: "https://api.dicebear.com/9.x/icons/svg?seed=Andrea", label: "Headline", sublabel: "Supporting text that is long enough to fill up multiple lines" },
@@ -46,7 +46,7 @@ class DemoList extends MdComponent {
                         ></md-list>
                     </div>
 
-                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                    <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <md-list
                             .items="${[
                                 { video: "https://api.dicebear.com/9.x/icons/svg?seed=Andrea", label: "Headline", sublabel: "Supporting text that is long enough to fill up multiple lines" },
@@ -55,7 +55,7 @@ class DemoList extends MdComponent {
                             ]}"
                         ></md-list>
                     </div>
-                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                    <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <md-list
                             .items="${[
                                 { trailingCheckbox: true, video: "https://api.dicebear.com/9.x/icons/svg?seed=Andrea", label: "Headline", sublabel: "Supporting text that is long enough to fill up multiple lines" },
@@ -66,7 +66,7 @@ class DemoList extends MdComponent {
                         ></md-list>
                     </div>
 
-                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                    <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <md-list
                             .items="${[
                                 { icon: "image", label: "Headline", sublabel: "Supporting text that is long enough to fill up multiple lines" },
@@ -75,7 +75,7 @@ class DemoList extends MdComponent {
                             ]}"
                         ></md-list>
                     </div>
-                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                    <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <md-list
                             .items="${[
                                 { trailingCheckbox: true, icon: "image", label: "Headline", sublabel: "Supporting text that is long enough to fill up multiple lines" },
@@ -86,10 +86,10 @@ class DemoList extends MdComponent {
                         ></md-list>
                     </div>
 
-                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                    <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <md-list .items="${[{ label: "Headline", sublabel: "Supporting text that is long enough to fill up multiple lines" }, { label: "Headline", sublabel: "Supporting text" }, { label: "Headline" }]}"></md-list>
                     </div>
-                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                    <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <md-list
                             .items="${[
                                 { trailingCheckbox: true, label: "Headline", sublabel: "Supporting text that is long enough to fill up multiple lines" },
@@ -100,7 +100,7 @@ class DemoList extends MdComponent {
                         ></md-list>
                     </div>
 
-                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                    <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <md-list
                             .items="${[
                                 { leadingCheckbox: true, label: "Headline", sublabel: "Supporting text that is long enough to fill up multiple lines" },
@@ -110,7 +110,7 @@ class DemoList extends MdComponent {
                             type="multi-select"
                         ></md-list>
                     </div>
-                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                    <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <md-list
                             .items="${[
                                 { text: "100+", leadingCheckbox: true, label: "Headline", sublabel: "Supporting text that is long enough to fill up multiple lines" },
@@ -121,7 +121,7 @@ class DemoList extends MdComponent {
                         ></md-list>
                     </div>
 
-                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                    <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <md-list
                             .items="${[
                                 { leadingRadioButton: true, label: "Headline", sublabel: "Supporting text that is long enough to fill up multiple lines" },
@@ -130,7 +130,7 @@ class DemoList extends MdComponent {
                             ]}"
                         ></md-list>
                     </div>
-                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                    <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <md-list
                             .items="${[
                                 { text: "100+", leadingRadioButton: true, label: "Headline", sublabel: "Supporting text that is long enough to fill up multiple lines" },
@@ -140,7 +140,7 @@ class DemoList extends MdComponent {
                         ></md-list>
                     </div>
 
-                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                    <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <md-list
                             .items="${[
                                 { trailingSwitch: true, label: "Headline", sublabel: "Supporting text that is long enough to fill up multiple lines" },
@@ -149,7 +149,7 @@ class DemoList extends MdComponent {
                             ]}"
                         ></md-list>
                     </div>
-                    <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
+                    <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <md-list
                             .items="${[
                                 { icon: "image", trailingSwitch: true, label: "Headline", sublabel: "Supporting text that is long enough to fill up multiple lines" },
