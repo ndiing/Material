@@ -53,8 +53,16 @@ class DemoMain extends MdComponent {
                     { label: "No Label", routerLink: "/navigation-rail-no-label" },
                 ],
             },
+            { label: "Menu", routerLink: "/menu" },
         ];
-        this.items.sort((a, b) => a.label.localeCompare(b.label));
+        this.items.sort((a, b) => {
+            
+            if (a.children && !b.children) return -1; 
+            if (!a.children && b.children) return 1;  
+        
+            
+            return a.label.localeCompare(b.label);
+        });
         function select(items) {
             items.forEach((item) => {
                 item.selected = item.routerLink === Router.pathname;

@@ -6,7 +6,7 @@ class DemoNavigationList extends MdComponent {
         return html`
             <div class="md-layout">
                 <div class="md-layout__grid">
-                    <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
+                    <!-- <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <div class="md-menu">
                             <md-navigation-list
                                 .items="${[
@@ -30,7 +30,7 @@ class DemoNavigationList extends MdComponent {
                                 ]}"
                             ></md-navigation-list>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <div class="md-navigation-drawer">

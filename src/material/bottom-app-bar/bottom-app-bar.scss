@@ -12,13 +12,13 @@
     background-color: var(--md-sys-color-surface-container);
     box-shadow: var(--md-sys-elevation-level2);
 
-    --md-comp-sheet-animation: sheet-south-out;
+    --md-comp-sheet-animation: sheet-south-in;
     animation-name: var(--md-comp-sheet-animation);
     animation-timing-function: cubic-bezier(var(--md-sys-motion-easing-standard-accelerate));
     animation-duration: var(--md-sys-motion-duration-short3);
     &[open] {
         margin-bottom: 0;
-        --md-comp-sheet-animation: sheet-south-in;
+        --md-comp-sheet-animation: sheet-south-out;
         animation-name: var(--md-comp-sheet-animation);
         animation-timing-function: cubic-bezier(var(--md-sys-motion-easing-standard-decelerate));
     }

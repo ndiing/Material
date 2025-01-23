@@ -102,14 +102,14 @@
     height: var(--md-comp-sheet-height);
     margin-top: calc(0px - var(--md-comp-sheet-height));
 
-    --md-comp-sheet-animation: sheet-north-out;
+    --md-comp-sheet-animation: sheet-north-in;
     animation-name: var(--md-comp-sheet-animation);
     animation-timing-function: cubic-bezier(var(--md-sys-motion-easing-standard-accelerate));
     animation-duration: var(--md-sys-motion-duration-short3);
 
     &[open] {
         margin-top: 0;
-        --md-comp-sheet-animation: sheet-north-in;
+        --md-comp-sheet-animation: sheet-north-out;
         animation-name: var(--md-comp-sheet-animation);
         animation-timing-function: cubic-bezier(var(--md-sys-motion-easing-standard-decelerate));
     }
@@ -121,13 +121,13 @@
     width: var(--md-comp-sheet-width);
     margin-right: calc(0px - var(--md-comp-sheet-width));
 
-    --md-comp-sheet-animation: sheet-east-out;
+    --md-comp-sheet-animation: sheet-east-in;
     animation-name: var(--md-comp-sheet-animation);
     animation-timing-function: cubic-bezier(var(--md-sys-motion-easing-standard-accelerate));
     animation-duration: var(--md-sys-motion-duration-short3);
     &[open] {
         margin-right: 0;
-        --md-comp-sheet-animation: sheet-east-in;
+        --md-comp-sheet-animation: sheet-east-out;
         animation-name: var(--md-comp-sheet-animation);
         animation-timing-function: cubic-bezier(var(--md-sys-motion-easing-standard-decelerate));
     }
@@ -139,13 +139,13 @@
     height: var(--md-comp-sheet-height);
     margin-bottom: calc(0px - var(--md-comp-sheet-height));
 
-    --md-comp-sheet-animation: sheet-south-out;
+    --md-comp-sheet-animation: sheet-south-in;
     animation-name: var(--md-comp-sheet-animation);
     animation-timing-function: cubic-bezier(var(--md-sys-motion-easing-standard-accelerate));
     animation-duration: var(--md-sys-motion-duration-short3);
     &[open] {
         margin-bottom: 0;
-        --md-comp-sheet-animation: sheet-south-in;
+        --md-comp-sheet-animation: sheet-south-out;
         animation-name: var(--md-comp-sheet-animation);
         animation-timing-function: cubic-bezier(var(--md-sys-motion-easing-standard-decelerate));
     }
@@ -157,13 +157,13 @@
     width: var(--md-comp-sheet-width);
     margin-left: calc(0px - var(--md-comp-sheet-width));
 
-    --md-comp-sheet-animation: sheet-west-out;
+    --md-comp-sheet-animation: sheet-west-in;
     animation-name: var(--md-comp-sheet-animation);
     animation-timing-function: cubic-bezier(var(--md-sys-motion-easing-standard-accelerate));
     animation-duration: var(--md-sys-motion-duration-short3);
     &[open] {
         margin-left: 0;
-        --md-comp-sheet-animation: sheet-west-in;
+        --md-comp-sheet-animation: sheet-west-out;
         animation-name: var(--md-comp-sheet-animation);
         animation-timing-function: cubic-bezier(var(--md-sys-motion-easing-standard-decelerate));
     }

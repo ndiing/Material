@@ -39,6 +39,7 @@ Router.use([
             { path: "navigation-drawer-modal", load: () => import("./navigation-drawer/navigation-drawer-modal.js").then((m) => m.default) },
             { path: "navigation-rail", load: () => import("./navigation-rail/navigation-rail.js").then((m) => m.default) },
             { path: "navigation-rail-no-label", load: () => import("./navigation-rail/navigation-rail-no-label.js").then((m) => m.default) },
+            { path: "menu", load: () => import("./menu/menu.js").then((m) => m.default) },
         ],
     },
     {

@@ -10,13 +10,13 @@
     margin-left: calc(0px - var(--md-comp-sheet-width));
     background-color: var(--md-sys-color-surface);
 
-    --md-comp-sheet-animation: sheet-west-out;
+    --md-comp-sheet-animation: sheet-west-in;
     animation-name: var(--md-comp-sheet-animation);
     animation-timing-function: cubic-bezier(var(--md-sys-motion-easing-standard-accelerate));
     animation-duration: var(--md-sys-motion-duration-short3);
     &[open] {
         margin-left: 0;
-        --md-comp-sheet-animation: sheet-west-in;
+        --md-comp-sheet-animation: sheet-west-out;
         animation-name: var(--md-comp-sheet-animation);
         animation-timing-function: cubic-bezier(var(--md-sys-motion-easing-standard-decelerate));
     }

@@ -17,14 +17,13 @@
     opacity: 0;
     pointer-events: none;
 
-    --md-comp-dialog-animation: dialog-out;
+    --md-comp-dialog-animation: dialog-in;
     animation-name: var(--md-comp-dialog-animation);
     animation-timing-function: cubic-bezier(var(--md-sys-motion-easing-standard-accelerate));
     animation-duration: var(--md-sys-motion-duration-short3);
 
-    .md-dialog__wrapper {
-        visibility: hidden;
-        animation-name: dialog-wrapper-out;
+    .md-dialog__body {
+        animation-name: dialog-body-in;
         animation-timing-function: cubic-bezier(var(--md-sys-motion-easing-standard-accelerate));
         animation-duration: var(--md-sys-motion-duration-short3);
     }
@@ -32,13 +31,12 @@
     &[open] {
         opacity: 1;
         pointer-events: all;
-        --md-comp-dialog-animation: dialog-in;
+        --md-comp-dialog-animation: dialog-out;
         animation-name: var(--md-comp-dialog-animation);
         animation-timing-function: cubic-bezier(var(--md-sys-motion-easing-standard-decelerate));
 
-        .md-dialog__wrapper {
-            visibility: visible;
-            animation-name: dialog-wrapper-in;
+        .md-dialog__body {
+            animation-name: dialog-body-out;
             animation-timing-function: cubic-bezier(var(--md-sys-motion-easing-standard-decelerate));
         }
     }

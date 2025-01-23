@@ -1,7 +1,7 @@
 {
-    "version": "0.36.0",
-    "description": "My webpack project",
-    "name": "webpack-project",
+    "version": "0.37.0",
+    "description": "Material 3",
+    "name": "@ndiinginc/material",
     "scripts": {
         "build": "webpack --mode=production --node-env=production",
         "build:dev": "webpack --mode=development",

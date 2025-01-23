@@ -3,7 +3,6 @@
 // import "./ripple/ripple.js";
 // import "./tokens/tokens.js";
 // import "./popper/popper.js";
-
 import "./icon/icon.js";
 import "./image/image.js";
 import "./badge/badge.js";
@@ -30,20 +29,20 @@ import "./scrim/scrim.js";
 import "./dialog/dialog.js";
 import "./tooltip/tooltip.js";
 import "./sheet/sheet.js";
-// import "./bottom-sheet/bottom-sheet.js";
-// import "./side-sheet/side-sheet.js";
 import "./bottom-app-bar/bottom-app-bar.js";
 import "./top-app-bar/top-app-bar.js";
 import "./navigation-bar/navigation-bar.js";
 import "./navigation-drawer/navigation-drawer.js";
 import "./navigation-rail/navigation-rail.js";
+import "./menu/menu.js";
 
+// import "./bottom-sheet/bottom-sheet.js";
+// import "./side-sheet/side-sheet.js";
 // import "./carousel/carousel.js";
 // import "./chip/chip.js";
 // import "./date-picker/date-picker.js";
 // import "./time-picker/time-picker.js";
 // import "./divider/divider.js";
-// import "./menu/menu.js";
 // import "./progress-indicator/progress-indicator.js";
 // import "./search/search.js";
 // import "./slider/slider.js";

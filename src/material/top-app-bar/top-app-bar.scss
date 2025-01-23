@@ -11,14 +11,14 @@
     margin-top: calc(0px - var(--md-comp-sheet-height));
     background-color: var(--md-sys-color-surface);
 
-    --md-comp-sheet-animation: sheet-north-out;
+    --md-comp-sheet-animation: sheet-north-in;
     animation-name: var(--md-comp-sheet-animation);
     animation-timing-function: cubic-bezier(var(--md-sys-motion-easing-standard-accelerate));
     animation-duration: var(--md-sys-motion-duration-short3);
 
     &[open] {
         margin-top: 0;
-        --md-comp-sheet-animation: sheet-north-in;
+        --md-comp-sheet-animation: sheet-north-out;
         animation-name: var(--md-comp-sheet-animation);
         animation-timing-function: cubic-bezier(var(--md-sys-motion-easing-standard-decelerate));
     }
