@@ -35,6 +35,7 @@ import "./navigation-bar/navigation-bar.js";
 import "./navigation-drawer/navigation-drawer.js";
 import "./navigation-rail/navigation-rail.js";
 import "./menu/menu.js";
+import "./progress-indicator/progress-indicator.js";
 
 // import "./divider/divider.js";
 // import "./chip/chip.js";
@@ -44,7 +45,6 @@ import "./menu/menu.js";
 // import "./carousel/carousel.js";
 // import "./snackbar/snackbar.js";
 
-// import "./progress-indicator/progress-indicator.js";
 // import "./slider/slider.js";
 // import "./text-field/text-field.js";
 // import "./search/search.js";
