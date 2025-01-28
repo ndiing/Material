@@ -43,6 +43,10 @@ Router.use([
             { path: "progress-indicator", load: () => import("./progress-indicator/progress-indicator.js").then((m) => m.default) },
             { path: "slider", load: () => import("./slider/slider.js").then((m) => m.default) },
             { path: "test", load: () => import("./test/test.js").then((m) => m.default) },
+            { path: "side-sheet", load: () => import("./side-sheet/side-sheet.js").then((m) => m.default) },
+            { path: "side-sheet-modal", load: () => import("./side-sheet/side-sheet-modal.js").then((m) => m.default) },
+            { path: "bottom-sheet", load: () => import("./bottom-sheet/bottom-sheet.js").then((m) => m.default) },
+            { path: "bottom-sheet-modal", load: () => import("./bottom-sheet/bottom-sheet-modal.js").then((m) => m.default) },
         ],
     },
     {

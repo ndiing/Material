@@ -61,12 +61,10 @@ class Router {
     }
 
     static get pathname() {
-        if(this.options.historyApiFallback){
+        if (this.options.historyApiFallback) {
             return window.location.pathname;
-        }else{
-            return window.location.hash
-            .replace(/^#/,'')
-            .replace(/\?[^\?]+/,'')||'/'
+        } else {
+            return window.location.hash.replace(/^#/, "").replace(/\?[^\?]+/, "") || "/";
         }
     }
 
@@ -180,10 +178,10 @@ class Router {
      * @param {String} url
      */
     static navigate(url) {
-        if(this.options.historyApiFallback){
+        if (this.options.historyApiFallback) {
             window.history.pushState({}, "", url);
-        }else{
-            window.location.hash=url
+        } else {
+            window.location.hash = url;
         }
     }
 
@@ -240,18 +238,17 @@ class Router {
         };
         window.addEventListener("load", this.handleNavigation.bind(this));
 
-        if(this.options.historyApiFallback){
+        if (this.options.historyApiFallback) {
             window.addEventListener("popstate", this.handleNavigation.bind(this));
             const pushState = window.history.pushState;
-    
+
             window.history.pushState = function () {
                 pushState.apply(this, arguments);
                 Router.emit("popstate");
             };
-        } else{
-            window.addEventListener('hashchange',this.handleNavigation.bind(this))
+        } else {
+            window.addEventListener("hashchange", this.handleNavigation.bind(this));
         }
-
 
         window.addEventListener("click", this.handleNavigate.bind(this));
     }

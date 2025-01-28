@@ -32,6 +32,8 @@ import "./scrim/scrim.js";
 import "./dialog/dialog.js";
 import "./tooltip/tooltip.js";
 import "./sheet/sheet.js";
+import "./bottom-sheet/bottom-sheet.js";
+import "./side-sheet/side-sheet.js";
 import "./bottom-app-bar/bottom-app-bar.js";
 import "./top-app-bar/top-app-bar.js";
 import "./navigation-bar/navigation-bar.js";
@@ -42,8 +44,6 @@ import "./progress-indicator/progress-indicator.js";
 import "./slider/slider.js";
 // import "./chip/chip.js";
 
-// import "./bottom-sheet/bottom-sheet.js";
-// import "./side-sheet/side-sheet.js";
 // import "./carousel/carousel.js";
 // import "./snackbar/snackbar.js";
 

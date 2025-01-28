@@ -2,27 +2,26 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { choose } from "lit/directives/choose.js";
-import { PopperController } from "../popper/popper";
 
 /**
  * @requires MdScrimComponent
  * @requires MdIconComponent
  * @requires MdIconButtonComponent
  * @requires MdButtonComponent
- * @fires onTooltipIconButtonClick
- * @fires onTooltipButtonClick
- * @fires onTooltipShown
- * @fires onTooltipClosed
- * @fires onTooltipScrimClosed
+ * @fires onBottomSheetIconButtonClick
+ * @fires onBottomSheetButtonClick
+ * @fires onBottomSheetShown
+ * @fires onBottomSheetClosed
+ * @fires onBottomSheetScrimClosed
  */
-class MdTooltipComponent extends MdComponent {
+class MdBottomSheetComponent extends MdComponent {
     /**
-     * @typedef {Array} MdTooltipComponentIcons
+     * @typedef {Array} MdBottomSheetComponentIcons
      * @property {String} icon
      * @property {String} [component=icon]
      */
     /**
-     * @typedef {Array} MdTooltipComponentActions
+     * @typedef {Array} MdBottomSheetComponentActions
      * @property {String} icon
      * @property {String} [variant]
      * @property {String} [type]
@@ -32,7 +31,7 @@ class MdTooltipComponent extends MdComponent {
      * @property {String} [component=icon-button]
      */
     /**
-     * @typedef {Array} MdTooltipComponentButtons
+     * @typedef {Array} MdBottomSheetComponentButtons
      * @property {String} [icon]
      * @property {String} label
      * @property {String} [variant]
@@ -42,11 +41,11 @@ class MdTooltipComponent extends MdComponent {
      * @property {String} [component=button]
      */
     /**
-     * @property {MdTooltipComponentIcons} [icons]
-     * @property {MdTooltipComponentActions} [actions]
+     * @property {MdBottomSheetComponentIcons} [icons]
+     * @property {MdBottomSheetComponentActions} [actions]
      * @property {String} [label]
      * @property {String} [sublabel]
-     * @property {MdTooltipComponentButtons} [buttons]
+     * @property {MdBottomSheetComponentButtons} [buttons]
      * @property {Boolean} [open]
      */
     static properties = {
@@ -56,6 +55,7 @@ class MdTooltipComponent extends MdComponent {
         sublabel: { type: String },
         buttons: { type: Array },
         open: { type: Boolean, reflect: true },
+        modal: { type: Boolean, reflect: true },
     };
 
     /**
@@ -88,7 +88,7 @@ class MdTooltipComponent extends MdComponent {
                 .toggle="${ifDefined(item.toggle)}"
                 .selected="${ifDefined(item.selected)}"
                 .disabled="${ifDefined(item.disabled)}"
-                @click="${this.handleTooltipIconButtonClick}"
+                @click="${this.handleBottomSheetIconButtonClick}"
             ></md-icon-button>
         `
     }
@@ -105,7 +105,7 @@ class MdTooltipComponent extends MdComponent {
                 .type="${ifDefined(item.type)}"
                 .disabled="${ifDefined(item.disabled)}"
                 .selected="${ifDefined(item.selected)}"
-                @click="${this.handleTooltipButtonClick}"
+                @click="${this.handleBottomSheetButtonClick}"
             ></md-button>
         `
     }
@@ -114,7 +114,7 @@ class MdTooltipComponent extends MdComponent {
     renderSpacer(item) {
         /* prettier-ignore */
         return html`
-            <div class="md-tooltip__spacer"></div>
+            <div class="md-bottom-sheet__spacer"></div>
         `
     }
 
@@ -134,32 +134,32 @@ class MdTooltipComponent extends MdComponent {
         /* prettier-ignore */
         return html`
             ${this.icons?.length||this.label||this.sublabel||this.actions?.length?html`
-                <div class="md-tooltip__header">
+                <div class="md-bottom-sheet__header">
                     ${this.icons?.length?html`
-                        <div class="md-tooltip__icons">
+                        <div class="md-bottom-sheet__icons">
                             ${this.icons.map(icon=>this.renderItem(icon,'icon'))}
                         </div>    
                     `:nothing}
                     ${this.label||this.sublabel?html`
-                        <div class="md-tooltip__labels">
-                            ${this.label?html`<div class="md-tooltip__label">${this.label}</div>`:nothing}
-                            ${this.sublabel?html`<div class="md-tooltip__sublabel">${this.sublabel}</div>`:nothing}
+                        <div class="md-bottom-sheet__labels">
+                            ${this.label?html`<div class="md-bottom-sheet__label">${this.label}</div>`:nothing}
+                            ${this.sublabel?html`<div class="md-bottom-sheet__sublabel">${this.sublabel}</div>`:nothing}
                         </div>
                     `:nothing}
                     ${this.actions?.length?html`
-                        <div class="md-tooltip__actions">
+                        <div class="md-bottom-sheet__actions">
                             ${this.actions.map(action=>this.renderItem(action,'icon-button'))}
                         </div>    
                     `:nothing}
                 </div>
             `:nothing}
             ${this.body?.length||this.buttons?.length?html`
-                <div class="md-tooltip__wrapper">
-                    ${this.body?.length?html`<div class="md-tooltip__body">${this.body}</div>`:nothing}
+                <div class="md-bottom-sheet__wrapper">
+                    ${this.body?.length?html`<div class="md-bottom-sheet__body">${this.body}</div>`:nothing}
                     ${this.buttons?.length?html`
-                        <div class="md-tooltip__footer">
+                        <div class="md-bottom-sheet__footer">
                             ${this.buttons?.length?html`
-                                <div class="md-tooltip__buttons">
+                                <div class="md-bottom-sheet__buttons">
                                     ${this.buttons.map(button=>this.renderItem(button,'button'))}
                                 </div>    
                             `:nothing}
@@ -171,59 +171,83 @@ class MdTooltipComponent extends MdComponent {
     }
 
     /**@private*/
-    connectedCallback() {
+    async connectedCallback() {
         super.connectedCallback();
-        this.classList.add("md-tooltip");
+        this.bottomSheetScrim = document.createElement("md-scrim");
+        this.parentElement.insertBefore(this.bottomSheetScrim, this.nextElementSibling);
+        this.handleBottomSheetScrimClosed = this.handleBottomSheetScrimClosed.bind(this);
+        this.bottomSheetScrim.addEventListener("onScrimClosed", this.handleBottomSheetScrimClosed);
+        if (this.modal && this.open) this.bottomSheetScrim.show();
+        this.classList.add("md-bottom-sheet");
+        this.style.setProperty("--md-comp-sheet-animation", "none");
+        await this.updateComplete;
+
+        this.style.setProperty("--md-comp-sheet-width", this.clientWidth + "px");
+        this.style.setProperty("--md-comp-sheet-height", this.clientHeight + "px");
     }
 
     /**@private*/
     disconnectedCallback() {
         super.disconnectedCallback();
-        this.classList.remove("md-tooltip");
+        this.bottomSheetScrim.removeEventListener("onScrimClosed", this.handleBottomSheetScrimClosed);
+        this.bottomSheetScrim.remove();
+        this.classList.remove("md-bottom-sheet");
+        this.style.setProperty("--md-comp-sheet-animation", "none");
     }
 
     /**@private*/
-    handleTooltipIconButtonClick(event) {
-        this.emit("onTooltipIconButtonClick", { event });
+    updated(changedProperties) {
+        super.updated(changedProperties);
+
+        if (changedProperties.has("modal")) {
+            this.classList.toggle(`md-bottom-sheet--modal`, !!this.modal);
+        }
+    }
+
+    /**@private*/
+    handleBottomSheetIconButtonClick(event) {
+        this.emit("onBottomSheetIconButtonClick", { event });
     }
     /**@private*/
-    handleTooltipButtonClick(event) {
-        this.emit("onTooltipButtonClick", { event });
+    handleBottomSheetButtonClick(event) {
+        this.emit("onBottomSheetButtonClick", { event });
     }
 
     /**
      *
      */
-    show(options) {
-        options = {
-            container: this,
-            placements: ["bottom", "top", "right", "left", "top-right", "bottom-right", "top-left", "bottom-left"],
-            offset: 8,
-            ...options,
-        };
+    show() {
+        this.style.removeProperty("--md-comp-sheet-animation");
+        if (this.modal) this.bottomSheetScrim.show();
         this.open = true;
-        this.popper = new PopperController();
-        this.popper.show(options);
-        this.emit("onTooltipShown");
+        this.emit("onBottomSheetShown");
     }
 
     /**
      *
      */
     close() {
+        this.style.removeProperty("--md-comp-sheet-animation");
         this.open = false;
-        this.emit("onTooltipClosed");
+        if (this.bottomSheetScrim.open) this.bottomSheetScrim.close();
+        this.emit("onBottomSheetClosed");
     }
 
     /**
      *
      */
-    toggle(options) {
+    toggle() {
         if (this.open) this.close();
-        else this.show(options);
+        else this.show();
+    }
+
+    /**@private*/
+    handleBottomSheetScrimClosed(event) {
+        if (this.open) this.close();
+        this.emit("onBottomSheetScrimClosed", { event });
     }
 }
 
-customElements.define("md-tooltip", MdTooltipComponent);
+customElements.define("md-bottom-sheet", MdBottomSheetComponent);
 
-export { MdTooltipComponent };
+export { MdBottomSheetComponent };
