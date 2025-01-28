@@ -2,7 +2,7 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { choose } from "lit/directives/choose.js";
-import { setPlacement } from "../popper/popper";
+import { PopperController } from "../popper/popper";
 
 /**
  * @requires MdScrimComponent
@@ -51,7 +51,7 @@ class MdMenuComponent extends MdComponent {
      */
     static properties = {
         open: { type: Boolean, reflect: true },
-        items:{type:Array}
+        items: { type: Array },
     };
 
     /**
@@ -59,10 +59,8 @@ class MdMenuComponent extends MdComponent {
      */
     constructor() {
         super();
-        this.items=[]
+        this.items = [];
     }
-
-
 
     /**@private*/
     render() {
@@ -93,28 +91,16 @@ class MdMenuComponent extends MdComponent {
     /**
      *
      */
-    show(options={}) {
+    show(options = {}) {
         this.style.removeProperty("--md-comp-menu-animation");
         options = {
             container: this,
-            placements: [
-                'bottom-start',
-                'bottom-end',
-                'bottom',
-                'top-start',
-                'top-end',
-                'top',
-                'right-start',
-                'right-end',
-                'right',
-                'left-start',
-                'left-end',
-                'left',
-            ],
+            placements: ["bottom-start", "bottom-end", "bottom", "top-start", "top-end", "top", "right-start", "right-end", "right", "left-start", "left-end", "left"],
             ...options,
         };
         this.open = true;
-        setPlacement(options);
+        this.popper=new PopperController();
+        this.popover.show(options)
         this.emit("onMenuShown");
     }
 
@@ -135,7 +121,6 @@ class MdMenuComponent extends MdComponent {
         if (this.open) this.close();
         else this.show(options);
     }
-
 }
 
 customElements.define("md-menu", MdMenuComponent);

@@ -1,7 +1,9 @@
+
+class PopperController{
 /**
  *
  */
-const methods = {
+ methods = {
     "top-end": ({ containerRect, triggerRect, offset } = {}) => ({ left: triggerRect.right - containerRect.width, top: triggerRect.top - containerRect.height - offset }),
     top: ({ containerRect, triggerRect, offset } = {}) => ({ left: triggerRect.left - (containerRect.width - triggerRect.width) / 2, top: triggerRect.top - containerRect.height - offset }),
     "top-start": ({ containerRect, triggerRect, offset } = {}) => ({ left: triggerRect.left, top: triggerRect.top - containerRect.height - offset }),
@@ -36,14 +38,14 @@ const methods = {
  *
  * @param {PlacementOptions} options
  */
-function setPlacement(options = {}) {
-    const { container = undefined, trigger = undefined, boundary = closestScrollable(container), offset = 0, placements = ["top-end", "top", "top-start", "top-right", "right-end", "right", "right-start", "bottom-right", "bottom-start", "bottom", "bottom-end", "bottom-left", "left-start", "left", "left-end", "top-left"] } = options;
+ show(options = {}) {
+    const { container = undefined, trigger = undefined, boundary = this.closestScrollable(container), offset = 0, placements = ["top-end", "top", "top-start", "top-right", "right-end", "right", "right-start", "bottom-right", "bottom-start", "bottom", "bottom-end", "bottom-left", "left-start", "left", "left-end", "top-left"] } = options;
 
     let left;
     let top;
 
     for (let i = 0; i < placements.length; i++) {
-        const method = methods[placements[i]];
+        const method = this.methods[placements[i]];
 
         const containerRect = container.getBoundingClientRect();
         const triggerRect = trigger.getBoundingClientRect();
@@ -66,7 +68,7 @@ function setPlacement(options = {}) {
  * @param {HTMLElement} element
  * @returns {HTMLElement}
  */
-function closestScrollable(element) {
+ closestScrollable(element) {
     let current = element;
     while (current) {
         const style = window.getComputedStyle(current);
@@ -79,4 +81,7 @@ function closestScrollable(element) {
     return null;
 }
 
-export { methods, setPlacement, closestScrollable };
+
+}
+
+export{PopperController}

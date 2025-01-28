@@ -40,10 +40,10 @@ class MdSliderComponent extends MdComponent {
     get indicators() {
         if (this.variant === "centered") return 3;
         else if (this.variant === "continuous") return 1;
-        else if (this.variant === "discrete") return (this.max / this.step) + 1;
+        else if (this.variant === "discrete") return this.max / this.step + 1;
         else if (this.variant === "range-selection") return 2;
     }
-    renderSliderWrapper(value,index) {
+    renderSliderWrapper(value, index) {
         /* prettier-ignore */
         return html`
             <div class="md-slider__wrapper">
@@ -80,14 +80,14 @@ class MdSliderComponent extends MdComponent {
         if (this.value === undefined) {
             this.value = [this.max < this.min ? this.min : this.min + (this.max - this.min) / 2];
         }
-        if (this.value[0] < 0) this.variant=("centered");
-        else if (this.step > 1) this.variant=("discrete");
-        else if (this.value.length > 1) this.variant=("range-selection");
-        else this.variant=("continuous");
+        if (this.value[0] < 0) this.variant = "centered";
+        else if (this.step > 1) this.variant = "discrete";
+        else if (this.value.length > 1) this.variant = "range-selection";
+        else this.variant = "continuous";
         this.updateValue();
     }
-     /**@private*/
-     updated(changedProperties) {
+    /**@private*/
+    updated(changedProperties) {
         super.updated(changedProperties);
 
         if (changedProperties.has("variant")) {
@@ -96,17 +96,28 @@ class MdSliderComponent extends MdComponent {
             });
         }
     }
-    handleSliderNativeInput(event){
-        const native=event.currentTarget
-        const data=native.data
-        this.value[data.index]=Number(native.value)
-        native.value=this.value[data.index]
+
+    get sliderNatives() {
+        return this.querySelectorAll(".md-slider__native");
+    }
+
+    handleSliderNativeInput(event) {
+        const native = event.currentTarget;
+        const data = native.data;
+
+        if (this.value.length > 1) {
+            this.sliderNatives[0].value = Math.min(this.sliderNatives[0].value, this.value[1]);
+            this.sliderNatives[1].value = Math.max(this.sliderNatives[1].value, this.value[0]);
+        }
+
+        this.value[data.index] = Number(native.value);
+        native.value = this.value[data.index];
 
         this.updateValue();
 
-        this.requestUpdate()
+        this.requestUpdate();
 
-        this.emit('onSliderNativeInput',{event})
+        this.emit("onSliderNativeInput", { event });
     }
     updateValue() {
         this.value.forEach((value, index) => {
@@ -114,8 +125,8 @@ class MdSliderComponent extends MdComponent {
         });
     }
 
-    percentage(value,min=this.min,max=this.max,){
-        return ((value - min) / (max - min)) 
+    percentage(value, min = this.min, max = this.max) {
+        return (value - min) / (max - min);
     }
 }
 

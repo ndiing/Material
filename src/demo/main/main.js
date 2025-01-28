@@ -7,10 +7,13 @@ class DemoMain extends MdComponent {
         super();
 
         this.items = [
-            { label: "Layout", children:[
-                { label: "Grid", routerLink: "/layout-grid" },
-                { label: "Border", routerLink: "/layout-border" },
-            ] },
+            {
+                label: "Layout",
+                children: [
+                    { label: "Grid", routerLink: "/layout-grid" },
+                    { label: "Border", routerLink: "/layout-border" },
+                ],
+            },
             { label: "Icon", routerLink: "/icon" },
             { label: "Image", routerLink: "/image" },
             { label: "Badge", routerLink: "/badge" },
@@ -24,10 +27,13 @@ class DemoMain extends MdComponent {
             { label: "Card", routerLink: "/card" },
             { label: "Scrim", routerLink: "/scrim" },
             { label: "Dialog", routerLink: "/dialog" },
-            { label: "Sheet", children:[
-                { label: "Default", routerLink: "/sheet" },
-                { label: "Modal", routerLink: "/sheet-modal" },
-            ] },
+            {
+                label: "Sheet",
+                children: [
+                    { label: "Default", routerLink: "/sheet" },
+                    { label: "Modal", routerLink: "/sheet-modal" },
+                ],
+            },
             { label: "List", routerLink: "/list" },
             { label: "Tooltip", routerLink: "/tooltip" },
             { label: "Tree", routerLink: "/tree" },
@@ -62,11 +68,9 @@ class DemoMain extends MdComponent {
             { label: "Slider", routerLink: "/slider" },
         ];
         this.items.sort((a, b) => {
-            
-            if (a.children && !b.children) return -1; 
-            if (!a.children && b.children) return 1;  
-        
-            
+            if (a.children && !b.children) return -1;
+            if (!a.children && b.children) return 1;
+
             return a.label.localeCompare(b.label);
         });
         function select(items) {
@@ -84,7 +88,7 @@ class DemoMain extends MdComponent {
         return html`
             <div class="md-layout__border">
                 <md-top-app-bar class="demo-main-top-app-bar" open label="Material 3" .leadingActions="${this.leadingActions}" @onTopAppBarIconButtonClick="${() => navigationDrawer.toggle()}"></md-top-app-bar>
-                <md-navigation-drawer id="navigationDrawer" view="tree"  .items="${this.items}" @onTreeItemClick="${() => {}}"></md-navigation-drawer>
+                <md-navigation-drawer id="navigationDrawer" view="tree" .items="${this.items}" @onTreeItemClick="${() => {}}"></md-navigation-drawer>
                 <md-sheet region="center">
                     <md-outlet></md-outlet>
                 </md-sheet>

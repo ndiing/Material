@@ -42,6 +42,7 @@ Router.use([
             { path: "menu", load: () => import("./menu/menu.js").then((m) => m.default) },
             { path: "progress-indicator", load: () => import("./progress-indicator/progress-indicator.js").then((m) => m.default) },
             { path: "slider", load: () => import("./slider/slider.js").then((m) => m.default) },
+            { path: "test", load: () => import("./test/test.js").then((m) => m.default) },
         ],
     },
     {

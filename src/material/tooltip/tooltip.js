@@ -2,7 +2,7 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { choose } from "lit/directives/choose.js";
-import { setPlacement } from "../popper/popper";
+import { PopperController,  } from "../popper/popper";
 
 /**
  * @requires MdScrimComponent
@@ -202,7 +202,8 @@ class MdTooltipComponent extends MdComponent {
             ...options,
         };
         this.open = true;
-        setPlacement(options);
+        this.popper=new PopperController();
+        this.popper.show(options)
         this.emit("onTooltipShown");
     }
 

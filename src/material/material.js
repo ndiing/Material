@@ -1,10 +1,13 @@
 // import "./component/component.js";
-// import "./router/router.js";
+import "./router/router.js";
 // import "./ripple/ripple.js";
 // import "./tokens/tokens.js";
 // import "./popper/popper.js";
+// import "./dragger/dragger.js";
+
 import "./icon/icon.js";
 import "./image/image.js";
+import "./divider/divider.js";
 import "./badge/badge.js";
 import "./button/button.js";
 import "./fab/fab.js";
@@ -37,13 +40,15 @@ import "./navigation-rail/navigation-rail.js";
 import "./menu/menu.js";
 import "./progress-indicator/progress-indicator.js";
 import "./slider/slider.js";
-// import "./divider/divider.js";
 // import "./chip/chip.js";
+
 // import "./bottom-sheet/bottom-sheet.js";
 // import "./side-sheet/side-sheet.js";
 // import "./carousel/carousel.js";
 // import "./snackbar/snackbar.js";
+
 // import "./text-field/text-field.js";
 // import "./search/search.js";
+
 // import "./date-picker/date-picker.js";
 // import "./time-picker/time-picker.js";

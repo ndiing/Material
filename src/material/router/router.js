@@ -61,7 +61,13 @@ class Router {
     }
 
     static get pathname() {
-        return window.location.pathname;
+        if(this.options.historyApiFallback){
+            return window.location.pathname;
+        }else{
+            return window.location.hash
+            .replace(/^#/,'')
+            .replace(/\?[^\?]+/,'')||'/'
+        }
     }
 
     /**@private*/
@@ -174,7 +180,11 @@ class Router {
      * @param {String} url
      */
     static navigate(url) {
-        window.history.pushState({}, "", url);
+        if(this.options.historyApiFallback){
+            window.history.pushState({}, "", url);
+        }else{
+            window.location.hash=url
+        }
     }
 
     /**@private*/
@@ -225,17 +235,24 @@ class Router {
     static use(routes = [], options = {}) {
         this.routes = routes;
         this.options = {
-            historyApiFallback: true,
+            historyApiFallback: false,
             ...options,
         };
         window.addEventListener("load", this.handleNavigation.bind(this));
-        window.addEventListener("popstate", this.handleNavigation.bind(this));
-        const pushState = window.history.pushState;
 
-        window.history.pushState = function () {
-            pushState.apply(this, arguments);
-            Router.emit("popstate");
-        };
+        if(this.options.historyApiFallback){
+            window.addEventListener("popstate", this.handleNavigation.bind(this));
+            const pushState = window.history.pushState;
+    
+            window.history.pushState = function () {
+                pushState.apply(this, arguments);
+                Router.emit("popstate");
+            };
+        } else{
+            window.addEventListener('hashchange',this.handleNavigation.bind(this))
+        }
+
+
         window.addEventListener("click", this.handleNavigate.bind(this));
     }
 }

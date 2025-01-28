@@ -10,12 +10,12 @@ class DemoNavigationList extends MdComponent {
                         <div class="md-menu">
                             <md-navigation-list
                                 .items="${[
-                                    //
-                                    { label: "Item 1", selected: true },
-                                    { label: "Item 2", badge: 0 },
-                                    { label: "Item 3", badge: 1 },
-                                    { label: "Item 4", badge: 1000 },
-                                ]}"
+                        //
+                        { label: "Item 1", selected: true },
+                        { label: "Item 2", badge: 0 },
+                        { label: "Item 3", badge: 1 },
+                        { label: "Item 4", badge: 1000 },
+                    ]}"
                             ></md-navigation-list>
                         </div>
                     </div>
@@ -23,11 +23,11 @@ class DemoNavigationList extends MdComponent {
                         <div class="md-menu">
                             <md-navigation-list
                                 .items="${[
-                                    { icon: "image", label: "Item 1", selected: true },
-                                    { icon: "image", label: "Item 2", badge: 0 },
-                                    { icon: "image", label: "Item 3", badge: 1 },
-                                    { icon: "image", label: "Item 4", badge: 1000 },
-                                ]}"
+                        { icon: "image", label: "Item 1", selected: true },
+                        { icon: "image", label: "Item 2", badge: 0 },
+                        { icon: "image", label: "Item 3", badge: 1 },
+                        { icon: "image", label: "Item 4", badge: 1000 },
+                    ]}"
                             ></md-navigation-list>
                         </div>
                     </div> -->
