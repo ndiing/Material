@@ -1,5 +1,5 @@
 // import "./component/component.js";
-import "./router/router.js";
+// import "./router/router.js";
 // import "./ripple/ripple.js";
 // import "./tokens/tokens.js";
 // import "./popper/popper.js";
