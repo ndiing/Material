@@ -1,7 +1,10 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
-
 class DemoSheetModal extends MdComponent {
+
+/**
+ * @private
+ */
     render() {
         return html`
             <div class="md-layout__border">
@@ -21,7 +24,5 @@ class DemoSheetModal extends MdComponent {
         `;
     }
 }
-
 customElements.define("demo-sheet-modal", DemoSheetModal);
-
 export default document.createElement("demo-sheet-modal");

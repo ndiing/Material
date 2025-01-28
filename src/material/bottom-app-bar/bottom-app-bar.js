@@ -2,7 +2,6 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { choose } from "lit/directives/choose.js";
-
 class MdBottomAppBarComponent extends MdComponent {
     static properties = {
         actions: { type: Array },
@@ -10,10 +9,17 @@ class MdBottomAppBarComponent extends MdComponent {
         open: { type: Boolean, reflect: true },
     };
 
+/**
+ * @private
+ */
     constructor() {
         super();
     }
 
+/**
+ * @private
+ * @param {String} item
+ */
     renderIconButton(item) {
         /* prettier-ignore */
         return html`
@@ -31,6 +37,10 @@ class MdBottomAppBarComponent extends MdComponent {
         `
     }
 
+/**
+ * @private
+ * @param {String} item
+ */
     renderFab(item) {
         /* prettier-ignore */
         return html`
@@ -47,6 +57,9 @@ class MdBottomAppBarComponent extends MdComponent {
         `
     }
 
+/**
+ * @private
+ */
     render() {
         /* prettier-ignore */
         return html`
@@ -58,54 +71,73 @@ class MdBottomAppBarComponent extends MdComponent {
             ${this.fab?this.renderFab(this.fab):nothing}
         `
     }
-
     async connectedCallback() {
         super.connectedCallback();
-
         this.classList.add("md-bottom-app-bar");
         this.style.setProperty("--md-comp-sheet-animation", "none");
         await this.updateComplete;
-
         this.style.setProperty("--md-comp-sheet-width", this.clientWidth + "px");
         this.style.setProperty("--md-comp-sheet-height", this.clientHeight + "px");
     }
 
+/**
+ *
+ */
     disconnectedCallback() {
         super.disconnectedCallback();
         this.classList.remove("md-bottom-app-bar");
         this.style.setProperty("--md-comp-sheet-animation", "none");
     }
 
+/**
+ *
+ * @param {Object} changedProperties
+ */
     updated(changedProperties) {
         super.updated(changedProperties);
     }
 
+/**
+ * @private
+ * @param {Object} event
+ */
     handleBottomAppBarIconButtonClick(event) {
         this.emit("onBottomAppBarIconButtonClick", { event });
     }
 
+/**
+ * @private
+ * @param {Object} event
+ */
     handleBottomAppBarFabClick(event) {
         this.emit("onBottomAppBarFabClick", { event });
     }
 
+/**
+ *
+ */
     show() {
         this.style.removeProperty("--md-comp-sheet-animation");
         this.open = true;
         this.emit("onBottomAppBarShown");
     }
 
+/**
+ *
+ */
     close() {
         this.style.removeProperty("--md-comp-sheet-animation");
         this.open = false;
         this.emit("onBottomAppBarClosed");
     }
 
+/**
+ *
+ */
     toggle() {
         if (this.open) this.close();
         else this.show();
     }
 }
-
 customElements.define("md-bottom-app-bar", MdBottomAppBarComponent);
-
 export { MdBottomAppBarComponent };

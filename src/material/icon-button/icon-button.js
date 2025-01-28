@@ -2,7 +2,6 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { RippleController } from "../ripple/ripple";
 import { ifDefined } from "lit/directives/if-defined.js";
-
 class MdIconButtonComponent extends MdComponent {
     static properties = {
         icon: { type: String },
@@ -12,15 +11,16 @@ class MdIconButtonComponent extends MdComponent {
         selected: { type: Boolean, reflect: true },
         disabled: { type: Boolean, reflect: true },
     };
-
     /* prettier-ignore */
-
     variants=[
         'filled',
         'filled-tonal',
         'outlined',
     ]
 
+/**
+ * @private
+ */
     constructor() {
         super();
         this.type = "icon-button";
@@ -31,6 +31,9 @@ class MdIconButtonComponent extends MdComponent {
         });
     }
 
+/**
+ * @private
+ */
     render() {
         /* prettier-ignore */
         return html`
@@ -42,6 +45,9 @@ class MdIconButtonComponent extends MdComponent {
         `
     }
 
+/**
+ *
+ */
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-icon-button");
@@ -49,15 +55,21 @@ class MdIconButtonComponent extends MdComponent {
         this.addEventListener("click", this.handleIconButtonClick);
     }
 
+/**
+ *
+ */
     disconnectedCallback() {
         super.disconnectedCallback();
         this.classList.remove("md-icon-button");
         this.removeEventListener("click", this.handleIconButtonClick);
     }
 
+/**
+ *
+ * @param {Object} changedProperties
+ */
     updated(changedProperties) {
         super.updated(changedProperties);
-
         if (changedProperties.has("variant")) {
             this.variants.forEach((variant) => {
                 this.classList.toggle(`md-icon-button--${variant}`, variant === this.variant);
@@ -65,6 +77,10 @@ class MdIconButtonComponent extends MdComponent {
         }
     }
 
+/**
+ * @private
+ * @param {Object} event
+ */
     handleIconButtonClick(event) {
         if (this.toggle) {
             this.selected = !this.selected;
@@ -72,7 +88,5 @@ class MdIconButtonComponent extends MdComponent {
         this.emit("onIconButtonClick", { event });
     }
 }
-
 customElements.define("md-icon-button", MdIconButtonComponent);
-
 export { MdIconButtonComponent };

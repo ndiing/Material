@@ -1,7 +1,10 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
-
 class DemoTree extends MdComponent {
+
+/**
+ * @private
+ */
     constructor() {
         super();
         this.items = [
@@ -685,6 +688,10 @@ class DemoTree extends MdComponent {
             },
         ];
     }
+
+/**
+ * @private
+ */
     render() {
         return html`
             <div class="md-layout">
@@ -697,7 +704,5 @@ class DemoTree extends MdComponent {
         `;
     }
 }
-
 customElements.define("demo-tree", DemoTree);
-
 export default document.createElement("demo-tree");

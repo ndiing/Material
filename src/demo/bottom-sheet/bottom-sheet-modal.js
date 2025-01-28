@@ -1,7 +1,10 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
-
 class DemoBottomSheetModal extends MdComponent {
+
+/**
+ * @private
+ */
     render() {
         return html`
             <div class="md-layout__border">
@@ -15,7 +18,5 @@ class DemoBottomSheetModal extends MdComponent {
         `;
     }
 }
-
 customElements.define("demo-bottom-sheet-modal", DemoBottomSheetModal);
-
 export default document.createElement("demo-bottom-sheet-modal");

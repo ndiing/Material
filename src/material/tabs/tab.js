@@ -2,7 +2,6 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { RippleController } from "../ripple/ripple";
-
 class MdTabComponent extends MdComponent {
     static properties = {
         icon: { type: String },
@@ -15,16 +14,21 @@ class MdTabComponent extends MdComponent {
         badge: { type: Number },
     };
 
+/**
+ * @private
+ */
     constructor() {
         super();
         this.rippleOptions = {};
     }
 
+/**
+ * @private
+ */
     render() {
         /* prettier-ignore */
         return html`
             ${this.icon?html`<md-icon class="md-tab__icon">${this.icon}</md-icon>`:nothing}
-
             ${this.label||this.sublabel?html`
                 <div class="md-tab__labels">
                     ${this.label?html`<div class="md-tab__label">${this.label}</div>`:nothing}
@@ -32,33 +36,24 @@ class MdTabComponent extends MdComponent {
                 </div>
             `:nothing}
             ${this.text?html`<div class="md-tab__text">${this.text}</div>`:nothing}
-
             ${this.badge!==undefined?html`<md-badge class="md-tab__badge" .label="${this.badge}"></md-badge>`:nothing}
         `
     }
-
     async connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-tab");
-
         await this.updateComplete;
-
         this.ripple = new RippleController(this, this.rippleOptions);
     }
-
     async updated(changedProperties) {
         super.updated(changedProperties);
-
         if (changedProperties.has("icon")) {
             this.classList.toggle("md-tab--with-icon", !!this.icon);
         }
-
         if (changedProperties.has("selected") && this.selected) {
             this.emit("onTabSelected", { tab: this });
         }
     }
 }
-
 customElements.define("md-tab", MdTabComponent);
-
 export { MdTabComponent };

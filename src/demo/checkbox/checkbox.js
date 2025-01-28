@@ -1,7 +1,10 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
-
 class DemoCheckbox extends MdComponent {
+
+/**
+ * @private
+ */
     render() {
         return html`
             <div class="md-layout">
@@ -20,7 +23,5 @@ class DemoCheckbox extends MdComponent {
         `;
     }
 }
-
 customElements.define("demo-checkbox", DemoCheckbox);
-
 export default document.createElement("demo-checkbox");

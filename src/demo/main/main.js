@@ -1,11 +1,13 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
 import { Router } from "../../material/router/router";
-
 class DemoMain extends MdComponent {
+
+/**
+ * @private
+ */
     constructor() {
         super();
-
         this.items = [
             {
                 label: "Layout",
@@ -74,7 +76,6 @@ class DemoMain extends MdComponent {
         this.items.sort((a, b) => {
             if (a.children && !b.children) return -1;
             if (!a.children && b.children) return 1;
-
             return a.label.localeCompare(b.label);
         });
         function select(items) {
@@ -88,6 +89,10 @@ class DemoMain extends MdComponent {
         select(this.items);
         this.leadingActions = [{ icon: "menu" }];
     }
+
+/**
+ * @private
+ */
     render() {
         return html`
             <div class="md-layout__border">
@@ -100,7 +105,5 @@ class DemoMain extends MdComponent {
         `;
     }
 }
-
 customElements.define("demo-main", DemoMain);
-
 export default document.createElement("demo-main");

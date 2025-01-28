@@ -1,7 +1,10 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
-
 class DemoLayoutGrid extends MdComponent {
+
+/**
+ * @private
+ */
     render() {
         return html`
             <div class="md-layout">
@@ -14,7 +17,5 @@ class DemoLayoutGrid extends MdComponent {
         `;
     }
 }
-
 customElements.define("demo-layout-grid", DemoLayoutGrid);
-
 export default document.createElement("demo-layout-grid");

@@ -1,7 +1,10 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
-
 class DemoUser extends MdComponent {
+
+/**
+ * @private
+ */
     render() {
         return html`
             <h1>User</h1>
@@ -9,7 +12,5 @@ class DemoUser extends MdComponent {
         `;
     }
 }
-
 customElements.define("demo-user", DemoUser);
-
 export default document.createElement("demo-user");

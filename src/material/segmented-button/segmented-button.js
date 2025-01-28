@@ -1,25 +1,30 @@
 import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
-
 class MdSegmentedButtonComponent extends MdComponent {
     static properties = {
         items: { type: Array },
         type: { type: String },
     };
-
     /* prettier-ignore */
     types=[
         'single-select',
         'multi-select',
     ]
 
+/**
+ * @private
+ */
     constructor() {
         super();
         this.items = [];
         this.type = "single-select";
     }
 
+/**
+ * @private
+ * @param {String} item
+ */
     renderButton(item) {
         /* prettier-ignore */
         return html`
@@ -37,15 +42,25 @@ class MdSegmentedButtonComponent extends MdComponent {
         `
     }
 
+/**
+ * @private
+ */
     render() {
         return this.items.map((item) => this.renderButton(item));
     }
 
+/**
+ *
+ */
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-segmented-button");
     }
 
+/**
+ * @private
+ * @param {Object} event
+ */
     handleSegmentedButtonItemClick(event) {
         const data = event.currentTarget.data;
         if (this.type === "single-select") {
@@ -59,7 +74,5 @@ class MdSegmentedButtonComponent extends MdComponent {
         this.emit("onSegmentedButtonItemClick", { event });
     }
 }
-
 customElements.define("md-segmented-button", MdSegmentedButtonComponent);
-
 export { MdSegmentedButtonComponent };

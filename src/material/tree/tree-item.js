@@ -2,7 +2,6 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { RippleController } from "../ripple/ripple";
-
 class MdTreeItemComponent extends MdComponent {
     static properties = {
         selected: { type: Boolean, reflect: true },
@@ -15,6 +14,9 @@ class MdTreeItemComponent extends MdComponent {
         routerLink: { type: String, reflect: true },
     };
 
+/**
+ * @private
+ */
     constructor() {
         super();
         this.ripple = new RippleController(this, {});
@@ -22,19 +24,20 @@ class MdTreeItemComponent extends MdComponent {
         this.nodeIcons = ["folder", "folder_open"];
         this.leafIcons = ["draft", "draft"];
     }
-
     get action() {
         if (!this.actions?.length) return;
         if (this.data.children?.length) return this.actions[~~this.expanded];
         else return [" ", ""][~~(this.indent === 0)];
     }
-
     get icon() {
         if (!this.leafIcons?.length) return;
         if (this.data.children?.length) return this.nodeIcons[~~this.expanded];
         else return this.leafIcons[~~this.selected];
     }
 
+/**
+ * @private
+ */
     render() {
         /* prettier-ignore */
         return html`
@@ -44,21 +47,16 @@ class MdTreeItemComponent extends MdComponent {
             ${this.label?html`<div class="md-tree__label">${this.label}</div>`:nothing}
         `
     }
-
     async connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-tree__item");
     }
-
     async updated(changedProperties) {
         super.updated(changedProperties);
-
         if (changedProperties.has("selected") && this.selected) {
             this.emit("onTreeItemSelected", { treeItem: this });
         }
     }
 }
-
 customElements.define("md-tree-item", MdTreeItemComponent);
-
 export { MdTreeItemComponent };

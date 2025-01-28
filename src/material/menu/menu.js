@@ -3,18 +3,23 @@ import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { choose } from "lit/directives/choose.js";
 import { PopperController } from "../popper/popper";
-
 class MdMenuComponent extends MdComponent {
     static properties = {
         open: { type: Boolean, reflect: true },
         items: { type: Array },
     };
 
+/**
+ * @private
+ */
     constructor() {
         super();
         this.items = [];
     }
 
+/**
+ * @private
+ */
     render() {
         /* prettier-ignore */
         return html`
@@ -23,7 +28,6 @@ class MdMenuComponent extends MdComponent {
             ></md-navigation-list>
         `
     }
-
     async connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-menu");
@@ -33,11 +37,18 @@ class MdMenuComponent extends MdComponent {
         this.style.setProperty("--md-comp-menu-width", this.clientWidth + "px");
     }
 
+/**
+ *
+ */
     disconnectedCallback() {
         super.disconnectedCallback();
         this.classList.remove("md-menu");
     }
 
+/**
+ *
+ * @param {String} options
+ */
     show(options = {}) {
         this.style.removeProperty("--md-comp-menu-animation");
         options = {
@@ -51,19 +62,23 @@ class MdMenuComponent extends MdComponent {
         this.emit("onMenuShown");
     }
 
+/**
+ *
+ */
     close() {
         this.style.removeProperty("--md-comp-menu-animation");
-
         this.open = false;
         this.emit("onMenuClosed");
     }
 
+/**
+ *
+ * @param {String} options
+ */
     toggle(options) {
         if (this.open) this.close();
         else this.show(options);
     }
 }
-
 customElements.define("md-menu", MdMenuComponent);
-
 export { MdMenuComponent };

@@ -1,7 +1,10 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
-
 class DemoList extends MdComponent {
+
+/**
+ * @private
+ */
     render() {
         return html`
             <div class="md-layout">
@@ -25,7 +28,6 @@ class DemoList extends MdComponent {
                             type="multi-select"
                         ></md-list>
                     </div>
-
                     <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <md-list
                             .items="${[
@@ -45,7 +47,6 @@ class DemoList extends MdComponent {
                             type="multi-select"
                         ></md-list>
                     </div>
-
                     <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <md-list
                             .items="${[
@@ -65,7 +66,6 @@ class DemoList extends MdComponent {
                             type="multi-select"
                         ></md-list>
                     </div>
-
                     <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <md-list
                             .items="${[
@@ -85,7 +85,6 @@ class DemoList extends MdComponent {
                             type="multi-select"
                         ></md-list>
                     </div>
-
                     <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <md-list .items="${[{ label: "Headline", sublabel: "Supporting text that is long enough to fill up multiple lines" }, { label: "Headline", sublabel: "Supporting text" }, { label: "Headline" }]}"></md-list>
                     </div>
@@ -99,7 +98,6 @@ class DemoList extends MdComponent {
                             type="multi-select"
                         ></md-list>
                     </div>
-
                     <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <md-list
                             .items="${[
@@ -120,7 +118,6 @@ class DemoList extends MdComponent {
                             type="multi-select"
                         ></md-list>
                     </div>
-
                     <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <md-list
                             .items="${[
@@ -139,7 +136,6 @@ class DemoList extends MdComponent {
                             ]}"
                         ></md-list>
                     </div>
-
                     <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <md-list
                             .items="${[
@@ -163,7 +159,5 @@ class DemoList extends MdComponent {
         `;
     }
 }
-
 customElements.define("demo-list", DemoList);
-
 export default document.createElement("demo-list");

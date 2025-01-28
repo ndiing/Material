@@ -1,7 +1,10 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
-
 class DemoBottomAppBar extends MdComponent {
+
+/**
+ * @private
+ */
     render() {
         return html`
             <div class="md-layout__border">
@@ -15,7 +18,5 @@ class DemoBottomAppBar extends MdComponent {
         `;
     }
 }
-
 customElements.define("demo-bottom-app-bar", DemoBottomAppBar);
-
 export default document.createElement("demo-bottom-app-bar");

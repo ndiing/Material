@@ -2,7 +2,6 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { choose } from "lit/directives/choose.js";
-
 class MdNavigationDrawerComponent extends MdComponent {
     static properties = {
         icons: { type: Array },
@@ -14,18 +13,24 @@ class MdNavigationDrawerComponent extends MdComponent {
         modal: { type: Boolean, reflect: true },
         view: { type: String },
     };
-
     /* prettier-ignore */
     views=[
         'flat',
         'tree',
     ]
 
+/**
+ * @private
+ */
     constructor() {
         super();
         this.view = "flat";
     }
 
+/**
+ * @private
+ * @param {String} item
+ */
     renderIcon(item) {
         /* prettier-ignore */
         return html`
@@ -35,6 +40,10 @@ class MdNavigationDrawerComponent extends MdComponent {
         `
     }
 
+/**
+ * @private
+ * @param {String} item
+ */
     renderIconButton(item) {
         /* prettier-ignore */
         return html`
@@ -51,6 +60,11 @@ class MdNavigationDrawerComponent extends MdComponent {
         `
     }
 
+/**
+ * @private
+ * @param {String} item
+ * @param {String} component
+ */
     renderItem(item, component = "icon") {
         /* prettier-ignore */
         return choose(item.component||component,[
@@ -59,6 +73,9 @@ class MdNavigationDrawerComponent extends MdComponent {
         ],() => nothing)
     }
 
+/**
+ * @private
+ */
     render() {
         /* prettier-ignore */
         return html`
@@ -93,7 +110,6 @@ class MdNavigationDrawerComponent extends MdComponent {
             </div>
         `
     }
-
     async connectedCallback() {
         super.connectedCallback();
         this.navigationDrawerScrim = document.createElement("md-scrim");
@@ -104,11 +120,13 @@ class MdNavigationDrawerComponent extends MdComponent {
         this.classList.add("md-navigation-drawer");
         this.style.setProperty("--md-comp-sheet-animation", "none");
         await this.updateComplete;
-
         this.style.setProperty("--md-comp-sheet-width", this.clientWidth + "px");
         this.style.setProperty("--md-comp-sheet-height", this.clientHeight + "px");
     }
 
+/**
+ *
+ */
     disconnectedCallback() {
         super.disconnectedCallback();
         this.navigationDrawerScrim.removeEventListener("onScrimClosed", this.handleNavigationDrawerScrimClosed);
@@ -117,24 +135,33 @@ class MdNavigationDrawerComponent extends MdComponent {
         this.style.setProperty("--md-comp-sheet-animation", "none");
     }
 
+/**
+ *
+ * @param {Object} changedProperties
+ */
     updated(changedProperties) {
         super.updated(changedProperties);
-
         if (changedProperties.has("region")) {
             this.regions.forEach((region) => {
                 this.classList.toggle(`md-navigation-drawer--${region}`, region === this.region);
             });
         }
-
         if (changedProperties.has("modal")) {
             this.classList.toggle(`md-navigation-drawer--modal`, !!this.modal);
         }
     }
 
+/**
+ * @private
+ * @param {Object} event
+ */
     handleNavigationDrawerIconButtonClick(event) {
         this.emit("onNavigationDrawerIconButtonClick", { event });
     }
 
+/**
+ *
+ */
     show() {
         this.style.removeProperty("--md-comp-sheet-animation");
         if (this.modal) this.navigationDrawerScrim.show();
@@ -142,6 +169,9 @@ class MdNavigationDrawerComponent extends MdComponent {
         this.emit("onNavigationDrawerShown");
     }
 
+/**
+ *
+ */
     close() {
         this.style.removeProperty("--md-comp-sheet-animation");
         this.open = false;
@@ -149,17 +179,22 @@ class MdNavigationDrawerComponent extends MdComponent {
         this.emit("onNavigationDrawerClosed");
     }
 
+/**
+ *
+ */
     toggle() {
         if (this.open) this.close();
         else this.show();
     }
 
+/**
+ * @private
+ * @param {Object} event
+ */
     handleNavigationDrawerScrimClosed(event) {
         if (this.open) this.close();
         this.emit("onNavigationDrawerScrimClosed", { event });
     }
 }
-
 customElements.define("md-navigation-drawer", MdNavigationDrawerComponent);
-
 export { MdNavigationDrawerComponent };

@@ -1,7 +1,10 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
-
 class DemoSlider extends MdComponent {
+
+/**
+ * @private
+ */
     render() {
         return html`
             <div class="md-layout">
@@ -30,7 +33,6 @@ class DemoSlider extends MdComponent {
                         <br />
                         <md-slider value="[25,75]"></md-slider>
                     </div>
-
                     <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <br />
                         <br />
@@ -60,7 +62,5 @@ class DemoSlider extends MdComponent {
         `;
     }
 }
-
 customElements.define("demo-slider", DemoSlider);
-
 export default document.createElement("demo-slider");

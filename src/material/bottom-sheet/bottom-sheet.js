@@ -2,7 +2,6 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { choose } from "lit/directives/choose.js";
-
 class MdBottomSheetComponent extends MdComponent {
     static properties = {
         icons: { type: Array },
@@ -14,11 +13,18 @@ class MdBottomSheetComponent extends MdComponent {
         modal: { type: Boolean, reflect: true },
     };
 
+/**
+ * @private
+ */
     constructor() {
         super();
         this.body = Array.from(this.childNodes);
     }
 
+/**
+ * @private
+ * @param {String} item
+ */
     renderIcon(item) {
         /* prettier-ignore */
         return html`
@@ -28,6 +34,10 @@ class MdBottomSheetComponent extends MdComponent {
         `
     }
 
+/**
+ * @private
+ * @param {String} item
+ */
     renderIconButton(item) {
         /* prettier-ignore */
         return html`
@@ -44,6 +54,10 @@ class MdBottomSheetComponent extends MdComponent {
         `
     }
 
+/**
+ * @private
+ * @param {String} item
+ */
     renderButton(item) {
         /* prettier-ignore */
         return html`
@@ -60,6 +74,10 @@ class MdBottomSheetComponent extends MdComponent {
         `
     }
 
+/**
+ * @private
+ * @param {String} item
+ */
     renderSpacer(item) {
         /* prettier-ignore */
         return html`
@@ -67,6 +85,11 @@ class MdBottomSheetComponent extends MdComponent {
         `
     }
 
+/**
+ * @private
+ * @param {String} item
+ * @param {String} component
+ */
     renderItem(item, component = "icon") {
         /* prettier-ignore */
         return choose(item.component||component,[
@@ -77,6 +100,9 @@ class MdBottomSheetComponent extends MdComponent {
         ],() => nothing)
     }
 
+/**
+ * @private
+ */
     render() {
         /* prettier-ignore */
         return html`
@@ -116,7 +142,6 @@ class MdBottomSheetComponent extends MdComponent {
             `:nothing}
         `
     }
-
     async connectedCallback() {
         super.connectedCallback();
         this.bottomSheetScrim = document.createElement("md-scrim");
@@ -127,11 +152,13 @@ class MdBottomSheetComponent extends MdComponent {
         this.classList.add("md-bottom-sheet");
         this.style.setProperty("--md-comp-sheet-animation", "none");
         await this.updateComplete;
-
         this.style.setProperty("--md-comp-sheet-width", this.clientWidth + "px");
         this.style.setProperty("--md-comp-sheet-height", this.clientHeight + "px");
     }
 
+/**
+ *
+ */
     disconnectedCallback() {
         super.disconnectedCallback();
         this.bottomSheetScrim.removeEventListener("onScrimClosed", this.handleBottomSheetScrimClosed);
@@ -140,22 +167,36 @@ class MdBottomSheetComponent extends MdComponent {
         this.style.setProperty("--md-comp-sheet-animation", "none");
     }
 
+/**
+ *
+ * @param {Object} changedProperties
+ */
     updated(changedProperties) {
         super.updated(changedProperties);
-
         if (changedProperties.has("modal")) {
             this.classList.toggle(`md-bottom-sheet--modal`, !!this.modal);
         }
     }
 
+/**
+ * @private
+ * @param {Object} event
+ */
     handleBottomSheetIconButtonClick(event) {
         this.emit("onBottomSheetIconButtonClick", { event });
     }
 
+/**
+ * @private
+ * @param {Object} event
+ */
     handleBottomSheetButtonClick(event) {
         this.emit("onBottomSheetButtonClick", { event });
     }
 
+/**
+ *
+ */
     show() {
         this.style.removeProperty("--md-comp-sheet-animation");
         if (this.modal) this.bottomSheetScrim.show();
@@ -163,6 +204,9 @@ class MdBottomSheetComponent extends MdComponent {
         this.emit("onBottomSheetShown");
     }
 
+/**
+ *
+ */
     close() {
         this.style.removeProperty("--md-comp-sheet-animation");
         this.open = false;
@@ -170,17 +214,22 @@ class MdBottomSheetComponent extends MdComponent {
         this.emit("onBottomSheetClosed");
     }
 
+/**
+ *
+ */
     toggle() {
         if (this.open) this.close();
         else this.show();
     }
 
+/**
+ * @private
+ * @param {Object} event
+ */
     handleBottomSheetScrimClosed(event) {
         if (this.open) this.close();
         this.emit("onBottomSheetScrimClosed", { event });
     }
 }
-
 customElements.define("md-bottom-sheet", MdBottomSheetComponent);
-
 export { MdBottomSheetComponent };

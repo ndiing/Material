@@ -1,7 +1,10 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
-
 class DemoNavigationList extends MdComponent {
+
+/**
+ * @private
+ */
     render() {
         return html`
             <div class="md-layout">
@@ -31,7 +34,6 @@ class DemoNavigationList extends MdComponent {
                             ></md-navigation-list>
                         </div>
                     </div> -->
-
                     <!-- <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <div class="md-navigation-drawer">
                             <md-navigation-list
@@ -57,7 +59,6 @@ class DemoNavigationList extends MdComponent {
                             ></md-navigation-list>
                         </div>
                     </div> -->
-
                     <!-- <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <div class="md-navigation-rail">
                             <md-navigation-list
@@ -85,10 +86,8 @@ class DemoNavigationList extends MdComponent {
                             ></md-navigation-list>
                         </div>
                     </div> -->
-
                     <!-- <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <div class="md-navigation-bar">
-
                             <md-navigation-list
                                 .rippleOptions="${{ container: ".md-navigation-list__icon" }}"
                                 .items="${[
@@ -102,7 +101,6 @@ class DemoNavigationList extends MdComponent {
                     </div>
                     <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <div class="md-navigation-bar">
-
                             <md-navigation-list
                                 .rippleOptions="${{ container: ".md-navigation-list__icon" }}"
                                 .items="${[
@@ -120,7 +118,5 @@ class DemoNavigationList extends MdComponent {
         `;
     }
 }
-
 customElements.define("demo-navigation-list", DemoNavigationList);
-
 export default document.createElement("demo-navigation-list");

@@ -1,8 +1,6 @@
 import { Router } from "../material/router/router";
-
 import DemoMain from "./main/main.js";
 import DemoError from "./error/error.js";
-
 Router.use([
     {
         path: "",

@@ -1,7 +1,10 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
-
 class DemoIconButton extends MdComponent {
+
+/**
+ * @private
+ */
     render() {
         return html`
             <div class="md-layout">
@@ -35,7 +38,5 @@ class DemoIconButton extends MdComponent {
         `;
     }
 }
-
 customElements.define("demo-icon-button", DemoIconButton);
-
 export default document.createElement("demo-icon-button");

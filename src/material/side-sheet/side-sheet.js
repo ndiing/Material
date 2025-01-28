@@ -2,7 +2,6 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { choose } from "lit/directives/choose.js";
-
 class MdSideSheetComponent extends MdComponent {
     static properties = {
         icons: { type: Array },
@@ -14,11 +13,18 @@ class MdSideSheetComponent extends MdComponent {
         modal: { type: Boolean, reflect: true },
     };
 
+/**
+ * @private
+ */
     constructor() {
         super();
         this.body = Array.from(this.childNodes);
     }
 
+/**
+ * @private
+ * @param {String} item
+ */
     renderIcon(item) {
         /* prettier-ignore */
         return html`
@@ -28,6 +34,10 @@ class MdSideSheetComponent extends MdComponent {
         `
     }
 
+/**
+ * @private
+ * @param {String} item
+ */
     renderIconButton(item) {
         /* prettier-ignore */
         return html`
@@ -44,6 +54,10 @@ class MdSideSheetComponent extends MdComponent {
         `
     }
 
+/**
+ * @private
+ * @param {String} item
+ */
     renderButton(item) {
         /* prettier-ignore */
         return html`
@@ -60,6 +74,10 @@ class MdSideSheetComponent extends MdComponent {
         `
     }
 
+/**
+ * @private
+ * @param {String} item
+ */
     renderSpacer(item) {
         /* prettier-ignore */
         return html`
@@ -67,6 +85,11 @@ class MdSideSheetComponent extends MdComponent {
         `
     }
 
+/**
+ * @private
+ * @param {String} item
+ * @param {String} component
+ */
     renderItem(item, component = "icon") {
         /* prettier-ignore */
         return choose(item.component||component,[
@@ -77,6 +100,9 @@ class MdSideSheetComponent extends MdComponent {
         ],() => nothing)
     }
 
+/**
+ * @private
+ */
     render() {
         /* prettier-ignore */
         return html`
@@ -116,7 +142,6 @@ class MdSideSheetComponent extends MdComponent {
             `:nothing}
         `
     }
-
     async connectedCallback() {
         super.connectedCallback();
         this.sideSheetScrim = document.createElement("md-scrim");
@@ -127,11 +152,13 @@ class MdSideSheetComponent extends MdComponent {
         this.classList.add("md-side-sheet");
         this.style.setProperty("--md-comp-sheet-animation", "none");
         await this.updateComplete;
-
         this.style.setProperty("--md-comp-sheet-width", this.clientWidth + "px");
         this.style.setProperty("--md-comp-sheet-height", this.clientHeight + "px");
     }
 
+/**
+ *
+ */
     disconnectedCallback() {
         super.disconnectedCallback();
         this.sideSheetScrim.removeEventListener("onScrimClosed", this.handleSideSheetScrimClosed);
@@ -140,22 +167,36 @@ class MdSideSheetComponent extends MdComponent {
         this.style.setProperty("--md-comp-sheet-animation", "none");
     }
 
+/**
+ *
+ * @param {Object} changedProperties
+ */
     updated(changedProperties) {
         super.updated(changedProperties);
-
         if (changedProperties.has("modal")) {
             this.classList.toggle(`md-side-sheet--modal`, !!this.modal);
         }
     }
 
+/**
+ * @private
+ * @param {Object} event
+ */
     handleSideSheetIconButtonClick(event) {
         this.emit("onSideSheetIconButtonClick", { event });
     }
 
+/**
+ * @private
+ * @param {Object} event
+ */
     handleSideSheetButtonClick(event) {
         this.emit("onSideSheetButtonClick", { event });
     }
 
+/**
+ *
+ */
     show() {
         this.style.removeProperty("--md-comp-sheet-animation");
         if (this.modal) this.sideSheetScrim.show();
@@ -163,6 +204,9 @@ class MdSideSheetComponent extends MdComponent {
         this.emit("onSideSheetShown");
     }
 
+/**
+ *
+ */
     close() {
         this.style.removeProperty("--md-comp-sheet-animation");
         this.open = false;
@@ -170,17 +214,22 @@ class MdSideSheetComponent extends MdComponent {
         this.emit("onSideSheetClosed");
     }
 
+/**
+ *
+ */
     toggle() {
         if (this.open) this.close();
         else this.show();
     }
 
+/**
+ * @private
+ * @param {Object} event
+ */
     handleSideSheetScrimClosed(event) {
         if (this.open) this.close();
         this.emit("onSideSheetScrimClosed", { event });
     }
 }
-
 customElements.define("md-side-sheet", MdSideSheetComponent);
-
 export { MdSideSheetComponent };

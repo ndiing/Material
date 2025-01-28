@@ -2,7 +2,6 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { choose } from "lit/directives/choose.js";
-
 class MdSheetComponent extends MdComponent {
     static properties = {
         icons: { type: Array },
@@ -14,7 +13,6 @@ class MdSheetComponent extends MdComponent {
         region: { type: String },
         modal: { type: Boolean, reflect: true },
     };
-
     /* prettier-ignore */
     regions=[
         "north",
@@ -24,12 +22,19 @@ class MdSheetComponent extends MdComponent {
         "center",
     ]
 
+/**
+ * @private
+ */
     constructor() {
         super();
         this.body = Array.from(this.childNodes);
         this.region = "center";
     }
 
+/**
+ * @private
+ * @param {String} item
+ */
     renderIcon(item) {
         /* prettier-ignore */
         return html`
@@ -39,6 +44,10 @@ class MdSheetComponent extends MdComponent {
         `
     }
 
+/**
+ * @private
+ * @param {String} item
+ */
     renderIconButton(item) {
         /* prettier-ignore */
         return html`
@@ -55,6 +64,10 @@ class MdSheetComponent extends MdComponent {
         `
     }
 
+/**
+ * @private
+ * @param {String} item
+ */
     renderButton(item) {
         /* prettier-ignore */
         return html`
@@ -71,6 +84,10 @@ class MdSheetComponent extends MdComponent {
         `
     }
 
+/**
+ * @private
+ * @param {String} item
+ */
     renderSpacer(item) {
         /* prettier-ignore */
         return html`
@@ -78,6 +95,11 @@ class MdSheetComponent extends MdComponent {
         `
     }
 
+/**
+ * @private
+ * @param {String} item
+ * @param {String} component
+ */
     renderItem(item, component = "icon") {
         /* prettier-ignore */
         return choose(item.component||component,[
@@ -88,6 +110,9 @@ class MdSheetComponent extends MdComponent {
         ],() => nothing)
     }
 
+/**
+ * @private
+ */
     render() {
         /* prettier-ignore */
         return html`
@@ -127,7 +152,6 @@ class MdSheetComponent extends MdComponent {
             `:nothing}
         `
     }
-
     async connectedCallback() {
         super.connectedCallback();
         this.sheetScrim = document.createElement("md-scrim");
@@ -138,11 +162,13 @@ class MdSheetComponent extends MdComponent {
         this.classList.add("md-sheet");
         this.style.setProperty("--md-comp-sheet-animation", "none");
         await this.updateComplete;
-
         this.style.setProperty("--md-comp-sheet-width", this.clientWidth + "px");
         this.style.setProperty("--md-comp-sheet-height", this.clientHeight + "px");
     }
 
+/**
+ *
+ */
     disconnectedCallback() {
         super.disconnectedCallback();
         this.sheetScrim.removeEventListener("onScrimClosed", this.handleSheetScrimClosed);
@@ -151,28 +177,41 @@ class MdSheetComponent extends MdComponent {
         this.style.setProperty("--md-comp-sheet-animation", "none");
     }
 
+/**
+ *
+ * @param {Object} changedProperties
+ */
     updated(changedProperties) {
         super.updated(changedProperties);
-
         if (changedProperties.has("region")) {
             this.regions.forEach((region) => {
                 this.classList.toggle(`md-sheet--${region}`, region === this.region);
             });
         }
-
         if (changedProperties.has("modal")) {
             this.classList.toggle(`md-sheet--modal`, !!this.modal);
         }
     }
 
+/**
+ * @private
+ * @param {Object} event
+ */
     handleSheetIconButtonClick(event) {
         this.emit("onSheetIconButtonClick", { event });
     }
 
+/**
+ * @private
+ * @param {Object} event
+ */
     handleSheetButtonClick(event) {
         this.emit("onSheetButtonClick", { event });
     }
 
+/**
+ *
+ */
     show() {
         this.style.removeProperty("--md-comp-sheet-animation");
         if (this.modal) this.sheetScrim.show();
@@ -180,6 +219,9 @@ class MdSheetComponent extends MdComponent {
         this.emit("onSheetShown");
     }
 
+/**
+ *
+ */
     close() {
         this.style.removeProperty("--md-comp-sheet-animation");
         this.open = false;
@@ -187,17 +229,22 @@ class MdSheetComponent extends MdComponent {
         this.emit("onSheetClosed");
     }
 
+/**
+ *
+ */
     toggle() {
         if (this.open) this.close();
         else this.show();
     }
 
+/**
+ * @private
+ * @param {Object} event
+ */
     handleSheetScrimClosed(event) {
         if (this.open) this.close();
         this.emit("onSheetScrimClosed", { event });
     }
 }
-
 customElements.define("md-sheet", MdSheetComponent);
-
 export { MdSheetComponent };

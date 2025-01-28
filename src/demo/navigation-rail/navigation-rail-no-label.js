@@ -1,7 +1,10 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
-
 class DemoNavigationRailNoLabel extends MdComponent {
+
+/**
+ * @private
+ */
     render() {
         return html`
             <div class="md-layout__border">
@@ -24,7 +27,5 @@ class DemoNavigationRailNoLabel extends MdComponent {
         `;
     }
 }
-
 customElements.define("demo-navigation-rail-no-label", DemoNavigationRailNoLabel);
-
 export default document.createElement("demo-navigation-rail-no-label");

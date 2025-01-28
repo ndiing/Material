@@ -1,26 +1,31 @@
 import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
-
 class MdTabsComponent extends MdComponent {
     static properties = {
         items: { type: Array },
         rippleOptions: { type: Object },
         variant: { type: String },
     };
-
     /* prettier-ignore */
     variants=[
         'primary',
         'secondary',
     ]
 
+/**
+ * @private
+ */
     constructor() {
         super();
         this.items = [];
         this.variant = "primary";
     }
 
+/**
+ * @private
+ * @param {String} item
+ */
     renderTab(item) {
         /* prettier-ignore */
         return html`
@@ -39,20 +44,29 @@ class MdTabsComponent extends MdComponent {
         `
     }
 
+/**
+ * @private
+ */
     render() {
         /* prettier-ignore */
         return this.items.map(item=>this.renderTab(item))
     }
 
+/**
+ *
+ */
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-tabs");
         this.style.setProperty("--md-comp-tabs-indicator-transition-property", "none");
     }
 
+/**
+ *
+ * @param {Object} changedProperties
+ */
     updated(changedProperties) {
         super.updated(changedProperties);
-
         if (changedProperties.has("variant")) {
             this.variants.forEach((variant) => {
                 this.classList.toggle(`md-tabs--${variant}`, variant === this.variant);
@@ -60,28 +74,31 @@ class MdTabsComponent extends MdComponent {
         }
     }
 
+/**
+ * @private
+ * @param {Object} event
+ */
     handleTabClick(event) {
         this.style.removeProperty("--md-comp-tabs-indicator-transition-property");
-
         const data = event.currentTarget.data;
-
         this.singleSelect(data);
         this.requestUpdate();
-
         this.emit("onTabClick", { event });
     }
 
+/**
+ *
+ * @param {Object} data
+ */
     singleSelect(data) {
         this.items.forEach((item) => {
             item.selected = item === data;
         });
     }
-
     async handleTabSelected(event) {
         if (this.classList.contains("md-tabs")) {
             const tab = event.detail.tab;
             const data = tab.data;
-
             this.currIndex = this.items.indexOf(data);
             this.prevIndex = this.prevIndex ?? this.currIndex;
             const direction = this.currIndex > this.prevIndex ? "right" : "left";
@@ -89,15 +106,12 @@ class MdTabsComponent extends MdComponent {
             this.classList.remove("md-tabs--right");
             this.classList.add("md-tabs--" + direction);
             this.prevIndex = this.currIndex;
-
             let left = tab.offsetLeft;
             let right = this.clientWidth - (left + tab.clientWidth);
-
             if (this.classList.contains("md-tabs--primary")) {
                 const label = tab.querySelector(".md-tab__label");
                 left = label.offsetLeft + tab.offsetLeft;
                 right = this.clientWidth - (left + label.clientWidth);
-
                 if (!tab.classList.contains("md-tab--with-icon")) {
                     const badge = tab.querySelector(".md-tab__badge");
                     if (badge) {
@@ -105,13 +119,10 @@ class MdTabsComponent extends MdComponent {
                     }
                 }
             }
-
             this.style.setProperty("--md-comp-tabs-indicator-left", left + "px");
             this.style.setProperty("--md-comp-tabs-indicator-right", right + "px");
         }
     }
 }
-
 customElements.define("md-tabs", MdTabsComponent);
-
 export { MdTabsComponent };

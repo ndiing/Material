@@ -1,7 +1,10 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
-
 class DemoError extends MdComponent {
+
+/**
+ * @private
+ */
     render() {
         return html`
             <h1>Error</h1>
@@ -9,7 +12,5 @@ class DemoError extends MdComponent {
         `;
     }
 }
-
 customElements.define("demo-error", DemoError);
-
 export default document.createElement("demo-error");

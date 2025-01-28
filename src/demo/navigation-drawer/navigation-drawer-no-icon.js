@@ -1,7 +1,10 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
-
 class DemoNavigationDrawerNoIcon extends MdComponent {
+
+/**
+ * @private
+ */
     render() {
         return html`
             <div class="md-layout__border">
@@ -24,7 +27,5 @@ class DemoNavigationDrawerNoIcon extends MdComponent {
         `;
     }
 }
-
 customElements.define("demo-navigation-drawer-no-icon", DemoNavigationDrawerNoIcon);
-
 export default document.createElement("demo-navigation-drawer-no-icon");

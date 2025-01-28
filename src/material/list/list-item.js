@@ -2,7 +2,6 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { RippleController } from "../ripple/ripple";
-
 class MdListItemComponent extends MdComponent {
     static properties = {
         leadingCheckbox: { type: Boolean },
@@ -25,23 +24,27 @@ class MdListItemComponent extends MdComponent {
         badge: { type: Number },
     };
 
+/**
+ * @private
+ */
     constructor() {
         super();
         this.rippleOptions = {};
     }
 
+/**
+ * @private
+ */
     render() {
         /* prettier-ignore */
         return html`
             ${this.leadingCheckbox?html`<md-checkbox class="md-list__checkbox" .checked="${this.selected}"></md-checkbox>`:nothing}
             ${this.leadingRadioButton?html`<md-radio-button class="md-list__radio-button" .checked="${this.selected}"></md-radio-button>`:nothing}
             ${this.leadingSwitch?html`<md-switch class="md-list__switch" .checked="${this.selected}"></md-switch>`:nothing}
-
             ${this.avatar?html`<md-image class="md-list__avatar" .src="${ifDefined(this.avatar)}" circular></md-image>`:nothing}
             ${this.image?html`<md-image class="md-list__image" .src="${ifDefined(this.image)}"></md-image>`:nothing}
             ${this.video?html`<md-image class="md-list__video" .src="${ifDefined(this.video)}" ratio="3/2"></md-image>`:nothing}
             ${this.icon?html`<md-icon class="md-list__icon">${this.icon}</md-icon>`:nothing}
-
             ${this.label||this.sublabel?html`
                 <div class="md-list__labels">
                     ${this.label?html`<div class="md-list__label">${this.label}</div>`:nothing}
@@ -49,19 +52,15 @@ class MdListItemComponent extends MdComponent {
                 </div>
             `:nothing}
             ${this.text?html`<div class="md-list__text">${this.text}</div>`:nothing}
-
             ${this.trailingCheckbox?html`<md-checkbox class="md-list__checkbox" .checked="${this.selected}"></md-checkbox>`:nothing}
             ${this.trailingRadioButton?html`<md-radio-button class="md-list__radio-button" .checked="${this.selected}"></md-radio-button>`:nothing}
             ${this.trailingSwitch?html`<md-switch class="md-list__switch" .checked="${this.selected}"></md-switch>`:nothing}
-
             ${this.badge!==undefined?html`<md-badge class="md-list__badge" .label="${this.badge}"></md-badge>`:nothing}
         `
     }
-
     async connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-list__item");
-
         await this.updateComplete;
         if (this.sublabel) {
             const sublabel = this.querySelector(".md-list__sublabel");
@@ -71,23 +70,17 @@ class MdListItemComponent extends MdComponent {
                 this.classList.add("md-list__item--two-line");
             }
         }
-
         this.ripple = new RippleController(this, this.rippleOptions);
     }
-
     async updated(changedProperties) {
         super.updated(changedProperties);
-
         if (changedProperties.has("icon")) {
             this.classList.toggle("md-list__item--with-icon", !!this.icon);
         }
-
         if (changedProperties.has("selected") && this.selected) {
             this.emit("onListItemSelected", { listItem: this });
         }
     }
 }
-
 customElements.define("md-list-item", MdListItemComponent);
-
 export { MdListItemComponent };

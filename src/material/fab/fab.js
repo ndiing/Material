@@ -2,7 +2,6 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { RippleController } from "../ripple/ripple";
 import { ifDefined } from "lit/directives/if-defined.js";
-
 class MdFabComponent extends MdComponent {
     static properties = {
         icon: { type: String },
@@ -11,31 +10,31 @@ class MdFabComponent extends MdComponent {
         size: { type: String },
         variant: { type: String },
     };
-
     /* prettier-ignore */
-
     sizes=[
         'small',
         'large',
     ]
-
     /* prettier-ignore */
-
     types=[
         'extended',
     ]
-
     /* prettier-ignore */
-
     variants=[
         'unelevated',
     ]
 
+/**
+ * @private
+ */
     constructor() {
         super();
         this.ripple = new RippleController(this, {});
     }
 
+/**
+ * @private
+ */
     render() {
         /* prettier-ignore */
         return html`
@@ -44,26 +43,30 @@ class MdFabComponent extends MdComponent {
         `
     }
 
+/**
+ *
+ */
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-fab");
     }
 
+/**
+ *
+ * @param {Object} changedProperties
+ */
     updated(changedProperties) {
         super.updated(changedProperties);
-
         if (changedProperties.has("type")) {
             this.types.forEach((type) => {
                 this.classList.toggle(`md-fab--${type}`, type === this.type);
             });
         }
-
         if (changedProperties.has("size")) {
             this.sizes.forEach((size) => {
                 this.classList.toggle(`md-fab--${size}`, size === this.size);
             });
         }
-
         if (changedProperties.has("variant")) {
             this.variants.forEach((variant) => {
                 this.classList.toggle(`md-fab--${variant}`, variant === this.variant);
@@ -71,7 +74,5 @@ class MdFabComponent extends MdComponent {
         }
     }
 }
-
 customElements.define("md-fab", MdFabComponent);
-
 export { MdFabComponent };

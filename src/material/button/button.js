@@ -2,7 +2,6 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { RippleController } from "../ripple/ripple";
 import { ifDefined } from "lit/directives/if-defined.js";
-
 class MdButtonComponent extends MdComponent {
     static properties = {
         icon: { type: String },
@@ -12,7 +11,6 @@ class MdButtonComponent extends MdComponent {
         disabled: { type: Boolean, reflect: true },
         selected: { type: Boolean, reflect: true },
     };
-
     /* prettier-ignore */
     variants=[
         'elevated',
@@ -21,6 +19,9 @@ class MdButtonComponent extends MdComponent {
         'outlined',
     ]
 
+/**
+ * @private
+ */
     constructor() {
         super();
         this.type = "button";
@@ -29,6 +30,9 @@ class MdButtonComponent extends MdComponent {
         });
     }
 
+/**
+ * @private
+ */
     render() {
         /* prettier-ignore */
         return html`
@@ -41,14 +45,20 @@ class MdButtonComponent extends MdComponent {
         `
     }
 
+/**
+ *
+ */
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-button");
     }
 
+/**
+ *
+ * @param {Object} changedProperties
+ */
     updated(changedProperties) {
         super.updated(changedProperties);
-
         if (changedProperties.has("variant")) {
             this.variants.forEach((variant) => {
                 this.classList.toggle(`md-button--${variant}`, variant === this.variant);
@@ -56,7 +66,5 @@ class MdButtonComponent extends MdComponent {
         }
     }
 }
-
 customElements.define("md-button", MdButtonComponent);
-
 export { MdButtonComponent };

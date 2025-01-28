@@ -1,19 +1,25 @@
 import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
-
 class MdTreeComponent extends MdComponent {
     static properties = {
         items: { type: Array },
         items2: { type: Array },
     };
 
+/**
+ * @private
+ */
     constructor() {
         super();
         this.items = [];
         this.items2 = [];
     }
 
+/**
+ * @private
+ * @param {String} item
+ */
     renderTreeItem(item) {
         // console.log(item)
         /* prettier-ignore */
@@ -35,6 +41,9 @@ class MdTreeComponent extends MdComponent {
         `
     }
 
+/**
+ * @private
+ */
     render() {
         /* prettier-ignore */
         return this.items2
@@ -42,11 +51,13 @@ class MdTreeComponent extends MdComponent {
         .map(item=>this.renderTreeItem(item))
     }
 
+/**
+ *
+ */
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-tree");
     }
-
     async updated(changedProperties) {
         super.updated(changedProperties);
         if (changedProperties.has("items")) {
@@ -55,6 +66,12 @@ class MdTreeComponent extends MdComponent {
         }
     }
 
+/**
+ *
+ * @param {String} items
+ * @param {String} parent
+ * @param {Number} indent
+ */
     flatten(items, parent, indent = 0) {
         let expanded;
         let items2 = [];
@@ -77,6 +94,10 @@ class MdTreeComponent extends MdComponent {
         return { expanded, items2 };
     }
 
+/**
+ *
+ * @param {Object} data
+ */
     toggle(data) {
         data.children.forEach((item) => {
             item.visible = data.expanded;
@@ -85,6 +106,10 @@ class MdTreeComponent extends MdComponent {
         });
     }
 
+/**
+ * @private
+ * @param {Object} event
+ */
     handleTreeItemClick(event) {
         const action = event.target.closest(".md-tree__action");
         const data = event.currentTarget.data;
@@ -99,7 +124,5 @@ class MdTreeComponent extends MdComponent {
         this.emit("onTreeItemClick", { event });
     }
 }
-
 customElements.define("md-tree", MdTreeComponent);
-
 export { MdTreeComponent };

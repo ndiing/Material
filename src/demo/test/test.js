@@ -1,7 +1,10 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
-
 class DemoTest extends MdComponent {
+
+/**
+ * @private
+ */
     render() {
         return html`
             <div class="md-layout">
@@ -14,7 +17,5 @@ class DemoTest extends MdComponent {
         `;
     }
 }
-
 customElements.define("demo-test", DemoTest);
-
 export default document.createElement("demo-test");

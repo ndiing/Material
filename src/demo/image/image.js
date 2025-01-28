@@ -1,7 +1,10 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
-
 class DemoImage extends MdComponent {
+
+/**
+ * @private
+ */
     render() {
         return html`
             <div class="md-layout">
@@ -46,7 +49,5 @@ class DemoImage extends MdComponent {
         `;
     }
 }
-
 customElements.define("demo-image", DemoImage);
-
 export default document.createElement("demo-image");

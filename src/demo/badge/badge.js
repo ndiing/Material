@@ -1,7 +1,10 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
-
 class DemoBadge extends MdComponent {
+
+/**
+ * @private
+ */
     render() {
         return html`
             <div class="md-layout">
@@ -20,7 +23,5 @@ class DemoBadge extends MdComponent {
         `;
     }
 }
-
 customElements.define("demo-badge", DemoBadge);
-
 export default document.createElement("demo-badge");

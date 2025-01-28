@@ -1,6 +1,5 @@
 class Router {
     static params = {};
-
     static get(pathname = this.pathname, routes = this.routes, parent = null, result = []) {
         for (const route of routes) {
             if (!route.regexp) {
@@ -9,21 +8,18 @@ class Router {
                 route.regexp = new RegExp("^" + route.pathname.replace(/\:(\w+)/g, "(?<$1>[^/]+)").replace(/\*/, "(?:.*)") + "(?:/?$)", "i");
             }
             const matches = pathname.match(route.regexp);
-
             if (matches) {
                 this.params = {
                     ...matches?.groups,
                 };
                 return [...result, route];
             }
-
             if (route?.children?.length) {
                 const matches = this.get(pathname, route.children, route, [...result, route]);
                 if (matches) return matches;
             }
         }
     }
-
     static get pathname() {
         if (this.options.historyApiFallback) {
             return window.location.pathname;
@@ -31,13 +27,11 @@ class Router {
             return window.location.hash.replace(/^#/, "").replace(/\?[^\?]+/, "") || "/";
         }
     }
-
     static async handleNavigation(event) {
         this.emit("onRouterCurrentEntryChange");
         this.setController();
         const routes = this.get();
         this.emit("onRouterNavigate");
-
         for (const route of routes) {
             if (route.beforeLoad) {
                 try {
@@ -55,13 +49,10 @@ class Router {
         }
         this.emit("onRouterNavigateSuccess");
     }
-
     static removeComponent(routes) {
         const outlets = Array.from(document.body.querySelectorAll("md-outlet"));
-
         for (const outlet of outlets) {
             let element = outlet.nextElementSibling;
-
             while (element) {
                 if (!outlets.find((outlet) => outlet === element) && !routes.find((route) => route.component === element)) {
                     element.remove();
@@ -70,33 +61,27 @@ class Router {
             }
         }
     }
-
     static renderComponent(route, outlet) {
         if (!route.component.isConnected) outlet.parentElement.insertBefore(route.component, outlet.nextElementSibling);
     }
-
     static async getOutlet(container, route) {
         return await new Promise((resolve) => {
             let observer;
             let outlet;
             let selector = "md-outlet:not([name])";
             let target = container;
-
             if (route.outlet) {
                 selector = `md-outlet[name="${route.outlet}"]`;
                 target = document.body;
             }
-
             const callback = () => {
                 outlet = target.querySelector(selector);
-
                 if (outlet) {
                     if (observer) observer.disconnect();
                     resolve(outlet);
                 }
             };
             observer = new MutationObserver(callback);
-
             observer.observe(target, {
                 subtree: true,
                 childList: true,
@@ -104,15 +89,12 @@ class Router {
             callback();
         });
     }
-
     static setContainer(route) {
         return route.parent?.component || document.body;
     }
-
     static async loadComponent(route) {
         if (!route.component) route.component = await route.load();
     }
-
     static async handleBeforeLoad(route) {
         await new Promise((resolve, reject) => {
             const callback = (error) => {
@@ -123,12 +105,10 @@ class Router {
             route.beforeLoad(callback);
         });
     }
-
     static setController() {
         if (this.controller && !this.controller.signal.aborted) this.controller.abort();
         if (!this.controller || (this.controller && this.controller.signal.aborted)) this.controller = new AbortController();
     }
-
     static navigate(url) {
         if (this.options.historyApiFallback) {
             window.history.pushState({}, "", url);
@@ -136,16 +116,13 @@ class Router {
             window.location.hash = url;
         }
     }
-
     static handleNavigate(event) {
         const element = event.target.closest("[routerLink]");
-
         if (element) {
             const url = element.getAttribute("routerLink");
             Router.navigate(url);
         }
     }
-
     static emit(type, detail) {
         const event = new CustomEvent(type, {
             bubbles: true,
@@ -154,11 +131,8 @@ class Router {
         });
         window.dispatchEvent(event);
     }
-
     static routes = [];
-
     static options = {};
-
     static use(routes = [], options = {}) {
         this.routes = routes;
         this.options = {
@@ -166,11 +140,9 @@ class Router {
             ...options,
         };
         window.addEventListener("load", this.handleNavigation.bind(this));
-
         if (this.options.historyApiFallback) {
             window.addEventListener("popstate", this.handleNavigation.bind(this));
             const pushState = window.history.pushState;
-
             window.history.pushState = function () {
                 pushState.apply(this, arguments);
                 Router.emit("popstate");
@@ -178,9 +150,7 @@ class Router {
         } else {
             window.addEventListener("hashchange", this.handleNavigation.bind(this));
         }
-
         window.addEventListener("click", this.handleNavigate.bind(this));
     }
 }
-
 export { Router };

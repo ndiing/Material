@@ -1,7 +1,10 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
-
 class DemoMenu extends MdComponent {
+
+/**
+ * @private
+ */
     render() {
         return html`
             <div class="md-layout">
@@ -37,7 +40,5 @@ class DemoMenu extends MdComponent {
         `;
     }
 }
-
 customElements.define("demo-menu", DemoMenu);
-
 export default document.createElement("demo-menu");

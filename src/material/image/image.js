@@ -2,7 +2,6 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
-
 class MdImageComponent extends MdComponent {
     static properties = {
         src: { type: String },
@@ -11,10 +10,12 @@ class MdImageComponent extends MdComponent {
         circular: { type: Boolean },
     };
 
+/**
+ * @private
+ */
     constructor() {
         super();
     }
-
     get styleInfo() {
         const style = {};
         if (this.ratio) style["aspect-ratio"] = this.ratio;
@@ -29,6 +30,9 @@ class MdImageComponent extends MdComponent {
         return style;
     }
 
+/**
+ * @private
+ */
     render() {
         /* prettier-ignore */
         return html`
@@ -41,12 +45,13 @@ class MdImageComponent extends MdComponent {
         `
     }
 
+/**
+ *
+ */
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-image");
     }
 }
-
 customElements.define("md-image", MdImageComponent);
-
 export { MdImageComponent };

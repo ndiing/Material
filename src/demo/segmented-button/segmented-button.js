@@ -1,7 +1,10 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
-
 class DemoSegmentedButton extends MdComponent {
+
+/**
+ * @private
+ */
     render() {
         return html`
             <div class="md-layout">
@@ -17,7 +20,5 @@ class DemoSegmentedButton extends MdComponent {
         `;
     }
 }
-
 customElements.define("demo-segmented-button", DemoSegmentedButton);
-
 export default document.createElement("demo-segmented-button");

@@ -1,7 +1,10 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
-
 class DemoDialog extends MdComponent {
+
+/**
+ * @private
+ */
     render() {
         return html`
             <div class="md-layout">
@@ -15,7 +18,5 @@ class DemoDialog extends MdComponent {
         `;
     }
 }
-
 customElements.define("demo-dialog", DemoDialog);
-
 export default document.createElement("demo-dialog");

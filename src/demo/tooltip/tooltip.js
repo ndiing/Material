@@ -1,7 +1,10 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
-
 class DemoTooltip extends MdComponent {
+
+/**
+ * @private
+ */
     render() {
         return html`
             <div class="md-layout">
@@ -31,7 +34,5 @@ class DemoTooltip extends MdComponent {
         `;
     }
 }
-
 customElements.define("demo-tooltip", DemoTooltip);
-
 export default document.createElement("demo-tooltip");

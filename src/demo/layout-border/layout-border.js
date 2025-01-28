@@ -1,7 +1,10 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
-
 class DemoLayoutBorder extends MdComponent {
+
+/**
+ * @private
+ */
     render() {
         return html`
             <div class="md-layout">
@@ -16,7 +19,5 @@ class DemoLayoutBorder extends MdComponent {
         `;
     }
 }
-
 customElements.define("demo-layout-border", DemoLayoutBorder);
-
 export default document.createElement("demo-layout-border");
