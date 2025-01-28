@@ -1,42 +1,6 @@
-/**
- * @class Router
- * @fires onRouterCurrentEntryChange
- * @fires onRouterNavigate
- * @fires onRouterNavigateError
- * @fires onRouterNavigateSuccess
- * @example
- * import { Router } from "../material/router/router";
- *
- * import DemoMain from'./main/main.js'
- * const DemoUsers = () => import( './users/users.js').then(m=>m.default)
- * const DemoUser = () => import( './user/user.js').then(m=>m.default)
- * const DemoBlogs = () => import( './blogs/blogs.js').then(m=>m.default)
- * const DemoBlog = () => import( './blog/blog.js').then(m=>m.default)
- * const DemoError = () => import( './error/error.js').then(m=>m.default)
- *
- * const beforeLoad = (next) => {
- *     next()
- * }
- *
- * Router.use([
- *     {path:'',component:DemoMain,children:[
- *         {path:'users',beforeLoad,load:DemoUsers,children:[
- *             {path:':id',outlet:'user',load:DemoUser,children:[]},
- *         ]},
- *         {path:'blogs',load:DemoBlogs,children:[
- *             {path:':id',load:DemoBlog,children:[]},
- *         ]},
- *     ]},
- *     {path:'*',load:DemoError,children:[]},
- * ])
- */
 class Router {
-    /**
-     *
-     */
     static params = {};
 
-    /**@private*/
     static get(pathname = this.pathname, routes = this.routes, parent = null, result = []) {
         for (const route of routes) {
             if (!route.regexp) {
@@ -68,7 +32,6 @@ class Router {
         }
     }
 
-    /**@private*/
     static async handleNavigation(event) {
         this.emit("onRouterCurrentEntryChange");
         this.setController();
@@ -93,7 +56,6 @@ class Router {
         this.emit("onRouterNavigateSuccess");
     }
 
-    /**@private*/
     static removeComponent(routes) {
         const outlets = Array.from(document.body.querySelectorAll("md-outlet"));
 
@@ -109,12 +71,10 @@ class Router {
         }
     }
 
-    /**@private*/
     static renderComponent(route, outlet) {
         if (!route.component.isConnected) outlet.parentElement.insertBefore(route.component, outlet.nextElementSibling);
     }
 
-    /**@private*/
     static async getOutlet(container, route) {
         return await new Promise((resolve) => {
             let observer;
@@ -145,17 +105,14 @@ class Router {
         });
     }
 
-    /**@private*/
     static setContainer(route) {
         return route.parent?.component || document.body;
     }
 
-    /**@private*/
     static async loadComponent(route) {
         if (!route.component) route.component = await route.load();
     }
 
-    /**@private*/
     static async handleBeforeLoad(route) {
         await new Promise((resolve, reject) => {
             const callback = (error) => {
@@ -167,16 +124,11 @@ class Router {
         });
     }
 
-    /**@private*/
     static setController() {
         if (this.controller && !this.controller.signal.aborted) this.controller.abort();
         if (!this.controller || (this.controller && this.controller.signal.aborted)) this.controller = new AbortController();
     }
 
-    /**
-     *
-     * @param {String} url
-     */
     static navigate(url) {
         if (this.options.historyApiFallback) {
             window.history.pushState({}, "", url);
@@ -185,7 +137,6 @@ class Router {
         }
     }
 
-    /**@private*/
     static handleNavigate(event) {
         const element = event.target.closest("[routerLink]");
 
@@ -195,7 +146,6 @@ class Router {
         }
     }
 
-    /**@private*/
     static emit(type, detail) {
         const event = new CustomEvent(type, {
             bubbles: true,
@@ -204,32 +154,11 @@ class Router {
         });
         window.dispatchEvent(event);
     }
-    /**@private*/
+
     static routes = [];
 
-    /**@private*/
     static options = {};
 
-    /**
-     * @typedef {Array} RouterRoutes
-     * @property {String} path
-     * @property {HTMLElement} component
-     * @property {Function} load
-     * @property {Function} [beforeLoad]
-     * @property {String} [outlet]
-     * @property {Array} [children]
-     */
-
-    /**
-     * @typedef {Object} RouterOptions
-     * @property {Boolean} [historyApiFallback=true]
-     */
-
-    /**
-     *
-     * @param {RouterRoutes} routes
-     * @param {RouterOptions} options
-     */
     static use(routes = [], options = {}) {
         this.routes = routes;
         this.options = {

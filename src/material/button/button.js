@@ -3,18 +3,7 @@ import { MdComponent } from "../component/component";
 import { RippleController } from "../ripple/ripple";
 import { ifDefined } from "lit/directives/if-defined.js";
 
-/**
- * @requires MdIconComponent
- */
 class MdButtonComponent extends MdComponent {
-    /**
-     * @property {String} [icon]
-     * @property {String} label
-     * @property {String} [variant]
-     * @property {String} [type=button]
-     * @property {Boolean} [disabled]
-     * @property {Boolean} [selected]
-     */
     static properties = {
         icon: { type: String },
         label: { type: String },
@@ -32,9 +21,6 @@ class MdButtonComponent extends MdComponent {
         'outlined',
     ]
 
-    /**
-     *
-     */
     constructor() {
         super();
         this.type = "button";
@@ -43,7 +29,6 @@ class MdButtonComponent extends MdComponent {
         });
     }
 
-    /**@private*/
     render() {
         /* prettier-ignore */
         return html`
@@ -56,13 +41,11 @@ class MdButtonComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-button");
     }
 
-    /**@private*/
     updated(changedProperties) {
         super.updated(changedProperties);
 

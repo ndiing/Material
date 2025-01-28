@@ -1,7 +1,4 @@
 class PopperController {
-    /**
-     *
-     */
     methods = {
         "top-end": ({ containerRect, triggerRect, offset } = {}) => ({ left: triggerRect.right - containerRect.width, top: triggerRect.top - containerRect.height - offset }),
         top: ({ containerRect, triggerRect, offset } = {}) => ({ left: triggerRect.left - (containerRect.width - triggerRect.width) / 2, top: triggerRect.top - containerRect.height - offset }),
@@ -24,19 +21,6 @@ class PopperController {
         "top-left": ({ containerRect, triggerRect, offset } = {}) => ({ left: triggerRect.left - containerRect.width - offset, top: triggerRect.top - containerRect.height - offset }),
     };
 
-    /**
-     * @typedef {Object} PlacementOptions
-     * @property {HTMLElement} container
-     * @property {HTMLElement} trigger
-     * @property {HTMLElement} boundary
-     * @property {Number} [offset=0]
-     * @property {Array} [placements=["top-end", "top", "top-start", "top-right", "right-end", "right", "right-start", "bottom-right", "bottom-start", "bottom", "bottom-end", "bottom-left", "left-start", "left", "left-end", "top-left"]]
-     */
-
-    /**
-     *
-     * @param {PlacementOptions} options
-     */
     show(options = {}) {
         const { container = undefined, trigger = undefined, boundary = this.closestScrollable(container), offset = 0, placements = ["top-end", "top", "top-start", "top-right", "right-end", "right", "right-start", "bottom-right", "bottom-start", "bottom", "bottom-end", "bottom-left", "left-start", "left", "left-end", "top-left"] } = options;
 
@@ -62,11 +46,6 @@ class PopperController {
         container.style.setProperty("top", top + "px");
     }
 
-    /**
-     *
-     * @param {HTMLElement} element
-     * @returns {HTMLElement}
-     */
     closestScrollable(element) {
         let current = element;
         while (current) {

@@ -4,51 +4,7 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { choose } from "lit/directives/choose.js";
 import { PopperController } from "../popper/popper";
 
-/**
- * @requires MdScrimComponent
- * @requires MdIconComponent
- * @requires MdIconButtonComponent
- * @requires MdButtonComponent
- * @fires onTooltipIconButtonClick
- * @fires onTooltipButtonClick
- * @fires onTooltipShown
- * @fires onTooltipClosed
- * @fires onTooltipScrimClosed
- */
 class MdTooltipComponent extends MdComponent {
-    /**
-     * @typedef {Array} MdTooltipComponentIcons
-     * @property {String} icon
-     * @property {String} [component=icon]
-     */
-    /**
-     * @typedef {Array} MdTooltipComponentActions
-     * @property {String} icon
-     * @property {String} [variant]
-     * @property {String} [type]
-     * @property {Boolean} [toggle]
-     * @property {Boolean} [selected]
-     * @property {Boolean} [disabled]
-     * @property {String} [component=icon-button]
-     */
-    /**
-     * @typedef {Array} MdTooltipComponentButtons
-     * @property {String} [icon]
-     * @property {String} label
-     * @property {String} [variant]
-     * @property {String} [type]
-     * @property {Boolean} [disabled]
-     * @property {Boolean} [selected]
-     * @property {String} [component=button]
-     */
-    /**
-     * @property {MdTooltipComponentIcons} [icons]
-     * @property {MdTooltipComponentActions} [actions]
-     * @property {String} [label]
-     * @property {String} [sublabel]
-     * @property {MdTooltipComponentButtons} [buttons]
-     * @property {Boolean} [open]
-     */
     static properties = {
         icons: { type: Array },
         actions: { type: Array },
@@ -58,15 +14,11 @@ class MdTooltipComponent extends MdComponent {
         open: { type: Boolean, reflect: true },
     };
 
-    /**
-     *
-     */
     constructor() {
         super();
         this.body = Array.from(this.childNodes);
     }
 
-    /**@private*/
     renderIcon(item) {
         /* prettier-ignore */
         return html`
@@ -76,7 +28,6 @@ class MdTooltipComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     renderIconButton(item) {
         /* prettier-ignore */
         return html`
@@ -93,7 +44,6 @@ class MdTooltipComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     renderButton(item) {
         /* prettier-ignore */
         return html`
@@ -110,7 +60,6 @@ class MdTooltipComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     renderSpacer(item) {
         /* prettier-ignore */
         return html`
@@ -118,7 +67,6 @@ class MdTooltipComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     renderItem(item, component = "icon") {
         /* prettier-ignore */
         return choose(item.component||component,[
@@ -129,7 +77,6 @@ class MdTooltipComponent extends MdComponent {
         ],() => nothing)
     }
 
-    /**@private*/
     render() {
         /* prettier-ignore */
         return html`
@@ -170,30 +117,24 @@ class MdTooltipComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-tooltip");
     }
 
-    /**@private*/
     disconnectedCallback() {
         super.disconnectedCallback();
         this.classList.remove("md-tooltip");
     }
 
-    /**@private*/
     handleTooltipIconButtonClick(event) {
         this.emit("onTooltipIconButtonClick", { event });
     }
-    /**@private*/
+
     handleTooltipButtonClick(event) {
         this.emit("onTooltipButtonClick", { event });
     }
 
-    /**
-     *
-     */
     show(options) {
         options = {
             container: this,
@@ -207,17 +148,11 @@ class MdTooltipComponent extends MdComponent {
         this.emit("onTooltipShown");
     }
 
-    /**
-     *
-     */
     close() {
         this.open = false;
         this.emit("onTooltipClosed");
     }
 
-    /**
-     *
-     */
     toggle(options) {
         if (this.open) this.close();
         else this.show(options);

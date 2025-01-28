@@ -2,18 +2,7 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 
-/**
- * @fires onListItemClick
- * @fires onListItemCheckboxInput
- * @fires onListItemRadioButtonInput
- * @fires onListItemSwitchInput
- */
 class MdListComponent extends MdComponent {
-    /**
-     * @property {Array} [items=[]]
-     * @property {String} [type=single-select]
-     * @property {Object} [rippleOptions]
-     */
     static properties = {
         items: { type: Array },
         type: { type: String },
@@ -25,16 +14,13 @@ class MdListComponent extends MdComponent {
         'single-select',
         'multi-select',
     ]
-    /**
-     *
-     */
+
     constructor() {
         super();
         this.items = [];
         this.type = "single-select";
     }
 
-    /**@private*/
     renderListItem(item) {
         /* prettier-ignore */
         return html`
@@ -68,19 +54,16 @@ class MdListComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     render() {
         /* prettier-ignore */
         return this.items.map(item=>this.renderListItem(item))
     }
 
-    /**@private*/
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-list");
     }
 
-    /**@private*/
     handleListItemClick(event) {
         const action = event.target.closest(".md-list__checkbox,.md-list__radio-button,.md-list__switch");
         if (action) return;
@@ -106,7 +89,6 @@ class MdListComponent extends MdComponent {
         });
     }
 
-    /**@private*/
     handleListItemCheckboxNativeInput(event) {
         const data = event.currentTarget.data;
         this.multiSelect(data);
@@ -114,7 +96,7 @@ class MdListComponent extends MdComponent {
 
         this.emit("onListItemCheckboxNativeInput", { event });
     }
-    /**@private*/
+
     handleListItemRadioButtonNativeInput(event) {
         const data = event.currentTarget.data;
         this.singleSelect(data);
@@ -122,7 +104,7 @@ class MdListComponent extends MdComponent {
 
         this.emit("onListItemRadioButtonNativeInput", { event });
     }
-    /**@private*/
+
     handleListItemSwitchNativeInput(event) {
         const data = event.currentTarget.data;
         this.multiSelect(data);

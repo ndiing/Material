@@ -3,51 +3,7 @@ import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { choose } from "lit/directives/choose.js";
 
-/**
- * @requires MdScrimComponent
- * @requires MdIconComponent
- * @requires MdIconButtonComponent
- * @requires MdButtonComponent
- * @fires onDialogIconButtonClick
- * @fires onDialogButtonClick
- * @fires onDialogShown
- * @fires onDialogClosed
- * @fires onDialogScrimClosed
- */
 class MdDialogComponent extends MdComponent {
-    /**
-     * @typedef {Array} MdDialogComponentIcons
-     * @property {String} icon
-     * @property {String} [component=icon]
-     */
-    /**
-     * @typedef {Array} MdDialogComponentActions
-     * @property {String} icon
-     * @property {String} [variant]
-     * @property {String} [type]
-     * @property {Boolean} [toggle]
-     * @property {Boolean} [selected]
-     * @property {Boolean} [disabled]
-     * @property {String} [component=icon-button]
-     */
-    /**
-     * @typedef {Array} MdDialogComponentButtons
-     * @property {String} [icon]
-     * @property {String} label
-     * @property {String} [variant]
-     * @property {String} [type]
-     * @property {Boolean} [disabled]
-     * @property {Boolean} [selected]
-     * @property {String} [component=button]
-     */
-    /**
-     * @property {MdDialogComponentIcons} [icons]
-     * @property {MdDialogComponentActions} [actions]
-     * @property {String} [label]
-     * @property {String} [sublabel]
-     * @property {MdDialogComponentButtons} [buttons]
-     * @property {Boolean} [open]
-     */
     static properties = {
         icons: { type: Array },
         actions: { type: Array },
@@ -57,15 +13,11 @@ class MdDialogComponent extends MdComponent {
         open: { type: Boolean, reflect: true },
     };
 
-    /**
-     *
-     */
     constructor() {
         super();
         this.body = Array.from(this.childNodes);
     }
 
-    /**@private*/
     renderIcon(item) {
         /* prettier-ignore */
         return html`
@@ -75,7 +27,6 @@ class MdDialogComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     renderIconButton(item) {
         /* prettier-ignore */
         return html`
@@ -92,7 +43,6 @@ class MdDialogComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     renderButton(item) {
         /* prettier-ignore */
         return html`
@@ -109,7 +59,6 @@ class MdDialogComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     renderSpacer(item) {
         /* prettier-ignore */
         return html`
@@ -117,7 +66,6 @@ class MdDialogComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     renderItem(item, component = "icon") {
         /* prettier-ignore */
         return choose(item.component||component,[
@@ -128,7 +76,6 @@ class MdDialogComponent extends MdComponent {
         ],() => nothing)
     }
 
-    /**@private*/
     render() {
         /* prettier-ignore */
         return html`
@@ -169,7 +116,6 @@ class MdDialogComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     async connectedCallback() {
         super.connectedCallback();
         this.dialogScrim = document.createElement("md-scrim");
@@ -184,7 +130,6 @@ class MdDialogComponent extends MdComponent {
         this.style.setProperty("--md-comp-dialog-width", this.clientWidth + "px");
     }
 
-    /**@private*/
     disconnectedCallback() {
         super.disconnectedCallback();
         this.dialogScrim.removeEventListener("onScrimClosed", this.handleDialogScrimClosed);
@@ -192,18 +137,14 @@ class MdDialogComponent extends MdComponent {
         this.classList.remove("md-dialog");
     }
 
-    /**@private*/
     handleDialogIconButtonClick(event) {
         this.emit("onDialogIconButtonClick", { event });
     }
-    /**@private*/
+
     handleDialogButtonClick(event) {
         this.emit("onDialogButtonClick", { event });
     }
 
-    /**
-     *
-     */
     show() {
         this.style.removeProperty("--md-comp-dialog-animation");
 
@@ -212,9 +153,6 @@ class MdDialogComponent extends MdComponent {
         this.emit("onDialogShown");
     }
 
-    /**
-     *
-     */
     close() {
         this.style.removeProperty("--md-comp-dialog-animation");
 
@@ -223,15 +161,11 @@ class MdDialogComponent extends MdComponent {
         this.emit("onDialogClosed");
     }
 
-    /**
-     *
-     */
     toggle() {
         if (this.open) this.close();
         else this.show();
     }
 
-    /**@private*/
     handleDialogScrimClosed(event) {
         if (this.open) this.close();
         this.emit("onDialogScrimClosed", { event });

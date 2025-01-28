@@ -3,16 +3,7 @@ import { MdComponent } from "../component/component";
 import { RippleController } from "../ripple/ripple";
 import { ifDefined } from "lit/directives/if-defined.js";
 
-/**
- * @requires MdIconComponent
- */
 class MdFabComponent extends MdComponent {
-    /**
-     * @property {String} [icon]
-     * @property {String} [label]
-     * @property {String} [type]
-     * @property {String} [size]
-     */
     static properties = {
         icon: { type: String },
         label: { type: String },
@@ -22,39 +13,29 @@ class MdFabComponent extends MdComponent {
     };
 
     /* prettier-ignore */
-    /**
-     *
-     */
+
     sizes=[
         'small',
         'large',
     ]
 
     /* prettier-ignore */
-    /**
-     *
-     */
+
     types=[
         'extended',
     ]
 
     /* prettier-ignore */
-    /**
-     *
-     */
+
     variants=[
         'unelevated',
     ]
 
-    /**
-     *
-     */
     constructor() {
         super();
         this.ripple = new RippleController(this, {});
     }
 
-    /**@private*/
     render() {
         /* prettier-ignore */
         return html`
@@ -63,13 +44,11 @@ class MdFabComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-fab");
     }
 
-    /**@private*/
     updated(changedProperties) {
         super.updated(changedProperties);
 

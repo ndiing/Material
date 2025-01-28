@@ -3,46 +3,7 @@ import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { choose } from "lit/directives/choose.js";
 
-/**
- * @requires MdIconComponent
- * @requires MdIconButtonComponent
- * @requires MdButtonComponent
- * @fires onCardIconButtonClick
- * @fires onCardButtonClick
- */
 class MdCardComponent extends MdComponent {
-    /**
-     * @typedef {Array} MdCardComponentIcons
-     * @property {String} icon
-     * @property {String} [component=icon]
-     */
-    /**
-     * @typedef {Array} MdCardComponentActions
-     * @property {String} icon
-     * @property {String} [variant]
-     * @property {String} [type]
-     * @property {Boolean} [toggle]
-     * @property {Boolean} [selected]
-     * @property {Boolean} [disabled]
-     * @property {String} [component=icon-button]
-     */
-    /**
-     * @typedef {Array} MdCardComponentButtons
-     * @property {String} [icon]
-     * @property {String} label
-     * @property {String} [variant]
-     * @property {String} [type]
-     * @property {Boolean} [disabled]
-     * @property {Boolean} [selected]
-     * @property {String} [component=button]
-     */
-    /**
-     * @property {MdCardComponentIcons} [icons]
-     * @property {MdCardComponentActions} [actions]
-     * @property {String} [label]
-     * @property {String} [sublabel]
-     * @property {MdCardComponentButtons} [buttons]
-     */
     static properties = {
         icons: { type: Array },
         actions: { type: Array },
@@ -51,15 +12,11 @@ class MdCardComponent extends MdComponent {
         buttons: { type: Array },
     };
 
-    /**
-     *
-     */
     constructor() {
         super();
         this.body = Array.from(this.childNodes);
     }
 
-    /**@private*/
     renderIcon(item) {
         /* prettier-ignore */
         return html`
@@ -69,7 +26,6 @@ class MdCardComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     renderIconButton(item) {
         /* prettier-ignore */
         return html`
@@ -86,7 +42,6 @@ class MdCardComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     renderButton(item) {
         /* prettier-ignore */
         return html`
@@ -103,7 +58,6 @@ class MdCardComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     renderSpacer(item) {
         /* prettier-ignore */
         return html`
@@ -111,7 +65,6 @@ class MdCardComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     renderItem(item, component = "icon") {
         /* prettier-ignore */
         return choose(item.component||component,[
@@ -122,7 +75,6 @@ class MdCardComponent extends MdComponent {
         ],() => nothing)
     }
 
-    /**@private*/
     render() {
         /* prettier-ignore */
         return html`
@@ -163,17 +115,15 @@ class MdCardComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-card");
     }
 
-    /**@private*/
     handleCardIconButtonClick(event) {
         this.emit("onCardIconButtonClick", { event });
     }
-    /**@private*/
+
     handleCardButtonClick(event) {
         this.emit("onCardButtonClick", { event });
     }

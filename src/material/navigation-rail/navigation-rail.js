@@ -3,51 +3,7 @@ import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { choose } from "lit/directives/choose.js";
 
-/**
- * @requires MdScrimComponent
- * @requires MdIconComponent
- * @requires MdIconButtonComponent
- * @requires MdButtonComponent
- * @fires onNavigationRailIconButtonClick
- * @fires onNavigationRailButtonClick
- * @fires onNavigationRailShown
- * @fires onNavigationRailClosed
- * @fires onNavigationRailScrimClosed
- */
 class MdNavigationRailComponent extends MdComponent {
-    /**
-     * @typedef {Array} MdNavigationRailComponentIcons
-     * @property {String} icon
-     * @property {String} [component=icon]
-     */
-    /**
-     * @typedef {Array} MdNavigationRailComponentActions
-     * @property {String} icon
-     * @property {String} [variant]
-     * @property {String} [type]
-     * @property {Boolean} [toggle]
-     * @property {Boolean} [selected]
-     * @property {Boolean} [disabled]
-     * @property {String} [component=icon-button]
-     */
-    /**
-     * @typedef {Array} MdNavigationRailComponentButtons
-     * @property {String} [icon]
-     * @property {String} label
-     * @property {String} [variant]
-     * @property {String} [type]
-     * @property {Boolean} [disabled]
-     * @property {Boolean} [selected]
-     * @property {String} [component=button]
-     */
-    /**
-     * @property {MdNavigationRailComponentIcons} [icons]
-     * @property {MdNavigationRailComponentActions} [actions]
-     * @property {String} [label]
-     * @property {String} [sublabel]
-     * @property {MdNavigationRailComponentButtons} [buttons]
-     * @property {Boolean} [open]
-     */
     static properties = {
         icons: { type: Array },
         actions: { type: Array },
@@ -57,16 +13,12 @@ class MdNavigationRailComponent extends MdComponent {
         open: { type: Boolean, reflect: true },
     };
 
-    /**
-     *
-     */
     constructor() {
         super();
         this.items = [];
         this.rippleOptions = { container: ".md-navigation-list__icon" };
     }
 
-    /**@private*/
     renderIcon(item) {
         /* prettier-ignore */
         return html`
@@ -76,7 +28,6 @@ class MdNavigationRailComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     renderIconButton(item) {
         /* prettier-ignore */
         return html`
@@ -93,7 +44,6 @@ class MdNavigationRailComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     renderItem(item, component = "icon") {
         /* prettier-ignore */
         return choose(item.component||component,[
@@ -102,7 +52,6 @@ class MdNavigationRailComponent extends MdComponent {
         ],() => nothing)
     }
 
-    /**@private*/
     render() {
         /* prettier-ignore */
         return html`
@@ -137,7 +86,6 @@ class MdNavigationRailComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     async connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-navigation-rail");
@@ -148,44 +96,32 @@ class MdNavigationRailComponent extends MdComponent {
         this.style.setProperty("--md-comp-sheet-height", this.clientHeight + "px");
     }
 
-    /**@private*/
     disconnectedCallback() {
         super.disconnectedCallback();
         this.classList.remove("md-navigation-rail");
         this.style.setProperty("--md-comp-sheet-animation", "none");
     }
 
-    /**@private*/
     updated(changedProperties) {
         super.updated(changedProperties);
     }
 
-    /**@private*/
     handleNavigationRailIconButtonClick(event) {
         this.emit("onNavigationRailIconButtonClick", { event });
     }
 
-    /**
-     *
-     */
     show() {
         this.style.removeProperty("--md-comp-sheet-animation");
         this.open = true;
         this.emit("onNavigationRailShown");
     }
 
-    /**
-     *
-     */
     close() {
         this.style.removeProperty("--md-comp-sheet-animation");
         this.open = false;
         this.emit("onNavigationRailClosed");
     }
 
-    /**
-     *
-     */
     toggle() {
         if (this.open) this.close();
         else this.show();

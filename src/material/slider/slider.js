@@ -3,9 +3,6 @@ import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { classMap } from "lit/directives/class-map.js";
 
-/**
- *
- */
 class MdSliderComponent extends MdComponent {
     static properties = {
         min: { type: Number },
@@ -73,7 +70,7 @@ class MdSliderComponent extends MdComponent {
         /* prettier-ignore */
         return this.value.map((value,index)=>this.renderSliderWrapper(value,index))
     }
-    /**@private*/
+
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-slider");
@@ -86,7 +83,7 @@ class MdSliderComponent extends MdComponent {
         else this.variant = "continuous";
         this.updateValue();
     }
-    /**@private*/
+
     updated(changedProperties) {
         super.updated(changedProperties);
 

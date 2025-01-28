@@ -3,19 +3,7 @@ import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { RippleController } from "../ripple/ripple";
 
-/**
- *
- */
 class MdTreeItemComponent extends MdComponent {
-    /**
-     * @property {Boolean} [selected]
-     * @property {Boolean} [expanded]
-     * @property {String} [actions]
-     * @property {String} [nodeIcons]
-     * @property {String} [leafIcons]
-     * @property {String} label
-     * @property {String} [routerLink]
-     */
     static properties = {
         selected: { type: Boolean, reflect: true },
         expanded: { type: Boolean, reflect: true },
@@ -27,9 +15,6 @@ class MdTreeItemComponent extends MdComponent {
         routerLink: { type: String, reflect: true },
     };
 
-    /**
-     *
-     */
     constructor() {
         super();
         this.ripple = new RippleController(this, {});
@@ -50,7 +35,6 @@ class MdTreeItemComponent extends MdComponent {
         else return this.leafIcons[~~this.selected];
     }
 
-    /**@private*/
     render() {
         /* prettier-ignore */
         return html`
@@ -61,18 +45,14 @@ class MdTreeItemComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     async connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-tree__item");
     }
 
-    
-    /**@private*/
     async updated(changedProperties) {
         super.updated(changedProperties);
 
-        
         if (changedProperties.has("selected") && this.selected) {
             this.emit("onTreeItemSelected", { treeItem: this });
         }

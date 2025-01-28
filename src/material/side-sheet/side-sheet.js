@@ -3,51 +3,7 @@ import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { choose } from "lit/directives/choose.js";
 
-/**
- * @requires MdScrimComponent
- * @requires MdIconComponent
- * @requires MdIconButtonComponent
- * @requires MdButtonComponent
- * @fires onSideSheetIconButtonClick
- * @fires onSideSheetButtonClick
- * @fires onSideSheetShown
- * @fires onSideSheetClosed
- * @fires onSideSheetScrimClosed
- */
 class MdSideSheetComponent extends MdComponent {
-    /**
-     * @typedef {Array} MdSideSheetComponentIcons
-     * @property {String} icon
-     * @property {String} [component=icon]
-     */
-    /**
-     * @typedef {Array} MdSideSheetComponentActions
-     * @property {String} icon
-     * @property {String} [variant]
-     * @property {String} [type]
-     * @property {Boolean} [toggle]
-     * @property {Boolean} [selected]
-     * @property {Boolean} [disabled]
-     * @property {String} [component=icon-button]
-     */
-    /**
-     * @typedef {Array} MdSideSheetComponentButtons
-     * @property {String} [icon]
-     * @property {String} label
-     * @property {String} [variant]
-     * @property {String} [type]
-     * @property {Boolean} [disabled]
-     * @property {Boolean} [selected]
-     * @property {String} [component=button]
-     */
-    /**
-     * @property {MdSideSheetComponentIcons} [icons]
-     * @property {MdSideSheetComponentActions} [actions]
-     * @property {String} [label]
-     * @property {String} [sublabel]
-     * @property {MdSideSheetComponentButtons} [buttons]
-     * @property {Boolean} [open]
-     */
     static properties = {
         icons: { type: Array },
         actions: { type: Array },
@@ -58,15 +14,11 @@ class MdSideSheetComponent extends MdComponent {
         modal: { type: Boolean, reflect: true },
     };
 
-    /**
-     *
-     */
     constructor() {
         super();
         this.body = Array.from(this.childNodes);
     }
 
-    /**@private*/
     renderIcon(item) {
         /* prettier-ignore */
         return html`
@@ -76,7 +28,6 @@ class MdSideSheetComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     renderIconButton(item) {
         /* prettier-ignore */
         return html`
@@ -93,7 +44,6 @@ class MdSideSheetComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     renderButton(item) {
         /* prettier-ignore */
         return html`
@@ -110,7 +60,6 @@ class MdSideSheetComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     renderSpacer(item) {
         /* prettier-ignore */
         return html`
@@ -118,7 +67,6 @@ class MdSideSheetComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     renderItem(item, component = "icon") {
         /* prettier-ignore */
         return choose(item.component||component,[
@@ -129,7 +77,6 @@ class MdSideSheetComponent extends MdComponent {
         ],() => nothing)
     }
 
-    /**@private*/
     render() {
         /* prettier-ignore */
         return html`
@@ -170,7 +117,6 @@ class MdSideSheetComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     async connectedCallback() {
         super.connectedCallback();
         this.sideSheetScrim = document.createElement("md-scrim");
@@ -186,7 +132,6 @@ class MdSideSheetComponent extends MdComponent {
         this.style.setProperty("--md-comp-sheet-height", this.clientHeight + "px");
     }
 
-    /**@private*/
     disconnectedCallback() {
         super.disconnectedCallback();
         this.sideSheetScrim.removeEventListener("onScrimClosed", this.handleSideSheetScrimClosed);
@@ -195,7 +140,6 @@ class MdSideSheetComponent extends MdComponent {
         this.style.setProperty("--md-comp-sheet-animation", "none");
     }
 
-    /**@private*/
     updated(changedProperties) {
         super.updated(changedProperties);
 
@@ -204,18 +148,14 @@ class MdSideSheetComponent extends MdComponent {
         }
     }
 
-    /**@private*/
     handleSideSheetIconButtonClick(event) {
         this.emit("onSideSheetIconButtonClick", { event });
     }
-    /**@private*/
+
     handleSideSheetButtonClick(event) {
         this.emit("onSideSheetButtonClick", { event });
     }
 
-    /**
-     *
-     */
     show() {
         this.style.removeProperty("--md-comp-sheet-animation");
         if (this.modal) this.sideSheetScrim.show();
@@ -223,9 +163,6 @@ class MdSideSheetComponent extends MdComponent {
         this.emit("onSideSheetShown");
     }
 
-    /**
-     *
-     */
     close() {
         this.style.removeProperty("--md-comp-sheet-animation");
         this.open = false;
@@ -233,15 +170,11 @@ class MdSideSheetComponent extends MdComponent {
         this.emit("onSideSheetClosed");
     }
 
-    /**
-     *
-     */
     toggle() {
         if (this.open) this.close();
         else this.show();
     }
 
-    /**@private*/
     handleSideSheetScrimClosed(event) {
         if (this.open) this.close();
         this.emit("onSideSheetScrimClosed", { event });

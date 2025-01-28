@@ -3,16 +3,7 @@ import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { RippleController } from "../ripple/ripple";
 
-/**
- * @fires onRadioButtonNativeInput
- */
 class MdRadioButtonComponent extends MdComponent {
-    /**
-     * @property {String} name
-     * @property {String} value
-     * @property {Boolean} indeterminate
-     * @property {Boolean} checked
-     */
     static properties = {
         name: { type: String },
         value: { type: String },
@@ -20,9 +11,6 @@ class MdRadioButtonComponent extends MdComponent {
         checked: { type: Boolean },
     };
 
-    /**
-     *
-     */
     constructor() {
         super();
         this.ripple = new RippleController(this, {
@@ -33,7 +21,6 @@ class MdRadioButtonComponent extends MdComponent {
         });
     }
 
-    /**@private*/
     render() {
         /* prettier-ignore */
         return html`
@@ -52,13 +39,11 @@ class MdRadioButtonComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-radio-button");
     }
 
-    /**@private*/
     handleRadioButtonNativeInput(event) {
         const native = event.currentTarget;
         this.indeterminate = native.indeterminate;

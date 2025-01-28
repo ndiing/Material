@@ -1,20 +1,4 @@
-/**
- *
- */
 class RippleController {
-    /**
-     * @typedef {Object} RippleControllerOptions
-     * @property {Boolean} [centered]
-     * @property {Number} [radius]
-     * @property {String/HTMLElement} [trigger=this.host]
-     * @property {Boolean} [unbounded]
-     * @property {String/HTMLElement} [container=this.host]
-     */
-    /**
-     *
-     * @param {HTMLElement} host
-     * @param {RippleControllerOptions} options
-     */
     constructor(host, options) {
         (this.host = host).addController(this);
         this.options = {
@@ -30,7 +14,6 @@ class RippleController {
         };
     }
 
-    /**@private*/
     async hostConnected() {
         await this.host.updateComplete;
 
@@ -78,7 +61,6 @@ class RippleController {
         this.trigger.addEventListener("blur", this.handleBlur);
     }
 
-    /**@private*/
     async hostDisconnected() {
         await this.host.updateComplete;
         this.container.classList.remove("md-ripple");
@@ -94,16 +76,14 @@ class RippleController {
         this.trigger.removeEventListener("blur", this.handleBlur);
     }
 
-    /**@private*/
     handlePointerenter(event) {
         this.container.classList.add("md-ripple--hover");
     }
-    /**@private*/
+
     handlePointerleave(event) {
         this.container.classList.remove("md-ripple--hover");
     }
 
-    /**@private*/
     handlePointerdown(event) {
         window.addEventListener("pointerup", this.handlePointerup);
         this.container.classList.add("md-ripple--press");
@@ -123,17 +103,16 @@ class RippleController {
             this.container.style.setProperty("--md-comp-ripple-y", y * 100 + "%");
         }
     }
-    /**@private*/
+
     handlePointerup(event) {
         this.container.classList.remove("md-ripple--press");
         window.removeEventListener("pointerup", this.handlePointerup);
     }
 
-    /**@private*/
     handleFocus(event) {
         this.container.classList.add("md-ripple--focus");
     }
-    /**@private*/
+
     handleBlur(event) {
         this.container.classList.remove("md-ripple--focus");
     }

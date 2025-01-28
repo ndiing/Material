@@ -3,51 +3,7 @@ import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { choose } from "lit/directives/choose.js";
 
-/**
- * @requires MdScrimComponent
- * @requires MdIconComponent
- * @requires MdIconButtonComponent
- * @requires MdButtonComponent
- * @fires onBottomSheetIconButtonClick
- * @fires onBottomSheetButtonClick
- * @fires onBottomSheetShown
- * @fires onBottomSheetClosed
- * @fires onBottomSheetScrimClosed
- */
 class MdBottomSheetComponent extends MdComponent {
-    /**
-     * @typedef {Array} MdBottomSheetComponentIcons
-     * @property {String} icon
-     * @property {String} [component=icon]
-     */
-    /**
-     * @typedef {Array} MdBottomSheetComponentActions
-     * @property {String} icon
-     * @property {String} [variant]
-     * @property {String} [type]
-     * @property {Boolean} [toggle]
-     * @property {Boolean} [selected]
-     * @property {Boolean} [disabled]
-     * @property {String} [component=icon-button]
-     */
-    /**
-     * @typedef {Array} MdBottomSheetComponentButtons
-     * @property {String} [icon]
-     * @property {String} label
-     * @property {String} [variant]
-     * @property {String} [type]
-     * @property {Boolean} [disabled]
-     * @property {Boolean} [selected]
-     * @property {String} [component=button]
-     */
-    /**
-     * @property {MdBottomSheetComponentIcons} [icons]
-     * @property {MdBottomSheetComponentActions} [actions]
-     * @property {String} [label]
-     * @property {String} [sublabel]
-     * @property {MdBottomSheetComponentButtons} [buttons]
-     * @property {Boolean} [open]
-     */
     static properties = {
         icons: { type: Array },
         actions: { type: Array },
@@ -58,15 +14,11 @@ class MdBottomSheetComponent extends MdComponent {
         modal: { type: Boolean, reflect: true },
     };
 
-    /**
-     *
-     */
     constructor() {
         super();
         this.body = Array.from(this.childNodes);
     }
 
-    /**@private*/
     renderIcon(item) {
         /* prettier-ignore */
         return html`
@@ -76,7 +28,6 @@ class MdBottomSheetComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     renderIconButton(item) {
         /* prettier-ignore */
         return html`
@@ -93,7 +44,6 @@ class MdBottomSheetComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     renderButton(item) {
         /* prettier-ignore */
         return html`
@@ -110,7 +60,6 @@ class MdBottomSheetComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     renderSpacer(item) {
         /* prettier-ignore */
         return html`
@@ -118,7 +67,6 @@ class MdBottomSheetComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     renderItem(item, component = "icon") {
         /* prettier-ignore */
         return choose(item.component||component,[
@@ -129,7 +77,6 @@ class MdBottomSheetComponent extends MdComponent {
         ],() => nothing)
     }
 
-    /**@private*/
     render() {
         /* prettier-ignore */
         return html`
@@ -170,7 +117,6 @@ class MdBottomSheetComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     async connectedCallback() {
         super.connectedCallback();
         this.bottomSheetScrim = document.createElement("md-scrim");
@@ -186,7 +132,6 @@ class MdBottomSheetComponent extends MdComponent {
         this.style.setProperty("--md-comp-sheet-height", this.clientHeight + "px");
     }
 
-    /**@private*/
     disconnectedCallback() {
         super.disconnectedCallback();
         this.bottomSheetScrim.removeEventListener("onScrimClosed", this.handleBottomSheetScrimClosed);
@@ -195,7 +140,6 @@ class MdBottomSheetComponent extends MdComponent {
         this.style.setProperty("--md-comp-sheet-animation", "none");
     }
 
-    /**@private*/
     updated(changedProperties) {
         super.updated(changedProperties);
 
@@ -204,18 +148,14 @@ class MdBottomSheetComponent extends MdComponent {
         }
     }
 
-    /**@private*/
     handleBottomSheetIconButtonClick(event) {
         this.emit("onBottomSheetIconButtonClick", { event });
     }
-    /**@private*/
+
     handleBottomSheetButtonClick(event) {
         this.emit("onBottomSheetButtonClick", { event });
     }
 
-    /**
-     *
-     */
     show() {
         this.style.removeProperty("--md-comp-sheet-animation");
         if (this.modal) this.bottomSheetScrim.show();
@@ -223,9 +163,6 @@ class MdBottomSheetComponent extends MdComponent {
         this.emit("onBottomSheetShown");
     }
 
-    /**
-     *
-     */
     close() {
         this.style.removeProperty("--md-comp-sheet-animation");
         this.open = false;
@@ -233,15 +170,11 @@ class MdBottomSheetComponent extends MdComponent {
         this.emit("onBottomSheetClosed");
     }
 
-    /**
-     *
-     */
     toggle() {
         if (this.open) this.close();
         else this.show();
     }
 
-    /**@private*/
     handleBottomSheetScrimClosed(event) {
         if (this.open) this.close();
         this.emit("onBottomSheetScrimClosed", { event });

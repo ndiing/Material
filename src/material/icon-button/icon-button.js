@@ -3,19 +3,7 @@ import { MdComponent } from "../component/component";
 import { RippleController } from "../ripple/ripple";
 import { ifDefined } from "lit/directives/if-defined.js";
 
-/**
- * @requires MdIconComponent
- * @fires onIconButtonClick
- */
 class MdIconButtonComponent extends MdComponent {
-    /**
-     * @property {String} icon
-     * @property {String} [variant]
-     * @property {String} [type=icon-button]
-     * @property {Boolean} [toggle]
-     * @property {Boolean} [selected]
-     * @property {Boolean} [disabled]
-     */
     static properties = {
         icon: { type: String },
         variant: { type: String },
@@ -26,18 +14,13 @@ class MdIconButtonComponent extends MdComponent {
     };
 
     /* prettier-ignore */
-    /**
-     *
-     */
+
     variants=[
         'filled',
         'filled-tonal',
         'outlined',
     ]
 
-    /**
-     *
-     */
     constructor() {
         super();
         this.type = "icon-button";
@@ -48,7 +31,6 @@ class MdIconButtonComponent extends MdComponent {
         });
     }
 
-    /**@private*/
     render() {
         /* prettier-ignore */
         return html`
@@ -60,7 +42,6 @@ class MdIconButtonComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-icon-button");
@@ -68,14 +49,12 @@ class MdIconButtonComponent extends MdComponent {
         this.addEventListener("click", this.handleIconButtonClick);
     }
 
-    /**@private*/
     disconnectedCallback() {
         super.disconnectedCallback();
         this.classList.remove("md-icon-button");
         this.removeEventListener("click", this.handleIconButtonClick);
     }
 
-    /**@private*/
     updated(changedProperties) {
         super.updated(changedProperties);
 
@@ -86,7 +65,6 @@ class MdIconButtonComponent extends MdComponent {
         }
     }
 
-    /**@private*/
     handleIconButtonClick(event) {
         if (this.toggle) {
             this.selected = !this.selected;

@@ -1,9 +1,6 @@
 import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 
-/**
- *
- */
 class MdProgressIndicatorComponent extends MdComponent {
     static properties = {
         variant: { type: String },
@@ -77,13 +74,11 @@ class MdProgressIndicatorComponent extends MdComponent {
         else return this.renderProgressIndicatorNative();
     }
 
-    /**@private*/
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-progress-indicator");
     }
 
-    /**@private*/
     updated(changedProperties) {
         super.updated(changedProperties);
         if (changedProperties.has("variant")) {

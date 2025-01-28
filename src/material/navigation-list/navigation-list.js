@@ -2,31 +2,17 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 
-/**
- * @fires onNavigationListItemClick
- * @fires onNavigationListItemCheckboxInput
- * @fires onNavigationListItemRadioButtonInput
- * @fires onNavigationListItemSwitchInput
- */
 class MdNavigationListComponent extends MdComponent {
-    /**
-     * @property {Array} [items=[]]
-     * @property {Object} [rippleOptions]
-     */
     static properties = {
         items: { type: Array },
         rippleOptions: { type: Object },
     };
 
-    /**
-     *
-     */
     constructor() {
         super();
         this.items = [];
     }
 
-    /**@private*/
     renderNavigationListItem(item) {
         /* prettier-ignore */
         return html`
@@ -47,20 +33,17 @@ class MdNavigationListComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     render() {
         /* prettier-ignore */
         return this.items.map(item=>this.renderNavigationListItem(item))
     }
 
-    /**@private*/
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-navigation-list");
         this.style.setProperty("--md-comp-navigation-list-icon-animation", "none");
     }
 
-    /**@private*/
     handleNavigationListItemClick(event) {
         this.style.removeProperty("--md-comp-navigation-list-icon-animation");
 

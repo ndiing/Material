@@ -3,51 +3,7 @@ import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { choose } from "lit/directives/choose.js";
 
-/**
- * @requires MdScrimComponent
- * @requires MdIconComponent
- * @requires MdIconButtonComponent
- * @requires MdButtonComponent
- * @fires onNavigationDrawerIconButtonClick
- * @fires onNavigationDrawerButtonClick
- * @fires onNavigationDrawerShown
- * @fires onNavigationDrawerClosed
- * @fires onNavigationDrawerScrimClosed
- */
 class MdNavigationDrawerComponent extends MdComponent {
-    /**
-     * @typedef {Array} MdNavigationDrawerComponentIcons
-     * @property {String} icon
-     * @property {String} [component=icon]
-     */
-    /**
-     * @typedef {Array} MdNavigationDrawerComponentActions
-     * @property {String} icon
-     * @property {String} [variant]
-     * @property {String} [type]
-     * @property {Boolean} [toggle]
-     * @property {Boolean} [selected]
-     * @property {Boolean} [disabled]
-     * @property {String} [component=icon-button]
-     */
-    /**
-     * @typedef {Array} MdNavigationDrawerComponentButtons
-     * @property {String} [icon]
-     * @property {String} label
-     * @property {String} [variant]
-     * @property {String} [type]
-     * @property {Boolean} [disabled]
-     * @property {Boolean} [selected]
-     * @property {String} [component=button]
-     */
-    /**
-     * @property {MdNavigationDrawerComponentIcons} [icons]
-     * @property {MdNavigationDrawerComponentActions} [actions]
-     * @property {String} [label]
-     * @property {String} [sublabel]
-     * @property {MdNavigationDrawerComponentButtons} [buttons]
-     * @property {Boolean} [open]
-     */
     static properties = {
         icons: { type: Array },
         actions: { type: Array },
@@ -65,15 +21,11 @@ class MdNavigationDrawerComponent extends MdComponent {
         'tree',
     ]
 
-    /**
-     *
-     */
     constructor() {
         super();
         this.view = "flat";
     }
 
-    /**@private*/
     renderIcon(item) {
         /* prettier-ignore */
         return html`
@@ -83,7 +35,6 @@ class MdNavigationDrawerComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     renderIconButton(item) {
         /* prettier-ignore */
         return html`
@@ -100,7 +51,6 @@ class MdNavigationDrawerComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     renderItem(item, component = "icon") {
         /* prettier-ignore */
         return choose(item.component||component,[
@@ -109,7 +59,6 @@ class MdNavigationDrawerComponent extends MdComponent {
         ],() => nothing)
     }
 
-    /**@private*/
     render() {
         /* prettier-ignore */
         return html`
@@ -145,7 +94,6 @@ class MdNavigationDrawerComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     async connectedCallback() {
         super.connectedCallback();
         this.navigationDrawerScrim = document.createElement("md-scrim");
@@ -161,7 +109,6 @@ class MdNavigationDrawerComponent extends MdComponent {
         this.style.setProperty("--md-comp-sheet-height", this.clientHeight + "px");
     }
 
-    /**@private*/
     disconnectedCallback() {
         super.disconnectedCallback();
         this.navigationDrawerScrim.removeEventListener("onScrimClosed", this.handleNavigationDrawerScrimClosed);
@@ -170,7 +117,6 @@ class MdNavigationDrawerComponent extends MdComponent {
         this.style.setProperty("--md-comp-sheet-animation", "none");
     }
 
-    /**@private*/
     updated(changedProperties) {
         super.updated(changedProperties);
 
@@ -185,14 +131,10 @@ class MdNavigationDrawerComponent extends MdComponent {
         }
     }
 
-    /**@private*/
     handleNavigationDrawerIconButtonClick(event) {
         this.emit("onNavigationDrawerIconButtonClick", { event });
     }
 
-    /**
-     *
-     */
     show() {
         this.style.removeProperty("--md-comp-sheet-animation");
         if (this.modal) this.navigationDrawerScrim.show();
@@ -200,9 +142,6 @@ class MdNavigationDrawerComponent extends MdComponent {
         this.emit("onNavigationDrawerShown");
     }
 
-    /**
-     *
-     */
     close() {
         this.style.removeProperty("--md-comp-sheet-animation");
         this.open = false;
@@ -210,15 +149,11 @@ class MdNavigationDrawerComponent extends MdComponent {
         this.emit("onNavigationDrawerClosed");
     }
 
-    /**
-     *
-     */
     toggle() {
         if (this.open) this.close();
         else this.show();
     }
 
-    /**@private*/
     handleNavigationDrawerScrimClosed(event) {
         if (this.open) this.close();
         this.emit("onNavigationDrawerScrimClosed", { event });

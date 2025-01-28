@@ -2,18 +2,7 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 
-/**
- * @fires onTabClick
- * @fires onTabCheckboxInput
- * @fires onTabRadioButtonInput
- * @fires onTabSwitchInput
- */
 class MdTabsComponent extends MdComponent {
-    /**
-     * @property {Array} [items=[]]
-     * @property {Object} [rippleOptions]
-     * @property {String} [variant=primary]
-     */
     static properties = {
         items: { type: Array },
         rippleOptions: { type: Object },
@@ -26,16 +15,12 @@ class MdTabsComponent extends MdComponent {
         'secondary',
     ]
 
-    /**
-     *
-     */
     constructor() {
         super();
         this.items = [];
         this.variant = "primary";
     }
 
-    /**@private*/
     renderTab(item) {
         /* prettier-ignore */
         return html`
@@ -54,20 +39,17 @@ class MdTabsComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     render() {
         /* prettier-ignore */
         return this.items.map(item=>this.renderTab(item))
     }
 
-    /**@private*/
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-tabs");
         this.style.setProperty("--md-comp-tabs-indicator-transition-property", "none");
     }
 
-    /**@private*/
     updated(changedProperties) {
         super.updated(changedProperties);
 
@@ -78,7 +60,6 @@ class MdTabsComponent extends MdComponent {
         }
     }
 
-    /**@private*/
     handleTabClick(event) {
         this.style.removeProperty("--md-comp-tabs-indicator-transition-property");
 
@@ -98,8 +79,8 @@ class MdTabsComponent extends MdComponent {
 
     async handleTabSelected(event) {
         if (this.classList.contains("md-tabs")) {
-            const navigationListItem = event.detail.navigationListItem;
-            const data = navigationListItem.data;
+            const tab = event.detail.tab;
+            const data = tab.data;
 
             this.currIndex = this.items.indexOf(data);
             this.prevIndex = this.prevIndex ?? this.currIndex;
@@ -109,18 +90,18 @@ class MdTabsComponent extends MdComponent {
             this.classList.add("md-tabs--" + direction);
             this.prevIndex = this.currIndex;
 
-            let left = navigationListItem.offsetLeft;
-            let right = this.clientWidth - (left + navigationListItem.clientWidth);
+            let left = tab.offsetLeft;
+            let right = this.clientWidth - (left + tab.clientWidth);
 
             if (this.classList.contains("md-tabs--primary")) {
-                const label = navigationListItem.querySelector(".md-tab__label");
-                left = label.offsetLeft + navigationListItem.offsetLeft;
+                const label = tab.querySelector(".md-tab__label");
+                left = label.offsetLeft + tab.offsetLeft;
                 right = this.clientWidth - (left + label.clientWidth);
 
-                if (!navigationListItem.classList.contains("md-tab--with-icon")) {
-                    const badge = navigationListItem.querySelector(".md-tab__badge");
+                if (!tab.classList.contains("md-tab--with-icon")) {
+                    const badge = tab.querySelector(".md-tab__badge");
                     if (badge) {
-                        right = this.clientWidth - (badge.offsetLeft + navigationListItem.offsetLeft + badge.clientWidth);
+                        right = this.clientWidth - (badge.offsetLeft + tab.offsetLeft + badge.clientWidth);
                     }
                 }
             }

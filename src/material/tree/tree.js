@@ -2,27 +2,18 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 
-/**
- */
 class MdTreeComponent extends MdComponent {
-    /**
-     * @property {Array} [items=[]]
-     */
     static properties = {
         items: { type: Array },
         items2: { type: Array },
     };
 
-    /**
-     *
-     */
     constructor() {
         super();
         this.items = [];
         this.items2 = [];
     }
 
-    /**@private*/
     renderTreeItem(item) {
         // console.log(item)
         /* prettier-ignore */
@@ -44,7 +35,6 @@ class MdTreeComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     render() {
         /* prettier-ignore */
         return this.items2
@@ -52,13 +42,11 @@ class MdTreeComponent extends MdComponent {
         .map(item=>this.renderTreeItem(item))
     }
 
-    /**@private*/
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-tree");
     }
 
-    /**@private*/
     async updated(changedProperties) {
         super.updated(changedProperties);
         if (changedProperties.has("items")) {

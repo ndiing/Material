@@ -3,43 +3,17 @@ import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { choose } from "lit/directives/choose.js";
 
-/**
- * @requires MdIconButtonComponent
- * @fires onBottomAppBarIconButtonClick
- * @fires onBottomAppBarShown
- * @fires onBottomAppBarClosed
- */
 class MdBottomAppBarComponent extends MdComponent {
-    /**
-     * @typedef {Array} MdBottomAppBarComponentActions
-     * @property {String} icon
-     * @property {String} [variant]
-     * @property {String} [type]
-     * @property {Boolean} [toggle]
-     * @property {Boolean} [selected]
-     * @property {Boolean} [disabled]
-     * @property {String} [component=icon-button]
-     */
-
-    /**
-     * @property {MdBottomAppBarComponentActions} [actions]
-     * @property {String} [fab]
-     * @property {Boolean} [open]
-     */
     static properties = {
         actions: { type: Array },
         fab: { type: String },
         open: { type: Boolean, reflect: true },
     };
 
-    /**
-     *
-     */
     constructor() {
         super();
     }
 
-    /**@private*/
     renderIconButton(item) {
         /* prettier-ignore */
         return html`
@@ -57,7 +31,6 @@ class MdBottomAppBarComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     renderFab(item) {
         /* prettier-ignore */
         return html`
@@ -74,7 +47,6 @@ class MdBottomAppBarComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     render() {
         /* prettier-ignore */
         return html`
@@ -87,7 +59,6 @@ class MdBottomAppBarComponent extends MdComponent {
         `
     }
 
-    /**@private*/
     async connectedCallback() {
         super.connectedCallback();
 
@@ -99,49 +70,36 @@ class MdBottomAppBarComponent extends MdComponent {
         this.style.setProperty("--md-comp-sheet-height", this.clientHeight + "px");
     }
 
-    /**@private*/
     disconnectedCallback() {
         super.disconnectedCallback();
         this.classList.remove("md-bottom-app-bar");
         this.style.setProperty("--md-comp-sheet-animation", "none");
     }
 
-    /**@private*/
     updated(changedProperties) {
         super.updated(changedProperties);
     }
 
-    /**@private*/
     handleBottomAppBarIconButtonClick(event) {
         this.emit("onBottomAppBarIconButtonClick", { event });
     }
 
-    /**@private*/
     handleBottomAppBarFabClick(event) {
         this.emit("onBottomAppBarFabClick", { event });
     }
 
-    /**
-     *
-     */
     show() {
         this.style.removeProperty("--md-comp-sheet-animation");
         this.open = true;
         this.emit("onBottomAppBarShown");
     }
 
-    /**
-     *
-     */
     close() {
         this.style.removeProperty("--md-comp-sheet-animation");
         this.open = false;
         this.emit("onBottomAppBarClosed");
     }
 
-    /**
-     *
-     */
     toggle() {
         if (this.open) this.close();
         else this.show();
