@@ -1,4 +1,7 @@
 import { LitElement } from "lit";
+/**
+ *
+ */
 class MdComponent extends LitElement {
     /**
      *

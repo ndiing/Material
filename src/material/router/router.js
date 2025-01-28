@@ -1,3 +1,6 @@
+/**
+ *
+ */
 class Router {
     static params = {};
     static get(pathname = this.pathname, routes = this.routes, parent = null, result = []) {

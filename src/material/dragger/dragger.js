@@ -1,3 +1,6 @@
+/**
+ *
+ */
 class Dragger {}
 export { Dragger };
 // let target = undefined;

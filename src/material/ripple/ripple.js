@@ -1,3 +1,6 @@
+/**
+ *
+ */
 class RippleController {
     /**
      * @private

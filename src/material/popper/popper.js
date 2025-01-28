@@ -1,3 +1,6 @@
+/**
+ *
+ */
 class PopperController {
     methods = {
         "top-end": ({ containerRect, triggerRect, offset } = {}) => ({ left: triggerRect.right - containerRect.width, top: triggerRect.top - containerRect.height - offset }),

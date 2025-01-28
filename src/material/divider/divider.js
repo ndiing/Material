@@ -1,5 +1,8 @@
 import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
+/**
+ *
+ */
 class MdDividerComponent extends MdComponent {
     /**
      * @private

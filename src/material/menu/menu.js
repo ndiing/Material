@@ -3,6 +3,9 @@ import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { choose } from "lit/directives/choose.js";
 import { PopperController } from "../popper/popper";
+/**
+ *
+ */
 class MdMenuComponent extends MdComponent {
     /**
      *
