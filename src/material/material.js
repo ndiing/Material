@@ -42,7 +42,9 @@ import "./navigation-rail/navigation-rail.js";
 import "./menu/menu.js";
 import "./progress-indicator/progress-indicator.js";
 import "./slider/slider.js";
-// import "./chip/chip.js";
+
+// import "./chips/chip.js";
+// import "./chips/chips.js";
 
 // import "./carousel/carousel.js";
 // import "./snackbar/snackbar.js";

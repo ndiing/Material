@@ -71,7 +71,7 @@ class MdTabComponent extends MdComponent {
         }
 
         if (changedProperties.has("selected") && this.selected) {
-            this.emit("onTabSelected", { navigationListItem: this });
+            this.emit("onTabSelected", { tab: this });
         }
     }
 }

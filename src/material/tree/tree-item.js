@@ -66,6 +66,17 @@ class MdTreeItemComponent extends MdComponent {
         super.connectedCallback();
         this.classList.add("md-tree__item");
     }
+
+    
+    /**@private*/
+    async updated(changedProperties) {
+        super.updated(changedProperties);
+
+        
+        if (changedProperties.has("selected") && this.selected) {
+            this.emit("onTreeItemSelected", { treeItem: this });
+        }
+    }
 }
 
 customElements.define("md-tree-item", MdTreeItemComponent);
