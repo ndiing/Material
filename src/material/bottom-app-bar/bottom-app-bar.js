@@ -19,7 +19,7 @@ class MdBottomAppBarComponent extends MdComponent {
     };
 
     /**
-     * @private
+     *
      */
     constructor() {
         super();

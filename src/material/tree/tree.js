@@ -16,7 +16,7 @@ class MdTreeComponent extends MdComponent {
     };
 
     /**
-     * @private
+     *
      */
     constructor() {
         super();

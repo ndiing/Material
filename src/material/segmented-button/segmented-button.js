@@ -22,7 +22,7 @@ class MdSegmentedButtonComponent extends MdComponent {
     ]
 
     /**
-     * @private
+     *
      */
     constructor() {
         super();

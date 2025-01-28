@@ -27,7 +27,7 @@ class MdBottomSheetComponent extends MdComponent {
     };
 
     /**
-     * @private
+     *
      */
     constructor() {
         super();

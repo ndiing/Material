@@ -15,7 +15,7 @@ class MdBadgeComponent extends MdComponent {
     };
 
     /**
-     * @private
+     *
      */
     constructor() {
         super();

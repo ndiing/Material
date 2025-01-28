@@ -24,7 +24,7 @@ class MdTabsComponent extends MdComponent {
     ]
 
     /**
-     * @private
+     *
      */
     constructor() {
         super();

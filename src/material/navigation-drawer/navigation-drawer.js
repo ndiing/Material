@@ -35,7 +35,7 @@ class MdNavigationDrawerComponent extends MdComponent {
     ]
 
     /**
-     * @private
+     *
      */
     constructor() {
         super();

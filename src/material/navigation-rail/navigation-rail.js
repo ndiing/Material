@@ -25,7 +25,7 @@ class MdNavigationRailComponent extends MdComponent {
     };
 
     /**
-     * @private
+     *
      */
     constructor() {
         super();

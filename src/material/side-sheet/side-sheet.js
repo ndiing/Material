@@ -27,7 +27,7 @@ class MdSideSheetComponent extends MdComponent {
     };
 
     /**
-     * @private
+     *
      */
     constructor() {
         super();

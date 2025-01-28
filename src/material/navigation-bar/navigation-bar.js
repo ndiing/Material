@@ -17,7 +17,7 @@ class MdNavigationBarComponent extends MdComponent {
     };
 
     /**
-     * @private
+     *
      */
     constructor() {
         super();

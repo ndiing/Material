@@ -21,7 +21,7 @@ class MdCheckboxComponent extends MdComponent {
     };
 
     /**
-     * @private
+     *
      */
     constructor() {
         super();

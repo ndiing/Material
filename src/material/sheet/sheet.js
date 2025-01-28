@@ -38,7 +38,7 @@ class MdSheetComponent extends MdComponent {
     ]
 
     /**
-     * @private
+     *
      */
     constructor() {
         super();

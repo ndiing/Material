@@ -25,7 +25,7 @@ class MdDialogComponent extends MdComponent {
     };
 
     /**
-     * @private
+     *
      */
     constructor() {
         super();

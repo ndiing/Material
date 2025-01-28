@@ -21,7 +21,7 @@ class MdImageComponent extends MdComponent {
     };
 
     /**
-     * @private
+     *
      */
     constructor() {
         super();

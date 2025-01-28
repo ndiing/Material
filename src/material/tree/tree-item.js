@@ -29,7 +29,7 @@ class MdTreeItemComponent extends MdComponent {
     };
 
     /**
-     * @private
+     *
      */
     constructor() {
         super();

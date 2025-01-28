@@ -39,7 +39,7 @@ class MdFabComponent extends MdComponent {
     ]
 
     /**
-     * @private
+     *
      */
     constructor() {
         super();

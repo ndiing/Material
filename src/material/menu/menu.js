@@ -18,7 +18,7 @@ class MdMenuComponent extends MdComponent {
     };
 
     /**
-     * @private
+     *
      */
     constructor() {
         super();

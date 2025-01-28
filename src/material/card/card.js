@@ -23,7 +23,7 @@ class MdCardComponent extends MdComponent {
     };
 
     /**
-     * @private
+     *
      */
     constructor() {
         super();

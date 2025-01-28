@@ -29,7 +29,7 @@ class MdNavigationListItemComponent extends MdComponent {
     };
 
     /**
-     * @private
+     *
      */
     constructor() {
         super();

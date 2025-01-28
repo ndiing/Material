@@ -40,7 +40,7 @@ class MdSliderComponent extends MdComponent {
     ]
 
     /**
-     * @private
+     *
      */
     constructor() {
         super();

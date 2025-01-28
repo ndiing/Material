@@ -22,7 +22,7 @@ class MdProgressIndicatorComponent extends MdComponent {
     ]
 
     /**
-     * @private
+     *
      */
     constructor() {
         super();

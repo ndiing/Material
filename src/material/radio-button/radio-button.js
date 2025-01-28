@@ -21,7 +21,7 @@ class MdRadioButtonComponent extends MdComponent {
     };
 
     /**
-     * @private
+     *
      */
     constructor() {
         super();

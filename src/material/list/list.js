@@ -24,7 +24,7 @@ class MdListComponent extends MdComponent {
     ]
 
     /**
-     * @private
+     *
      */
     constructor() {
         super();

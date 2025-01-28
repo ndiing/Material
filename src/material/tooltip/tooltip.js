@@ -26,7 +26,7 @@ class MdTooltipComponent extends MdComponent {
     };
 
     /**
-     * @private
+     *
      */
     constructor() {
         super();

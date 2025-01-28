@@ -33,7 +33,7 @@ class MdButtonComponent extends MdComponent {
     ]
 
     /**
-     * @private
+     *
      */
     constructor() {
         super();

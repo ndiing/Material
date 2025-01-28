@@ -49,7 +49,7 @@ class MdListItemComponent extends MdComponent {
     };
 
     /**
-     * @private
+     *
      */
     constructor() {
         super();

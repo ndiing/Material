@@ -23,7 +23,7 @@ class MdTopAppBarComponent extends MdComponent {
     };
 
     /**
-     * @private
+     *
      */
     constructor() {
         super();

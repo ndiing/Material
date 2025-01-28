@@ -23,7 +23,7 @@ class MdSwitchComponent extends MdComponent {
     };
 
     /**
-     * @private
+     *
      */
     constructor() {
         super();
