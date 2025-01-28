@@ -100,7 +100,7 @@ class MdMenuComponent extends MdComponent {
         };
         this.open = true;
         this.popper = new PopperController();
-        this.popover.show(options);
+        this.popper.show(options);
         this.emit("onMenuShown");
     }
 
