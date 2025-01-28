@@ -41,6 +41,7 @@ Router.use([
             { path: "navigation-rail-no-label", load: () => import("./navigation-rail/navigation-rail-no-label.js").then((m) => m.default) },
             { path: "menu", load: () => import("./menu/menu.js").then((m) => m.default) },
             { path: "progress-indicator", load: () => import("./progress-indicator/progress-indicator.js").then((m) => m.default) },
+            { path: "slider", load: () => import("./slider/slider.js").then((m) => m.default) },
         ],
     },
     {
