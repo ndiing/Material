@@ -12,6 +12,7 @@
     animation-name: var(--md-comp-sheet-animation);
     animation-timing-function: cubic-bezier(var(--md-sys-motion-easing-standard-accelerate));
     animation-duration: var(--md-sys-motion-duration-short3);
+
     &[open] {
         margin-right: 0;
         --md-comp-sheet-animation: sheet-east-out;
@@ -25,7 +26,6 @@
     align-items: center;
     padding: 24px;
     gap: 0 16px;
-
     // + .md-side-sheet__wrapper {
     //     margin-top: -32px;
     // }
@@ -84,7 +84,6 @@
     overflow: auto;
     // @include mixins.typescale-body-medium();
     // color: var(--md-sys-color-on-surface-variant);
-
     // + .md-side-sheet__footer {
     //     margin-top: -24px;
     // }

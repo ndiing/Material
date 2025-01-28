@@ -4,6 +4,15 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { choose } from "lit/directives/choose.js";
 import { PopperController } from "../popper/popper";
 class MdTooltipComponent extends MdComponent {
+    /**
+     *
+     * @property {Array} [icons]
+     * @property {Array} [actions]
+     * @property {String} [label]
+     * @property {String} [sublabel]
+     * @property {Array} [buttons]
+     * @property {Boolean} [open]
+     */
     static properties = {
         icons: { type: Array },
         actions: { type: Array },
@@ -13,18 +22,18 @@ class MdTooltipComponent extends MdComponent {
         open: { type: Boolean, reflect: true },
     };
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     constructor() {
         super();
         this.body = Array.from(this.childNodes);
     }
 
-/**
- * @private
- * @param {String} item
- */
+    /**
+     * @private
+     * @param {String} item
+     */
     renderIcon(item) {
         /* prettier-ignore */
         return html`
@@ -34,10 +43,10 @@ class MdTooltipComponent extends MdComponent {
         `
     }
 
-/**
- * @private
- * @param {String} item
- */
+    /**
+     * @private
+     * @param {String} item
+     */
     renderIconButton(item) {
         /* prettier-ignore */
         return html`
@@ -54,10 +63,10 @@ class MdTooltipComponent extends MdComponent {
         `
     }
 
-/**
- * @private
- * @param {String} item
- */
+    /**
+     * @private
+     * @param {String} item
+     */
     renderButton(item) {
         /* prettier-ignore */
         return html`
@@ -74,10 +83,10 @@ class MdTooltipComponent extends MdComponent {
         `
     }
 
-/**
- * @private
- * @param {String} item
- */
+    /**
+     * @private
+     * @param {String} item
+     */
     renderSpacer(item) {
         /* prettier-ignore */
         return html`
@@ -85,11 +94,11 @@ class MdTooltipComponent extends MdComponent {
         `
     }
 
-/**
- * @private
- * @param {String} item
- * @param {String} component
- */
+    /**
+     * @private
+     * @param {String} item
+     * @param {String} component
+     */
     renderItem(item, component = "icon") {
         /* prettier-ignore */
         return choose(item.component||component,[
@@ -100,9 +109,9 @@ class MdTooltipComponent extends MdComponent {
         ],() => nothing)
     }
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     render() {
         /* prettier-ignore */
         return html`
@@ -143,42 +152,42 @@ class MdTooltipComponent extends MdComponent {
         `
     }
 
-/**
- *
- */
+    /**
+     * @private
+     */
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-tooltip");
     }
 
-/**
- *
- */
+    /**
+     * @private
+     */
     disconnectedCallback() {
         super.disconnectedCallback();
         this.classList.remove("md-tooltip");
     }
 
-/**
- * @private
- * @param {Object} event
- */
+    /**
+     * @private
+     * @param {Object} event
+     */
     handleTooltipIconButtonClick(event) {
         this.emit("onTooltipIconButtonClick", { event });
     }
 
-/**
- * @private
- * @param {Object} event
- */
+    /**
+     * @private
+     * @param {Object} event
+     */
     handleTooltipButtonClick(event) {
         this.emit("onTooltipButtonClick", { event });
     }
 
-/**
- *
- * @param {String} options
- */
+    /**
+     *
+     * @param {String} options
+     */
     show(options) {
         options = {
             container: this,
@@ -192,18 +201,18 @@ class MdTooltipComponent extends MdComponent {
         this.emit("onTooltipShown");
     }
 
-/**
- *
- */
+    /**
+     *
+     */
     close() {
         this.open = false;
         this.emit("onTooltipClosed");
     }
 
-/**
- *
- * @param {String} options
- */
+    /**
+     *
+     * @param {String} options
+     */
     toggle(options) {
         if (this.open) this.close();
         else this.show(options);

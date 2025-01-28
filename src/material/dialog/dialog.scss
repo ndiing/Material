@@ -16,7 +16,6 @@
     transform: translate3d(-50%, -50%, 0);
     opacity: 0;
     pointer-events: none;
-
     --md-comp-dialog-animation: dialog-in;
     animation-name: var(--md-comp-dialog-animation);
     animation-timing-function: cubic-bezier(var(--md-sys-motion-easing-standard-accelerate));
@@ -47,7 +46,6 @@
     align-items: center;
     padding: 24px;
     gap: 0 16px;
-
     + .md-dialog__wrapper {
         margin-top: -32px;
     }
@@ -106,7 +104,6 @@
     overflow: auto;
     @include mixins.typescale-body-medium();
     color: var(--md-sys-color-on-surface-variant);
-
     + .md-dialog__footer {
         margin-top: -24px;
     }

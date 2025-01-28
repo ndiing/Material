@@ -1,28 +1,35 @@
 import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 class MdProgressIndicatorComponent extends MdComponent {
+    /**
+     *
+     * @property {String} [variant]
+     * @property {Number} [max]
+     * @property {Number} [value]
+     */
     static properties = {
         variant: { type: String },
         max: { type: Number },
         value: { type: Number },
     };
+
     /* prettier-ignore */
     variants=[
         'circular'
     ]
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     constructor() {
         super();
         this.max = 100;
         this.value = 0;
     }
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     renderProgressIndicatorNative() {
         /* prettier-ignore */
         return html`
@@ -34,14 +41,15 @@ class MdProgressIndicatorComponent extends MdComponent {
         `
     }
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     renderProgressIndicatorCircular() {
         this.r = ((36 / 40) * 100) / 2;
         this.strokeWidth = (4 / 40) * 100;
         this.strokeDasharray = 2 * Math.PI * this.r;
         this.strokeDashoffset = this.strokeDasharray * (1 - this.value / 100);
+
         /* prettier-ignore */
         return html`
             <div class="md-progress-indicator__wrapper">
@@ -75,26 +83,26 @@ class MdProgressIndicatorComponent extends MdComponent {
         `
     }
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     render() {
         if (this.variant === "circular") return this.renderProgressIndicatorCircular();
         else return this.renderProgressIndicatorNative();
     }
 
-/**
- *
- */
+    /**
+     * @private
+     */
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-progress-indicator");
     }
 
-/**
- *
- * @param {Object} changedProperties
- */
+    /**
+     * @private
+     * @param {Object} changedProperties
+     */
     updated(changedProperties) {
         super.updated(changedProperties);
         if (changedProperties.has("variant")) {

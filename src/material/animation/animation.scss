@@ -3,7 +3,6 @@
         width: 0;
     }
 }
-
 @keyframes sheet-north-out {
     0% {
         margin-top: calc(0px - var(--md-comp-sheet-height));
@@ -20,7 +19,6 @@
         margin-top: calc(0px - var(--md-comp-sheet-height));
     }
 }
-
 @keyframes sheet-east-out {
     0% {
         margin-right: calc(0px - var(--md-comp-sheet-height));
@@ -37,7 +35,6 @@
         margin-right: calc(0px - var(--md-comp-sheet-height));
     }
 }
-
 @keyframes sheet-south-out {
     0% {
         margin-bottom: calc(0px - var(--md-comp-sheet-height));
@@ -54,7 +51,6 @@
         margin-bottom: calc(0px - var(--md-comp-sheet-height));
     }
 }
-
 @keyframes sheet-west-out {
     0% {
         margin-left: calc(0px - var(--md-comp-sheet-height));
@@ -71,7 +67,6 @@
         margin-left: calc(0px - var(--md-comp-sheet-height));
     }
 }
-
 @keyframes sheet-north-modal-in {
     0% {
         transform: translate3d(0, 0, 0);
@@ -136,7 +131,6 @@
         transform: translate3d(0, 0, 0);
     }
 }
-
 @keyframes dialog-out {
     0% {
         height: 72px;
@@ -161,7 +155,6 @@
         transform: translate3d(-50%, calc(-100% - 72px), 0);
     }
 }
-
 @keyframes dialog-body-out {
     0% {
         overflow: hidden;
@@ -178,14 +171,12 @@
         overflow: hidden;
     }
 }
-
 @keyframes navigation-list-icon-out {
     0% {
         width: 32px;
     }
     // 100%{}
 }
-
 @keyframes menu-out {
     0% {
         overflow: hidden;

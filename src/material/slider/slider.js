@@ -3,6 +3,13 @@ import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { classMap } from "lit/directives/class-map.js";
 class MdSliderComponent extends MdComponent {
+    /**
+     *
+     * @property {Number} [min]
+     * @property {Number} [max]
+     * @property {Number} [step]
+     * @property {String} [variant]
+     */
     static properties = {
         min: { type: Number },
         max: { type: Number },
@@ -20,6 +27,7 @@ class MdSliderComponent extends MdComponent {
             },
         },
     };
+
     /* prettier-ignore */
     variants=[
         'centered',
@@ -28,9 +36,9 @@ class MdSliderComponent extends MdComponent {
         'range-selection',
     ]
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     constructor() {
         super();
         this.min = 0;
@@ -44,11 +52,11 @@ class MdSliderComponent extends MdComponent {
         else if (this.variant === "range-selection") return 2;
     }
 
-/**
- * @private
- * @param {String} value
- * @param {String} index
- */
+    /**
+     * @private
+     * @param {String} value
+     * @param {String} index
+     */
     renderSliderWrapper(value, index) {
         /* prettier-ignore */
         return html`
@@ -76,17 +84,17 @@ class MdSliderComponent extends MdComponent {
         `
     }
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     render() {
         /* prettier-ignore */
         return this.value.map((value,index)=>this.renderSliderWrapper(value,index))
     }
 
-/**
- *
- */
+    /**
+     * @private
+     */
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-slider");
@@ -100,10 +108,10 @@ class MdSliderComponent extends MdComponent {
         this.updateValue();
     }
 
-/**
- *
- * @param {Object} changedProperties
- */
+    /**
+     * @private
+     * @param {Object} changedProperties
+     */
     updated(changedProperties) {
         super.updated(changedProperties);
         if (changedProperties.has("variant")) {
@@ -116,10 +124,10 @@ class MdSliderComponent extends MdComponent {
         return this.querySelectorAll(".md-slider__native");
     }
 
-/**
- * @private
- * @param {Object} event
- */
+    /**
+     * @private
+     * @param {Object} event
+     */
     handleSliderNativeInput(event) {
         const native = event.currentTarget;
         const data = native.data;
@@ -134,21 +142,21 @@ class MdSliderComponent extends MdComponent {
         this.emit("onSliderNativeInput", { event });
     }
 
-/**
- *
- */
+    /**
+     *
+     */
     updateValue() {
         this.value.forEach((value, index) => {
             this.style.setProperty(`--md-comp-slider-value${index}`, this.percentage(value));
         });
     }
 
-/**
- *
- * @param {String} value
- * @param {String} min
- * @param {String} max
- */
+    /**
+     *
+     * @param {String} value
+     * @param {String} min
+     * @param {String} max
+     */
     percentage(value, min = this.min, max = this.max) {
         return (value - min) / (max - min);
     }

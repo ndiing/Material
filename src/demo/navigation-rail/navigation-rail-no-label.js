@@ -1,10 +1,9 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
 class DemoNavigationRailNoLabel extends MdComponent {
-
-/**
- * @private
- */
+    /**
+     * @private
+     */
     render() {
         return html`
             <div class="md-layout__border">

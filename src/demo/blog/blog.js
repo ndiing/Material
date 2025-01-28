@@ -1,10 +1,9 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
 class DemoBlog extends MdComponent {
-
-/**
- * @private
- */
+    /**
+     * @private
+     */
     render() {
         return html`
             <h1>Blog</h1>

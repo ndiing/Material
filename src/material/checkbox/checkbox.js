@@ -3,6 +3,13 @@ import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { RippleController } from "../ripple/ripple";
 class MdCheckboxComponent extends MdComponent {
+    /**
+     *
+     * @property {String} [name]
+     * @property {String} [value]
+     * @property {Boolean} [indeterminate]
+     * @property {Boolean} [checked]
+     */
     static properties = {
         name: { type: String },
         value: { type: String },
@@ -10,9 +17,9 @@ class MdCheckboxComponent extends MdComponent {
         checked: { type: Boolean },
     };
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     constructor() {
         super();
         this.ripple = new RippleController(this, {
@@ -23,9 +30,9 @@ class MdCheckboxComponent extends MdComponent {
         });
     }
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     render() {
         /* prettier-ignore */
         return html`
@@ -44,18 +51,18 @@ class MdCheckboxComponent extends MdComponent {
         `
     }
 
-/**
- *
- */
+    /**
+     * @private
+     */
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-checkbox");
     }
 
-/**
- * @private
- * @param {Object} event
- */
+    /**
+     * @private
+     * @param {Object} event
+     */
     handleCheckboxNativeInput(event) {
         const native = event.currentTarget;
         this.indeterminate = native.indeterminate;

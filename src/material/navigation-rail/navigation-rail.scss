@@ -8,11 +8,11 @@
     width: 80px;
     margin-left: calc(0px - var(--md-comp-sheet-width));
     background-color: var(--md-sys-color-surface);
-
     --md-comp-sheet-animation: sheet-west-in;
     animation-name: var(--md-comp-sheet-animation);
     animation-timing-function: cubic-bezier(var(--md-sys-motion-easing-standard-accelerate));
     animation-duration: var(--md-sys-motion-duration-short3);
+
     &[open] {
         margin-left: 0;
         --md-comp-sheet-animation: sheet-west-out;
@@ -26,7 +26,6 @@
     align-items: center;
     padding: 24px;
     gap: 0 16px;
-
     // + .md-navigation-rail__wrapper {
     //     margin-top: -32px;
     // }
@@ -85,7 +84,6 @@
     overflow: auto;
     // @include mixins.typescale-body-medium();
     // color: var(--md-sys-color-on-surface-variant);
-
     // + .md-navigation-rail__footer {
     //     margin-top: -24px;
     // }

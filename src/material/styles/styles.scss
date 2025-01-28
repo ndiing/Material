@@ -1,18 +1,15 @@
 @use "../mixins/mixins.scss";
-
 * {
     margin: 0;
     padding: 0;
     border: 0;
     font: inherit;
-
     &,
     &::before,
     &::after {
         box-sizing: border-box;
     }
 }
-
 html,
 body {
     width: 100%;

@@ -16,7 +16,6 @@
     // transform: translate3d(-50%, -50%, 0);
     opacity: 0;
     pointer-events: none;
-
     --md-comp-menu-animation: menu-in;
     animation-name: var(--md-comp-menu-animation);
     animation-timing-function: cubic-bezier(var(--md-sys-motion-easing-standard-accelerate));

@@ -3,6 +3,13 @@ import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 class MdImageComponent extends MdComponent {
+    /**
+     *
+     * @property {String} [src]
+     * @property {String} [alt]
+     * @property {String} [ratio]
+     * @property {Boolean} [circular]
+     */
     static properties = {
         src: { type: String },
         alt: { type: String },
@@ -10,9 +17,9 @@ class MdImageComponent extends MdComponent {
         circular: { type: Boolean },
     };
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     constructor() {
         super();
     }
@@ -30,9 +37,9 @@ class MdImageComponent extends MdComponent {
         return style;
     }
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     render() {
         /* prettier-ignore */
         return html`
@@ -45,9 +52,9 @@ class MdImageComponent extends MdComponent {
         `
     }
 
-/**
- *
- */
+    /**
+     * @private
+     */
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-image");

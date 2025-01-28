@@ -3,7 +3,6 @@
 .md-sheet {
     display: inline-flex;
     flex-direction: column;
-
     background-color: var(--md-sys-color-surface);
 }
 
@@ -12,7 +11,6 @@
     align-items: center;
     padding: 24px;
     gap: 0 16px;
-
     // + .md-sheet__wrapper {
     //     margin-top: -32px;
     // }
@@ -71,7 +69,6 @@
     overflow: auto;
     // @include mixins.typescale-body-medium();
     // color: var(--md-sys-color-on-surface-variant);
-
     // + .md-sheet__footer {
     //     margin-top: -24px;
     // }
@@ -101,7 +98,6 @@
     overflow: auto;
     height: var(--md-comp-sheet-height);
     margin-top: calc(0px - var(--md-comp-sheet-height));
-
     --md-comp-sheet-animation: sheet-north-in;
     animation-name: var(--md-comp-sheet-animation);
     animation-timing-function: cubic-bezier(var(--md-sys-motion-easing-standard-accelerate));
@@ -120,11 +116,11 @@
     overflow: auto;
     width: var(--md-comp-sheet-width);
     margin-right: calc(0px - var(--md-comp-sheet-width));
-
     --md-comp-sheet-animation: sheet-east-in;
     animation-name: var(--md-comp-sheet-animation);
     animation-timing-function: cubic-bezier(var(--md-sys-motion-easing-standard-accelerate));
     animation-duration: var(--md-sys-motion-duration-short3);
+
     &[open] {
         margin-right: 0;
         --md-comp-sheet-animation: sheet-east-out;
@@ -138,11 +134,11 @@
     overflow: auto;
     height: var(--md-comp-sheet-height);
     margin-bottom: calc(0px - var(--md-comp-sheet-height));
-
     --md-comp-sheet-animation: sheet-south-in;
     animation-name: var(--md-comp-sheet-animation);
     animation-timing-function: cubic-bezier(var(--md-sys-motion-easing-standard-accelerate));
     animation-duration: var(--md-sys-motion-duration-short3);
+
     &[open] {
         margin-bottom: 0;
         --md-comp-sheet-animation: sheet-south-out;
@@ -156,11 +152,11 @@
     overflow: auto;
     width: var(--md-comp-sheet-width);
     margin-left: calc(0px - var(--md-comp-sheet-width));
-
     --md-comp-sheet-animation: sheet-west-in;
     animation-name: var(--md-comp-sheet-animation);
     animation-timing-function: cubic-bezier(var(--md-sys-motion-easing-standard-accelerate));
     animation-duration: var(--md-sys-motion-duration-short3);
+
     &[open] {
         margin-left: 0;
         --md-comp-sheet-animation: sheet-west-out;

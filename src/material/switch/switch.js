@@ -3,6 +3,14 @@ import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { RippleController } from "../ripple/ripple";
 class MdSwitchComponent extends MdComponent {
+    /**
+     *
+     * @property {String} [name]
+     * @property {String} [value]
+     * @property {Boolean} [indeterminate]
+     * @property {Boolean} [checked]
+     * @property {Array} [icons]
+     */
     static properties = {
         name: { type: String },
         value: { type: String },
@@ -11,9 +19,9 @@ class MdSwitchComponent extends MdComponent {
         icons: { type: Array },
     };
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     constructor() {
         super();
         this.ripple = new RippleController(this, {
@@ -25,9 +33,9 @@ class MdSwitchComponent extends MdComponent {
         });
     }
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     render() {
         /* prettier-ignore */
         return html`
@@ -46,19 +54,19 @@ class MdSwitchComponent extends MdComponent {
         `
     }
 
-/**
- *
- */
+    /**
+     * @private
+     */
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-switch");
         this.style.setProperty("--md-comp-switch-thumb-transition-property", "none");
     }
 
-/**
- * @private
- * @param {Object} event
- */
+    /**
+     * @private
+     * @param {Object} event
+     */
     handleSwitchNativeInput(event) {
         this.style.removeProperty("--md-comp-switch-thumb-transition-property");
         const native = event.currentTarget;

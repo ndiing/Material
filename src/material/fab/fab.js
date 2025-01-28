@@ -3,6 +3,14 @@ import { MdComponent } from "../component/component";
 import { RippleController } from "../ripple/ripple";
 import { ifDefined } from "lit/directives/if-defined.js";
 class MdFabComponent extends MdComponent {
+    /**
+     *
+     * @property {String} [icon]
+     * @property {String} [label]
+     * @property {String} [type]
+     * @property {String} [size]
+     * @property {String} [variant]
+     */
     static properties = {
         icon: { type: String },
         label: { type: String },
@@ -10,31 +18,34 @@ class MdFabComponent extends MdComponent {
         size: { type: String },
         variant: { type: String },
     };
+
     /* prettier-ignore */
     sizes=[
         'small',
         'large',
     ]
+
     /* prettier-ignore */
     types=[
         'extended',
     ]
+
     /* prettier-ignore */
     variants=[
         'unelevated',
     ]
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     constructor() {
         super();
         this.ripple = new RippleController(this, {});
     }
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     render() {
         /* prettier-ignore */
         return html`
@@ -43,18 +54,18 @@ class MdFabComponent extends MdComponent {
         `
     }
 
-/**
- *
- */
+    /**
+     * @private
+     */
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-fab");
     }
 
-/**
- *
- * @param {Object} changedProperties
- */
+    /**
+     * @private
+     * @param {Object} changedProperties
+     */
     updated(changedProperties) {
         super.updated(changedProperties);
         if (changedProperties.has("type")) {

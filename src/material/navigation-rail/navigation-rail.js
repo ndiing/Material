@@ -3,6 +3,15 @@ import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { choose } from "lit/directives/choose.js";
 class MdNavigationRailComponent extends MdComponent {
+    /**
+     *
+     * @property {Array} [icons]
+     * @property {Array} [actions]
+     * @property {String} [label]
+     * @property {String} [sublabel]
+     * @property {Array} [items]
+     * @property {Boolean} [open]
+     */
     static properties = {
         icons: { type: Array },
         actions: { type: Array },
@@ -12,19 +21,19 @@ class MdNavigationRailComponent extends MdComponent {
         open: { type: Boolean, reflect: true },
     };
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     constructor() {
         super();
         this.items = [];
         this.rippleOptions = { container: ".md-navigation-list__icon" };
     }
 
-/**
- * @private
- * @param {String} item
- */
+    /**
+     * @private
+     * @param {String} item
+     */
     renderIcon(item) {
         /* prettier-ignore */
         return html`
@@ -34,10 +43,10 @@ class MdNavigationRailComponent extends MdComponent {
         `
     }
 
-/**
- * @private
- * @param {String} item
- */
+    /**
+     * @private
+     * @param {String} item
+     */
     renderIconButton(item) {
         /* prettier-ignore */
         return html`
@@ -54,11 +63,11 @@ class MdNavigationRailComponent extends MdComponent {
         `
     }
 
-/**
- * @private
- * @param {String} item
- * @param {String} component
- */
+    /**
+     * @private
+     * @param {String} item
+     * @param {String} component
+     */
     renderItem(item, component = "icon") {
         /* prettier-ignore */
         return choose(item.component||component,[
@@ -67,9 +76,9 @@ class MdNavigationRailComponent extends MdComponent {
         ],() => nothing)
     }
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     render() {
         /* prettier-ignore */
         return html`
@@ -112,52 +121,52 @@ class MdNavigationRailComponent extends MdComponent {
         this.style.setProperty("--md-comp-sheet-height", this.clientHeight + "px");
     }
 
-/**
- *
- */
+    /**
+     * @private
+     */
     disconnectedCallback() {
         super.disconnectedCallback();
         this.classList.remove("md-navigation-rail");
         this.style.setProperty("--md-comp-sheet-animation", "none");
     }
 
-/**
- *
- * @param {Object} changedProperties
- */
+    /**
+     * @private
+     * @param {Object} changedProperties
+     */
     updated(changedProperties) {
         super.updated(changedProperties);
     }
 
-/**
- * @private
- * @param {Object} event
- */
+    /**
+     * @private
+     * @param {Object} event
+     */
     handleNavigationRailIconButtonClick(event) {
         this.emit("onNavigationRailIconButtonClick", { event });
     }
 
-/**
- *
- */
+    /**
+     *
+     */
     show() {
         this.style.removeProperty("--md-comp-sheet-animation");
         this.open = true;
         this.emit("onNavigationRailShown");
     }
 
-/**
- *
- */
+    /**
+     *
+     */
     close() {
         this.style.removeProperty("--md-comp-sheet-animation");
         this.open = false;
         this.emit("onNavigationRailClosed");
     }
 
-/**
- *
- */
+    /**
+     *
+     */
     toggle() {
         if (this.open) this.close();
         else this.show();

@@ -56,14 +56,17 @@
 
 .md-tabs--left {
     --md-comp-tabs-indicator-transition-property: left, right;
+
     &::after {
         transition-property: var(--md-comp-tabs-indicator-transition-property);
         transition-timing-function: cubic-bezier(var(--md-sys-motion-easing-standard-decelerate));
         transition-duration: var(--md-sys-motion-duration-short3), var(--md-sys-motion-duration-medium2);
     }
 }
+
 .md-tabs--right {
     --md-comp-tabs-indicator-transition-property: left, right;
+
     &::after {
         transition-property: var(--md-comp-tabs-indicator-transition-property);
         transition-timing-function: cubic-bezier(var(--md-sys-motion-easing-standard-decelerate));

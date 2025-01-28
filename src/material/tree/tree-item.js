@@ -3,6 +3,17 @@ import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { RippleController } from "../ripple/ripple";
 class MdTreeItemComponent extends MdComponent {
+    /**
+     *
+     * @property {Boolean} [selected]
+     * @property {Boolean} [expanded]
+     * @property {String} [indent]
+     * @property {Array} [actions]
+     * @property {Array} [nodeIcons]
+     * @property {Array} [leafIcons]
+     * @property {String} [label]
+     * @property {String} [routerLink]
+     */
     static properties = {
         selected: { type: Boolean, reflect: true },
         expanded: { type: Boolean, reflect: true },
@@ -14,9 +25,9 @@ class MdTreeItemComponent extends MdComponent {
         routerLink: { type: String, reflect: true },
     };
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     constructor() {
         super();
         this.ripple = new RippleController(this, {});
@@ -35,9 +46,9 @@ class MdTreeItemComponent extends MdComponent {
         else return this.leafIcons[~~this.selected];
     }
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     render() {
         /* prettier-ignore */
         return html`

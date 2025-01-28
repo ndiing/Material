@@ -3,6 +3,17 @@ import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { RippleController } from "../ripple/ripple";
 class MdNavigationListItemComponent extends MdComponent {
+    /**
+     *
+     * @property {String} [icon]
+     * @property {String} [label]
+     * @property {String} [sublabel]
+     * @property {Boolean} [selected]
+     * @property {Boolean} [disabled]
+     * @property {String} [routerLink]
+     * @property {Object} [rippleOptions]
+     * @property {Number} [badge]
+     */
     static properties = {
         icon: { type: String },
         label: { type: String },
@@ -14,17 +25,17 @@ class MdNavigationListItemComponent extends MdComponent {
         badge: { type: Number },
     };
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     constructor() {
         super();
         this.rippleOptions = {};
     }
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     render() {
         /* prettier-ignore */
         return html`

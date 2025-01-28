@@ -2,10 +2,9 @@ import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
 import { Router } from "../../material/router/router";
 class DemoMain extends MdComponent {
-
-/**
- * @private
- */
+    /**
+     * @private
+     */
     constructor() {
         super();
         this.items = [
@@ -90,9 +89,9 @@ class DemoMain extends MdComponent {
         this.leadingActions = [{ icon: "menu" }];
     }
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     render() {
         return html`
             <div class="md-layout__border">

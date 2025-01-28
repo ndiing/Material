@@ -2,30 +2,37 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 class MdTabsComponent extends MdComponent {
+    /**
+     *
+     * @property {Array} [items]
+     * @property {Object} [rippleOptions]
+     * @property {String} [variant]
+     */
     static properties = {
         items: { type: Array },
         rippleOptions: { type: Object },
         variant: { type: String },
     };
+
     /* prettier-ignore */
     variants=[
         'primary',
         'secondary',
     ]
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     constructor() {
         super();
         this.items = [];
         this.variant = "primary";
     }
 
-/**
- * @private
- * @param {String} item
- */
+    /**
+     * @private
+     * @param {String} item
+     */
     renderTab(item) {
         /* prettier-ignore */
         return html`
@@ -44,27 +51,27 @@ class MdTabsComponent extends MdComponent {
         `
     }
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     render() {
         /* prettier-ignore */
         return this.items.map(item=>this.renderTab(item))
     }
 
-/**
- *
- */
+    /**
+     * @private
+     */
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-tabs");
         this.style.setProperty("--md-comp-tabs-indicator-transition-property", "none");
     }
 
-/**
- *
- * @param {Object} changedProperties
- */
+    /**
+     * @private
+     * @param {Object} changedProperties
+     */
     updated(changedProperties) {
         super.updated(changedProperties);
         if (changedProperties.has("variant")) {
@@ -74,10 +81,10 @@ class MdTabsComponent extends MdComponent {
         }
     }
 
-/**
- * @private
- * @param {Object} event
- */
+    /**
+     * @private
+     * @param {Object} event
+     */
     handleTabClick(event) {
         this.style.removeProperty("--md-comp-tabs-indicator-transition-property");
         const data = event.currentTarget.data;
@@ -86,10 +93,10 @@ class MdTabsComponent extends MdComponent {
         this.emit("onTabClick", { event });
     }
 
-/**
- *
- * @param {Object} data
- */
+    /**
+     *
+     * @param {Object} data
+     */
     singleSelect(data) {
         this.items.forEach((item) => {
             item.selected = item === data;

@@ -3,6 +3,15 @@ import { MdComponent } from "../component/component";
 import { RippleController } from "../ripple/ripple";
 import { ifDefined } from "lit/directives/if-defined.js";
 class MdIconButtonComponent extends MdComponent {
+    /**
+     *
+     * @property {String} [icon]
+     * @property {String} [variant]
+     * @property {String} [type]
+     * @property {Boolean} [toggle]
+     * @property {Boolean} [selected]
+     * @property {Boolean} [disabled]
+     */
     static properties = {
         icon: { type: String },
         variant: { type: String },
@@ -11,6 +20,7 @@ class MdIconButtonComponent extends MdComponent {
         selected: { type: Boolean, reflect: true },
         disabled: { type: Boolean, reflect: true },
     };
+
     /* prettier-ignore */
     variants=[
         'filled',
@@ -18,9 +28,9 @@ class MdIconButtonComponent extends MdComponent {
         'outlined',
     ]
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     constructor() {
         super();
         this.type = "icon-button";
@@ -31,9 +41,9 @@ class MdIconButtonComponent extends MdComponent {
         });
     }
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     render() {
         /* prettier-ignore */
         return html`
@@ -45,9 +55,9 @@ class MdIconButtonComponent extends MdComponent {
         `
     }
 
-/**
- *
- */
+    /**
+     * @private
+     */
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-icon-button");
@@ -55,19 +65,19 @@ class MdIconButtonComponent extends MdComponent {
         this.addEventListener("click", this.handleIconButtonClick);
     }
 
-/**
- *
- */
+    /**
+     * @private
+     */
     disconnectedCallback() {
         super.disconnectedCallback();
         this.classList.remove("md-icon-button");
         this.removeEventListener("click", this.handleIconButtonClick);
     }
 
-/**
- *
- * @param {Object} changedProperties
- */
+    /**
+     * @private
+     * @param {Object} changedProperties
+     */
     updated(changedProperties) {
         super.updated(changedProperties);
         if (changedProperties.has("variant")) {
@@ -77,10 +87,10 @@ class MdIconButtonComponent extends MdComponent {
         }
     }
 
-/**
- * @private
- * @param {Object} event
- */
+    /**
+     * @private
+     * @param {Object} event
+     */
     handleIconButtonClick(event) {
         if (this.toggle) {
             this.selected = !this.selected;

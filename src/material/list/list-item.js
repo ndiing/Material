@@ -3,6 +3,27 @@ import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { RippleController } from "../ripple/ripple";
 class MdListItemComponent extends MdComponent {
+    /**
+     *
+     * @property {Boolean} [leadingCheckbox]
+     * @property {Boolean} [leadingRadioButton]
+     * @property {Boolean} [leadingSwitch]
+     * @property {String} [avatar]
+     * @property {String} [image]
+     * @property {String} [video]
+     * @property {String} [icon]
+     * @property {String} [label]
+     * @property {String} [sublabel]
+     * @property {String} [text]
+     * @property {Boolean} [trailingCheckbox]
+     * @property {Boolean} [trailingRadioButton]
+     * @property {Boolean} [trailingSwitch]
+     * @property {Boolean} [selected]
+     * @property {Boolean} [disabled]
+     * @property {String} [routerLink]
+     * @property {Object} [rippleOptions]
+     * @property {Number} [badge]
+     */
     static properties = {
         leadingCheckbox: { type: Boolean },
         leadingRadioButton: { type: Boolean },
@@ -24,17 +45,17 @@ class MdListItemComponent extends MdComponent {
         badge: { type: Number },
     };
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     constructor() {
         super();
         this.rippleOptions = {};
     }
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     render() {
         /* prettier-ignore */
         return html`

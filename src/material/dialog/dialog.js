@@ -3,6 +3,15 @@ import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { choose } from "lit/directives/choose.js";
 class MdDialogComponent extends MdComponent {
+    /**
+     *
+     * @property {Array} [icons]
+     * @property {Array} [actions]
+     * @property {String} [label]
+     * @property {String} [sublabel]
+     * @property {Array} [buttons]
+     * @property {Boolean} [open]
+     */
     static properties = {
         icons: { type: Array },
         actions: { type: Array },
@@ -12,18 +21,18 @@ class MdDialogComponent extends MdComponent {
         open: { type: Boolean, reflect: true },
     };
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     constructor() {
         super();
         this.body = Array.from(this.childNodes);
     }
 
-/**
- * @private
- * @param {String} item
- */
+    /**
+     * @private
+     * @param {String} item
+     */
     renderIcon(item) {
         /* prettier-ignore */
         return html`
@@ -33,10 +42,10 @@ class MdDialogComponent extends MdComponent {
         `
     }
 
-/**
- * @private
- * @param {String} item
- */
+    /**
+     * @private
+     * @param {String} item
+     */
     renderIconButton(item) {
         /* prettier-ignore */
         return html`
@@ -53,10 +62,10 @@ class MdDialogComponent extends MdComponent {
         `
     }
 
-/**
- * @private
- * @param {String} item
- */
+    /**
+     * @private
+     * @param {String} item
+     */
     renderButton(item) {
         /* prettier-ignore */
         return html`
@@ -73,10 +82,10 @@ class MdDialogComponent extends MdComponent {
         `
     }
 
-/**
- * @private
- * @param {String} item
- */
+    /**
+     * @private
+     * @param {String} item
+     */
     renderSpacer(item) {
         /* prettier-ignore */
         return html`
@@ -84,11 +93,11 @@ class MdDialogComponent extends MdComponent {
         `
     }
 
-/**
- * @private
- * @param {String} item
- * @param {String} component
- */
+    /**
+     * @private
+     * @param {String} item
+     * @param {String} component
+     */
     renderItem(item, component = "icon") {
         /* prettier-ignore */
         return choose(item.component||component,[
@@ -99,9 +108,9 @@ class MdDialogComponent extends MdComponent {
         ],() => nothing)
     }
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     render() {
         /* prettier-ignore */
         return html`
@@ -155,9 +164,9 @@ class MdDialogComponent extends MdComponent {
         this.style.setProperty("--md-comp-dialog-width", this.clientWidth + "px");
     }
 
-/**
- *
- */
+    /**
+     * @private
+     */
     disconnectedCallback() {
         super.disconnectedCallback();
         this.dialogScrim.removeEventListener("onScrimClosed", this.handleDialogScrimClosed);
@@ -165,25 +174,25 @@ class MdDialogComponent extends MdComponent {
         this.classList.remove("md-dialog");
     }
 
-/**
- * @private
- * @param {Object} event
- */
+    /**
+     * @private
+     * @param {Object} event
+     */
     handleDialogIconButtonClick(event) {
         this.emit("onDialogIconButtonClick", { event });
     }
 
-/**
- * @private
- * @param {Object} event
- */
+    /**
+     * @private
+     * @param {Object} event
+     */
     handleDialogButtonClick(event) {
         this.emit("onDialogButtonClick", { event });
     }
 
-/**
- *
- */
+    /**
+     *
+     */
     show() {
         this.style.removeProperty("--md-comp-dialog-animation");
         this.dialogScrim.show();
@@ -191,9 +200,9 @@ class MdDialogComponent extends MdComponent {
         this.emit("onDialogShown");
     }
 
-/**
- *
- */
+    /**
+     *
+     */
     close() {
         this.style.removeProperty("--md-comp-dialog-animation");
         this.open = false;
@@ -201,18 +210,18 @@ class MdDialogComponent extends MdComponent {
         this.emit("onDialogClosed");
     }
 
-/**
- *
- */
+    /**
+     *
+     */
     toggle() {
         if (this.open) this.close();
         else this.show();
     }
 
-/**
- * @private
- * @param {Object} event
- */
+    /**
+     * @private
+     * @param {Object} event
+     */
     handleDialogScrimClosed(event) {
         if (this.open) this.close();
         this.emit("onDialogScrimClosed", { event });

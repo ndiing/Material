@@ -3,6 +3,16 @@ import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { choose } from "lit/directives/choose.js";
 class MdSideSheetComponent extends MdComponent {
+    /**
+     *
+     * @property {Array} [icons]
+     * @property {Array} [actions]
+     * @property {String} [label]
+     * @property {String} [sublabel]
+     * @property {Array} [buttons]
+     * @property {Boolean} [open]
+     * @property {Boolean} [modal]
+     */
     static properties = {
         icons: { type: Array },
         actions: { type: Array },
@@ -13,18 +23,18 @@ class MdSideSheetComponent extends MdComponent {
         modal: { type: Boolean, reflect: true },
     };
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     constructor() {
         super();
         this.body = Array.from(this.childNodes);
     }
 
-/**
- * @private
- * @param {String} item
- */
+    /**
+     * @private
+     * @param {String} item
+     */
     renderIcon(item) {
         /* prettier-ignore */
         return html`
@@ -34,10 +44,10 @@ class MdSideSheetComponent extends MdComponent {
         `
     }
 
-/**
- * @private
- * @param {String} item
- */
+    /**
+     * @private
+     * @param {String} item
+     */
     renderIconButton(item) {
         /* prettier-ignore */
         return html`
@@ -54,10 +64,10 @@ class MdSideSheetComponent extends MdComponent {
         `
     }
 
-/**
- * @private
- * @param {String} item
- */
+    /**
+     * @private
+     * @param {String} item
+     */
     renderButton(item) {
         /* prettier-ignore */
         return html`
@@ -74,10 +84,10 @@ class MdSideSheetComponent extends MdComponent {
         `
     }
 
-/**
- * @private
- * @param {String} item
- */
+    /**
+     * @private
+     * @param {String} item
+     */
     renderSpacer(item) {
         /* prettier-ignore */
         return html`
@@ -85,11 +95,11 @@ class MdSideSheetComponent extends MdComponent {
         `
     }
 
-/**
- * @private
- * @param {String} item
- * @param {String} component
- */
+    /**
+     * @private
+     * @param {String} item
+     * @param {String} component
+     */
     renderItem(item, component = "icon") {
         /* prettier-ignore */
         return choose(item.component||component,[
@@ -100,9 +110,9 @@ class MdSideSheetComponent extends MdComponent {
         ],() => nothing)
     }
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     render() {
         /* prettier-ignore */
         return html`
@@ -156,9 +166,9 @@ class MdSideSheetComponent extends MdComponent {
         this.style.setProperty("--md-comp-sheet-height", this.clientHeight + "px");
     }
 
-/**
- *
- */
+    /**
+     * @private
+     */
     disconnectedCallback() {
         super.disconnectedCallback();
         this.sideSheetScrim.removeEventListener("onScrimClosed", this.handleSideSheetScrimClosed);
@@ -167,10 +177,10 @@ class MdSideSheetComponent extends MdComponent {
         this.style.setProperty("--md-comp-sheet-animation", "none");
     }
 
-/**
- *
- * @param {Object} changedProperties
- */
+    /**
+     * @private
+     * @param {Object} changedProperties
+     */
     updated(changedProperties) {
         super.updated(changedProperties);
         if (changedProperties.has("modal")) {
@@ -178,25 +188,25 @@ class MdSideSheetComponent extends MdComponent {
         }
     }
 
-/**
- * @private
- * @param {Object} event
- */
+    /**
+     * @private
+     * @param {Object} event
+     */
     handleSideSheetIconButtonClick(event) {
         this.emit("onSideSheetIconButtonClick", { event });
     }
 
-/**
- * @private
- * @param {Object} event
- */
+    /**
+     * @private
+     * @param {Object} event
+     */
     handleSideSheetButtonClick(event) {
         this.emit("onSideSheetButtonClick", { event });
     }
 
-/**
- *
- */
+    /**
+     *
+     */
     show() {
         this.style.removeProperty("--md-comp-sheet-animation");
         if (this.modal) this.sideSheetScrim.show();
@@ -204,9 +214,9 @@ class MdSideSheetComponent extends MdComponent {
         this.emit("onSideSheetShown");
     }
 
-/**
- *
- */
+    /**
+     *
+     */
     close() {
         this.style.removeProperty("--md-comp-sheet-animation");
         this.open = false;
@@ -214,18 +224,18 @@ class MdSideSheetComponent extends MdComponent {
         this.emit("onSideSheetClosed");
     }
 
-/**
- *
- */
+    /**
+     *
+     */
     toggle() {
         if (this.open) this.close();
         else this.show();
     }
 
-/**
- * @private
- * @param {Object} event
- */
+    /**
+     * @private
+     * @param {Object} event
+     */
     handleSideSheetScrimClosed(event) {
         if (this.open) this.close();
         this.emit("onSideSheetScrimClosed", { event });

@@ -3,6 +3,15 @@ import { MdComponent } from "../component/component";
 import { RippleController } from "../ripple/ripple";
 import { ifDefined } from "lit/directives/if-defined.js";
 class MdButtonComponent extends MdComponent {
+    /**
+     *
+     * @property {String} [icon]
+     * @property {String} [label]
+     * @property {String} [variant]
+     * @property {String} [type]
+     * @property {Boolean} [disabled]
+     * @property {Boolean} [selected]
+     */
     static properties = {
         icon: { type: String },
         label: { type: String },
@@ -11,6 +20,7 @@ class MdButtonComponent extends MdComponent {
         disabled: { type: Boolean, reflect: true },
         selected: { type: Boolean, reflect: true },
     };
+
     /* prettier-ignore */
     variants=[
         'elevated',
@@ -19,9 +29,9 @@ class MdButtonComponent extends MdComponent {
         'outlined',
     ]
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     constructor() {
         super();
         this.type = "button";
@@ -30,9 +40,9 @@ class MdButtonComponent extends MdComponent {
         });
     }
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     render() {
         /* prettier-ignore */
         return html`
@@ -45,18 +55,18 @@ class MdButtonComponent extends MdComponent {
         `
     }
 
-/**
- *
- */
+    /**
+     * @private
+     */
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-button");
     }
 
-/**
- *
- * @param {Object} changedProperties
- */
+    /**
+     * @private
+     * @param {Object} changedProperties
+     */
     updated(changedProperties) {
         super.updated(changedProperties);
         if (changedProperties.has("variant")) {

@@ -2,30 +2,37 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 class MdListComponent extends MdComponent {
+    /**
+     *
+     * @property {Array} [items]
+     * @property {String} [type]
+     * @property {Object} [rippleOptions]
+     */
     static properties = {
         items: { type: Array },
         type: { type: String },
         rippleOptions: { type: Object },
     };
+
     /* prettier-ignore */
     types=[
         'single-select',
         'multi-select',
     ]
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     constructor() {
         super();
         this.items = [];
         this.type = "single-select";
     }
 
-/**
- * @private
- * @param {String} item
- */
+    /**
+     * @private
+     * @param {String} item
+     */
     renderListItem(item) {
         /* prettier-ignore */
         return html`
@@ -59,26 +66,26 @@ class MdListComponent extends MdComponent {
         `
     }
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     render() {
         /* prettier-ignore */
         return this.items.map(item=>this.renderListItem(item))
     }
 
-/**
- *
- */
+    /**
+     * @private
+     */
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-list");
     }
 
-/**
- * @private
- * @param {Object} event
- */
+    /**
+     * @private
+     * @param {Object} event
+     */
     handleListItemClick(event) {
         const action = event.target.closest(".md-list__checkbox,.md-list__radio-button,.md-list__switch");
         if (action) return;
@@ -92,28 +99,28 @@ class MdListComponent extends MdComponent {
         this.emit("onListItemClick", { event });
     }
 
-/**
- *
- * @param {Object} data
- */
+    /**
+     *
+     * @param {Object} data
+     */
     multiSelect(data) {
         data.selected = !data.selected;
     }
 
-/**
- *
- * @param {Object} data
- */
+    /**
+     *
+     * @param {Object} data
+     */
     singleSelect(data) {
         this.items.forEach((item) => {
             item.selected = item === data;
         });
     }
 
-/**
- * @private
- * @param {Object} event
- */
+    /**
+     * @private
+     * @param {Object} event
+     */
     handleListItemCheckboxNativeInput(event) {
         const data = event.currentTarget.data;
         this.multiSelect(data);
@@ -121,10 +128,10 @@ class MdListComponent extends MdComponent {
         this.emit("onListItemCheckboxNativeInput", { event });
     }
 
-/**
- * @private
- * @param {Object} event
- */
+    /**
+     * @private
+     * @param {Object} event
+     */
     handleListItemRadioButtonNativeInput(event) {
         const data = event.currentTarget.data;
         this.singleSelect(data);
@@ -132,10 +139,10 @@ class MdListComponent extends MdComponent {
         this.emit("onListItemRadioButtonNativeInput", { event });
     }
 
-/**
- * @private
- * @param {Object} event
- */
+    /**
+     * @private
+     * @param {Object} event
+     */
     handleListItemSwitchNativeInput(event) {
         const data = event.currentTarget.data;
         this.multiSelect(data);

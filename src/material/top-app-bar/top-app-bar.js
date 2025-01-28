@@ -3,6 +3,14 @@ import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { choose } from "lit/directives/choose.js";
 class MdTopAppBarComponent extends MdComponent {
+    /**
+     *
+     * @property {Array} [leadingActions]
+     * @property {String} [label]
+     * @property {String} [sublabel]
+     * @property {Array} [trailingActions]
+     * @property {Boolean} [open]
+     */
     static properties = {
         leadingActions: { type: Array },
         label: { type: String },
@@ -11,17 +19,17 @@ class MdTopAppBarComponent extends MdComponent {
         open: { type: Boolean, reflect: true },
     };
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     constructor() {
         super();
     }
 
-/**
- * @private
- * @param {String} item
- */
+    /**
+     * @private
+     * @param {String} item
+     */
     renderIconButton(item) {
         /* prettier-ignore */
         return html`
@@ -38,9 +46,9 @@ class MdTopAppBarComponent extends MdComponent {
         `
     }
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     render() {
         /* prettier-ignore */
         return html`
@@ -71,52 +79,52 @@ class MdTopAppBarComponent extends MdComponent {
         this.style.setProperty("--md-comp-sheet-height", this.clientHeight + "px");
     }
 
-/**
- *
- */
+    /**
+     * @private
+     */
     disconnectedCallback() {
         super.disconnectedCallback();
         this.classList.remove("md-top-app-bar");
         this.style.setProperty("--md-comp-sheet-animation", "none");
     }
 
-/**
- *
- * @param {Object} changedProperties
- */
+    /**
+     * @private
+     * @param {Object} changedProperties
+     */
     updated(changedProperties) {
         super.updated(changedProperties);
     }
 
-/**
- * @private
- * @param {Object} event
- */
+    /**
+     * @private
+     * @param {Object} event
+     */
     handleTopAppBarIconButtonClick(event) {
         this.emit("onTopAppBarIconButtonClick", { event });
     }
 
-/**
- *
- */
+    /**
+     *
+     */
     show() {
         this.style.removeProperty("--md-comp-sheet-animation");
         this.open = true;
         this.emit("onTopAppBarShown");
     }
 
-/**
- *
- */
+    /**
+     *
+     */
     close() {
         this.style.removeProperty("--md-comp-sheet-animation");
         this.open = false;
         this.emit("onTopAppBarClosed");
     }
 
-/**
- *
- */
+    /**
+     *
+     */
     toggle() {
         if (this.open) this.close();
         else this.show();

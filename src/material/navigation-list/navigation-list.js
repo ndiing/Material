@@ -2,23 +2,28 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 class MdNavigationListComponent extends MdComponent {
+    /**
+     *
+     * @property {Array} [items]
+     * @property {Object} [rippleOptions]
+     */
     static properties = {
         items: { type: Array },
         rippleOptions: { type: Object },
     };
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     constructor() {
         super();
         this.items = [];
     }
 
-/**
- * @private
- * @param {String} item
- */
+    /**
+     * @private
+     * @param {String} item
+     */
     renderNavigationListItem(item) {
         /* prettier-ignore */
         return html`
@@ -39,27 +44,27 @@ class MdNavigationListComponent extends MdComponent {
         `
     }
 
-/**
- * @private
- */
+    /**
+     * @private
+     */
     render() {
         /* prettier-ignore */
         return this.items.map(item=>this.renderNavigationListItem(item))
     }
 
-/**
- *
- */
+    /**
+     * @private
+     */
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-navigation-list");
         this.style.setProperty("--md-comp-navigation-list-icon-animation", "none");
     }
 
-/**
- * @private
- * @param {Object} event
- */
+    /**
+     * @private
+     * @param {Object} event
+     */
     handleNavigationListItemClick(event) {
         this.style.removeProperty("--md-comp-navigation-list-icon-animation");
         const data = event.currentTarget.data;
@@ -68,10 +73,10 @@ class MdNavigationListComponent extends MdComponent {
         this.emit("onNavigationListItemClick", { event });
     }
 
-/**
- *
- * @param {Object} data
- */
+    /**
+     *
+     * @param {Object} data
+     */
     singleSelect(data) {
         this.items.forEach((item) => {
             item.selected = item === data;
