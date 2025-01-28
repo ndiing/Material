@@ -37,11 +37,7 @@ class MdIconButtonComponent extends MdComponent {
     constructor() {
         super();
         this.type = "icon-button";
-        this.ripple = new RippleController(this, {
-            trigger: ".md-icon-button__native",
-            unbounded: true,
-            radius: 40,
-        });
+
     }
 
     /**
@@ -66,6 +62,12 @@ class MdIconButtonComponent extends MdComponent {
         this.classList.add("md-icon-button");
         this.handleIconButtonClick = this.handleIconButtonClick.bind(this);
         this.addEventListener("click", this.handleIconButtonClick);
+        this.ripple = new RippleController(this, {
+            trigger: ".md-icon-button__native",
+            unbounded: true,
+            radius: 40,
+            ...this.rippleOptions
+        });
     }
 
     /**

@@ -71,6 +71,7 @@ class DemoMain extends MdComponent {
             { label: "Menu", routerLink: "/menu" },
             { label: "Progress Indicator", routerLink: "/progress-indicator" },
             { label: "Slider", routerLink: "/slider" },
+            { label: "Chips", routerLink: "/chips" },
         ];
         this.items.sort((a, b) => {
             if (a.children && !b.children) return -1;
