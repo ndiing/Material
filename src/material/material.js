@@ -1,4 +1,4 @@
-/* // import "./component/component.js";
+// import "./component/component.js";
 // import "./router/router.js";
 // import "./ripple/ripple.js";
 // import "./tokens/tokens.js";
@@ -44,7 +44,7 @@ import "./top-app-bar/top-app-bar.js";
 import "./navigation-bar/navigation-bar.js";
 import "./navigation-drawer/navigation-drawer.js";
 import "./navigation-rail/navigation-rail.js";
-import "./menu/menu.js"; */
+import "./menu/menu.js";
 // import "./carousel/carousel.js";
 // import "./text-field/text-field.js";
 // import "./search/search.js";
