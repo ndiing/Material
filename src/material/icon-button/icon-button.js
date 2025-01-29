@@ -36,7 +36,7 @@ class MdIconButtonComponent extends MdComponent {
      */
     constructor() {
         super();
-        this.type = "icon-button";
+        this.type = "button";
     }
 
     /**

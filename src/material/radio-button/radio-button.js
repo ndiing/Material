@@ -64,11 +64,10 @@ class MdRadioButtonComponent extends MdComponent {
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-radio-button");
-    
-        this.defaultValue=this.value
-        this.defaultIndeterminate=this.indeterminate
-        this.defaultChecked=this.checked
-    
+
+        this.defaultValue = this.value;
+        this.defaultIndeterminate = this.indeterminate;
+        this.defaultChecked = this.checked;
     }
 
     /**
@@ -89,10 +88,9 @@ class MdRadioButtonComponent extends MdComponent {
      * @param {Object} event
      */
     handleRadioButtonNativeReset(event) {
-        
-        this.value=this.defaultValue
-        this.indeterminate=this.defaultIndeterminate
-        this.checked=this.defaultChecked
+        this.value = this.defaultValue;
+        this.indeterminate = this.defaultIndeterminate;
+        this.checked = this.defaultChecked;
 
         this.emit("onRadioButtonNativeReset", { event });
     }

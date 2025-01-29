@@ -1,6 +1,9 @@
 import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { choose } from "lit/directives/choose.js";
+import { classMap } from "lit/directives/class-map.js";
+
 /**
  *
  */
@@ -23,8 +26,11 @@ class MdTextFieldComponent extends MdComponent {
         title: { type: String },
         autocomplete: { type: String },
         required: { type: Boolean },
+        readOnly: { type: Boolean },
 
         variant: { type: String },
+
+        disabled: { type: Boolean, reflect: true },
     };
 
     /* prettier-ignore */
@@ -39,6 +45,61 @@ class MdTextFieldComponent extends MdComponent {
         this.autocomplete = "off";
     }
 
+    /**
+     * @private
+     * @param {String} item
+     */
+    renderIcon(item) {
+        /* prettier-ignore */
+        return html`
+            <md-icon
+                .data="${item}"
+                class="${classMap({...item.classMap})}"
+            >${item.icon}</md-icon>
+        `
+    }
+
+    /**
+     * @private
+     * @param {String} item
+     */
+    renderIconButton(item) {
+        /* prettier-ignore */
+        return html`
+            <md-icon-button
+                .data="${item}"
+                class="${classMap({...item.classMap})}"
+                .icon="${ifDefined(item.icon)}"
+                .variant="${ifDefined(item.variant)}"
+                .type="${ifDefined(item.type)}"
+                .toggle="${ifDefined(item.toggle)}"
+                .selected="${ifDefined(item.selected)}"
+                .disabled="${ifDefined(item.disabled)}"
+                @click="${this.handleDialogIconButtonClick}"
+            ></md-icon-button>
+        `
+    }
+
+    /**
+     * @private
+     * @param {String} item
+     * @param {String} component
+     */
+    renderItem(item, component = "icon") {
+        /* prettier-ignore */
+        return choose(item.component||component,[
+            ['icon',() => this.renderIcon(item)],
+            ['icon-button',() => this.renderIconButton(item)],
+        ],() => nothing)
+    }
+
+    get actions2() {
+        let actions = [];
+        if (this.error) actions = actions.concat([{ component: "icon", icon: "error", classMap: { "md-text-field__icon--error": true } }]);
+        if (this.actions?.length) actions = actions.concat(this.actions);
+        return actions;
+    }
+
     render() {
         /* prettier-ignore */
         return html`
@@ -46,9 +107,7 @@ class MdTextFieldComponent extends MdComponent {
             <div class="md-text-field__container">
                 ${this.icons?.length?html`
                     <div class="md-text-field__icons">
-                        ${this.icons.map(item => html`
-                            <md-icon class="md-text-field__icon">${item.icon}</md-icon>
-                        `)}    
+                        ${this.icons.map(item => this.renderItem(item,'icon'))}    
                     </div>
                 `:nothing}
                 ${this.prefix?html`<div class="md-text-field__prefix">${this.prefix}</div>`:nothing}
@@ -58,6 +117,7 @@ class MdTextFieldComponent extends MdComponent {
                     .value="${ifDefined(this.value)}" 
                     .placeholder="${ifDefined(this.placeholder)}" 
                     .required="${ifDefined(this.required)}" 
+                    .readOnly="${ifDefined(this.readOnly)}" 
                     .title="${ifDefined(this.title)}" 
                     .autocomplete="${ifDefined(this.autocomplete)}" 
                     .defaultValue="${ifDefined(this.defaultValue)}" 
@@ -70,11 +130,9 @@ class MdTextFieldComponent extends MdComponent {
                     class="md-text-field__native"
                 >
                 ${this.suffix?html`<div class="md-text-field__suffix">${this.suffix}</div>`:nothing}
-                ${this.actions?.length?html`
+                ${this.actions2?.length?html`
                     <div class="md-text-field__actions">
-                        ${this.actions.map(item => html`
-                            <md-icon-button class="md-text-field__action" icon="${item.icon}"></md-icon-button>
-                        `)}    
+                        ${this.actions2.map(item => this.renderItem(item,'icon-button'))}    
                     </div>
                 `:nothing}
             </div>

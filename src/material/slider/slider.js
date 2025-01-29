@@ -114,7 +114,7 @@ class MdSliderComponent extends MdComponent {
         if (this.value === undefined) {
             this.value = [this.max < this.min ? this.min : this.min + (this.max - this.min) / 2];
         }
-        this.defaultValue=JSON.parse(JSON.stringify(this.value))
+        this.defaultValue = JSON.parse(JSON.stringify(this.value));
         if (this.min < 0) this.variant = "centered";
         else if (this.step > 1) this.variant = "discrete";
         else if (this.value.length > 1) this.variant = "range-selection";
@@ -161,7 +161,7 @@ class MdSliderComponent extends MdComponent {
      * @param {Object} event
      */
     handleSliderNativeReset(event) {
-        this.value=JSON.parse(JSON.stringify(this.defaultValue))
+        this.value = JSON.parse(JSON.stringify(this.defaultValue));
         this.updateValue();
         this.requestUpdate();
         this.emit("onSliderNativeReset", { event });

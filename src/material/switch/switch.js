@@ -68,9 +68,9 @@ class MdSwitchComponent extends MdComponent {
         super.connectedCallback();
         this.classList.add("md-switch");
         this.style.setProperty("--md-comp-switch-thumb-transition-property", "none");
-        this.defaultValue=this.value
-        this.defaultIndeterminate=this.indeterminate
-        this.defaultChecked=this.checked
+        this.defaultValue = this.value;
+        this.defaultIndeterminate = this.indeterminate;
+        this.defaultChecked = this.checked;
     }
 
     /**
@@ -90,10 +90,9 @@ class MdSwitchComponent extends MdComponent {
      * @param {Object} event
      */
     handleSwitchNativeReset(event) {
-
-        this.value=this.defaultValue
-        this.indeterminate=this.defaultIndeterminate
-        this.checked=this.defaultChecked
+        this.value = this.defaultValue;
+        this.indeterminate = this.defaultIndeterminate;
+        this.checked = this.defaultChecked;
 
         this.emit("onSwitchNativeReset", { event });
     }
