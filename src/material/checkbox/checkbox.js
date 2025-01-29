@@ -45,8 +45,12 @@ class MdCheckboxComponent extends MdComponent {
                 .value="${ifDefined(this.value)}"
                 .indeterminate="${ifDefined(this.indeterminate)}"
                 .checked="${ifDefined(this.checked)}"
+                .defaultValue="${ifDefined(this.defaultValue)}"
+                .defaultIndeterminate="${ifDefined(this.defaultIndeterminate)}"
+                .defaultChecked="${ifDefined(this.defaultChecked)}"
                 class="md-checkbox__native"
                 @input="${this.handleCheckboxNativeInput}"
+                @reset="${this.handleCheckboxNativeReset}"
             >
             <div class="md-checkbox__track">
                 <div class="md-checkbox__thumb"></div>
@@ -60,6 +64,9 @@ class MdCheckboxComponent extends MdComponent {
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-checkbox");
+        this.defaultValue=this.value
+        this.defaultIndeterminate=this.indeterminate
+        this.defaultChecked=this.checked
     }
 
     /**
@@ -68,9 +75,24 @@ class MdCheckboxComponent extends MdComponent {
      */
     handleCheckboxNativeInput(event) {
         const native = event.currentTarget;
+        
         this.indeterminate = native.indeterminate;
         this.checked = native.checked;
+        
         this.emit("onCheckboxNativeInput", { event });
+    }
+
+    /**
+     * @private
+     * @param {Object} event
+     */
+    handleCheckboxNativeReset(event) {
+
+        this.value=this.defaultValue
+        this.indeterminate=this.defaultIndeterminate
+        this.checked=this.defaultChecked
+
+        this.emit("onCheckboxNativeReset", { event });
     }
 }
 customElements.define("md-checkbox", MdCheckboxComponent);

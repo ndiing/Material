@@ -18,6 +18,7 @@ class MdSliderComponent extends MdComponent {
         max: { type: Number },
         step: { type: Number },
         variant: { type: String },
+        name: { type: String },
         value: {
             type: String,
             converter: {
@@ -72,7 +73,9 @@ class MdSliderComponent extends MdComponent {
                     .max="${ifDefined(this.max)}"
                     .step="${ifDefined(this.step)}"
                     .value="${ifDefined(value)}"
+                    .defaultValue="${ifDefined(this.defaultValue[index])}"
                     @input="${this.handleSliderNativeInput}"
+                    @reset="${this.handleSliderNativeReset}"
                 >
                 <div class="md-slider__indicators">
                     ${Array.from({length:this.indicators},(v,k) => html`
@@ -92,7 +95,14 @@ class MdSliderComponent extends MdComponent {
      */
     render() {
         /* prettier-ignore */
-        return this.value.map((value,index)=>this.renderSliderWrapper(value,index))
+        return html`
+            ${this.value.map((value,index)=>this.renderSliderWrapper(value,index))}
+            <input 
+                type="hidden" class="md-slider__hidden"
+                .name="${this.name}"
+                .value="${this.value}"
+            >
+        `
     }
 
     /**
@@ -104,7 +114,8 @@ class MdSliderComponent extends MdComponent {
         if (this.value === undefined) {
             this.value = [this.max < this.min ? this.min : this.min + (this.max - this.min) / 2];
         }
-        if (this.value[0] < 0) this.variant = "centered";
+        this.defaultValue=JSON.parse(JSON.stringify(this.value))
+        if (this.min < 0) this.variant = "centered";
         else if (this.step > 1) this.variant = "discrete";
         else if (this.value.length > 1) this.variant = "range-selection";
         else this.variant = "continuous";
@@ -143,6 +154,17 @@ class MdSliderComponent extends MdComponent {
         this.updateValue();
         this.requestUpdate();
         this.emit("onSliderNativeInput", { event });
+    }
+
+    /**
+     * @private
+     * @param {Object} event
+     */
+    handleSliderNativeReset(event) {
+        this.value=JSON.parse(JSON.stringify(this.defaultValue))
+        this.updateValue();
+        this.requestUpdate();
+        this.emit("onSliderNativeReset", { event });
     }
 
     /**

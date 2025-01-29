@@ -45,8 +45,12 @@ class MdRadioButtonComponent extends MdComponent {
                 .value="${ifDefined(this.value)}"
                 .indeterminate="${ifDefined(this.indeterminate)}"
                 .checked="${ifDefined(this.checked)}"
+                .defaultValue="${ifDefined(this.defaultValue)}"
+                .defaultIndeterminate="${ifDefined(this.defaultIndeterminate)}"
+                .defaultChecked="${ifDefined(this.defaultChecked)}"
                 class="md-radio-button__native"
                 @input="${this.handleRadioButtonNativeInput}"
+                @reset="${this.handleRadioButtonNativeReset}"
             >
             <div class="md-radio-button__track">
                 <div class="md-radio-button__thumb"></div>
@@ -60,6 +64,11 @@ class MdRadioButtonComponent extends MdComponent {
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-radio-button");
+    
+        this.defaultValue=this.value
+        this.defaultIndeterminate=this.indeterminate
+        this.defaultChecked=this.checked
+    
     }
 
     /**
@@ -68,9 +77,24 @@ class MdRadioButtonComponent extends MdComponent {
      */
     handleRadioButtonNativeInput(event) {
         const native = event.currentTarget;
+
         this.indeterminate = native.indeterminate;
         this.checked = native.checked;
+
         this.emit("onRadioButtonNativeInput", { event });
+    }
+
+    /**
+     * @private
+     * @param {Object} event
+     */
+    handleRadioButtonNativeReset(event) {
+        
+        this.value=this.defaultValue
+        this.indeterminate=this.defaultIndeterminate
+        this.checked=this.defaultChecked
+
+        this.emit("onRadioButtonNativeReset", { event });
     }
 }
 customElements.define("md-radio-button", MdRadioButtonComponent);

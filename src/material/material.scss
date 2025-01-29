@@ -17,6 +17,9 @@
 @use "./checkbox/checkbox.scss";
 @use "./radio-button/radio-button.scss";
 @use "./switch/switch.scss";
+@use "./progress-indicator/progress-indicator.scss";
+@use "./slider/slider.scss";
+@use "./form/form.scss";
 @use "./list/list.scss";
 @use "./tree/tree.scss";
 @use "./navigation-list/navigation-list.scss";
@@ -35,5 +38,3 @@
 @use "./navigation-drawer/navigation-drawer.scss";
 @use "./navigation-rail/navigation-rail.scss";
 @use "./menu/menu.scss";
-@use "./progress-indicator/progress-indicator.scss";
-@use "./slider/slider.scss";

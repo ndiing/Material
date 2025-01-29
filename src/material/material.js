@@ -1,4 +1,4 @@
-// import "./component/component.js";
+/* // import "./component/component.js";
 // import "./router/router.js";
 // import "./ripple/ripple.js";
 // import "./tokens/tokens.js";
@@ -17,6 +17,9 @@ import "./chips/chips.js";
 import "./checkbox/checkbox.js";
 import "./radio-button/radio-button.js";
 import "./switch/switch.js";
+import "./progress-indicator/progress-indicator.js";
+import "./slider/slider.js";
+import "./form/form.js";
 import "./list/list-row.js";
 import "./list/list-item.js";
 import "./list/list.js";
@@ -41,10 +44,7 @@ import "./top-app-bar/top-app-bar.js";
 import "./navigation-bar/navigation-bar.js";
 import "./navigation-drawer/navigation-drawer.js";
 import "./navigation-rail/navigation-rail.js";
-import "./menu/menu.js";
-import "./progress-indicator/progress-indicator.js";
-import "./slider/slider.js";
-import "./form/form.js";
+import "./menu/menu.js"; */
 // import "./carousel/carousel.js";
 // import "./text-field/text-field.js";
 // import "./search/search.js";

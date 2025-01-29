@@ -6,28 +6,28 @@ import { createRef, ref } from "lit/directives/ref.js";
  *
  */
 class MdFormComponent extends MdComponent {
-    static properties={
-        acceptCharset:{type:String},
-        action:{type:String},
-        autocomplete:{type:String},
-        enctype:{type:String},
-        method:{type:String},
-        name:{type:String},
-        noValidate:{type:Boolean},
+    static properties = {
+        acceptCharset: { type: String },
+        action: { type: String },
+        autocomplete: { type: String },
+        enctype: { type: String },
+        method: { type: String },
+        name: { type: String },
+        noValidate: { type: Boolean },
+    };
+
+    constructor() {
+        super();
+        this.acceptCharset = "UTF-8";
+        this.action = "/";
+        this.autocomplete = "off";
+        this.enctype = "application/x-www-form-urlencoded";
+        this.method = "post";
+        this.noValidate = true;
+        this.body = Array.from(this.childNodes);
     }
 
-    constructor(){
-        super()
-        this.acceptCharset='UTF-8'
-        this.action='/'
-        this.autocomplete='off'
-        this.enctype='application/x-www-form-urlencoded'
-        this.method='post'
-        this.noValidate=true
-        this.body=Array.from(this.childNodes)
-    }
-
-    render(){
+    render() {
         /* prettier-ignore */
         return html`
             <form 
@@ -53,45 +53,44 @@ class MdFormComponent extends MdComponent {
         this.classList.add("md-form");
     }
 
-    handleFormNativeFormdata(event){
-        this.emit('onFormNativeFormdata',{event})
+    handleFormNativeFormdata(event) {
+        this.emit("onFormNativeFormdata", { event });
     }
 
-    handleFormNativeReset(event){
-        for(const element of this.formNative.elements){
-            const event=new CustomEvent('reset',{
-                bubbles:true,
-                cancelable:true,
-            })
-            element.dispatchEvent(event)
+    handleFormNativeReset(event) {
+        for (const element of this.formNative.elements) {
+            const event = new CustomEvent("reset", {
+                bubbles: true,
+                cancelable: true,
+            });
+            element.dispatchEvent(event);
         }
-        this.emit('onFormNativeReset',{event})
+        this.emit("onFormNativeReset", { event });
     }
 
-    handleFormNativeSubmit(event){
-        event.preventDefault()
-        new FormData(this.formNative)
-        this.emit('onFormNativeSubmit',{event})
+    handleFormNativeSubmit(event) {
+        event.preventDefault();
+        new FormData(this.formNative);
+        this.emit("onFormNativeSubmit", { event });
     }
 
-    get formNative(){
-        return this.querySelector('.md-form__native')
+    get formNative() {
+        return this.querySelector(".md-form__native");
     }
 
-    reset(){
-        this.formNative.reset()
+    reset() {
+        this.formNative.reset();
     }
 
-    submit(submitButton){
-        
+    submit(submitButton) {
         if (this.formNative.requestSubmit) {
-          if (submitButton) {
-            this.formNative.requestSubmit(submitButton);
-          } else {
-            this.formNative.requestSubmit();
-          }
+            if (submitButton) {
+                this.formNative.requestSubmit(submitButton);
+            } else {
+                this.formNative.requestSubmit();
+            }
         } else {
-          this.formNative.submit();
+            this.formNative.submit();
         }
     }
 }
