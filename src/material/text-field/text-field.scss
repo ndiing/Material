@@ -36,7 +36,7 @@
     color: inherit;
     width: 100%;
     // height: 100%;
-    padding: calc((56px - var(--md-sys-typescale-body-large-line-height)) / 2) 0;
+    padding: calc((var(--md-comp-text-field-height) - var(--md-sys-typescale-body-large-line-height)) / 2) 0;
     @include mixins.typescale-body-large();
     &::placeholder {
         color: inherit;
@@ -190,8 +190,8 @@
             @include mixins.typescale-body-large();
             pointer-events: none;
 
-            &::before{
-                content:'';
+            &::before {
+                content: "";
                 // width: 100%;
                 width: 0;
                 height: 100%;
@@ -223,7 +223,7 @@
                 top: -8px;
                 @include mixins.typescale-body-small();
 
-                &::before{
+                &::before {
                     width: 100%;
                 }
             }
