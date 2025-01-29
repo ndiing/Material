@@ -18,12 +18,11 @@ class MdFormComponent extends MdComponent {
 
     constructor() {
         super();
-        this.acceptCharset = "UTF-8";
-        this.action = "/";
-        this.autocomplete = "off";
-        this.enctype = "application/x-www-form-urlencoded";
-        this.method = "post";
-        this.noValidate = true;
+        // this.acceptCharset = "UTF-8";
+        // this.action = "/";
+        // this.autocomplete = "off";
+        // this.enctype = "application/x-www-form-urlencoded";
+        // this.method = "post";
         this.body = Array.from(this.childNodes);
     }
 

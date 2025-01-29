@@ -48,6 +48,7 @@ Router.use([
             { path: "chips", load: () => import("./chips/chips.js").then((m) => m.default) },
             { path: "snackbar", load: () => import("./snackbar/snackbar.js").then((m) => m.default) },
             { path: "form", load: () => import("./form/form.js").then((m) => m.default) },
+            { path: "text-field", load: () => import("./text-field/text-field.js").then((m) => m.default) },
         ],
     },
     {

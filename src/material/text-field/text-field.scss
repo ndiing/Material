@@ -1,0 +1,94 @@
+@use "../mixins/mixins.scss";
+
+.md-text-field {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.md-text-field__label {
+    margin-bottom: 4px;
+    padding: 0 16px;
+    gap: 0 16px;
+    @include mixins.typescale-body-small();
+}
+
+.md-text-field__container {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    padding: 0 16px;
+    gap: 0 16px;
+    border-radius: var(--md-sys-shape-corner-extra-small);
+    background-color: var(--md-sys-color-surface-container-highest);
+    color: var(--md-sys-color-on-surface-variant);
+}
+.md-text-field__prefix {
+    margin-right: -16px;
+    @include mixins.typescale-body-large();
+}
+.md-text-field__native {
+    appearance: none;
+    background: transparent;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+    @include mixins.typescale-body-large();
+    &::placeholder{
+        color: inherit;
+    }
+}
+.md-text-field__suffix {
+    margin-left: -16px;
+    @include mixins.typescale-body-large();
+}
+.md-text-field__icons {
+    display: inline-flex;
+    align-items: center;
+    margin-left: -4px;
+    gap: 0 16px;
+}
+// .md-text-field__icon {}
+.md-text-field__actions {
+    display: inline-flex;
+    align-items: center;
+    margin-right: -4px;
+    gap: 0 16px;
+}
+// .md-text-field__action {}
+
+.md-text-field__wrapper {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    gap: 0 16px;
+    margin-top: 4px;
+}
+.md-text-field__text {
+    @include mixins.typescale-body-small();
+}
+.md-text-field__counter {
+    margin-left: auto;
+    @include mixins.typescale-body-small();
+}
+
+.md-text-field--focus{
+    .md-text-field__label{
+        color: var(--md-sys-color-primary);
+    }
+    .md-text-field__icon{
+        color: var(--md-sys-color-primary);
+    }
+}
+// .md-text-field--populated{}
+.md-text-field--error{
+    .md-text-field__label{
+        color: var(--md-sys-color-error);
+    }
+    .md-text-field__icon{
+        color: var(--md-sys-color-error);
+    }
+    .md-text-field__text{
+        color: var(--md-sys-color-error);
+    }
+}
