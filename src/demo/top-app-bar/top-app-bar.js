@@ -7,10 +7,20 @@ class DemoTopAppBar extends MdComponent {
     render() {
         return html`
             <div class="md-layout__border">
-                <md-top-app-bar open id="topAppBar1" label="North" .leadingActions="${[{ icon: "image" }]}" .trailingActions="${[{ icon: "image" }, { icon: "image" }, { icon: "image" }]}"></md-top-app-bar>
+                <md-top-app-bar
+                    open
+                    id="topAppBar1"
+                    label="North"
+                    .leadingActions="${[{ icon: "image" }]}"
+                    .trailingActions="${[{ icon: "image" }, { icon: "image" }, { icon: "image" }]}"
+                ></md-top-app-bar>
                 <md-sheet region="center">
                     <div class="md-layout">
-                        <md-button variant="filled-tonal" label="Toggle Top App Bar" @click="${() => topAppBar1.toggle()}"></md-button>
+                        <md-button
+                            variant="filled-tonal"
+                            label="Toggle Top App Bar"
+                            @click="${() => topAppBar1.toggle()}"
+                        ></md-button>
                     </div>
                 </md-sheet>
             </div>

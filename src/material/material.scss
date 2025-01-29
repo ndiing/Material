@@ -13,6 +13,7 @@
 @use "./fab/fab.scss";
 @use "./icon-button/icon-button.scss";
 @use "./segmented-button/segmented-button.scss";
+@use "./chips/chips.scss";
 @use "./checkbox/checkbox.scss";
 @use "./radio-button/radio-button.scss";
 @use "./switch/switch.scss";
@@ -23,6 +24,7 @@
 @use "./card/card.scss";
 @use "./scrim/scrim.scss";
 @use "./dialog/dialog.scss";
+@use "./snackbar/snackbar.scss";
 @use "./tooltip/tooltip.scss";
 @use "./sheet/sheet.scss";
 @use "./bottom-sheet/bottom-sheet.scss";
@@ -35,4 +37,3 @@
 @use "./menu/menu.scss";
 @use "./progress-indicator/progress-indicator.scss";
 @use "./slider/slider.scss";
-@use "./chips/chips.scss";

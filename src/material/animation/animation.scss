@@ -201,3 +201,38 @@
         height: 48px;
     }
 }
+
+@keyframes snackbar-out {
+    0% {
+        opacity: 0;
+        height: 0px;
+    }
+    100% {
+        opacity: 1;
+        height: var(--md-comp-snackbar-height);
+    }
+}
+@keyframes snackbar-in {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes snackbar-body-out {
+    0% {
+        overflow: hidden;
+    }
+    100% {
+        overflow: hidden;
+    }
+}
+@keyframes snackbar-body-in {
+    0% {
+        overflow: hidden;
+    }
+    100% {
+        overflow: hidden;
+    }
+}

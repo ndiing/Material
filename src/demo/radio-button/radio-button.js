@@ -12,7 +12,10 @@ class DemoRadioButton extends MdComponent {
                         <md-radio-button name="radio1"></md-radio-button>
                     </div>
                     <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
-                        <md-radio-button name="radio1" checked></md-radio-button>
+                        <md-radio-button
+                            name="radio1"
+                            checked
+                        ></md-radio-button>
                     </div>
                 </div>
             </div>

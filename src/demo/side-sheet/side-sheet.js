@@ -10,7 +10,11 @@ class DemoSideSheet extends MdComponent {
                 <md-side-sheet id="sideSheet2">body</md-side-sheet>
                 <md-sheet region="center">
                     <div class="md-layout">
-                        <md-button variant="filled-tonal" label="Toggle Side Sheet" @click="${() => sideSheet2.toggle()}"></md-button>
+                        <md-button
+                            variant="filled-tonal"
+                            label="Toggle Side Sheet"
+                            @click="${() => sideSheet2.toggle()}"
+                        ></md-button>
                     </div>
                 </md-sheet>
             </div>

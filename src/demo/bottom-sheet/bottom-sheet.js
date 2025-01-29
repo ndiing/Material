@@ -10,7 +10,11 @@ class DemoBottomSheet extends MdComponent {
                 <md-bottom-sheet id="bottomSheet3">body</md-bottom-sheet>
                 <md-sheet region="center">
                     <div class="md-layout">
-                        <md-button variant="filled-tonal" label="Toggle Bottom Sheet" @click="${() => bottomSheet3.toggle()}"></md-button>
+                        <md-button
+                            variant="filled-tonal"
+                            label="Toggle Bottom Sheet"
+                            @click="${() => bottomSheet3.toggle()}"
+                        ></md-button>
                     </div>
                 </md-sheet>
             </div>

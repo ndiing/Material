@@ -19,7 +19,11 @@ class DemoNavigationRail extends MdComponent {
                 ></md-navigation-rail>
                 <md-sheet region="center">
                     <div class="md-layout">
-                        <md-button variant="filled-tonal" label="Toggle Navigation Rail" @click="${() => navigationRail1.toggle()}"></md-button>
+                        <md-button
+                            variant="filled-tonal"
+                            label="Toggle Navigation Rail"
+                            @click="${() => navigationRail1.toggle()}"
+                        ></md-button>
                     </div>
                 </md-sheet>
             </div>

@@ -5,21 +5,21 @@ import { RippleController } from "../ripple/ripple";
  *
  */
 class MdChipComponent extends MdComponent {
-    static properties={
-        icon:{type:String},
-        avatar:{type:String},
-        label:{type:String},
-        action:{type:String},
-        selected:{type:Boolean,reflect:true},
-        disabled:{type:Boolean,reflect:true},
+    static properties = {
+        icon: { type: String },
+        avatar: { type: String },
+        label: { type: String },
+        action: { type: String },
+        selected: { type: Boolean, reflect: true },
+        disabled: { type: Boolean, reflect: true },
+    };
+
+    constructor() {
+        super();
+        this.ripple = new RippleController(this, {});
     }
 
-    constructor(){
-        super()
-        this.ripple = new RippleController(this,{})
-    }
-
-    render(){
+    render() {
         /* prettier-ignore */
         return html`
             ${this.icon?html`<md-icon class="md-chip__icon">${this.icon}</md-icon>`:nothing}
@@ -41,8 +41,8 @@ class MdChipComponent extends MdComponent {
         this.classList.add("md-chip");
     }
 
-    handleChipActionClick(event){
-        this.emit('onChipActionClick',{event})
+    handleChipActionClick(event) {
+        this.emit("onChipActionClick", { event });
     }
 }
 customElements.define("md-chip", MdChipComponent);

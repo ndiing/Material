@@ -19,7 +19,11 @@ class DemoNavigationBarNoLabel extends MdComponent {
                 ></md-navigation-bar>
                 <md-sheet region="center">
                     <div class="md-layout">
-                        <md-button variant="filled-tonal" label="Toggle Navigation Bar" @click="${() => navigationBar1.toggle()}"></md-button>
+                        <md-button
+                            variant="filled-tonal"
+                            label="Toggle Navigation Bar"
+                            @click="${() => navigationBar1.toggle()}"
+                        ></md-button>
                     </div>
                 </md-sheet>
             </div>

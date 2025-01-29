@@ -37,7 +37,6 @@ class MdIconButtonComponent extends MdComponent {
     constructor() {
         super();
         this.type = "icon-button";
-
     }
 
     /**
@@ -66,7 +65,7 @@ class MdIconButtonComponent extends MdComponent {
             trigger: ".md-icon-button__native",
             unbounded: true,
             radius: 40,
-            ...this.rippleOptions
+            ...this.rippleOptions,
         });
     }
 

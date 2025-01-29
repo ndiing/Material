@@ -72,6 +72,7 @@ class DemoMain extends MdComponent {
             { label: "Progress Indicator", routerLink: "/progress-indicator" },
             { label: "Slider", routerLink: "/slider" },
             { label: "Chips", routerLink: "/chips" },
+            { label: "Snackbar", routerLink: "/snackbar" },
         ];
         this.items.sort((a, b) => {
             if (a.children && !b.children) return -1;
@@ -96,8 +97,19 @@ class DemoMain extends MdComponent {
     render() {
         return html`
             <div class="md-layout__border">
-                <md-top-app-bar class="demo-main-top-app-bar" open label="Material 3" .leadingActions="${this.leadingActions}" @onTopAppBarIconButtonClick="${() => navigationDrawer.toggle()}"></md-top-app-bar>
-                <md-navigation-drawer id="navigationDrawer" view="tree" .items="${this.items}" @onTreeItemClick="${() => {}}"></md-navigation-drawer>
+                <md-top-app-bar
+                    class="demo-main-top-app-bar"
+                    open
+                    label="Material 3"
+                    .leadingActions="${this.leadingActions}"
+                    @onTopAppBarIconButtonClick="${() => navigationDrawer.toggle()}"
+                ></md-top-app-bar>
+                <md-navigation-drawer
+                    id="navigationDrawer"
+                    view="tree"
+                    .items="${this.items}"
+                    @onTreeItemClick="${() => {}}"
+                ></md-navigation-drawer>
                 <md-sheet region="center">
                     <md-outlet></md-outlet>
                 </md-sheet>

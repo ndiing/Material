@@ -18,7 +18,10 @@ class DemoSwitch extends MdComponent {
                         <md-switch .icons="${["close", "check"]}"></md-switch>
                     </div>
                     <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
-                        <md-switch .icons="${["close", "check"]}" checked></md-switch>
+                        <md-switch
+                            .icons="${["close", "check"]}"
+                            checked
+                        ></md-switch>
                     </div>
                 </div>
             </div>

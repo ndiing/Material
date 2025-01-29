@@ -19,7 +19,12 @@ class DemoMenu extends MdComponent {
                                 { label: "Item 4", badge: 1000 },
                             ]}"
                         ></md-menu>
-                        <md-button id="button1" variant="filled-tonal" label="Toggle Menu" @click="${() => menu1.toggle({ trigger: button1 })}"></md-button>
+                        <md-button
+                            id="button1"
+                            variant="filled-tonal"
+                            label="Toggle Menu"
+                            @click="${() => menu1.toggle({ trigger: button1 })}"
+                        ></md-button>
                     </div>
                     <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <md-menu
@@ -32,7 +37,12 @@ class DemoMenu extends MdComponent {
                                 { icon: "image", label: "Item 4", badge: 1000 },
                             ]}"
                         ></md-menu>
-                        <md-button id="button2" variant="filled-tonal" label="Toggle Menu" @click="${() => menu2.toggle({ trigger: button2 })}"></md-button>
+                        <md-button
+                            id="button2"
+                            variant="filled-tonal"
+                            label="Toggle Menu"
+                            @click="${() => menu2.toggle({ trigger: button2 })}"
+                        ></md-button>
                     </div>
                 </div>
             </div>

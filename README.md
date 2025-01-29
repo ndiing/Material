@@ -13,6 +13,10 @@
 <dd></dd>
 <dt><a href="#MdCheckboxComponent">MdCheckboxComponent</a></dt>
 <dd></dd>
+<dt><a href="#MdChipComponent">MdChipComponent</a></dt>
+<dd></dd>
+<dt><a href="#MdChipComponent">MdChipComponent</a></dt>
+<dd></dd>
 <dt><a href="#MdComponent">MdComponent</a></dt>
 <dd></dd>
 <dt><a href="#MdDialogComponent">MdDialogComponent</a></dt>
@@ -66,6 +70,8 @@
 <dt><a href="#MdSideSheetComponent">MdSideSheetComponent</a></dt>
 <dd></dd>
 <dt><a href="#MdSliderComponent">MdSliderComponent</a></dt>
+<dd></dd>
+<dt><a href="#MdSnackbarComponent">MdSnackbarComponent</a></dt>
 <dd></dd>
 <dt><a href="#MdSwitchComponent">MdSwitchComponent</a></dt>
 <dd></dd>
@@ -228,6 +234,14 @@
 | [indeterminate] | <code>Boolean</code> | 
 | [checked] | <code>Boolean</code> | 
 
+<a name="MdChipComponent"></a>
+
+## MdChipComponent
+**Kind**: global class  
+<a name="MdChipComponent"></a>
+
+## MdChipComponent
+**Kind**: global class  
 <a name="MdComponent"></a>
 
 ## MdComponent
@@ -869,6 +883,44 @@
 | min | <code>String</code> | 
 | max | <code>String</code> | 
 
+<a name="MdSnackbarComponent"></a>
+
+## MdSnackbarComponent
+**Kind**: global class  
+
+* [MdSnackbarComponent](#MdSnackbarComponent)
+    * [.properties](#MdSnackbarComponent+properties)
+    * [.show()](#MdSnackbarComponent+show)
+    * [.close()](#MdSnackbarComponent+close)
+    * [.toggle()](#MdSnackbarComponent+toggle)
+
+<a name="MdSnackbarComponent+properties"></a>
+
+### mdSnackbarComponent.properties
+**Kind**: instance property of [<code>MdSnackbarComponent</code>](#MdSnackbarComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [icons] | <code>Array</code> | 
+| [actions] | <code>Array</code> | 
+| [label] | <code>String</code> | 
+| [sublabel] | <code>String</code> | 
+| [buttons] | <code>Array</code> | 
+| [open] | <code>Boolean</code> | 
+
+<a name="MdSnackbarComponent+show"></a>
+
+### mdSnackbarComponent.show()
+**Kind**: instance method of [<code>MdSnackbarComponent</code>](#MdSnackbarComponent)  
+<a name="MdSnackbarComponent+close"></a>
+
+### mdSnackbarComponent.close()
+**Kind**: instance method of [<code>MdSnackbarComponent</code>](#MdSnackbarComponent)  
+<a name="MdSnackbarComponent+toggle"></a>
+
+### mdSnackbarComponent.toggle()
+**Kind**: instance method of [<code>MdSnackbarComponent</code>](#MdSnackbarComponent)  
 <a name="MdSwitchComponent"></a>
 
 ## MdSwitchComponent

@@ -12,7 +12,10 @@ class DemoSlider extends MdComponent {
                         <br />
                         <br />
                         <br />
-                        <md-slider min="-50" max="50"></md-slider>
+                        <md-slider
+                            min="-50"
+                            max="50"
+                        ></md-slider>
                     </div>
                     <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <br />
@@ -36,7 +39,10 @@ class DemoSlider extends MdComponent {
                         <br />
                         <br />
                         <br />
-                        <md-slider min="-5000" max="5000"></md-slider>
+                        <md-slider
+                            min="-5000"
+                            max="5000"
+                        ></md-slider>
                     </div>
                     <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <br />
@@ -48,13 +54,19 @@ class DemoSlider extends MdComponent {
                         <br />
                         <br />
                         <br />
-                        <md-slider step="1000" max="10000"></md-slider>
+                        <md-slider
+                            step="1000"
+                            max="10000"
+                        ></md-slider>
                     </div>
                     <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <br />
                         <br />
                         <br />
-                        <md-slider value="[2500,7500]" max="10000"></md-slider>
+                        <md-slider
+                            value="[2500,7500]"
+                            max="10000"
+                        ></md-slider>
                     </div>
                 </div>
             </div>

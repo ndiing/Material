@@ -6,10 +6,10 @@ import { RippleController } from "../ripple/ripple";
  *
  */
 class MdChipComponent extends MdComponent {
-    static properties={
-        items:{type:Array},
-        type:{type:String},
-    }
+    static properties = {
+        items: { type: Array },
+        type: { type: String },
+    };
 
     /* prettier-ignore */
     types=[
@@ -17,12 +17,12 @@ class MdChipComponent extends MdComponent {
         'multi-select',
     ]
 
-    constructor(){
-        super()
-        this.type='single-select'
+    constructor() {
+        super();
+        this.type = "single-select";
     }
 
-    renderChip(item){
+    renderChip(item) {
         /* prettier-ignore */
         return html`
             <md-chip
@@ -38,7 +38,7 @@ class MdChipComponent extends MdComponent {
         `
     }
 
-    render(){
+    render() {
         /* prettier-ignore */
         return this.items.map(item=>this.renderChip(item))
     }
@@ -51,20 +51,20 @@ class MdChipComponent extends MdComponent {
         this.classList.add("md-chips");
     }
 
-    handleChipClick(event){
-        const data=event.currentTarget.data
+    handleChipClick(event) {
+        const data = event.currentTarget.data;
 
-        if(this.type==='single-select'){
-            this.items.forEach(item => {
-                item.selected=data===item
+        if (this.type === "single-select") {
+            this.items.forEach((item) => {
+                item.selected = data === item;
             });
-        }else{
-            data.selected=!data.selected
+        } else {
+            data.selected = !data.selected;
         }
 
-        this.requestUpdate()
+        this.requestUpdate();
 
-        this.emit('onChipClick',{event})
+        this.emit("onChipClick", { event });
     }
 }
 customElements.define("md-chips", MdChipComponent);

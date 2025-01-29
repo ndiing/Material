@@ -46,6 +46,7 @@ Router.use([
             { path: "bottom-sheet", load: () => import("./bottom-sheet/bottom-sheet.js").then((m) => m.default) },
             { path: "bottom-sheet-modal", load: () => import("./bottom-sheet/bottom-sheet-modal.js").then((m) => m.default) },
             { path: "chips", load: () => import("./chips/chips.js").then((m) => m.default) },
+            { path: "snackbar", load: () => import("./snackbar/snackbar.js").then((m) => m.default) },
         ],
     },
     {
