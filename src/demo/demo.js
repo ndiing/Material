@@ -47,6 +47,7 @@ Router.use([
             { path: "bottom-sheet-modal", load: () => import("./bottom-sheet/bottom-sheet-modal.js").then((m) => m.default) },
             { path: "chips", load: () => import("./chips/chips.js").then((m) => m.default) },
             { path: "snackbar", load: () => import("./snackbar/snackbar.js").then((m) => m.default) },
+            { path: "form", load: () => import("./form/form.js").then((m) => m.default) },
         ],
     },
     {

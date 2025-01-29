@@ -44,6 +44,7 @@ import "./navigation-rail/navigation-rail.js";
 import "./menu/menu.js";
 import "./progress-indicator/progress-indicator.js";
 import "./slider/slider.js";
+import "./form/form.js";
 // import "./carousel/carousel.js";
 // import "./text-field/text-field.js";
 // import "./search/search.js";
