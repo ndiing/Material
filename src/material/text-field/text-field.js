@@ -10,6 +10,8 @@ import { classMap } from "lit/directives/class-map.js";
 class MdTextFieldComponent extends MdComponent {
     static properties = {
         label: { type: String },
+        separateLabel: { type: Boolean },
+
         icons: { type: Array },
         prefix: { type: String },
         suffix: { type: String },
@@ -148,11 +150,13 @@ class MdTextFieldComponent extends MdComponent {
     /**
      * @private
      */
-    connectedCallback() {
+    async connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-text-field");
         this.defaultValue = this.value;
         this.classList.toggle("md-text-field--populated", !!this.value);
+        await this.updateComplete
+        this.style.setProperty('--md-comp-text-field-offset-left',this.textFieldNative.offsetLeft+'px')
     }
 
     /**
@@ -165,6 +169,12 @@ class MdTextFieldComponent extends MdComponent {
             this.variants.forEach((variant) => {
                 this.classList.toggle(`md-text-field--${variant}`, variant === this.variant);
             });
+        }
+        if (changedProperties.has("separateLabel")) {
+            this.classList.toggle(`md-text-field--separate-label`, !!this.separateLabel);
+        }
+        if (changedProperties.has("label")) {
+            this.classList.toggle(`md-text-field--with-label`, !!this.label);
         }
     }
 
