@@ -74,7 +74,10 @@ class DemoMain extends MdComponent {
             { label: "Chips", routerLink: "/chips" },
             { label: "Snackbar", routerLink: "/snackbar" },
             { label: "Form", routerLink: "/form" },
-            { label: "Text Field", routerLink: "/text-field" },
+            { label: "Text Field", children:[
+                { label: "Default", routerLink: "/text-field" },
+                { label: "Types", routerLink: "/text-field-types" },
+            ] },
         ];
         this.items.sort((a, b) => {
             if (a.children && !b.children) return -1;

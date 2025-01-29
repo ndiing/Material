@@ -8,243 +8,6 @@ class DemoForm extends MdComponent {
         return html`
             <div class="md-layout">
                 <div class="md-layout__grid">
-                    <!-- <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
-                        <md-form>
-                            <div class="md-layout__grid">
-                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
-                                    <input
-                                        type="checkbox"
-                                        name="checkbox"
-                                    /><br />
-                                    <input
-                                        type="color"
-                                        name="color"
-                                    /><br />
-                                    <input
-                                        type="date"
-                                        name="date"
-                                    /><br />
-                                    <input
-                                        type="datetime-local"
-                                        name="datetime-local"
-                                    /><br />
-                                    <input
-                                        type="email"
-                                        name="email"
-                                    /><br />
-                                    <input
-                                        type="file"
-                                        name="file"
-                                    /><br />
-                                    <input
-                                        type="month"
-                                        name="month"
-                                    /><br />
-                                    <input
-                                        type="number"
-                                        name="number"
-                                    /><br />
-                                    <input
-                                        type="password"
-                                        name="password"
-                                    /><br />
-                                    <input
-                                        type="radio"
-                                        name="radio"
-                                    /><br />
-                                    <input
-                                        type="range"
-                                        name="range"
-                                    /><br />
-                                    <input
-                                        type="search"
-                                        name="search"
-                                    /><br />
-                                    <input
-                                        type="tel"
-                                        name="tel"
-                                    /><br />
-                                    <input
-                                        type="text"
-                                        name="text"
-                                    /><br />
-                                    <input
-                                        type="time"
-                                        name="time"
-                                    /><br />
-                                    <input
-                                        type="url"
-                                        name="url"
-                                    /><br />
-                                    <input
-                                        type="week"
-                                        name="week"
-                                    /><br />
-                                    <textarea name="textarea"></textarea><br />
-                                    <select name="select">
-                                        <option
-                                            value="1"
-                                            label="One"
-                                        ></option>
-                                        <option
-                                            value="2"
-                                            label="Two"
-                                        ></option>
-                                        <option
-                                            value="3"
-                                            label="Three"
-                                        ></option>
-                                        <option
-                                            value="4"
-                                            label="Four"
-                                        ></option></select
-                                    ><br />
-                                </div>
-                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
-                                    <md-button
-                                        variant="filled-tonal"
-                                        type="submit"
-                                        label="Submit"
-                                    ></md-button>
-                                    <md-button
-                                        variant="filled-tonal"
-                                        type="reset"
-                                        label="Reset"
-                                    ></md-button>
-                                </div>
-                            </div>
-                        </md-form>
-                    </div> -->
-
-                    <!-- <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
-                        <md-form>
-                            <div class="md-layout__grid">
-                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
-                                    <input
-                                        value="on"
-                                        checked
-                                        type="checkbox"
-                                        name="checkbox"
-                                    /><br />
-                                    <input
-                                        value="#000000"
-                                        type="color"
-                                        name="color"
-                                    /><br />
-                                    <input
-                                        value="2025-01-29"
-                                        type="date"
-                                        name="date"
-                                    /><br />
-                                    <input
-                                        value="2025-01-29T10:23"
-                                        type="datetime-local"
-                                        name="datetime-local"
-                                    /><br />
-                                    <input
-                                        value="ndiing.inc@gmail.com"
-                                        type="email"
-                                        name="email"
-                                    /><br />
-                                    <input
-                                        type="file"
-                                        name="file"
-                                    /><br />
-                                    <input
-                                        value="2025-06"
-                                        type="month"
-                                        name="month"
-                                    /><br />
-                                    <input
-                                        value="123456789"
-                                        type="number"
-                                        name="number"
-                                    /><br />
-                                    <input
-                                        value="secret"
-                                        type="password"
-                                        name="password"
-                                    /><br />
-                                    <input
-                                        value="on"
-                                        checked
-                                        type="radio"
-                                        name="radio"
-                                    /><br />
-                                    <input
-                                        value="75"
-                                        min="0"
-                                        max="100"
-                                        type="range"
-                                        name="range"
-                                    /><br />
-                                    <input
-                                        value="material"
-                                        type="search"
-                                        name="search"
-                                    /><br />
-                                    <input
-                                        value="6281935155404"
-                                        type="tel"
-                                        name="tel"
-                                    /><br />
-                                    <input
-                                        value="hello word"
-                                        type="text"
-                                        name="text"
-                                    /><br />
-                                    <input
-                                        value="10:23"
-                                        type="time"
-                                        name="time"
-                                    /><br />
-                                    <input
-                                        value="http://google.com"
-                                        type="url"
-                                        name="url"
-                                    /><br />
-                                    <input
-                                        value="2025-W05"
-                                        type="week"
-                                        name="week"
-                                    /><br />
-                                    <textarea name="textarea">textarea</textarea><br />
-                                    <select name="select">
-                                        <option
-                                            value="1"
-                                            label="One"
-                                        ></option>
-                                        <option
-                                            value="2"
-                                            label="Two"
-                                        ></option>
-                                        <option
-                                            value="3"
-                                            label="Three"
-                                            selected
-                                        ></option>
-                                        <option
-                                            value="4"
-                                            label="Four"
-                                        ></option></select
-                                    ><br />
-                                </div>
-                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
-                                    <md-button
-                                        variant="filled-tonal"
-                                        type="submit"
-                                        label="Submit"
-                                    ></md-button>
-                                    <md-button
-                                        variant="filled-tonal"
-                                        type="reset"
-                                        label="Reset"
-                                    ></md-button>
-                                </div>
-                            </div>
-                        </md-form>
-                    </div> -->
-
                     <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <md-form
                             @onFormNativeFormdata="${console.log}"
@@ -327,6 +90,21 @@ class DemoForm extends MdComponent {
                                         value="[25,75]"
                                     ></md-slider>
                                 </div>
+
+                                <!-- <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4"><md-text-field variant="filled" label="Color" name="color" type="color"></md-text-field></div> -->
+                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4"><md-text-field variant="filled" label="Date" name="date" type="date"></md-text-field></div>
+                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4"><md-text-field variant="filled" label="Datetime Local" name="datetime-local" type="datetime-local"></md-text-field></div>
+                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4"><md-text-field variant="filled" label="Email" name="email" type="email"></md-text-field></div>
+                                <!-- <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4"><md-text-field variant="filled" label="File" name="file" type="file"></md-text-field></div> -->
+                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4"><md-text-field variant="filled" label="Month" name="month" type="month"></md-text-field></div>
+                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4"><md-text-field variant="filled" label="Number" name="number" type="number"></md-text-field></div>
+                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4"><md-text-field variant="filled" label="Password" name="password" type="password"></md-text-field></div>
+                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4"><md-text-field variant="filled" label="Search" name="search" type="search"></md-text-field></div>
+                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4"><md-text-field variant="filled" label="Tel" name="tel" type="tel"></md-text-field></div>
+                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4"><md-text-field variant="filled" label="Text" name="text" type="text"></md-text-field></div>
+                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4"><md-text-field variant="filled" label="Time" name="time" type="time"></md-text-field></div>
+                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4"><md-text-field variant="filled" label="URL" name="url" type="url"></md-text-field></div>
+                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4"><md-text-field variant="filled" label="Week" name="week" type="week"></md-text-field></div>
 
                                 <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                                     <md-button

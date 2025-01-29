@@ -153,6 +153,7 @@ class MdTextFieldComponent extends MdComponent {
     async connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-text-field");
+        if(this.type!=='file')
         this.defaultValue = this.value;
         this.classList.toggle("md-text-field--populated", !!this.value);
         await this.updateComplete;
@@ -193,8 +194,9 @@ class MdTextFieldComponent extends MdComponent {
     }
 
     handleTextFieldInput(event) {
+        if(this.type!=='file')
         this.value = this.textFieldNative.value;
-        this.classList.toggle("md-text-field--populated", !!this.value);
+        this.classList.toggle("md-text-field--populated", !!this.textFieldNative.value);
         this.error = this.textFieldNative.validationMessage;
         this.classList.toggle("md-text-field--error", !!this.error);
 
@@ -203,7 +205,7 @@ class MdTextFieldComponent extends MdComponent {
 
     handleTextFieldSearch(event) {
         this.value = this.textFieldNative.value;
-        this.classList.toggle("md-text-field--populated", !!this.value);
+        this.classList.toggle("md-text-field--populated", !!this.textFieldNative.value);
         this.error = this.textFieldNative.validationMessage;
         this.classList.toggle("md-text-field--error", !!this.error);
 
