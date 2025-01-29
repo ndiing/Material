@@ -75,7 +75,7 @@ class MdTextFieldComponent extends MdComponent {
                 .toggle="${ifDefined(item.toggle)}"
                 .selected="${ifDefined(item.selected)}"
                 .disabled="${ifDefined(item.disabled)}"
-                @click="${this.handleDialogIconButtonClick}"
+                @click="${this.handleTextFieldIconButtonClick}"
             ></md-icon-button>
         `
     }
@@ -217,6 +217,11 @@ class MdTextFieldComponent extends MdComponent {
         this.classList.toggle("md-text-field--error", !!this.error);
 
         this.emit("onTextFieldReset", { event });
+    }
+
+    handleTextFieldIconButtonClick(event) {
+
+        this.emit("onTextFieldIconButtonClick", { event });
     }
 }
 customElements.define("md-text-field", MdTextFieldComponent);
