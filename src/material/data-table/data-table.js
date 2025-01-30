@@ -22,7 +22,6 @@ class MdDataTableComponent extends MdComponent {
         this.footers = [];
     }
 
-    
     renderDataTableHeaderRow(tr) {
         /* prettier-ignore */
         return html`

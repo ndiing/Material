@@ -82,6 +82,7 @@ class DemoMain extends MdComponent {
                 ],
             },
             { label: "Data Table", routerLink: "/data-table" },
+            { label: "Datetime Picker", routerLink: "/datetime-picker" },
         ];
         this.items.sort((a, b) => {
             if (a.children && !b.children) return -1;

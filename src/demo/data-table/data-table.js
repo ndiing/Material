@@ -619,9 +619,18 @@ class DemoDataTable extends MdComponent {
      */
     render() {
         return html`
-            <div class="md-layout" style="min-height:0;height:100%;padding:12px;">
-                <div class="md-layout__grid" style="min-height:0;height:100%;">
-                    <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4" style="min-height:0;height:100%;">
+            <div
+                class="md-layout"
+                style="min-height:0;height:100%;padding:12px;"
+            >
+                <div
+                    class="md-layout__grid"
+                    style="min-height:0;height:100%;"
+                >
+                    <div
+                        class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4"
+                        style="min-height:0;height:100%;"
+                    >
                         <md-data-table
                             .headers="${this.headers}"
                             .data="${this.data}"

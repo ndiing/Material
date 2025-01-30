@@ -9,16 +9,28 @@ class DemoTest extends MdComponent {
             <div class="md-layout">
                 <div class="md-layout__grid">
                     <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
-                        <div class="demo-dragger" style="background:var(--md-sys-color-primary8);"></div>
+                        <div
+                            class="demo-dragger"
+                            style="background:var(--md-sys-color-primary8);"
+                        ></div>
                     </div>
                     <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
-                        <div class="demo-dragger" style="background:var(--md-sys-color-primary10);"></div>
+                        <div
+                            class="demo-dragger"
+                            style="background:var(--md-sys-color-primary10);"
+                        ></div>
                     </div>
                     <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
-                        <div class="demo-dragger" style="background:var(--md-sys-color-primary16);"></div>
+                        <div
+                            class="demo-dragger"
+                            style="background:var(--md-sys-color-primary16);"
+                        ></div>
                     </div>
                     <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
-                        <div class="demo-dragger" style="background:red"></div>
+                        <div
+                            class="demo-dragger"
+                            style="background:red"
+                        ></div>
                     </div>
                 </div>
             </div>

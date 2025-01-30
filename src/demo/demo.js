@@ -51,6 +51,7 @@ Router.use([
             { path: "text-field", load: () => import("./text-field/text-field.js").then((m) => m.default) },
             { path: "text-field-types", load: () => import("./text-field/text-field-types.js").then((m) => m.default) },
             { path: "data-table", load: () => import("./data-table/data-table.js").then((m) => m.default) },
+            { path: "datetime-picker", load: () => import("./datetime-picker/datetime-picker.js").then((m) => m.default) },
         ],
     },
     {

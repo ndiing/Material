@@ -62,7 +62,7 @@ class MdDataTableCellComponent extends MdComponent {
             }
         }
     }
-    
+
     async updated(changedProperties) {
         super.updated(changedProperties);
         if (changedProperties.has("icon")) {
