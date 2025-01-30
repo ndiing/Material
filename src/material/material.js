@@ -4,7 +4,7 @@
 // import "./tokens/tokens.js";
 // import "./popper/popper.js";
 // import "./dragger/dragger.js";
-import "./store/store.js";
+// import "./store/store.js";
 import "./icon/icon.js";
 import "./image/image.js";
 import "./divider/divider.js";

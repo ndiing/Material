@@ -162,7 +162,7 @@ class Store {
      * @param {StoreGetOptions} options
      * @returns {StoreGetReturn}
      */
-    get(options = {}) {
+    async get(options = {}) {
         let { sorters, q, filters, _start, _end, _page, _limit } = options;
 
         let data = this.data.slice();
@@ -171,7 +171,7 @@ class Store {
         data = this.search(data, q);
         data = this.filter(data, filters);
 
-        let length = data.length;
+        let total = data.length;
 
         if (_start !== undefined && _end !== undefined) {
             data = this.range(data, _start, _end);
@@ -179,7 +179,7 @@ class Store {
             data = this.paginate(data, _page, _limit);
         }
 
-        return { data, length };
+        return Promise.resolve({ data, total });
     }
 }
 
@@ -421,7 +421,7 @@ export { Store };
 
 //     const store=new Store(data)
 
-//     console.table(store.get({
+//     store.get({
 //         q:'mrs'
-//     }).data)
+//     }).then(console.log)
 // }
