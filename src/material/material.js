@@ -47,6 +47,8 @@ import "./navigation-bar/navigation-bar.js";
 import "./navigation-drawer/navigation-drawer.js";
 import "./navigation-rail/navigation-rail.js";
 import "./menu/menu.js";
+import "./data-table/data-table-cell.js";
+import "./data-table/data-table.js";
 // import "./carousel/carousel.js";
 // import "./search/search.js";
 // import "./date-picker/date-picker.js";

@@ -1,65 +1,20 @@
-.md-ripple {
-    position: relative;
-    --md-comp-ripple-radius: 141.4213562373095%;
-    --md-comp-ripple-left: 50%;
-    --md-comp-ripple-top: 50%;
-    --md-comp-ripple-x: 0%;
-    --md-comp-ripple-y: 0%;
+@use "../mixins/mixins.scss";
 
-    &:after {
-        content: "";
-        width: var(--md-comp-ripple-radius);
-        aspect-ratio: 1/1;
-        border-radius: 50%;
-        position: absolute;
-        left: var(--md-comp-ripple-left);
-        top: var(--md-comp-ripple-top);
-        transform: translate3d(-50%, -50%, 0) translate3d(var(--md-comp-ripple-x), var(--md-comp-ripple-y), 0);
-        z-index: 1;
-        pointer-events: none;
-        background-color: var(--md-sys-color-primary);
-        opacity: 0;
-    }
-}
-
-.md-ripple--bounded {
-    overflow: hidden;
-}
-
-.md-ripple--trigger {
-    cursor: pointer;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-}
-
-.md-ripple--focus {
-    &::after {
-        opacity: 10%;
-        animation-name: ripple-out;
-        animation-timing-function: cubic-bezier(var(--md-sys-motion-easing-standard-accelerate));
-        animation-duration: var(--md-sys-motion-duration-short3);
-    }
-}
-
-.md-ripple--press {
-    &::after {
-        opacity: 10%;
-        animation-name: none;
-    }
-}
-
-.md-ripple--hover {
-    &::after {
-        opacity: 8%;
-    }
-}
-
-.md-ripple--drag {
-    &::after {
-        opacity: 16%;
-    }
-}
-
-.md-ripple[disabled] {
-    pointer-events: none;
-}
+.md-ripple {@include mixins.ripple();}
+.md-ripple--bounded {@include mixins.ripple-bounded();}
+.md-ripple--trigger {@include mixins.ripple-trigger();}
+.md-ripple--focus {@include mixins.ripple-focus();}
+.md-ripple--press {@include mixins.ripple-press()}
+.md-ripple--hover {@include mixins.ripple-hover()}
+.md-ripple--drag {@include mixins.ripple-drag()}
+.md-ripple[disabled] {@include mixins.ripple-disabled()}
+/* 
+& {@include mixins.ripple();}
+& {@include mixins.ripple-bounded();}
+& {@include mixins.ripple-trigger();}
+&:focus {@include mixins.ripple-focus();}
+&:active {@include mixins.ripple-press()}
+&:hover {@include mixins.ripple-hover()}
+&:-moz-drag-over {@include mixins.ripple-drag()}
+&:disabled {@include mixins.ripple-disabled()}
+*/

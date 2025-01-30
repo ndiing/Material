@@ -50,6 +50,7 @@ Router.use([
             { path: "form", load: () => import("./form/form.js").then((m) => m.default) },
             { path: "text-field", load: () => import("./text-field/text-field.js").then((m) => m.default) },
             { path: "text-field-types", load: () => import("./text-field/text-field-types.js").then((m) => m.default) },
+            { path: "data-table", load: () => import("./data-table/data-table.js").then((m) => m.default) },
         ],
     },
     {

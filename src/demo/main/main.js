@@ -74,10 +74,14 @@ class DemoMain extends MdComponent {
             { label: "Chips", routerLink: "/chips" },
             { label: "Snackbar", routerLink: "/snackbar" },
             { label: "Form", routerLink: "/form" },
-            { label: "Text Field", children:[
-                { label: "Default", routerLink: "/text-field" },
-                { label: "Types", routerLink: "/text-field-types" },
-            ] },
+            {
+                label: "Text Field",
+                children: [
+                    { label: "Default", routerLink: "/text-field" },
+                    { label: "Types", routerLink: "/text-field-types" },
+                ],
+            },
+            { label: "Data Table", routerLink: "/data-table" },
         ];
         this.items.sort((a, b) => {
             if (a.children && !b.children) return -1;
@@ -107,13 +111,16 @@ class DemoMain extends MdComponent {
                     open
                     label="Material 3"
                     .leadingActions="${this.leadingActions}"
-                    @onTopAppBarIconButtonClick="${() => navigationDrawer.toggle()}"
+                    @onTopAppBarIconButtonClick="${() => mainNavigationDrawer.toggle()}"
                 ></md-top-app-bar>
                 <md-navigation-drawer
-                    id="navigationDrawer"
+                    id="mainNavigationDrawer"
                     view="tree"
                     .items="${this.items}"
-                    @onTreeItemClick="${() => {}}"
+                    modal
+                    @onTreeItemClick="${(event) => {
+                        if (event.detail.event.currentTarget.data.routerLink) mainNavigationDrawer.toggle();
+                    }}"
                 ></md-navigation-drawer>
                 <md-sheet region="center">
                     <md-outlet></md-outlet>

@@ -92,19 +92,103 @@ class DemoForm extends MdComponent {
                                 </div>
 
                                 <!-- <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4"><md-text-field variant="filled" label="Color" name="color" type="color"></md-text-field></div> -->
-                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4"><md-text-field variant="filled" label="Date" name="date" type="date"></md-text-field></div>
-                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4"><md-text-field variant="filled" label="Datetime Local" name="datetime-local" type="datetime-local"></md-text-field></div>
-                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4"><md-text-field variant="filled" label="Email" name="email" type="email"></md-text-field></div>
+                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
+                                    <md-text-field
+                                        variant="filled"
+                                        label="Date"
+                                        name="date"
+                                        type="date"
+                                    ></md-text-field>
+                                </div>
+                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
+                                    <md-text-field
+                                        variant="filled"
+                                        label="Datetime Local"
+                                        name="datetime-local"
+                                        type="datetime-local"
+                                    ></md-text-field>
+                                </div>
+                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
+                                    <md-text-field
+                                        variant="filled"
+                                        label="Email"
+                                        name="email"
+                                        type="email"
+                                    ></md-text-field>
+                                </div>
                                 <!-- <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4"><md-text-field variant="filled" label="File" name="file" type="file"></md-text-field></div> -->
-                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4"><md-text-field variant="filled" label="Month" name="month" type="month"></md-text-field></div>
-                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4"><md-text-field variant="filled" label="Number" name="number" type="number"></md-text-field></div>
-                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4"><md-text-field variant="filled" label="Password" name="password" type="password"></md-text-field></div>
-                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4"><md-text-field variant="filled" label="Search" name="search" type="search"></md-text-field></div>
-                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4"><md-text-field variant="filled" label="Tel" name="tel" type="tel"></md-text-field></div>
-                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4"><md-text-field variant="filled" label="Text" name="text" type="text"></md-text-field></div>
-                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4"><md-text-field variant="filled" label="Time" name="time" type="time"></md-text-field></div>
-                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4"><md-text-field variant="filled" label="URL" name="url" type="url"></md-text-field></div>
-                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4"><md-text-field variant="filled" label="Week" name="week" type="week"></md-text-field></div>
+                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
+                                    <md-text-field
+                                        variant="filled"
+                                        label="Month"
+                                        name="month"
+                                        type="month"
+                                    ></md-text-field>
+                                </div>
+                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
+                                    <md-text-field
+                                        variant="filled"
+                                        label="Number"
+                                        name="number"
+                                        type="number"
+                                    ></md-text-field>
+                                </div>
+                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
+                                    <md-text-field
+                                        variant="filled"
+                                        label="Password"
+                                        name="password"
+                                        type="password"
+                                    ></md-text-field>
+                                </div>
+                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
+                                    <md-text-field
+                                        variant="filled"
+                                        label="Search"
+                                        name="search"
+                                        type="search"
+                                    ></md-text-field>
+                                </div>
+                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
+                                    <md-text-field
+                                        variant="filled"
+                                        label="Tel"
+                                        name="tel"
+                                        type="tel"
+                                    ></md-text-field>
+                                </div>
+                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
+                                    <md-text-field
+                                        variant="filled"
+                                        label="Text"
+                                        name="text"
+                                        type="text"
+                                    ></md-text-field>
+                                </div>
+                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
+                                    <md-text-field
+                                        variant="filled"
+                                        label="Time"
+                                        name="time"
+                                        type="time"
+                                    ></md-text-field>
+                                </div>
+                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
+                                    <md-text-field
+                                        variant="filled"
+                                        label="URL"
+                                        name="url"
+                                        type="url"
+                                    ></md-text-field>
+                                </div>
+                                <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
+                                    <md-text-field
+                                        variant="filled"
+                                        label="Week"
+                                        name="week"
+                                        type="week"
+                                    ></md-text-field>
+                                </div>
 
                                 <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                                     <md-button
