@@ -339,6 +339,7 @@ class MdDatetimePickerComponent extends MdComponent {
             </div>
         `
     }
+
     async connectedCallback() {
         super.connectedCallback();
         this.datetimePickerScrim = document.createElement("md-scrim");

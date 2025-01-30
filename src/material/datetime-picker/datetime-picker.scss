@@ -45,6 +45,7 @@
     align-items: center;
     padding: 20px 12px;
     gap: 0 16px;
+
     // + .md-datetime-picker__wrapper {
     //     // margin-top: -8px;
     // }
@@ -101,6 +102,7 @@
     // overflow: auto;
     @include mixins.typescale-body-medium();
     color: var(--md-sys-color-on-surface-variant);
+
     // + .md-datetime-picker__footer {
     //     // margin-top: -8px;
     // }
@@ -131,6 +133,7 @@
     height: 328px;
     // overflow: hidden;
 }
+
 .md-datetime-picker__item {
     flex: 1 0 100%;
     overflow: auto;
@@ -141,6 +144,7 @@
     display: flex;
     flex-direction: column;
 }
+
 .md-datetime-picker__list-item {
     display: flex;
     align-items: center;
@@ -150,24 +154,31 @@
     @include mixins.ripple();
     @include mixins.ripple-bounded();
     @include mixins.ripple-trigger();
+
     &:focus {
         @include mixins.ripple-focus();
     }
+
     &:active {
         @include mixins.ripple-press();
     }
+
     &:hover {
         @include mixins.ripple-hover();
     }
+
     &:-moz-drag-over {
         @include mixins.ripple-drag();
     }
+
     &:disabled {
         @include mixins.ripple-disabled();
     }
+
     &[activated] {
         border: 1px solid var(--md-sys-color-outline);
     }
+
     &[selected] {
         background-color: var(--md-sys-color-secondary-container);
         color: var(--md-sys-color-on-secondary-container);
@@ -181,15 +192,18 @@
     margin: 0 12px;
     gap: 8px 0;
 }
+
 .md-datetime-picker__table-header {
     display: flex;
     flex-direction: column;
 }
+
 .md-datetime-picker__table-row {
     display: flex;
     align-items: center;
     gap: 0 8px;
 }
+
 .md-datetime-picker__table-cell {
     display: inline-flex;
     align-items: center;
@@ -199,32 +213,41 @@
     height: 40px;
     border-radius: 20px;
 }
+
 .md-datetime-picker__table-body {
     display: flex;
     flex-direction: column;
     gap: 8px 0;
+
     .md-datetime-picker__table-cell {
         @include mixins.ripple();
         @include mixins.ripple-bounded();
         @include mixins.ripple-trigger();
+
         &:focus {
             @include mixins.ripple-focus();
         }
+
         &:active {
             @include mixins.ripple-press();
         }
+
         &:hover {
             @include mixins.ripple-hover();
         }
+
         &:-moz-drag-over {
             @include mixins.ripple-drag();
         }
+
         &:disabled {
             @include mixins.ripple-disabled();
         }
+
         &[activated] {
             border: 1px solid var(--md-sys-color-outline);
         }
+
         &[selected] {
             background-color: var(--md-sys-color-primary);
             color: var(--md-sys-color-on-primary);
@@ -239,6 +262,7 @@
     margin: 36px 52px;
     border-radius: 128px;
     background-color: var(--md-sys-color-surface-container-highest);
+
     &::before {
         content: "";
         width: 8px;
@@ -251,6 +275,7 @@
         top: 50%;
     }
 }
+
 .md-datetime-picker__circle-item {
     display: inline-flex;
     align-items: center;
@@ -262,33 +287,42 @@
     @include mixins.ripple();
     // @include mixins.ripple-bounded();
     @include mixins.ripple-trigger();
+
     &:focus {
         @include mixins.ripple-focus();
     }
+
     &:active {
         @include mixins.ripple-press();
     }
+
     &:hover {
         @include mixins.ripple-hover();
     }
+
     &:-moz-drag-over {
         @include mixins.ripple-drag();
     }
+
     &:disabled {
         @include mixins.ripple-disabled();
     }
+
     &[activated] {
         border: 1px solid var(--md-sys-color-outline);
     }
+
     &[selected] {
         background-color: var(--md-sys-color-primary);
         color: var(--md-sys-color-on-primary);
+
         &::before {
             opacity: 1;
         }
     }
     --md-comp-ripple-radius: 100%;
     position: absolute;
+
     &::before {
         content: "";
         height: 2px;
@@ -303,18 +337,24 @@
 
 .md-datetime-picker__circle--hours {
     .md-datetime-picker__circle-item {
+        // 256/2 = 128
+        // 256/2 = 128-48/2 = 104
+
         @for $i from 1 through 12 {
             &:nth-child(#{$i}) {
                 left: calc(100px * cos((($i - 4) / 12) * 2 * pi) + 104px);
                 top: calc(100px * sin((($i - 4) / 12) * 2 * pi) + 104px);
+
                 &::before {
                     width: 100px;
                     transform: rotate(calc((360deg / 12) * ($i - 4)));
                 }
             }
+
             &:nth-child(#{$i + 12}) {
                 left: calc(76px * cos((($i - 4) / 12) * 2 * pi) + 104px);
                 top: calc(76px * sin((($i - 4) / 12) * 2 * pi) + 104px);
+
                 &::before {
                     width: 76px;
                     transform: rotate(calc((360deg / 12) * ($i - 4)));
@@ -323,17 +363,20 @@
         }
     }
 }
+
 .md-datetime-picker__circle--minutes {
     .md-datetime-picker__circle-item {
         @for $i from 1 through 60 {
             &:nth-child(#{$i}) {
                 left: calc(100px * cos((($i - 16) / 60) * 2 * pi) + 104px);
                 top: calc(100px * sin((($i - 16) / 60) * 2 * pi) + 104px);
+
                 &::before {
                     width: 100px;
                     transform: rotate(calc((360deg / 60) * ($i - 16)));
                 }
             }
+
             &:nth-child(#{$i}) {
                 @if ((($i - 16) % 5) != 0) {
                     height: 24px;
