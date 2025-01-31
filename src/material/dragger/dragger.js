@@ -1,5 +1,4 @@
 /**
- * @extends undefined
  */
 class Dragger {}
 export { Dragger };

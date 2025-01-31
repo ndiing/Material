@@ -29,7 +29,7 @@
 <dd></dd>
 <dt><a href="#MdDividerComponent">MdDividerComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
 <dd></dd>
-<dt><a href="#Dragger">Dragger</a> ⇐ <code>undefined</code></dt>
+<dt><a href="#Dragger">Dragger</a></dt>
 <dd></dd>
 <dt><a href="#MdFabComponent">MdFabComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
 <dd></dd>
@@ -61,15 +61,15 @@
 <dd></dd>
 <dt><a href="#MdNavigationRailComponent">MdNavigationRailComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
 <dd></dd>
-<dt><a href="#PopperController">PopperController</a> ⇐ <code>undefined</code></dt>
+<dt><a href="#PopperController">PopperController</a></dt>
 <dd></dd>
 <dt><a href="#MdProgressIndicatorComponent">MdProgressIndicatorComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
 <dd></dd>
 <dt><a href="#MdRadioButtonComponent">MdRadioButtonComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
 <dd></dd>
-<dt><a href="#RippleController">RippleController</a> ⇐ <code>undefined</code></dt>
+<dt><a href="#RippleController">RippleController</a></dt>
 <dd></dd>
-<dt><a href="#Router">Router</a> ⇐ <code>undefined</code></dt>
+<dt><a href="#Router">Router</a></dt>
 <dd></dd>
 <dt><a href="#MdScrimComponent">MdScrimComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
 <dd></dd>
@@ -83,7 +83,7 @@
 <dd></dd>
 <dt><a href="#MdSnackbarComponent">MdSnackbarComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
 <dd></dd>
-<dt><a href="#Store">Store</a> ⇐ <code>undefined</code></dt>
+<dt><a href="#Store">Store</a></dt>
 <dd></dd>
 <dt><a href="#MdSwitchComponent">MdSwitchComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
 <dd></dd>
@@ -753,10 +753,9 @@
 
 <a name="Dragger"></a>
 
-## Dragger ⇐ <code>undefined</code>
+## Dragger
 
 **Kind**: global class  
-**Extends**: <code>undefined</code>  
 <a name="MdFabComponent"></a>
 
 ## MdFabComponent ⇐ [<code>MdComponent</code>](#MdComponent)
@@ -1429,12 +1428,11 @@
 
 <a name="PopperController"></a>
 
-## PopperController ⇐ <code>undefined</code>
+## PopperController
 
-**Kind**: global class  
-**Extends**: <code>undefined</code>
+**Kind**: global class
 
-- [PopperController](#PopperController) ⇐ <code>undefined</code>
+- [PopperController](#PopperController)
     - [.show([options])](#PopperController+show)
     - [.closestScrollable([element])](#PopperController+closestScrollable)
 
@@ -1534,12 +1532,11 @@
 
 <a name="RippleController"></a>
 
-## RippleController ⇐ <code>undefined</code>
+## RippleController
 
-**Kind**: global class  
-**Extends**: <code>undefined</code>
+**Kind**: global class
 
-- [RippleController](#RippleController) ⇐ <code>undefined</code>
+- [RippleController](#RippleController)
     - [new RippleController([host], [options])](#new_RippleController_new)
     - [.hostConnected()](#RippleController+hostConnected)
     - [.hostDisconnected()](#RippleController+hostDisconnected)
@@ -1565,12 +1562,11 @@
 **Kind**: instance method of [<code>RippleController</code>](#RippleController)  
 <a name="Router"></a>
 
-## Router ⇐ <code>undefined</code>
+## Router
 
-**Kind**: global class  
-**Extends**: <code>undefined</code>
+**Kind**: global class
 
-- [Router](#Router) ⇐ <code>undefined</code>
+- [Router](#Router)
     - [.pathname](#Router.pathname)
     - [.get([pathname], [routes], [parent], [result])](#Router.get)
     - [.removeComponent([routes])](#Router.removeComponent)
@@ -2015,12 +2011,11 @@
 
 <a name="Store"></a>
 
-## Store ⇐ <code>undefined</code>
+## Store
 
-**Kind**: global class  
-**Extends**: <code>undefined</code>
+**Kind**: global class
 
-- [Store](#Store) ⇐ <code>undefined</code>
+- [Store](#Store)
     - [new Store([data], [options])](#new_Store_new)
     - [.sort([data], [sorters])](#Store+sort)
     - [.deepSearch([item], [q])](#Store+deepSearch)
