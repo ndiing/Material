@@ -2,12 +2,16 @@
 
 ## Instance properties
 
-- label - Number
-- max - Number
+name|type
+---|---
+label|Number
+max|Number
 
 ## Instance methods
 
-- constructor()
+name|params
+---|---
+constructor|{}
 
 ## Inheritance
 
@@ -18,21 +22,27 @@ MdComponent
 
 ## Instance properties
 
-- actions - Array
-- fab - String
-- open - Boolean
+name|type
+---|---
+actions|Array
+fab|String
+open|Boolean
 
 ## Instance methods
 
-- constructor()
-- show()
-- close()
-- toggle()
+name|params
+---|---
+constructor|{}
+show|{}
+close|{}
+toggle|{}
 
 ## Events
 
-- onBottomAppBarIconButtonClick
-- onBottomAppBarFabClick
+name|event
+---|---
+onBottomAppBarIconButtonClick|{"detail":{"event":{}}}
+onBottomAppBarFabClick|{"detail":{"event":{}}}
 
 ## Inheritance
 
@@ -43,26 +53,32 @@ MdComponent
 
 ## Instance properties
 
-- icons - Array
-- actions - Array
-- label - String
-- sublabel - String
-- buttons - Array
-- open - Boolean
-- modal - Boolean
+name|type
+---|---
+icons|Array
+actions|Array
+label|String
+sublabel|String
+buttons|Array
+open|Boolean
+modal|Boolean
 
 ## Instance methods
 
-- constructor()
-- show()
-- close()
-- toggle()
+name|params
+---|---
+constructor|{}
+show|{}
+close|{}
+toggle|{}
 
 ## Events
 
-- onBottomSheetIconButtonClick
-- onBottomSheetButtonClick
-- onBottomSheetScrimClosed
+name|event
+---|---
+onBottomSheetIconButtonClick|{"detail":{"event":{}}}
+onBottomSheetButtonClick|{"detail":{"event":{}}}
+onBottomSheetScrimClosed|{"detail":{"event":{}}}
 
 ## Inheritance
 
@@ -73,16 +89,20 @@ MdComponent
 
 ## Instance properties
 
-- icon - String
-- label - String
-- variant - String
-- type - String
-- disabled - Boolean
-- selected - Boolean
+name|type
+---|---
+icon|String
+label|String
+variant|String
+type|String
+disabled|Boolean
+selected|Boolean
 
 ## Instance methods
 
-- constructor()
+name|params
+---|---
+constructor|{}
 
 ## Inheritance
 
@@ -93,20 +113,26 @@ MdComponent
 
 ## Instance properties
 
-- icons - Array
-- actions - Array
-- label - String
-- sublabel - String
-- buttons - Array
+name|type
+---|---
+icons|Array
+actions|Array
+label|String
+sublabel|String
+buttons|Array
 
 ## Instance methods
 
-- constructor()
+name|params
+---|---
+constructor|{}
 
 ## Events
 
-- onCardIconButtonClick
-- onCardButtonClick
+name|event
+---|---
+onCardIconButtonClick|{"detail":{"event":{}}}
+onCardButtonClick|{"detail":{"event":{}}}
 
 ## Inheritance
 
@@ -117,19 +143,25 @@ MdComponent
 
 ## Instance properties
 
-- name - String
-- value - String
-- indeterminate - Boolean
-- checked - Boolean
+name|type
+---|---
+name|String
+value|String
+indeterminate|Boolean
+checked|Boolean
 
 ## Instance methods
 
-- constructor()
+name|params
+---|---
+constructor|{}
 
 ## Events
 
-- onCheckboxNativeInput
-- onCheckboxNativeReset
+name|event
+---|---
+onCheckboxNativeInput|{"detail":{"event":{}}}
+onCheckboxNativeReset|{"detail":{"event":{}}}
 
 ## Inheritance
 
@@ -140,16 +172,22 @@ MdComponent
 
 ## Instance properties
 
-- items - Array
-- type - String
+name|type
+---|---
+items|Array
+type|String
 
 ## Instance methods
 
-- constructor()
+name|params
+---|---
+constructor|{}
 
 ## Events
 
-- onChipClick
+name|event
+---|---
+onChipClick|{"detail":{"event":{}}}
 
 ## Inheritance
 
@@ -160,7 +198,9 @@ MdComponent
 
 ## Instance methods
 
-- emit()
+name|params
+---|---
+emit|{"type":{"type":"String"},"detail":{"type":"String"}}
 
 ## Inheritance
 
@@ -171,16 +211,20 @@ LitElement
 
 ## Instance properties
 
-- checkbox - Boolean
-- avatar - String
-- icon - String
-- label - String
-- sublabel - String
-- action - String
+name|type
+---|---
+checkbox|Boolean
+avatar|String
+icon|String
+label|String
+sublabel|String
+action|String
 
 ## Instance methods
 
-- constructor()
+name|params
+---|---
+constructor|{}
 
 ## Inheritance
 
@@ -191,14 +235,18 @@ MdComponent
 
 ## Instance properties
 
-- headers - Array
-- bodies - Array
-- data - Array
-- footers - Array
+name|type
+---|---
+headers|Array
+bodies|Array
+data|Array
+footers|Array
 
 ## Instance methods
 
-- constructor()
+name|params
+---|---
+constructor|{}
 
 ## Inheritance
 
@@ -209,44 +257,50 @@ MdComponent
 
 ## Instance properties
 
-- icons - Array
-- actions - Array
-- label - String
-- sublabel - String
-- buttons - Array
-- open - Boolean
-- index - Number
+name|type
+---|---
+icons|Array
+actions|Array
+label|String
+sublabel|String
+buttons|Array
+open|Boolean
+index|Number
 
 ## Instance methods
 
-- startOfDay()
-- years()
-- months()
-- weekdays()
-- days()
-- hours()
-- minutes()
-- label()
-- constructor()
-- show()
-- close()
-- toggle()
+name|params
+---|---
+startOfDay|{}
+years|{}
+months|{}
+weekdays|{}
+days|{}
+hours|{}
+minutes|{}
+label|{}
+constructor|{}
+show|{}
+close|{}
+toggle|{}
 
 ## Events
 
-- onDatetimePickerLabelClick
-- onDatetimePickerIconButtonPrevClick
-- onDatetimePickerIconButtonNextClick
-- onDatetimePickerIconButtonClick
-- onDatetimePickerYearItemClick
-- onDatetimePickerMonthItemClick
-- onDatetimePickerDayItemClick
-- onDatetimePickerHourItemClick
-- onDatetimePickerMinuteItemClick
-- onDatetimePickerButtonCancelClick
-- onDatetimePickerButtonOkClick
-- onDatetimePickerButtonClick
-- onDatetimePickerScrimClosed
+name|event
+---|---
+onDatetimePickerLabelClick|{"detail":{"event":{}}}
+onDatetimePickerIconButtonPrevClick|{"detail":{"event":{}}}
+onDatetimePickerIconButtonNextClick|{"detail":{"event":{}}}
+onDatetimePickerIconButtonClick|{"detail":{"event":{}}}
+onDatetimePickerYearItemClick|{"detail":{"event":{}}}
+onDatetimePickerMonthItemClick|{"detail":{"event":{}}}
+onDatetimePickerDayItemClick|{"detail":{"event":{}}}
+onDatetimePickerHourItemClick|{"detail":{"event":{}}}
+onDatetimePickerMinuteItemClick|{"detail":{"event":{}}}
+onDatetimePickerButtonCancelClick|{"detail":{"event":{}}}
+onDatetimePickerButtonOkClick|{"detail":{"event":{}}}
+onDatetimePickerButtonClick|{"detail":{"event":{}}}
+onDatetimePickerScrimClosed|{"detail":{"event":{}}}
 
 ## Inheritance
 
@@ -257,25 +311,31 @@ MdComponent
 
 ## Instance properties
 
-- icons - Array
-- actions - Array
-- label - String
-- sublabel - String
-- buttons - Array
-- open - Boolean
+name|type
+---|---
+icons|Array
+actions|Array
+label|String
+sublabel|String
+buttons|Array
+open|Boolean
 
 ## Instance methods
 
-- constructor()
-- show()
-- close()
-- toggle()
+name|params
+---|---
+constructor|{}
+show|{}
+close|{}
+toggle|{}
 
 ## Events
 
-- onDialogIconButtonClick
-- onDialogButtonClick
-- onDialogScrimClosed
+name|event
+---|---
+onDialogIconButtonClick|{"detail":{"event":{}}}
+onDialogButtonClick|{"detail":{"event":{}}}
+onDialogScrimClosed|{"detail":{"event":{}}}
 
 ## Inheritance
 
@@ -286,6 +346,8 @@ MdComponent
 
 ## Instance methods
 
+name|params
+---|---
 
 ## Inheritance
 
@@ -298,15 +360,19 @@ MdComponent
 
 ## Instance properties
 
-- icon - String
-- label - String
-- type - String
-- size - String
-- variant - String
+name|type
+---|---
+icon|String
+label|String
+type|String
+size|String
+variant|String
 
 ## Instance methods
 
-- constructor()
+name|params
+---|---
+constructor|{}
 
 ## Inheritance
 
@@ -317,26 +383,32 @@ MdComponent
 
 ## Instance properties
 
-- acceptCharset - String
-- action - String
-- autocomplete - String
-- enctype - String
-- method - String
-- name - String
-- noValidate - Boolean
+name|type
+---|---
+acceptCharset|String
+action|String
+autocomplete|String
+enctype|String
+method|String
+name|String
+noValidate|Boolean
 
 ## Instance methods
 
-- constructor()
-- formNative()
-- reset()
-- submit()
+name|params
+---|---
+constructor|{}
+formNative|{}
+reset|{}
+submit|{"submitButton":{"type":"String"}}
 
 ## Events
 
-- onFormNativeFormdata
-- onFormNativeReset
-- onFormNativeSubmit
+name|event
+---|---
+onFormNativeFormdata|{"detail":{"event":{}}}
+onFormNativeReset|{"detail":{"event":{}}}
+onFormNativeSubmit|{"detail":{"event":{}}}
 
 ## Inheritance
 
@@ -347,6 +419,8 @@ MdComponent
 
 ## Instance methods
 
+name|params
+---|---
 
 ## Inheritance
 
@@ -357,20 +431,26 @@ MdComponent
 
 ## Instance properties
 
-- icon - String
-- variant - String
-- type - String
-- toggle - Boolean
-- selected - Boolean
-- disabled - Boolean
+name|type
+---|---
+icon|String
+variant|String
+type|String
+toggle|Boolean
+selected|Boolean
+disabled|Boolean
 
 ## Instance methods
 
-- constructor()
+name|params
+---|---
+constructor|{}
 
 ## Events
 
-- onIconButtonClick
+name|event
+---|---
+onIconButtonClick|{"detail":{"event":{}}}
 
 ## Inheritance
 
@@ -381,15 +461,19 @@ MdComponent
 
 ## Instance properties
 
-- src - String
-- alt - String
-- ratio - String
-- circular - Boolean
+name|type
+---|---
+src|String
+alt|String
+ratio|String
+circular|Boolean
 
 ## Instance methods
 
-- constructor()
-- styleInfo()
+name|params
+---|---
+constructor|{}
+styleInfo|{}
 
 ## Inheritance
 
@@ -400,32 +484,38 @@ MdComponent
 
 ## Instance properties
 
-- leadingCheckbox - Boolean
-- leadingRadioButton - Boolean
-- leadingSwitch - Boolean
-- avatar - String
-- image - String
-- video - String
-- icon - String
-- label - String
-- sublabel - String
-- text - String
-- trailingCheckbox - Boolean
-- trailingRadioButton - Boolean
-- trailingSwitch - Boolean
-- selected - Boolean
-- disabled - Boolean
-- routerLink - String
-- rippleOptions - Object
-- badge - Number
+name|type
+---|---
+leadingCheckbox|Boolean
+leadingRadioButton|Boolean
+leadingSwitch|Boolean
+avatar|String
+image|String
+video|String
+icon|String
+label|String
+sublabel|String
+text|String
+trailingCheckbox|Boolean
+trailingRadioButton|Boolean
+trailingSwitch|Boolean
+selected|Boolean
+disabled|Boolean
+routerLink|String
+rippleOptions|Object
+badge|Number
 
 ## Instance methods
 
-- constructor()
+name|params
+---|---
+constructor|{}
 
 ## Events
 
-- onListItemSelected
+name|event
+---|---
+onListItemSelected|{"detail":{"listItem":"this"}}
 
 ## Inheritance
 
@@ -436,6 +526,8 @@ MdComponent
 
 ## Instance methods
 
+name|params
+---|---
 
 ## Inheritance
 
@@ -446,22 +538,28 @@ MdComponent
 
 ## Instance properties
 
-- items - Array
-- type - String
-- rippleOptions - Object
+name|type
+---|---
+items|Array
+type|String
+rippleOptions|Object
 
 ## Instance methods
 
-- constructor()
-- multiSelect()
-- singleSelect()
+name|params
+---|---
+constructor|{}
+multiSelect|{"data":{"type":"Object"}}
+singleSelect|{"data":{"type":"Object"}}
 
 ## Events
 
-- onListItemClick
-- onListItemCheckboxNativeInput
-- onListItemRadioButtonNativeInput
-- onListItemSwitchNativeInput
+name|event
+---|---
+onListItemClick|{"detail":{"event":{}}}
+onListItemCheckboxNativeInput|{"detail":{"event":{}}}
+onListItemRadioButtonNativeInput|{"detail":{"event":{}}}
+onListItemSwitchNativeInput|{"detail":{"event":{}}}
 
 ## Inheritance
 
@@ -474,15 +572,19 @@ MdComponent
 
 ## Instance properties
 
-- open - Boolean
-- items - Array
+name|type
+---|---
+open|Boolean
+items|Array
 
 ## Instance methods
 
-- constructor()
-- show()
-- close()
-- toggle()
+name|params
+---|---
+constructor|{}
+show|{"options":{"type":"Object","value":"{}"}}
+close|{}
+toggle|{"options":{"type":"String"}}
 
 ## Inheritance
 
@@ -493,15 +595,19 @@ MdComponent
 
 ## Instance properties
 
-- open - Boolean
-- items - Array
+name|type
+---|---
+open|Boolean
+items|Array
 
 ## Instance methods
 
-- constructor()
-- show()
-- close()
-- toggle()
+name|params
+---|---
+constructor|{}
+show|{}
+close|{}
+toggle|{}
 
 ## Inheritance
 
@@ -512,26 +618,32 @@ MdComponent
 
 ## Instance properties
 
-- icons - Array
-- actions - Array
-- label - String
-- sublabel - String
-- items - Array
-- open - Boolean
-- modal - Boolean
-- view - String
+name|type
+---|---
+icons|Array
+actions|Array
+label|String
+sublabel|String
+items|Array
+open|Boolean
+modal|Boolean
+view|String
 
 ## Instance methods
 
-- constructor()
-- show()
-- close()
-- toggle()
+name|params
+---|---
+constructor|{}
+show|{}
+close|{}
+toggle|{}
 
 ## Events
 
-- onNavigationDrawerIconButtonClick
-- onNavigationDrawerScrimClosed
+name|event
+---|---
+onNavigationDrawerIconButtonClick|{"detail":{"event":{}}}
+onNavigationDrawerScrimClosed|{"detail":{"event":{}}}
 
 ## Inheritance
 
@@ -542,22 +654,28 @@ MdComponent
 
 ## Instance properties
 
-- icon - String
-- label - String
-- sublabel - String
-- selected - Boolean
-- disabled - Boolean
-- routerLink - String
-- rippleOptions - Object
-- badge - Number
+name|type
+---|---
+icon|String
+label|String
+sublabel|String
+selected|Boolean
+disabled|Boolean
+routerLink|String
+rippleOptions|Object
+badge|Number
 
 ## Instance methods
 
-- constructor()
+name|params
+---|---
+constructor|{}
 
 ## Events
 
-- onNavigationListItemSelected
+name|event
+---|---
+onNavigationListItemSelected|{"detail":{"navigationListItem":"this"}}
 
 ## Inheritance
 
@@ -568,6 +686,8 @@ MdComponent
 
 ## Instance methods
 
+name|params
+---|---
 
 ## Inheritance
 
@@ -578,17 +698,23 @@ MdComponent
 
 ## Instance properties
 
-- items - Array
-- rippleOptions - Object
+name|type
+---|---
+items|Array
+rippleOptions|Object
 
 ## Instance methods
 
-- constructor()
-- singleSelect()
+name|params
+---|---
+constructor|{}
+singleSelect|{"data":{"type":"Object"}}
 
 ## Events
 
-- onNavigationListItemClick
+name|event
+---|---
+onNavigationListItemClick|{"detail":{"event":{}}}
 
 ## Inheritance
 
@@ -599,23 +725,29 @@ MdComponent
 
 ## Instance properties
 
-- icons - Array
-- actions - Array
-- label - String
-- sublabel - String
-- items - Array
-- open - Boolean
+name|type
+---|---
+icons|Array
+actions|Array
+label|String
+sublabel|String
+items|Array
+open|Boolean
 
 ## Instance methods
 
-- constructor()
-- show()
-- close()
-- toggle()
+name|params
+---|---
+constructor|{}
+show|{}
+close|{}
+toggle|{}
 
 ## Events
 
-- onNavigationRailIconButtonClick
+name|event
+---|---
+onNavigationRailIconButtonClick|{"detail":{"event":{}}}
 
 ## Inheritance
 
@@ -626,20 +758,26 @@ MdComponent
 
 ## Instance methods
 
-- show()
-- closestScrollable()
+name|params
+---|---
+show|{"options":{"type":"Object","value":"{}"}}
+closestScrollable|{"element":{"type":"String"}}
 
 # MdProgressIndicatorComponent
 
 ## Instance properties
 
-- variant - String
-- max - Number
-- value - Number
+name|type
+---|---
+variant|String
+max|Number
+value|Number
 
 ## Instance methods
 
-- constructor()
+name|params
+---|---
+constructor|{}
 
 ## Inheritance
 
@@ -650,19 +788,25 @@ MdComponent
 
 ## Instance properties
 
-- name - String
-- value - String
-- indeterminate - Boolean
-- checked - Boolean
+name|type
+---|---
+name|String
+value|String
+indeterminate|Boolean
+checked|Boolean
 
 ## Instance methods
 
-- constructor()
+name|params
+---|---
+constructor|{}
 
 ## Events
 
-- onRadioButtonNativeInput
-- onRadioButtonNativeReset
+name|event
+---|---
+onRadioButtonNativeInput|{"detail":{"event":{}}}
+onRadioButtonNativeReset|{"detail":{"event":{}}}
 
 ## Inheritance
 
@@ -673,40 +817,50 @@ MdComponent
 
 ## Instance methods
 
-- constructor()
-- hostConnected()
-- hostDisconnected()
+name|params
+---|---
+constructor|{"host":{"type":"String"},"options":{"type":"String"}}
+hostConnected|{}
+hostDisconnected|{}
 
 # Router
 
 ## Instance methods
 
-- get()
-- pathname()
-- removeComponent()
-- getOutlet()
-- setContainer()
-- loadComponent()
-- setController()
-- navigate()
-- emit()
-- use()
+name|params
+---|---
+get|{"pathname":{"value":"this.pathname"},"routes":{"value":"this.routes"},"parent":{"type":"String","value":"null"},"result":{"type":"Array","value":"[]"}}
+pathname|{}
+removeComponent|{"routes":{"type":"String"}}
+getOutlet|{"container":{"type":"String"},"route":{"type":"String"}}
+setContainer|{"route":{"type":"String"}}
+loadComponent|{"route":{"type":"String"}}
+setController|{}
+navigate|{"url":{"type":"String"}}
+emit|{"type":{"type":"String"},"detail":{"type":"String"}}
+use|{"routes":{"type":"Array","value":"[]"},"options":{"type":"Object","value":"{}"}}
 
 # MdScrimComponent
 
 ## Instance properties
 
-- open - Boolean
+name|type
+---|---
+open|Boolean
 
 ## Instance methods
 
-- show()
-- close()
-- toggle()
+name|params
+---|---
+show|{}
+close|{}
+toggle|{}
 
 ## Events
 
-- onScrimClick
+name|event
+---|---
+onScrimClick|{"detail":{"event":{}}}
 
 ## Inheritance
 
@@ -717,16 +871,22 @@ MdComponent
 
 ## Instance properties
 
-- items - Array
-- type - String
+name|type
+---|---
+items|Array
+type|String
 
 ## Instance methods
 
-- constructor()
+name|params
+---|---
+constructor|{}
 
 ## Events
 
-- onSegmentedButtonItemClick
+name|event
+---|---
+onSegmentedButtonItemClick|{"detail":{"event":{}}}
 
 ## Inheritance
 
@@ -737,27 +897,33 @@ MdComponent
 
 ## Instance properties
 
-- icons - Array
-- actions - Array
-- label - String
-- sublabel - String
-- buttons - Array
-- open - Boolean
-- region - String
-- modal - Boolean
+name|type
+---|---
+icons|Array
+actions|Array
+label|String
+sublabel|String
+buttons|Array
+open|Boolean
+region|String
+modal|Boolean
 
 ## Instance methods
 
-- constructor()
-- show()
-- close()
-- toggle()
+name|params
+---|---
+constructor|{}
+show|{}
+close|{}
+toggle|{}
 
 ## Events
 
-- onSheetIconButtonClick
-- onSheetButtonClick
-- onSheetScrimClosed
+name|event
+---|---
+onSheetIconButtonClick|{"detail":{"event":{}}}
+onSheetButtonClick|{"detail":{"event":{}}}
+onSheetScrimClosed|{"detail":{"event":{}}}
 
 ## Inheritance
 
@@ -768,26 +934,32 @@ MdComponent
 
 ## Instance properties
 
-- icons - Array
-- actions - Array
-- label - String
-- sublabel - String
-- buttons - Array
-- open - Boolean
-- modal - Boolean
+name|type
+---|---
+icons|Array
+actions|Array
+label|String
+sublabel|String
+buttons|Array
+open|Boolean
+modal|Boolean
 
 ## Instance methods
 
-- constructor()
-- show()
-- close()
-- toggle()
+name|params
+---|---
+constructor|{}
+show|{}
+close|{}
+toggle|{}
 
 ## Events
 
-- onSideSheetIconButtonClick
-- onSideSheetButtonClick
-- onSideSheetScrimClosed
+name|event
+---|---
+onSideSheetIconButtonClick|{"detail":{"event":{}}}
+onSideSheetButtonClick|{"detail":{"event":{}}}
+onSideSheetScrimClosed|{"detail":{"event":{}}}
 
 ## Inheritance
 
@@ -798,26 +970,32 @@ MdComponent
 
 ## Instance properties
 
-- min - Number
-- max - Number
-- step - Number
-- variant - String
-- name - String
-- value - undefined
-- converter - undefined
+name|type
+---|---
+min|Number
+max|Number
+step|Number
+variant|String
+name|String
+value|undefined
+converter|undefined
 
 ## Instance methods
 
-- constructor()
-- indicators()
-- sliderNatives()
-- updateValue()
-- percentage()
+name|params
+---|---
+constructor|{}
+indicators|{}
+sliderNatives|{}
+updateValue|{}
+percentage|{"value":{"type":"String"},"min":{"value":"this.min"},"max":{"value":"this.max"}}
 
 ## Events
 
-- onSliderNativeInput
-- onSliderNativeReset
+name|event
+---|---
+onSliderNativeInput|{"detail":{"event":{}}}
+onSliderNativeReset|{"detail":{"event":{}}}
 
 ## Inheritance
 
@@ -828,22 +1006,28 @@ MdComponent
 
 ## Instance properties
 
-- icons - Array
-- actions - Array
-- buttons - Array
-- open - Boolean
+name|type
+---|---
+icons|Array
+actions|Array
+buttons|Array
+open|Boolean
 
 ## Instance methods
 
-- constructor()
-- show()
-- close()
-- toggle()
+name|params
+---|---
+constructor|{}
+show|{}
+close|{}
+toggle|{}
 
 ## Events
 
-- onSnackbarIconButtonClick
-- onSnackbarButtonClick
+name|event
+---|---
+onSnackbarIconButtonClick|{"detail":{"event":{}}}
+onSnackbarButtonClick|{"detail":{"event":{}}}
 
 ## Inheritance
 
@@ -854,34 +1038,42 @@ MdComponent
 
 ## Instance methods
 
-- constructor()
-- sort()
-- deepSearch()
-- search()
-- getNestedValue()
-- filter()
-- range()
-- paginate()
-- get()
+name|params
+---|---
+constructor|{"data":{"type":"Object","value":"[]"},"options":{"type":"Object","value":"{}"}}
+sort|{"data":{"type":"Object"},"sorters":{"type":"String"}}
+deepSearch|{"item":{"type":"String"},"q":{"type":"String"}}
+search|{"data":{"type":"Object"},"q":{"type":"String"}}
+getNestedValue|{"item":{"type":"String"},"name":{"type":"String"}}
+filter|{"data":{"type":"Object"},"filters":{"type":"String"}}
+range|{"data":{"type":"Object"},"_start":{"type":"String"},"_end":{"type":"String"}}
+paginate|{"data":{"type":"Object"},"_page":{"type":"String"},"_limit":{"type":"String"}}
+get|{"options":{"type":"Object","value":"{}"}}
 
 # MdSwitchComponent
 
 ## Instance properties
 
-- name - String
-- value - String
-- indeterminate - Boolean
-- checked - Boolean
-- icons - Array
+name|type
+---|---
+name|String
+value|String
+indeterminate|Boolean
+checked|Boolean
+icons|Array
 
 ## Instance methods
 
-- constructor()
+name|params
+---|---
+constructor|{}
 
 ## Events
 
-- onSwitchNativeInput
-- onSwitchNativeReset
+name|event
+---|---
+onSwitchNativeInput|{"detail":{"event":{}}}
+onSwitchNativeReset|{"detail":{"event":{}}}
 
 ## Inheritance
 
@@ -892,22 +1084,28 @@ MdComponent
 
 ## Instance properties
 
-- icon - String
-- label - String
-- sublabel - String
-- selected - Boolean
-- disabled - Boolean
-- routerLink - String
-- rippleOptions - Object
-- badge - Number
+name|type
+---|---
+icon|String
+label|String
+sublabel|String
+selected|Boolean
+disabled|Boolean
+routerLink|String
+rippleOptions|Object
+badge|Number
 
 ## Instance methods
 
-- constructor()
+name|params
+---|---
+constructor|{}
 
 ## Events
 
-- onTabSelected
+name|event
+---|---
+onTabSelected|{"detail":{"tab":"this"}}
 
 ## Inheritance
 
@@ -918,18 +1116,24 @@ MdComponent
 
 ## Instance properties
 
-- items - Array
-- rippleOptions - Object
-- variant - String
+name|type
+---|---
+items|Array
+rippleOptions|Object
+variant|String
 
 ## Instance methods
 
-- constructor()
-- singleSelect()
+name|params
+---|---
+constructor|{}
+singleSelect|{"data":{"type":"Object"}}
 
 ## Events
 
-- onTabClick
+name|event
+---|---
+onTabClick|{"detail":{"event":{}}}
 
 ## Inheritance
 
@@ -940,41 +1144,47 @@ MdComponent
 
 ## Instance properties
 
-- label - String
-- separateLabel - Boolean
-- icons - Array
-- prefix - String
-- suffix - String
-- actions - Array
-- text - String
-- error - String
-- counter - String
-- name - String
-- type - String
-- value - String
-- placeholder - String
-- title - String
-- autocomplete - String
-- required - Boolean
-- readOnly - Boolean
-- variant - String
-- disabled - Boolean
+name|type
+---|---
+label|String
+separateLabel|Boolean
+icons|Array
+prefix|String
+suffix|String
+actions|Array
+text|String
+error|String
+counter|String
+name|String
+type|String
+value|String
+placeholder|String
+title|String
+autocomplete|String
+required|Boolean
+readOnly|Boolean
+variant|String
+disabled|Boolean
 
 ## Instance methods
 
-- constructor()
-- actions2()
-- textFieldNative()
+name|params
+---|---
+constructor|{}
+actions2|{}
+textFieldNative|{}
 
 ## Events
 
-- onTextFieldFocus
-- onTextFieldBlur
-- onTextFieldInput
-- onTextFieldSearch
-- onTextFieldInvalid
-- onTextFieldReset
-- onTextFieldIconButtonClick
+name|event
+---|---
+onTextFieldFocus|{"detail":{"event":{}}}
+onTextFieldBlur|{"detail":{"event":{}}}
+onTextFieldInput|{"detail":{"event":{}}}
+onTextFieldSearch|{"detail":{"event":{}}}
+onTextFieldInvalid|{"detail":{"event":{}}}
+onTextFieldReset|{"detail":{"event":{}}}
+onTextFieldIconButtonClick|{"detail":{"event":{}}}
 
 ## Inheritance
 
@@ -985,24 +1195,30 @@ MdComponent
 
 ## Instance properties
 
-- icons - Array
-- actions - Array
-- label - String
-- sublabel - String
-- buttons - Array
-- open - Boolean
+name|type
+---|---
+icons|Array
+actions|Array
+label|String
+sublabel|String
+buttons|Array
+open|Boolean
 
 ## Instance methods
 
-- constructor()
-- show()
-- close()
-- toggle()
+name|params
+---|---
+constructor|{}
+show|{"options":{"type":"String"}}
+close|{}
+toggle|{"options":{"type":"String"}}
 
 ## Events
 
-- onTooltipIconButtonClick
-- onTooltipButtonClick
+name|event
+---|---
+onTooltipIconButtonClick|{"detail":{"event":{}}}
+onTooltipButtonClick|{"detail":{"event":{}}}
 
 ## Inheritance
 
@@ -1013,22 +1229,28 @@ MdComponent
 
 ## Instance properties
 
-- leadingActions - Array
-- label - String
-- sublabel - String
-- trailingActions - Array
-- open - Boolean
+name|type
+---|---
+leadingActions|Array
+label|String
+sublabel|String
+trailingActions|Array
+open|Boolean
 
 ## Instance methods
 
-- constructor()
-- show()
-- close()
-- toggle()
+name|params
+---|---
+constructor|{}
+show|{}
+close|{}
+toggle|{}
 
 ## Events
 
-- onTopAppBarIconButtonClick
+name|event
+---|---
+onTopAppBarIconButtonClick|{"detail":{"event":{}}}
 
 ## Inheritance
 
@@ -1039,24 +1261,30 @@ MdComponent
 
 ## Instance properties
 
-- selected - Boolean
-- expanded - Boolean
-- indent - String
-- actions - Array
-- nodeIcons - Array
-- leafIcons - Array
-- label - String
-- routerLink - String
+name|type
+---|---
+selected|Boolean
+expanded|Boolean
+indent|String
+actions|Array
+nodeIcons|Array
+leafIcons|Array
+label|String
+routerLink|String
 
 ## Instance methods
 
-- constructor()
-- action()
-- icon()
+name|params
+---|---
+constructor|{}
+action|{}
+icon|{}
 
 ## Events
 
-- onTreeItemSelected
+name|event
+---|---
+onTreeItemSelected|{"detail":{"treeItem":"this"}}
 
 ## Inheritance
 
@@ -1067,6 +1295,8 @@ MdComponent
 
 ## Instance methods
 
+name|params
+---|---
 
 ## Inheritance
 
@@ -1077,18 +1307,24 @@ MdComponent
 
 ## Instance properties
 
-- items - Array
-- items2 - Array
+name|type
+---|---
+items|Array
+items2|Array
 
 ## Instance methods
 
-- constructor()
-- flatten()
-- toggle()
+name|params
+---|---
+constructor|{}
+flatten|{"items":{"type":"Array"},"parent":{"type":"String"},"indent":{"type":"Number","value":"0"}}
+toggle|{"data":{"type":"Object"}}
 
 ## Events
 
-- onTreeItemClick
+name|event
+---|---
+onTreeItemClick|{"detail":{"event":{}}}
 
 ## Inheritance
 
