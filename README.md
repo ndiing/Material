@@ -8,8 +8,6 @@
 ## Instance methods
 
 - constructor()
-- render()
-- connectedCallback()
 
 ## Events
 
@@ -30,14 +28,6 @@ MdComponent
 ## Instance methods
 
 - constructor()
-- renderIconButton()
-- renderFab()
-- render()
-- connectedCallback()
-- disconnectedCallback()
-- updated()
-- handleBottomAppBarIconButtonClick()
-- handleBottomAppBarFabClick()
 - show()
 - close()
 - toggle()
@@ -67,21 +57,9 @@ MdComponent
 ## Instance methods
 
 - constructor()
-- renderIcon()
-- renderIconButton()
-- renderButton()
-- renderSpacer()
-- renderItem()
-- render()
-- connectedCallback()
-- disconnectedCallback()
-- updated()
-- handleBottomSheetIconButtonClick()
-- handleBottomSheetButtonClick()
 - show()
 - close()
 - toggle()
-- handleBottomSheetScrimClosed()
 
 ## Events
 
@@ -108,9 +86,6 @@ MdComponent
 ## Instance methods
 
 - constructor()
-- render()
-- connectedCallback()
-- updated()
 
 ## Events
 
@@ -133,15 +108,6 @@ MdComponent
 ## Instance methods
 
 - constructor()
-- renderIcon()
-- renderIconButton()
-- renderButton()
-- renderSpacer()
-- renderItem()
-- render()
-- connectedCallback()
-- handleCardIconButtonClick()
-- handleCardButtonClick()
 
 ## Events
 
@@ -165,10 +131,6 @@ MdComponent
 ## Instance methods
 
 - constructor()
-- render()
-- connectedCallback()
-- handleCheckboxNativeInput()
-- handleCheckboxNativeReset()
 
 ## Events
 
@@ -190,10 +152,6 @@ MdComponent
 ## Instance methods
 
 - constructor()
-- renderChip()
-- render()
-- connectedCallback()
-- handleChipClick()
 
 ## Events
 
@@ -211,7 +169,6 @@ MdComponent
 
 ## Instance methods
 
-- createRenderRoot()
 - emit()
 
 ## Events
@@ -236,9 +193,6 @@ LitElement
 ## Instance methods
 
 - constructor()
-- render()
-- connectedCallback()
-- updated()
 
 ## Events
 
@@ -260,12 +214,6 @@ MdComponent
 ## Instance methods
 
 - constructor()
-- renderDataTableHeaderRow()
-- renderDataTableBodyRow()
-- renderDataTableFooterRow()
-- render()
-- connectedCallback()
-- updated()
 
 ## Events
 
@@ -298,33 +246,6 @@ MdComponent
 - minutes()
 - label()
 - constructor()
-- renderIcon()
-- renderIconButton()
-- renderButton()
-- renderSpacer()
-- renderItem()
-- renderDatetimePickerYear()
-- renderDatetimePickerMonth()
-- renderDatetimePickerDay()
-- renderDatetimePickerHour()
-- renderDatetimePickerMinute()
-- render()
-- connectedCallback()
-- disconnectedCallback()
-- updated()
-- handleDatetimePickerLabelClick()
-- handleDatetimePickerIconButtonPrevClick()
-- handleDatetimePickerIconButtonNextClick()
-- handleDatetimePickerIconButtonClick()
-- handleDatetimePickerYearItemClick()
-- handleDatetimePickerMonthItemClick()
-- handleDatetimePickerDayItemClick()
-- handleDatetimePickerHourItemClick()
-- handleDatetimePickerMinuteItemClick()
-- handleDatetimePickerButtonCancelClick()
-- handleDatetimePickerButtonOkClick()
-- handleDatetimePickerButtonClick()
-- handleDatetimePickerScrimClosed()
 - show()
 - close()
 - toggle()
@@ -364,20 +285,9 @@ MdComponent
 ## Instance methods
 
 - constructor()
-- renderIcon()
-- renderIconButton()
-- renderButton()
-- renderSpacer()
-- renderItem()
-- render()
-- connectedCallback()
-- disconnectedCallback()
-- handleDialogIconButtonClick()
-- handleDialogButtonClick()
 - show()
 - close()
 - toggle()
-- handleDialogScrimClosed()
 
 ## Events
 
@@ -397,7 +307,6 @@ MdComponent
 
 ## Instance methods
 
-- connectedCallback()
 
 ## Events
 
@@ -436,9 +345,6 @@ undefined
 ## Instance methods
 
 - constructor()
-- render()
-- connectedCallback()
-- updated()
 
 ## Events
 
@@ -463,11 +369,6 @@ MdComponent
 ## Instance methods
 
 - constructor()
-- render()
-- connectedCallback()
-- handleFormNativeFormdata()
-- handleFormNativeReset()
-- handleFormNativeSubmit()
 - formNative()
 - reset()
 - submit()
@@ -490,7 +391,6 @@ MdComponent
 
 ## Instance methods
 
-- connectedCallback()
 
 ## Events
 
@@ -514,11 +414,6 @@ MdComponent
 ## Instance methods
 
 - constructor()
-- render()
-- connectedCallback()
-- disconnectedCallback()
-- updated()
-- handleIconButtonClick()
 
 ## Events
 
@@ -542,8 +437,6 @@ MdComponent
 
 - constructor()
 - styleInfo()
-- render()
-- connectedCallback()
 
 ## Events
 
@@ -579,9 +472,6 @@ MdComponent
 ## Instance methods
 
 - constructor()
-- render()
-- connectedCallback()
-- updated()
 
 ## Events
 
@@ -599,7 +489,6 @@ MdComponent
 
 ## Instance methods
 
-- connectedCallback()
 
 ## Events
 
@@ -620,15 +509,8 @@ MdComponent
 ## Instance methods
 
 - constructor()
-- renderListItem()
-- render()
-- connectedCallback()
-- handleListItemClick()
 - multiSelect()
 - singleSelect()
-- handleListItemCheckboxNativeInput()
-- handleListItemRadioButtonNativeInput()
-- handleListItemSwitchNativeInput()
 
 ## Events
 
@@ -668,9 +550,6 @@ undefined
 ## Instance methods
 
 - constructor()
-- render()
-- connectedCallback()
-- disconnectedCallback()
 - show()
 - close()
 - toggle()
@@ -693,10 +572,6 @@ MdComponent
 ## Instance methods
 
 - constructor()
-- render()
-- connectedCallback()
-- disconnectedCallback()
-- updated()
 - show()
 - close()
 - toggle()
@@ -725,18 +600,9 @@ MdComponent
 ## Instance methods
 
 - constructor()
-- renderIcon()
-- renderIconButton()
-- renderItem()
-- render()
-- connectedCallback()
-- disconnectedCallback()
-- updated()
-- handleNavigationDrawerIconButtonClick()
 - show()
 - close()
 - toggle()
-- handleNavigationDrawerScrimClosed()
 
 ## Events
 
@@ -764,9 +630,6 @@ MdComponent
 ## Instance methods
 
 - constructor()
-- render()
-- connectedCallback()
-- updated()
 
 ## Events
 
@@ -784,7 +647,6 @@ MdComponent
 
 ## Instance methods
 
-- connectedCallback()
 
 ## Events
 
@@ -804,10 +666,6 @@ MdComponent
 ## Instance methods
 
 - constructor()
-- renderNavigationListItem()
-- render()
-- connectedCallback()
-- handleNavigationListItemClick()
 - singleSelect()
 
 ## Events
@@ -833,14 +691,6 @@ MdComponent
 ## Instance methods
 
 - constructor()
-- renderIcon()
-- renderIconButton()
-- renderItem()
-- render()
-- connectedCallback()
-- disconnectedCallback()
-- updated()
-- handleNavigationRailIconButtonClick()
 - show()
 - close()
 - toggle()
@@ -883,11 +733,6 @@ undefined
 ## Instance methods
 
 - constructor()
-- renderProgressIndicatorNative()
-- renderProgressIndicatorCircular()
-- render()
-- connectedCallback()
-- updated()
 
 ## Events
 
@@ -909,10 +754,6 @@ MdComponent
 ## Instance methods
 
 - constructor()
-- render()
-- connectedCallback()
-- handleRadioButtonNativeInput()
-- handleRadioButtonNativeReset()
 
 ## Events
 
@@ -934,12 +775,6 @@ MdComponent
 - constructor()
 - hostConnected()
 - hostDisconnected()
-- handlePointerenter()
-- handlePointerleave()
-- handlePointerdown()
-- handlePointerup()
-- handleFocus()
-- handleBlur()
 
 ## Events
 
@@ -958,16 +793,12 @@ undefined
 
 - get()
 - pathname()
-- handleNavigation()
 - removeComponent()
-- renderComponent()
 - getOutlet()
 - setContainer()
 - loadComponent()
-- handleBeforeLoad()
 - setController()
 - navigate()
-- handleNavigate()
 - emit()
 - use()
 
@@ -987,12 +818,9 @@ undefined
 
 ## Instance methods
 
-- connectedCallback()
-- disconnectedCallback()
 - show()
 - close()
 - toggle()
-- handleScrimClick()
 
 ## Events
 
@@ -1013,10 +841,6 @@ MdComponent
 ## Instance methods
 
 - constructor()
-- renderButton()
-- render()
-- connectedCallback()
-- handleSegmentedButtonItemClick()
 
 ## Events
 
@@ -1043,21 +867,9 @@ MdComponent
 ## Instance methods
 
 - constructor()
-- renderIcon()
-- renderIconButton()
-- renderButton()
-- renderSpacer()
-- renderItem()
-- render()
-- connectedCallback()
-- disconnectedCallback()
-- updated()
-- handleSheetIconButtonClick()
-- handleSheetButtonClick()
 - show()
 - close()
 - toggle()
-- handleSheetScrimClosed()
 
 ## Events
 
@@ -1085,21 +897,9 @@ MdComponent
 ## Instance methods
 
 - constructor()
-- renderIcon()
-- renderIconButton()
-- renderButton()
-- renderSpacer()
-- renderItem()
-- render()
-- connectedCallback()
-- disconnectedCallback()
-- updated()
-- handleSideSheetIconButtonClick()
-- handleSideSheetButtonClick()
 - show()
 - close()
 - toggle()
-- handleSideSheetScrimClosed()
 
 ## Events
 
@@ -1128,13 +928,7 @@ MdComponent
 
 - constructor()
 - indicators()
-- renderSliderWrapper()
-- render()
-- connectedCallback()
-- updated()
 - sliderNatives()
-- handleSliderNativeInput()
-- handleSliderNativeReset()
 - updateValue()
 - percentage()
 
@@ -1160,16 +954,6 @@ MdComponent
 ## Instance methods
 
 - constructor()
-- renderIcon()
-- renderIconButton()
-- renderButton()
-- renderSpacer()
-- renderItem()
-- render()
-- connectedCallback()
-- disconnectedCallback()
-- handleSnackbarIconButtonClick()
-- handleSnackbarButtonClick()
 - show()
 - close()
 - toggle()
@@ -1222,10 +1006,6 @@ undefined
 ## Instance methods
 
 - constructor()
-- render()
-- connectedCallback()
-- handleSwitchNativeInput()
-- handleSwitchNativeReset()
 
 ## Events
 
@@ -1253,9 +1033,6 @@ MdComponent
 ## Instance methods
 
 - constructor()
-- render()
-- connectedCallback()
-- updated()
 
 ## Events
 
@@ -1277,13 +1054,7 @@ MdComponent
 ## Instance methods
 
 - constructor()
-- renderTab()
-- render()
-- connectedCallback()
-- updated()
-- handleTabClick()
 - singleSelect()
-- handleTabSelected()
 
 ## Events
 
@@ -1321,21 +1092,8 @@ MdComponent
 ## Instance methods
 
 - constructor()
-- renderIcon()
-- renderIconButton()
-- renderItem()
 - actions2()
-- render()
-- connectedCallback()
-- updated()
 - textFieldNative()
-- handleTextFieldFocus()
-- handleTextFieldBlur()
-- handleTextFieldInput()
-- handleTextFieldSearch()
-- handleTextFieldInvalid()
-- handleTextFieldReset()
-- handleTextFieldIconButtonClick()
 
 ## Events
 
@@ -1366,16 +1124,6 @@ MdComponent
 ## Instance methods
 
 - constructor()
-- renderIcon()
-- renderIconButton()
-- renderButton()
-- renderSpacer()
-- renderItem()
-- render()
-- connectedCallback()
-- disconnectedCallback()
-- handleTooltipIconButtonClick()
-- handleTooltipButtonClick()
 - show()
 - close()
 - toggle()
@@ -1403,12 +1151,6 @@ MdComponent
 ## Instance methods
 
 - constructor()
-- renderIconButton()
-- render()
-- connectedCallback()
-- disconnectedCallback()
-- updated()
-- handleTopAppBarIconButtonClick()
 - show()
 - close()
 - toggle()
@@ -1440,9 +1182,6 @@ MdComponent
 - constructor()
 - action()
 - icon()
-- render()
-- connectedCallback()
-- updated()
 
 ## Events
 
@@ -1460,7 +1199,6 @@ MdComponent
 
 ## Instance methods
 
-- connectedCallback()
 
 ## Events
 
@@ -1480,13 +1218,8 @@ MdComponent
 ## Instance methods
 
 - constructor()
-- renderTreeItem()
-- render()
-- connectedCallback()
-- updated()
 - flatten()
 - toggle()
-- handleTreeItemClick()
 
 ## Events
 
