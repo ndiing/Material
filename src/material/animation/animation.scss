@@ -287,3 +287,53 @@
         overflow: hidden;
     }
 }
+
+
+
+@keyframes datetime-picker-out {
+    0% {
+        height: var(--md-comp-datetime-picker-container-height);
+        opacity: 0;
+        transform: translate3d(-50%, -50%, 0);
+    }
+
+    100% {
+        height: var(--md-comp-datetime-picker-height);
+        opacity: 1;
+        transform: translate3d(-50%, -50%, 0);
+    }
+}
+
+@keyframes datetime-picker-in {
+    0% {
+        height: var(--md-comp-datetime-picker-height);
+        opacity: 1;
+        transform: translate3d(-50%, -50%, 0);
+    }
+
+    100% {
+        height: var(--md-comp-datetime-picker-container-height);
+        opacity: 0;
+        transform: translate3d(-50%, -50%, 0);
+    }
+}
+
+@keyframes datetime-picker-body-out {
+    0% {
+        overflow: hidden;
+    }
+
+    100% {
+        overflow: hidden;
+    }
+}
+
+@keyframes datetime-picker-body-in {
+    0% {
+        overflow: hidden;
+    }
+
+    100% {
+        overflow: hidden;
+    }
+}

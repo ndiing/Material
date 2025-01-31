@@ -1,7 +1,3 @@
-/**
- */
-class Dragger {}
-export { Dragger };
 // let target = undefined;
 // let startX;
 // let startY;

@@ -655,6 +655,8 @@ class MdDatetimePickerComponent extends MdComponent {
             2: 0,
             0: 1,
             1: 2,
+            3: 4,
+            4: 2,
         };
         this.index = map[this.index];
         this.emit("onDatetimePickerButtonLabelClick", { event });

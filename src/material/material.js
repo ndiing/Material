@@ -3,7 +3,8 @@
 // import "./ripple/ripple.js";
 // import "./tokens/tokens.js";
 // import "./popper/popper.js";
-// import "./dragger/dragger.js";
+import "./dragger/dragger.js";
+import "./resizer/resizer.js";
 // import "./store/store.js";
 import "./polyfill/polyfill.js";
 import "./util/util.js";
