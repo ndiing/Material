@@ -4,16 +4,16 @@
 
 name|type
 ---|---
-label|Number
-max|Number
+<code>label</code>|Number
+<code>max</code>|Number
 
 ## Instance methods
 
-### constructor()
+### <code>constructor()</code>
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdBottomAppBarComponent
@@ -22,27 +22,27 @@ MdComponent
 
 name|type
 ---|---
-actions|Array
-fab|String
-open|Boolean
+<code>actions</code>|Array
+<code>fab</code>|String
+<code>open</code>|Boolean
 
 ## Instance methods
 
-### constructor()
-### show()
-### close()
-### toggle()
+### <code>constructor()</code>
+### <code>show()</code>
+### <code>close()</code>
+### <code>toggle()</code>
 
 ## Events
 
 name|event
 ---|---
-onBottomAppBarIconButtonClick|{"detail":{"event":{}}}
-onBottomAppBarFabClick|{"detail":{"event":{}}}
+<code>onBottomAppBarIconButtonClick</code>|{"detail":{"event":{}}}
+<code>onBottomAppBarFabClick</code>|{"detail":{"event":{}}}
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdBottomSheetComponent
@@ -51,32 +51,32 @@ MdComponent
 
 name|type
 ---|---
-icons|Array
-actions|Array
-label|String
-sublabel|String
-buttons|Array
-open|Boolean
-modal|Boolean
+<code>icons</code>|Array
+<code>actions</code>|Array
+<code>label</code>|String
+<code>sublabel</code>|String
+<code>buttons</code>|Array
+<code>open</code>|Boolean
+<code>modal</code>|Boolean
 
 ## Instance methods
 
-### constructor()
-### show()
-### close()
-### toggle()
+### <code>constructor()</code>
+### <code>show()</code>
+### <code>close()</code>
+### <code>toggle()</code>
 
 ## Events
 
 name|event
 ---|---
-onBottomSheetIconButtonClick|{"detail":{"event":{}}}
-onBottomSheetButtonClick|{"detail":{"event":{}}}
-onBottomSheetScrimClosed|{"detail":{"event":{}}}
+<code>onBottomSheetIconButtonClick</code>|{"detail":{"event":{}}}
+<code>onBottomSheetButtonClick</code>|{"detail":{"event":{}}}
+<code>onBottomSheetScrimClosed</code>|{"detail":{"event":{}}}
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdButtonComponent
@@ -85,20 +85,20 @@ MdComponent
 
 name|type
 ---|---
-icon|String
-label|String
-variant|String
-type|String
-disabled|Boolean
-selected|Boolean
+<code>icon</code>|String
+<code>label</code>|String
+<code>variant</code>|String
+<code>type</code>|String
+<code>disabled</code>|Boolean
+<code>selected</code>|Boolean
 
 ## Instance methods
 
-### constructor()
+### <code>constructor()</code>
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdCardComponent
@@ -107,26 +107,26 @@ MdComponent
 
 name|type
 ---|---
-icons|Array
-actions|Array
-label|String
-sublabel|String
-buttons|Array
+<code>icons</code>|Array
+<code>actions</code>|Array
+<code>label</code>|String
+<code>sublabel</code>|String
+<code>buttons</code>|Array
 
 ## Instance methods
 
-### constructor()
+### <code>constructor()</code>
 
 ## Events
 
 name|event
 ---|---
-onCardIconButtonClick|{"detail":{"event":{}}}
-onCardButtonClick|{"detail":{"event":{}}}
+<code>onCardIconButtonClick</code>|{"detail":{"event":{}}}
+<code>onCardButtonClick</code>|{"detail":{"event":{}}}
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdCheckboxComponent
@@ -135,25 +135,25 @@ MdComponent
 
 name|type
 ---|---
-name|String
-value|String
-indeterminate|Boolean
-checked|Boolean
+<code>name</code>|String
+<code>value</code>|String
+<code>indeterminate</code>|Boolean
+<code>checked</code>|Boolean
 
 ## Instance methods
 
-### constructor()
+### <code>constructor()</code>
 
 ## Events
 
 name|event
 ---|---
-onCheckboxNativeInput|{"detail":{"event":{}}}
-onCheckboxNativeReset|{"detail":{"event":{}}}
+<code>onCheckboxNativeInput</code>|{"detail":{"event":{}}}
+<code>onCheckboxNativeReset</code>|{"detail":{"event":{}}}
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdChipComponent
@@ -162,29 +162,29 @@ MdComponent
 
 name|type
 ---|---
-items|Array
-type|String
+<code>items</code>|Array
+<code>type</code>|String
 
 ## Instance methods
 
-### constructor()
+### <code>constructor()</code>
 
 ## Events
 
 name|event
 ---|---
-onChipClick|{"detail":{"event":{}}}
+<code>onChipClick</code>|{"detail":{"event":{}}}
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdComponent
 
 ## Instance methods
 
-### emit(type, detail)
+### <code>emit(type, detail)</code>
 name|type|default
 ---|---|---
 type|String|undefined
@@ -192,7 +192,7 @@ detail|String|undefined
 
 ## Inheritance
 
-LitElement
+<code>LitElement</code>
 
 ---
 # MdDataTableCellComponent
@@ -201,20 +201,20 @@ LitElement
 
 name|type
 ---|---
-checkbox|Boolean
-avatar|String
-icon|String
-label|String
-sublabel|String
-action|String
+<code>checkbox</code>|Boolean
+<code>avatar</code>|String
+<code>icon</code>|String
+<code>label</code>|String
+<code>sublabel</code>|String
+<code>action</code>|String
 
 ## Instance methods
 
-### constructor()
+### <code>constructor()</code>
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdDataTableComponent
@@ -223,18 +223,18 @@ MdComponent
 
 name|type
 ---|---
-headers|Array
-bodies|Array
-data|Array
-footers|Array
+<code>headers</code>|Array
+<code>bodies</code>|Array
+<code>data</code>|Array
+<code>footers</code>|Array
 
 ## Instance methods
 
-### constructor()
+### <code>constructor()</code>
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdDatetimePickerComponent
@@ -243,50 +243,50 @@ MdComponent
 
 name|type
 ---|---
-icons|Array
-actions|Array
-label|String
-sublabel|String
-buttons|Array
-open|Boolean
-index|Number
+<code>icons</code>|Array
+<code>actions</code>|Array
+<code>label</code>|String
+<code>sublabel</code>|String
+<code>buttons</code>|Array
+<code>open</code>|Boolean
+<code>index</code>|Number
 
 ## Instance methods
 
-### startOfDay()
-### years()
-### months()
-### weekdays()
-### days()
-### hours()
-### minutes()
-### label()
-### constructor()
-### show()
-### close()
-### toggle()
+### <code>startOfDay()</code>
+### <code>years()</code>
+### <code>months()</code>
+### <code>weekdays()</code>
+### <code>days()</code>
+### <code>hours()</code>
+### <code>minutes()</code>
+### <code>label()</code>
+### <code>constructor()</code>
+### <code>show()</code>
+### <code>close()</code>
+### <code>toggle()</code>
 
 ## Events
 
 name|event
 ---|---
-onDatetimePickerLabelClick|{"detail":{"event":{}}}
-onDatetimePickerIconButtonPrevClick|{"detail":{"event":{}}}
-onDatetimePickerIconButtonNextClick|{"detail":{"event":{}}}
-onDatetimePickerIconButtonClick|{"detail":{"event":{}}}
-onDatetimePickerYearItemClick|{"detail":{"event":{}}}
-onDatetimePickerMonthItemClick|{"detail":{"event":{}}}
-onDatetimePickerDayItemClick|{"detail":{"event":{}}}
-onDatetimePickerHourItemClick|{"detail":{"event":{}}}
-onDatetimePickerMinuteItemClick|{"detail":{"event":{}}}
-onDatetimePickerButtonCancelClick|{"detail":{"event":{}}}
-onDatetimePickerButtonOkClick|{"detail":{"event":{}}}
-onDatetimePickerButtonClick|{"detail":{"event":{}}}
-onDatetimePickerScrimClosed|{"detail":{"event":{}}}
+<code>onDatetimePickerLabelClick</code>|{"detail":{"event":{}}}
+<code>onDatetimePickerIconButtonPrevClick</code>|{"detail":{"event":{}}}
+<code>onDatetimePickerIconButtonNextClick</code>|{"detail":{"event":{}}}
+<code>onDatetimePickerIconButtonClick</code>|{"detail":{"event":{}}}
+<code>onDatetimePickerYearItemClick</code>|{"detail":{"event":{}}}
+<code>onDatetimePickerMonthItemClick</code>|{"detail":{"event":{}}}
+<code>onDatetimePickerDayItemClick</code>|{"detail":{"event":{}}}
+<code>onDatetimePickerHourItemClick</code>|{"detail":{"event":{}}}
+<code>onDatetimePickerMinuteItemClick</code>|{"detail":{"event":{}}}
+<code>onDatetimePickerButtonCancelClick</code>|{"detail":{"event":{}}}
+<code>onDatetimePickerButtonOkClick</code>|{"detail":{"event":{}}}
+<code>onDatetimePickerButtonClick</code>|{"detail":{"event":{}}}
+<code>onDatetimePickerScrimClosed</code>|{"detail":{"event":{}}}
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdDialogComponent
@@ -295,31 +295,31 @@ MdComponent
 
 name|type
 ---|---
-icons|Array
-actions|Array
-label|String
-sublabel|String
-buttons|Array
-open|Boolean
+<code>icons</code>|Array
+<code>actions</code>|Array
+<code>label</code>|String
+<code>sublabel</code>|String
+<code>buttons</code>|Array
+<code>open</code>|Boolean
 
 ## Instance methods
 
-### constructor()
-### show()
-### close()
-### toggle()
+### <code>constructor()</code>
+### <code>show()</code>
+### <code>close()</code>
+### <code>toggle()</code>
 
 ## Events
 
 name|event
 ---|---
-onDialogIconButtonClick|{"detail":{"event":{}}}
-onDialogButtonClick|{"detail":{"event":{}}}
-onDialogScrimClosed|{"detail":{"event":{}}}
+<code>onDialogIconButtonClick</code>|{"detail":{"event":{}}}
+<code>onDialogButtonClick</code>|{"detail":{"event":{}}}
+<code>onDialogScrimClosed</code>|{"detail":{"event":{}}}
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdDividerComponent
@@ -329,7 +329,7 @@ MdComponent
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # Dragger
@@ -340,19 +340,19 @@ MdComponent
 
 name|type
 ---|---
-icon|String
-label|String
-type|String
-size|String
-variant|String
+<code>icon</code>|String
+<code>label</code>|String
+<code>type</code>|String
+<code>size</code>|String
+<code>variant</code>|String
 
 ## Instance methods
 
-### constructor()
+### <code>constructor()</code>
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdFormComponent
@@ -361,20 +361,20 @@ MdComponent
 
 name|type
 ---|---
-acceptCharset|String
-action|String
-autocomplete|String
-enctype|String
-method|String
-name|String
-noValidate|Boolean
+<code>acceptCharset</code>|String
+<code>action</code>|String
+<code>autocomplete</code>|String
+<code>enctype</code>|String
+<code>method</code>|String
+<code>name</code>|String
+<code>noValidate</code>|Boolean
 
 ## Instance methods
 
-### constructor()
-### formNative()
-### reset()
-### submit(submitButton)
+### <code>constructor()</code>
+### <code>formNative()</code>
+### <code>reset()</code>
+### <code>submit(submitButton)</code>
 name|type|default
 ---|---|---
 submitButton|String|undefined
@@ -383,13 +383,13 @@ submitButton|String|undefined
 
 name|event
 ---|---
-onFormNativeFormdata|{"detail":{"event":{}}}
-onFormNativeReset|{"detail":{"event":{}}}
-onFormNativeSubmit|{"detail":{"event":{}}}
+<code>onFormNativeFormdata</code>|{"detail":{"event":{}}}
+<code>onFormNativeReset</code>|{"detail":{"event":{}}}
+<code>onFormNativeSubmit</code>|{"detail":{"event":{}}}
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdIconComponent
@@ -399,7 +399,7 @@ MdComponent
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdIconButtonComponent
@@ -408,26 +408,26 @@ MdComponent
 
 name|type
 ---|---
-icon|String
-variant|String
-type|String
-toggle|Boolean
-selected|Boolean
-disabled|Boolean
+<code>icon</code>|String
+<code>variant</code>|String
+<code>type</code>|String
+<code>toggle</code>|Boolean
+<code>selected</code>|Boolean
+<code>disabled</code>|Boolean
 
 ## Instance methods
 
-### constructor()
+### <code>constructor()</code>
 
 ## Events
 
 name|event
 ---|---
-onIconButtonClick|{"detail":{"event":{}}}
+<code>onIconButtonClick</code>|{"detail":{"event":{}}}
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdImageComponent
@@ -436,19 +436,19 @@ MdComponent
 
 name|type
 ---|---
-src|String
-alt|String
-ratio|String
-circular|Boolean
+<code>src</code>|String
+<code>alt</code>|String
+<code>ratio</code>|String
+<code>circular</code>|Boolean
 
 ## Instance methods
 
-### constructor()
-### styleInfo()
+### <code>constructor()</code>
+### <code>styleInfo()</code>
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdListItemComponent
@@ -457,38 +457,38 @@ MdComponent
 
 name|type
 ---|---
-leadingCheckbox|Boolean
-leadingRadioButton|Boolean
-leadingSwitch|Boolean
-avatar|String
-image|String
-video|String
-icon|String
-label|String
-sublabel|String
-text|String
-trailingCheckbox|Boolean
-trailingRadioButton|Boolean
-trailingSwitch|Boolean
-selected|Boolean
-disabled|Boolean
-routerLink|String
-rippleOptions|Object
-badge|Number
+<code>leadingCheckbox</code>|Boolean
+<code>leadingRadioButton</code>|Boolean
+<code>leadingSwitch</code>|Boolean
+<code>avatar</code>|String
+<code>image</code>|String
+<code>video</code>|String
+<code>icon</code>|String
+<code>label</code>|String
+<code>sublabel</code>|String
+<code>text</code>|String
+<code>trailingCheckbox</code>|Boolean
+<code>trailingRadioButton</code>|Boolean
+<code>trailingSwitch</code>|Boolean
+<code>selected</code>|Boolean
+<code>disabled</code>|Boolean
+<code>routerLink</code>|String
+<code>rippleOptions</code>|Object
+<code>badge</code>|Number
 
 ## Instance methods
 
-### constructor()
+### <code>constructor()</code>
 
 ## Events
 
 name|event
 ---|---
-onListItemSelected|{"detail":{"listItem":"this"}}
+<code>onListItemSelected</code>|{"detail":{"listItem":"this"}}
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdListRowComponent
@@ -498,7 +498,7 @@ MdComponent
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdListComponent
@@ -507,18 +507,18 @@ MdComponent
 
 name|type
 ---|---
-items|Array
-type|String
-rippleOptions|Object
+<code>items</code>|Array
+<code>type</code>|String
+<code>rippleOptions</code>|Object
 
 ## Instance methods
 
-### constructor()
-### multiSelect(data)
+### <code>constructor()</code>
+### <code>multiSelect(data)</code>
 name|type|default
 ---|---|---
 data|Object|undefined
-### singleSelect(data)
+### <code>singleSelect(data)</code>
 name|type|default
 ---|---|---
 data|Object|undefined
@@ -527,14 +527,14 @@ data|Object|undefined
 
 name|event
 ---|---
-onListItemClick|{"detail":{"event":{}}}
-onListItemCheckboxNativeInput|{"detail":{"event":{}}}
-onListItemRadioButtonNativeInput|{"detail":{"event":{}}}
-onListItemSwitchNativeInput|{"detail":{"event":{}}}
+<code>onListItemClick</code>|{"detail":{"event":{}}}
+<code>onListItemCheckboxNativeInput</code>|{"detail":{"event":{}}}
+<code>onListItemRadioButtonNativeInput</code>|{"detail":{"event":{}}}
+<code>onListItemSwitchNativeInput</code>|{"detail":{"event":{}}}
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # undefined
@@ -545,25 +545,25 @@ MdComponent
 
 name|type
 ---|---
-open|Boolean
-items|Array
+<code>open</code>|Boolean
+<code>items</code>|Array
 
 ## Instance methods
 
-### constructor()
-### show(options)
+### <code>constructor()</code>
+### <code>show(options)</code>
 name|type|default
 ---|---|---
 options|Object|{}
-### close()
-### toggle(options)
+### <code>close()</code>
+### <code>toggle(options)</code>
 name|type|default
 ---|---|---
 options|String|undefined
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdNavigationBarComponent
@@ -572,19 +572,19 @@ MdComponent
 
 name|type
 ---|---
-open|Boolean
-items|Array
+<code>open</code>|Boolean
+<code>items</code>|Array
 
 ## Instance methods
 
-### constructor()
-### show()
-### close()
-### toggle()
+### <code>constructor()</code>
+### <code>show()</code>
+### <code>close()</code>
+### <code>toggle()</code>
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdNavigationDrawerComponent
@@ -593,32 +593,32 @@ MdComponent
 
 name|type
 ---|---
-icons|Array
-actions|Array
-label|String
-sublabel|String
-items|Array
-open|Boolean
-modal|Boolean
-view|String
+<code>icons</code>|Array
+<code>actions</code>|Array
+<code>label</code>|String
+<code>sublabel</code>|String
+<code>items</code>|Array
+<code>open</code>|Boolean
+<code>modal</code>|Boolean
+<code>view</code>|String
 
 ## Instance methods
 
-### constructor()
-### show()
-### close()
-### toggle()
+### <code>constructor()</code>
+### <code>show()</code>
+### <code>close()</code>
+### <code>toggle()</code>
 
 ## Events
 
 name|event
 ---|---
-onNavigationDrawerIconButtonClick|{"detail":{"event":{}}}
-onNavigationDrawerScrimClosed|{"detail":{"event":{}}}
+<code>onNavigationDrawerIconButtonClick</code>|{"detail":{"event":{}}}
+<code>onNavigationDrawerScrimClosed</code>|{"detail":{"event":{}}}
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdNavigationListItemComponent
@@ -627,28 +627,28 @@ MdComponent
 
 name|type
 ---|---
-icon|String
-label|String
-sublabel|String
-selected|Boolean
-disabled|Boolean
-routerLink|String
-rippleOptions|Object
-badge|Number
+<code>icon</code>|String
+<code>label</code>|String
+<code>sublabel</code>|String
+<code>selected</code>|Boolean
+<code>disabled</code>|Boolean
+<code>routerLink</code>|String
+<code>rippleOptions</code>|Object
+<code>badge</code>|Number
 
 ## Instance methods
 
-### constructor()
+### <code>constructor()</code>
 
 ## Events
 
 name|event
 ---|---
-onNavigationListItemSelected|{"detail":{"navigationListItem":"this"}}
+<code>onNavigationListItemSelected</code>|{"detail":{"navigationListItem":"this"}}
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdNavigationListRowComponent
@@ -658,7 +658,7 @@ MdComponent
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdNavigationListComponent
@@ -667,13 +667,13 @@ MdComponent
 
 name|type
 ---|---
-items|Array
-rippleOptions|Object
+<code>items</code>|Array
+<code>rippleOptions</code>|Object
 
 ## Instance methods
 
-### constructor()
-### singleSelect(data)
+### <code>constructor()</code>
+### <code>singleSelect(data)</code>
 name|type|default
 ---|---|---
 data|Object|undefined
@@ -682,11 +682,11 @@ data|Object|undefined
 
 name|event
 ---|---
-onNavigationListItemClick|{"detail":{"event":{}}}
+<code>onNavigationListItemClick</code>|{"detail":{"event":{}}}
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdNavigationRailComponent
@@ -695,40 +695,40 @@ MdComponent
 
 name|type
 ---|---
-icons|Array
-actions|Array
-label|String
-sublabel|String
-items|Array
-open|Boolean
+<code>icons</code>|Array
+<code>actions</code>|Array
+<code>label</code>|String
+<code>sublabel</code>|String
+<code>items</code>|Array
+<code>open</code>|Boolean
 
 ## Instance methods
 
-### constructor()
-### show()
-### close()
-### toggle()
+### <code>constructor()</code>
+### <code>show()</code>
+### <code>close()</code>
+### <code>toggle()</code>
 
 ## Events
 
 name|event
 ---|---
-onNavigationRailIconButtonClick|{"detail":{"event":{}}}
+<code>onNavigationRailIconButtonClick</code>|{"detail":{"event":{}}}
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # PopperController
 
 ## Instance methods
 
-### show(options)
+### <code>show(options)</code>
 name|type|default
 ---|---|---
 options|Object|{}
-### closestScrollable(element)
+### <code>closestScrollable(element)</code>
 name|type|default
 ---|---|---
 element|String|undefined
@@ -739,17 +739,17 @@ element|String|undefined
 
 name|type
 ---|---
-variant|String
-max|Number
-value|Number
+<code>variant</code>|String
+<code>max</code>|Number
+<code>value</code>|Number
 
 ## Instance methods
 
-### constructor()
+### <code>constructor()</code>
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdRadioButtonComponent
@@ -758,79 +758,79 @@ MdComponent
 
 name|type
 ---|---
-name|String
-value|String
-indeterminate|Boolean
-checked|Boolean
+<code>name</code>|String
+<code>value</code>|String
+<code>indeterminate</code>|Boolean
+<code>checked</code>|Boolean
 
 ## Instance methods
 
-### constructor()
+### <code>constructor()</code>
 
 ## Events
 
 name|event
 ---|---
-onRadioButtonNativeInput|{"detail":{"event":{}}}
-onRadioButtonNativeReset|{"detail":{"event":{}}}
+<code>onRadioButtonNativeInput</code>|{"detail":{"event":{}}}
+<code>onRadioButtonNativeReset</code>|{"detail":{"event":{}}}
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # RippleController
 
 ## Instance methods
 
-### constructor(host, options)
+### <code>constructor(host, options)</code>
 name|type|default
 ---|---|---
 host|String|undefined
 options|String|undefined
-### hostConnected()
-### hostDisconnected()
+### <code>hostConnected()</code>
+### <code>hostDisconnected()</code>
 
 # Router
 
 ## Instance methods
 
-### get(pathname, routes, parent, result)
+### <code>get(pathname, routes, parent, result)</code>
 name|type|default
 ---|---|---
 pathname|undefined|this.pathname
 routes|undefined|this.routes
 parent|String|null
 result|Array|[]
-### pathname()
-### removeComponent(routes)
+### <code>pathname()</code>
+### <code>removeComponent(routes)</code>
 name|type|default
 ---|---|---
 routes|String|undefined
-### getOutlet(container, route)
+### <code>getOutlet(container, route)</code>
 name|type|default
 ---|---|---
 container|String|undefined
 route|String|undefined
-### setContainer(route)
+### <code>setContainer(route)</code>
 name|type|default
 ---|---|---
 route|String|undefined
-### loadComponent(route)
+### <code>loadComponent(route)</code>
 name|type|default
 ---|---|---
 route|String|undefined
-### setController()
-### navigate(url)
+### <code>setController()</code>
+### <code>navigate(url)</code>
 name|type|default
 ---|---|---
 url|String|undefined
-### emit(type, detail)
+### <code>emit(type, detail)</code>
 name|type|default
 ---|---|---
 type|String|undefined
 detail|String|undefined
-### use(routes, options)
+### <code>use(routes, options)</code>
 name|type|default
 ---|---|---
 routes|Array|[]
@@ -842,23 +842,23 @@ options|Object|{}
 
 name|type
 ---|---
-open|Boolean
+<code>open</code>|Boolean
 
 ## Instance methods
 
-### show()
-### close()
-### toggle()
+### <code>show()</code>
+### <code>close()</code>
+### <code>toggle()</code>
 
 ## Events
 
 name|event
 ---|---
-onScrimClick|{"detail":{"event":{}}}
+<code>onScrimClick</code>|{"detail":{"event":{}}}
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdSegmentedButtonComponent
@@ -867,22 +867,22 @@ MdComponent
 
 name|type
 ---|---
-items|Array
-type|String
+<code>items</code>|Array
+<code>type</code>|String
 
 ## Instance methods
 
-### constructor()
+### <code>constructor()</code>
 
 ## Events
 
 name|event
 ---|---
-onSegmentedButtonItemClick|{"detail":{"event":{}}}
+<code>onSegmentedButtonItemClick</code>|{"detail":{"event":{}}}
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdSheetComponent
@@ -891,33 +891,33 @@ MdComponent
 
 name|type
 ---|---
-icons|Array
-actions|Array
-label|String
-sublabel|String
-buttons|Array
-open|Boolean
-region|String
-modal|Boolean
+<code>icons</code>|Array
+<code>actions</code>|Array
+<code>label</code>|String
+<code>sublabel</code>|String
+<code>buttons</code>|Array
+<code>open</code>|Boolean
+<code>region</code>|String
+<code>modal</code>|Boolean
 
 ## Instance methods
 
-### constructor()
-### show()
-### close()
-### toggle()
+### <code>constructor()</code>
+### <code>show()</code>
+### <code>close()</code>
+### <code>toggle()</code>
 
 ## Events
 
 name|event
 ---|---
-onSheetIconButtonClick|{"detail":{"event":{}}}
-onSheetButtonClick|{"detail":{"event":{}}}
-onSheetScrimClosed|{"detail":{"event":{}}}
+<code>onSheetIconButtonClick</code>|{"detail":{"event":{}}}
+<code>onSheetButtonClick</code>|{"detail":{"event":{}}}
+<code>onSheetScrimClosed</code>|{"detail":{"event":{}}}
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdSideSheetComponent
@@ -926,32 +926,32 @@ MdComponent
 
 name|type
 ---|---
-icons|Array
-actions|Array
-label|String
-sublabel|String
-buttons|Array
-open|Boolean
-modal|Boolean
+<code>icons</code>|Array
+<code>actions</code>|Array
+<code>label</code>|String
+<code>sublabel</code>|String
+<code>buttons</code>|Array
+<code>open</code>|Boolean
+<code>modal</code>|Boolean
 
 ## Instance methods
 
-### constructor()
-### show()
-### close()
-### toggle()
+### <code>constructor()</code>
+### <code>show()</code>
+### <code>close()</code>
+### <code>toggle()</code>
 
 ## Events
 
 name|event
 ---|---
-onSideSheetIconButtonClick|{"detail":{"event":{}}}
-onSideSheetButtonClick|{"detail":{"event":{}}}
-onSideSheetScrimClosed|{"detail":{"event":{}}}
+<code>onSideSheetIconButtonClick</code>|{"detail":{"event":{}}}
+<code>onSideSheetButtonClick</code>|{"detail":{"event":{}}}
+<code>onSideSheetScrimClosed</code>|{"detail":{"event":{}}}
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdSliderComponent
@@ -960,21 +960,21 @@ MdComponent
 
 name|type
 ---|---
-min|Number
-max|Number
-step|Number
-variant|String
-name|String
-value|undefined
-converter|undefined
+<code>min</code>|Number
+<code>max</code>|Number
+<code>step</code>|Number
+<code>variant</code>|String
+<code>name</code>|String
+<code>value</code>|undefined
+<code>converter</code>|undefined
 
 ## Instance methods
 
-### constructor()
-### indicators()
-### sliderNatives()
-### updateValue()
-### percentage(value, min, max)
+### <code>constructor()</code>
+### <code>indicators()</code>
+### <code>sliderNatives()</code>
+### <code>updateValue()</code>
+### <code>percentage(value, min, max)</code>
 name|type|default
 ---|---|---
 value|String|undefined
@@ -985,12 +985,12 @@ max|undefined|this.max
 
 name|event
 ---|---
-onSliderNativeInput|{"detail":{"event":{}}}
-onSliderNativeReset|{"detail":{"event":{}}}
+<code>onSliderNativeInput</code>|{"detail":{"event":{}}}
+<code>onSliderNativeReset</code>|{"detail":{"event":{}}}
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdSnackbarComponent
@@ -999,77 +999,77 @@ MdComponent
 
 name|type
 ---|---
-icons|Array
-actions|Array
-buttons|Array
-open|Boolean
+<code>icons</code>|Array
+<code>actions</code>|Array
+<code>buttons</code>|Array
+<code>open</code>|Boolean
 
 ## Instance methods
 
-### constructor()
-### show()
-### close()
-### toggle()
+### <code>constructor()</code>
+### <code>show()</code>
+### <code>close()</code>
+### <code>toggle()</code>
 
 ## Events
 
 name|event
 ---|---
-onSnackbarIconButtonClick|{"detail":{"event":{}}}
-onSnackbarButtonClick|{"detail":{"event":{}}}
+<code>onSnackbarIconButtonClick</code>|{"detail":{"event":{}}}
+<code>onSnackbarButtonClick</code>|{"detail":{"event":{}}}
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # Store
 
 ## Instance methods
 
-### constructor(data, options)
+### <code>constructor(data, options)</code>
 name|type|default
 ---|---|---
 data|Object|[]
 options|Object|{}
-### sort(data, sorters)
+### <code>sort(data, sorters)</code>
 name|type|default
 ---|---|---
 data|Object|undefined
 sorters|String|undefined
-### deepSearch(item, q)
+### <code>deepSearch(item, q)</code>
 name|type|default
 ---|---|---
 item|String|undefined
 q|String|undefined
-### search(data, q)
+### <code>search(data, q)</code>
 name|type|default
 ---|---|---
 data|Object|undefined
 q|String|undefined
-### getNestedValue(item, name)
+### <code>getNestedValue(item, name)</code>
 name|type|default
 ---|---|---
 item|String|undefined
 name|String|undefined
-### filter(data, filters)
+### <code>filter(data, filters)</code>
 name|type|default
 ---|---|---
 data|Object|undefined
 filters|String|undefined
-### range(data, _start, _end)
+### <code>range(data, _start, _end)</code>
 name|type|default
 ---|---|---
 data|Object|undefined
 _start|String|undefined
 _end|String|undefined
-### paginate(data, _page, _limit)
+### <code>paginate(data, _page, _limit)</code>
 name|type|default
 ---|---|---
 data|Object|undefined
 _page|String|undefined
 _limit|String|undefined
-### get(options)
+### <code>get(options)</code>
 name|type|default
 ---|---|---
 options|Object|{}
@@ -1080,26 +1080,26 @@ options|Object|{}
 
 name|type
 ---|---
-name|String
-value|String
-indeterminate|Boolean
-checked|Boolean
-icons|Array
+<code>name</code>|String
+<code>value</code>|String
+<code>indeterminate</code>|Boolean
+<code>checked</code>|Boolean
+<code>icons</code>|Array
 
 ## Instance methods
 
-### constructor()
+### <code>constructor()</code>
 
 ## Events
 
 name|event
 ---|---
-onSwitchNativeInput|{"detail":{"event":{}}}
-onSwitchNativeReset|{"detail":{"event":{}}}
+<code>onSwitchNativeInput</code>|{"detail":{"event":{}}}
+<code>onSwitchNativeReset</code>|{"detail":{"event":{}}}
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdTabComponent
@@ -1108,28 +1108,28 @@ MdComponent
 
 name|type
 ---|---
-icon|String
-label|String
-sublabel|String
-selected|Boolean
-disabled|Boolean
-routerLink|String
-rippleOptions|Object
-badge|Number
+<code>icon</code>|String
+<code>label</code>|String
+<code>sublabel</code>|String
+<code>selected</code>|Boolean
+<code>disabled</code>|Boolean
+<code>routerLink</code>|String
+<code>rippleOptions</code>|Object
+<code>badge</code>|Number
 
 ## Instance methods
 
-### constructor()
+### <code>constructor()</code>
 
 ## Events
 
 name|event
 ---|---
-onTabSelected|{"detail":{"tab":"this"}}
+<code>onTabSelected</code>|{"detail":{"tab":"this"}}
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdTabsComponent
@@ -1138,14 +1138,14 @@ MdComponent
 
 name|type
 ---|---
-items|Array
-rippleOptions|Object
-variant|String
+<code>items</code>|Array
+<code>rippleOptions</code>|Object
+<code>variant</code>|String
 
 ## Instance methods
 
-### constructor()
-### singleSelect(data)
+### <code>constructor()</code>
+### <code>singleSelect(data)</code>
 name|type|default
 ---|---|---
 data|Object|undefined
@@ -1154,11 +1154,11 @@ data|Object|undefined
 
 name|event
 ---|---
-onTabClick|{"detail":{"event":{}}}
+<code>onTabClick</code>|{"detail":{"event":{}}}
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdTextFieldComponent
@@ -1167,47 +1167,47 @@ MdComponent
 
 name|type
 ---|---
-label|String
-separateLabel|Boolean
-icons|Array
-prefix|String
-suffix|String
-actions|Array
-text|String
-error|String
-counter|String
-name|String
-type|String
-value|String
-placeholder|String
-title|String
-autocomplete|String
-required|Boolean
-readOnly|Boolean
-variant|String
-disabled|Boolean
+<code>label</code>|String
+<code>separateLabel</code>|Boolean
+<code>icons</code>|Array
+<code>prefix</code>|String
+<code>suffix</code>|String
+<code>actions</code>|Array
+<code>text</code>|String
+<code>error</code>|String
+<code>counter</code>|String
+<code>name</code>|String
+<code>type</code>|String
+<code>value</code>|String
+<code>placeholder</code>|String
+<code>title</code>|String
+<code>autocomplete</code>|String
+<code>required</code>|Boolean
+<code>readOnly</code>|Boolean
+<code>variant</code>|String
+<code>disabled</code>|Boolean
 
 ## Instance methods
 
-### constructor()
-### actions2()
-### textFieldNative()
+### <code>constructor()</code>
+### <code>actions2()</code>
+### <code>textFieldNative()</code>
 
 ## Events
 
 name|event
 ---|---
-onTextFieldFocus|{"detail":{"event":{}}}
-onTextFieldBlur|{"detail":{"event":{}}}
-onTextFieldInput|{"detail":{"event":{}}}
-onTextFieldSearch|{"detail":{"event":{}}}
-onTextFieldInvalid|{"detail":{"event":{}}}
-onTextFieldReset|{"detail":{"event":{}}}
-onTextFieldIconButtonClick|{"detail":{"event":{}}}
+<code>onTextFieldFocus</code>|{"detail":{"event":{}}}
+<code>onTextFieldBlur</code>|{"detail":{"event":{}}}
+<code>onTextFieldInput</code>|{"detail":{"event":{}}}
+<code>onTextFieldSearch</code>|{"detail":{"event":{}}}
+<code>onTextFieldInvalid</code>|{"detail":{"event":{}}}
+<code>onTextFieldReset</code>|{"detail":{"event":{}}}
+<code>onTextFieldIconButtonClick</code>|{"detail":{"event":{}}}
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdTooltipComponent
@@ -1216,22 +1216,22 @@ MdComponent
 
 name|type
 ---|---
-icons|Array
-actions|Array
-label|String
-sublabel|String
-buttons|Array
-open|Boolean
+<code>icons</code>|Array
+<code>actions</code>|Array
+<code>label</code>|String
+<code>sublabel</code>|String
+<code>buttons</code>|Array
+<code>open</code>|Boolean
 
 ## Instance methods
 
-### constructor()
-### show(options)
+### <code>constructor()</code>
+### <code>show(options)</code>
 name|type|default
 ---|---|---
 options|String|undefined
-### close()
-### toggle(options)
+### <code>close()</code>
+### <code>toggle(options)</code>
 name|type|default
 ---|---|---
 options|String|undefined
@@ -1240,12 +1240,12 @@ options|String|undefined
 
 name|event
 ---|---
-onTooltipIconButtonClick|{"detail":{"event":{}}}
-onTooltipButtonClick|{"detail":{"event":{}}}
+<code>onTooltipIconButtonClick</code>|{"detail":{"event":{}}}
+<code>onTooltipButtonClick</code>|{"detail":{"event":{}}}
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdTopAppBarComponent
@@ -1254,28 +1254,28 @@ MdComponent
 
 name|type
 ---|---
-leadingActions|Array
-label|String
-sublabel|String
-trailingActions|Array
-open|Boolean
+<code>leadingActions</code>|Array
+<code>label</code>|String
+<code>sublabel</code>|String
+<code>trailingActions</code>|Array
+<code>open</code>|Boolean
 
 ## Instance methods
 
-### constructor()
-### show()
-### close()
-### toggle()
+### <code>constructor()</code>
+### <code>show()</code>
+### <code>close()</code>
+### <code>toggle()</code>
 
 ## Events
 
 name|event
 ---|---
-onTopAppBarIconButtonClick|{"detail":{"event":{}}}
+<code>onTopAppBarIconButtonClick</code>|{"detail":{"event":{}}}
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdTreeItemComponent
@@ -1284,30 +1284,30 @@ MdComponent
 
 name|type
 ---|---
-selected|Boolean
-expanded|Boolean
-indent|String
-actions|Array
-nodeIcons|Array
-leafIcons|Array
-label|String
-routerLink|String
+<code>selected</code>|Boolean
+<code>expanded</code>|Boolean
+<code>indent</code>|String
+<code>actions</code>|Array
+<code>nodeIcons</code>|Array
+<code>leafIcons</code>|Array
+<code>label</code>|String
+<code>routerLink</code>|String
 
 ## Instance methods
 
-### constructor()
-### action()
-### icon()
+### <code>constructor()</code>
+### <code>action()</code>
+### <code>icon()</code>
 
 ## Events
 
 name|event
 ---|---
-onTreeItemSelected|{"detail":{"treeItem":"this"}}
+<code>onTreeItemSelected</code>|{"detail":{"treeItem":"this"}}
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdTreeRowComponent
@@ -1317,7 +1317,7 @@ MdComponent
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
 # MdTreeComponent
@@ -1326,19 +1326,19 @@ MdComponent
 
 name|type
 ---|---
-items|Array
-items2|Array
+<code>items</code>|Array
+<code>items2</code>|Array
 
 ## Instance methods
 
-### constructor()
-### flatten(items, parent, indent)
+### <code>constructor()</code>
+### <code>flatten(items, parent, indent)</code>
 name|type|default
 ---|---|---
 items|Array|undefined
 parent|String|undefined
 indent|Number|0
-### toggle(data)
+### <code>toggle(data)</code>
 name|type|default
 ---|---|---
 data|Object|undefined
@@ -1347,10 +1347,10 @@ data|Object|undefined
 
 name|event
 ---|---
-onTreeItemClick|{"detail":{"event":{}}}
+<code>onTreeItemClick</code>|{"detail":{"event":{}}}
 
 ## Inheritance
 
-MdComponent
+<code>MdComponent</code>
 
 ---
