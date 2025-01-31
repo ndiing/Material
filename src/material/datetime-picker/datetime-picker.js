@@ -4,6 +4,7 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { choose } from "lit/directives/choose.js";
 import { parseDatetimeLocal, stringifyDatetimeLocal } from "../util/util";
 import { PopperController } from "../popper/popper";
+import { classMap } from "lit/directives/class-map.js";
 
 /**
  * @extends MdComponent
@@ -61,7 +62,7 @@ class MdDatetimePickerComponent extends MdComponent {
     /**
      */
     get startOfDay() {
-        return new Date(this.value.getFullYear(), this.value.getMonth()).getDay();
+        return new Date(this.selection.getFullYear(), this.selection.getMonth()).getDay();
     }
 
     /**
@@ -119,6 +120,8 @@ class MdDatetimePickerComponent extends MdComponent {
                     label: this.dayFormat(date),
                     selected: date.getFullYear() === this.value.getFullYear() && date.getMonth() === this.value.getMonth() && date.getDate() === this.value.getDate(),
                     activated: date.getFullYear() === this.current.getFullYear() && date.getMonth() === this.current.getMonth() && date.getDate() === this.current.getDate(),
+                    isSameMonth: date.getFullYear() === this.selection.getFullYear() && date.getMonth() === this.selection.getMonth(),
+                    isSunday: date.getDay() === 0,
                 };
             });
         });
@@ -183,13 +186,15 @@ class MdDatetimePickerComponent extends MdComponent {
         this.current = new Date();
         this.value = new Date();
         this.selection = new Date();
+        this.index = 2;
+
         this.yearFormat = new Intl.DateTimeFormat(undefined, { year: "numeric" }).format;
         this.monthFormat = new Intl.DateTimeFormat(undefined, { month: "long" }).format;
         this.weekdayFormat = new Intl.DateTimeFormat(undefined, { weekday: "narrow" }).format;
         this.dayFormat = new Intl.DateTimeFormat(undefined, { day: "numeric" }).format;
         this.hourFormat = new Intl.DateTimeFormat(undefined, { hour: "numeric", hour12: false }).format;
         this.minuteFormat = new Intl.DateTimeFormat(undefined, { minute: "numeric", hour12: false }).format;
-        this.index = 2;
+
         // this.icons = [{ component: "button", id: "label", label: stringifyDatetimeLocal(this.value) }];
         this.actions = [
             { id: "prev", icon: "keyboard_arrow_left" },
@@ -336,7 +341,11 @@ class MdDatetimePickerComponent extends MdComponent {
                                             ?selected="${item.selected}"
                                             ?activated="${item.activated}"
                                             @click="${this.handleDatetimePickerDayItemClick}"
-                                            class="md-datetime-picker__table-cell"
+                                            class="${classMap({
+                                                "md-datetime-picker__table-cell": true,
+                                                "md-datetime-picker__table-cell--same-month": item.isSameMonth,
+                                                "md-datetime-picker__table-cell--sunday": item.isSunday,
+                                            })}"
                                         >
                                             ${item.label}
                                         </div>
@@ -451,6 +460,9 @@ class MdDatetimePickerComponent extends MdComponent {
         await this.updateComplete;
         this.style.setProperty("--md-comp-datetime-picker-height", this.clientHeight + "px");
         this.style.setProperty("--md-comp-datetime-picker-width", this.clientWidth + "px");
+        this.selection = new Date(this.value.valueOf());
+        this.defaultValue = new Date(this.value.valueOf());
+        this.defaultIndex = this.index;
     }
 
     /**
@@ -643,6 +655,14 @@ class MdDatetimePickerComponent extends MdComponent {
      * @param {Object} [event]
      */
     handleDatetimePickerButtonCancelClick(event) {
+        this.close();
+
+        this.value.setFullYear(this.defaultValue.getFullYear());
+        this.value.setMonth(this.defaultValue.getMonth());
+        this.value.setDate(this.defaultValue.getDate());
+        this.value.setHours(this.defaultValue.getHours());
+        this.value.setMinutes(this.defaultValue.getMinutes());
+
         this.emit("onDatetimePickerButtonCancelClick", { event });
     }
 
@@ -651,6 +671,8 @@ class MdDatetimePickerComponent extends MdComponent {
      * @param {Object} [event]
      */
     handleDatetimePickerButtonOkClick(event) {
+        this.close();
+
         this.emit("onDatetimePickerButtonOkClick", { event });
     }
 
@@ -696,6 +718,7 @@ class MdDatetimePickerComponent extends MdComponent {
      */
     show(options) {
         this.style.removeProperty("--md-comp-datetime-picker-animation");
+        this.index = this.defaultIndex;
         if (this.modal) this.datetimePickerScrim.show();
         this.open = true;
         options = {

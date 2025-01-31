@@ -247,9 +247,9 @@
             @include mixins.ripple-drag();
         }
 
-        &:disabled {
-            @include mixins.ripple-disabled();
-        }
+        // &[disabled] {
+        //     @include mixins.ripple-disabled();
+        // }
 
         &[activated] {
             border: 1px solid var(--md-sys-color-outline);
@@ -259,8 +259,23 @@
             background-color: var(--md-sys-color-primary);
             color: var(--md-sys-color-on-primary);
         }
+
+
+        &:not(.md-datetime-picker__table-cell--same-month){
+            color: var(--md-sys-color-on-surface38);
+            &.md-datetime-picker__table-cell--sunday{
+                color: var(--md-sys-color-error38);
+            }
+        }
+
+                
+        &.md-datetime-picker__table-cell--sunday{
+            color: var(--md-sys-color-error);
+        }
+
     }
 }
+
 
 .md-datetime-picker__circle {
     position: relative;
