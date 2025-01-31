@@ -9,9 +9,6 @@
 
 - constructor()
 
-## Events
-
-
 ## Inheritance
 
 MdComponent
@@ -87,9 +84,6 @@ MdComponent
 
 - constructor()
 
-## Events
-
-
 ## Inheritance
 
 MdComponent
@@ -164,15 +158,9 @@ MdComponent
 ---
 # MdComponent
 
-## Instance properties
-
-
 ## Instance methods
 
 - emit()
-
-## Events
-
 
 ## Inheritance
 
@@ -194,9 +182,6 @@ LitElement
 
 - constructor()
 
-## Events
-
-
 ## Inheritance
 
 MdComponent
@@ -214,9 +199,6 @@ MdComponent
 ## Instance methods
 
 - constructor()
-
-## Events
-
 
 ## Inheritance
 
@@ -302,13 +284,7 @@ MdComponent
 ---
 # MdDividerComponent
 
-## Instance properties
-
-
 ## Instance methods
-
-
-## Events
 
 
 ## Inheritance
@@ -318,20 +294,6 @@ MdComponent
 ---
 # Dragger
 
-## Instance properties
-
-
-## Instance methods
-
-
-## Events
-
-
-## Inheritance
-
-undefined
-
----
 # MdFabComponent
 
 ## Instance properties
@@ -345,9 +307,6 @@ undefined
 ## Instance methods
 
 - constructor()
-
-## Events
-
 
 ## Inheritance
 
@@ -386,13 +345,7 @@ MdComponent
 ---
 # MdIconComponent
 
-## Instance properties
-
-
 ## Instance methods
-
-
-## Events
 
 
 ## Inheritance
@@ -438,9 +391,6 @@ MdComponent
 - constructor()
 - styleInfo()
 
-## Events
-
-
 ## Inheritance
 
 MdComponent
@@ -484,13 +434,7 @@ MdComponent
 ---
 # MdListRowComponent
 
-## Instance properties
-
-
 ## Instance methods
-
-
-## Events
 
 
 ## Inheritance
@@ -526,20 +470,6 @@ MdComponent
 ---
 # undefined
 
-## Instance properties
-
-
-## Instance methods
-
-
-## Events
-
-
-## Inheritance
-
-undefined
-
----
 # MdMenuComponent
 
 ## Instance properties
@@ -553,9 +483,6 @@ undefined
 - show()
 - close()
 - toggle()
-
-## Events
-
 
 ## Inheritance
 
@@ -575,9 +502,6 @@ MdComponent
 - show()
 - close()
 - toggle()
-
-## Events
-
 
 ## Inheritance
 
@@ -642,13 +566,7 @@ MdComponent
 ---
 # MdNavigationListRowComponent
 
-## Instance properties
-
-
 ## Instance methods
-
-
-## Events
 
 
 ## Inheritance
@@ -706,22 +624,11 @@ MdComponent
 ---
 # PopperController
 
-## Instance properties
-
-
 ## Instance methods
 
 - show()
 - closestScrollable()
 
-## Events
-
-
-## Inheritance
-
-undefined
-
----
 # MdProgressIndicatorComponent
 
 ## Instance properties
@@ -733,9 +640,6 @@ undefined
 ## Instance methods
 
 - constructor()
-
-## Events
-
 
 ## Inheritance
 
@@ -767,27 +671,13 @@ MdComponent
 ---
 # RippleController
 
-## Instance properties
-
-
 ## Instance methods
 
 - constructor()
 - hostConnected()
 - hostDisconnected()
 
-## Events
-
-
-## Inheritance
-
-undefined
-
----
 # Router
-
-## Instance properties
-
 
 ## Instance methods
 
@@ -802,14 +692,6 @@ undefined
 - emit()
 - use()
 
-## Events
-
-
-## Inheritance
-
-undefined
-
----
 # MdScrimComponent
 
 ## Instance properties
@@ -970,9 +852,6 @@ MdComponent
 ---
 # Store
 
-## Instance properties
-
-
 ## Instance methods
 
 - constructor()
@@ -985,14 +864,6 @@ MdComponent
 - paginate()
 - get()
 
-## Events
-
-
-## Inheritance
-
-undefined
-
----
 # MdSwitchComponent
 
 ## Instance properties
@@ -1194,13 +1065,7 @@ MdComponent
 ---
 # MdTreeRowComponent
 
-## Instance properties
-
-
 ## Instance methods
-
-
-## Events
 
 
 ## Inheritance
