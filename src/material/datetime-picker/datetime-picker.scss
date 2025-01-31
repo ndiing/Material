@@ -203,6 +203,10 @@
 .md-datetime-picker__table-header {
     display: flex;
     flex-direction: column;
+
+    .md-datetime-picker__table-cell {
+        @include mixins.typescale-label-large();
+    }
 }
 
 .md-datetime-picker__table-row {
@@ -260,22 +264,26 @@
             color: var(--md-sys-color-on-primary);
         }
 
-
-        &:not(.md-datetime-picker__table-cell--same-month){
+        &:not(.md-datetime-picker__table-cell--same-month) {
             color: var(--md-sys-color-on-surface38);
-            &.md-datetime-picker__table-cell--sunday{
-                color: var(--md-sys-color-error38);
-            }
+            // &.md-datetime-picker__table-cell--sunday{
+            //     color: var(--md-sys-color-error38);
+            // }
         }
 
-                
-        &.md-datetime-picker__table-cell--sunday{
-            color: var(--md-sys-color-error);
-        }
-
+        // &.md-datetime-picker__table-cell--sunday{
+        //     color: var(--md-sys-color-error);
+        //     // &[selected] {
+        //     //     background-color: var(--md-sys-color-error);
+        //     //     color: var(--md-sys-color-on-error);
+        //     // }
+        //     &[selected] {
+        //         background-color: var(--md-sys-color-primary);
+        //         color: var(--md-sys-color-on-primary);
+        //     }
+        // }
     }
 }
-
 
 .md-datetime-picker__circle {
     position: relative;

@@ -10,6 +10,18 @@ const isProduction = process.env.NODE_ENV === "production";
 const stylesHandler = MiniCssExtractPlugin.loader;
 
 const config = {
+    cache: {
+        type: "filesystem", // Simpan hasil build di disk
+        buildDependencies: {
+            config: [__filename], // Menggunakan file konfigurasi sebagai dependency cache
+        },
+    },
+    optimization: {
+        usedExports: true, // Mengaktifkan tree shaking untuk ekspor yang digunakan
+        splitChunks: {
+            chunks: "all", // Membagi kode untuk semua tipe chunk (async dan non-async)
+        },
+    },
     entry: "./src/index.js",
     output: {
         path: path.resolve(__dirname, "dist"),
@@ -18,9 +30,10 @@ const config = {
     devServer: {
         open: true,
         host: "localhost",
-        // compress: true,
+        compress: true,
         historyApiFallback: true,
         static: "./",
+        hot: true,
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -36,7 +49,18 @@ const config = {
         rules: [
             {
                 test: /\.(js|jsx)$/i,
-                loader: "babel-loader",
+                // loader: "babel-loader",
+                exclude: /node_modules/,
+                use: [
+                    "thread-loader", // Tambahkan ini untuk paralelisasi
+                    {
+                        loader: "babel-loader",
+                        options: {
+                            cacheDirectory: true,
+                            // parallel: true,
+                        },
+                    },
+                ],
             },
             {
                 test: /\.s[ac]ss$/i,
@@ -69,6 +93,7 @@ module.exports = () => {
         config.plugins.push(new WorkboxWebpackPlugin.GenerateSW());
     } else {
         config.mode = "development";
+        config.devtool = "eval-cheap-module-source-map";
     }
     return config;
 };
