@@ -5,6 +5,8 @@
 // import "./popper/popper.js";
 // import "./dragger/dragger.js";
 // import "./store/store.js";
+import "./polyfill/polyfill.js";
+import "./util/util.js";
 import "./icon/icon.js";
 import "./image/image.js";
 import "./divider/divider.js";

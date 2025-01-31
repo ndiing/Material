@@ -25,7 +25,7 @@ class MdSliderComponent extends MdComponent {
         variant: { type: String },
         name: { type: String },
         value: {
-            type: String,
+            // type: String,
             converter: {
                 fromAttribute: (value, type) => {
                     return [].concat(JSON.parse(value));
