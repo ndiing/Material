@@ -153,10 +153,21 @@ class MdDatetimePickerComponent extends MdComponent {
         });
     }
 
-    /**
-     */
-    get label() {
-        return stringifyDatetimeLocal(this.value)
+    // /**
+    //  */
+    // get label() {
+    //     return stringifyDatetimeLocal(this.value)
+    // }
+
+    get icons() {
+        const map = {
+            0: () => [this.years[0].label, this.years[this.years.length - 1].label].join(" - "),
+            1: () => this.selection.getFullYear(),
+            2: () => this.selection.toLocaleString(),
+            3: () => this.selection.toLocaleTimeString(),
+            4: () => this.selection.toLocaleTimeString(),
+        };
+        return [{ component: "button", id: "label", label: map[this.index]() }];
     }
 
     /**
@@ -174,7 +185,7 @@ class MdDatetimePickerComponent extends MdComponent {
         this.minuteFormat = new Intl.DateTimeFormat(undefined, { minute: "numeric", hour12: false }).format;
         this.index = 2;
 
-        // this.icons = [{ component: "button", id: "label", label: this.value?.toJSON() }];
+        // this.icons = [{ component: "button", id: "label", label: stringifyDatetimeLocal(this.value) }];
         this.actions = [
             { id: "prev", icon: "keyboard_arrow_left" },
             { id: "next", icon: "keyboard_arrow_right" },
@@ -388,7 +399,7 @@ class MdDatetimePickerComponent extends MdComponent {
             ${this.icons?.length || this.label || this.sublabel || this.actions?.length
                 ? html`
                       <div class="md-datetime-picker__header">
-                          ${this.icons?.length ? html` <div class="md-datetime-picker__icons">${this.icons.map((icon) => this.renderItem(icon, "icon"))}</div> ` : nothing}
+                          <!-- ${this.icons?.length ? html` <div class="md-datetime-picker__icons">${this.icons.map((icon) => this.renderItem(icon, "icon"))}</div> ` : nothing}
                           ${this.label || this.sublabel
                               ? html`
                                     <div
@@ -398,7 +409,8 @@ class MdDatetimePickerComponent extends MdComponent {
                                         ${this.label ? html`<div class="md-datetime-picker__label">${this.label}</div>` : nothing} ${this.sublabel ? html`<div class="md-datetime-picker__sublabel">${this.sublabel}</div>` : nothing}
                                     </div>
                                 `
-                              : nothing}
+                              : nothing} -->
+                          <div class="md-datetime-picker__icons">${this.icons.map((icon) => this.renderItem(icon, "icon"))}</div>
                           ${this.actions?.length ? html` <div class="md-datetime-picker__actions">${this.actions.map((action) => this.renderItem(action, "icon-button"))}</div> ` : nothing}
                       </div>
                   `
@@ -465,12 +477,12 @@ class MdDatetimePickerComponent extends MdComponent {
      * @param {Object} [event]
      */
     handleDatetimePickerLabelClick(event) {
-        const map = {
-            2: 0,
-            0: 1,
-            1: 2,
-        };
-        this.index = map[this.index];
+        // const map = {
+        //     2: 0,
+        //     0: 1,
+        //     1: 2,
+        // };
+        // this.index = map[this.index];
         this.emit("onDatetimePickerLabelClick", { event });
     }
 
@@ -638,10 +650,25 @@ class MdDatetimePickerComponent extends MdComponent {
      * @private
      * @param {Object} [event]
      */
+    handleDatetimePickerButtonLabelClick(event) {
+        const map = {
+            2: 0,
+            0: 1,
+            1: 2,
+        };
+        this.index = map[this.index];
+        this.emit("onDatetimePickerButtonLabelClick", { event });
+    }
+
+    /**
+     * @private
+     * @param {Object} [event]
+     */
     handleDatetimePickerButtonClick(event) {
         const data = event.currentTarget.data;
         if (data.id === "cancel") return this.handleDatetimePickerButtonCancelClick(event);
         else if (data.id === "ok") return this.handleDatetimePickerButtonOkClick(event);
+        else if (data.id === "label") return this.handleDatetimePickerButtonLabelClick(event);
         this.emit("onDatetimePickerButtonClick", { event });
     }
 
