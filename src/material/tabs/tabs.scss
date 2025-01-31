@@ -15,7 +15,6 @@
     gap: 0 8px;
 
     &[selected] {
-        
         color: var(--md-sys-color-primary);
 
         .md-tab__icon {
@@ -44,7 +43,6 @@
 
 .md-tab__sublabel {
     @include mixins.typescale-body-medium();
-    
     height: var(--md-sys-typescale-body-medium-line-height);
     overflow: hidden;
     color: var(--md-sys-color-on-surface-variant);
@@ -112,7 +110,6 @@
         .md-tab__icon {
             ~ .md-tab__labels {
                 ~ .md-tab__badge {
-                    
                     margin-top: -20px;
                 }
             }

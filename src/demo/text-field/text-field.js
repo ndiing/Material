@@ -1,5 +1,10 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
+
+/**
+ * @class DemoTextField
+ * @extends MdComponent
+ */
 class DemoTextField extends MdComponent {
     /**
      * @private
@@ -57,7 +62,6 @@ class DemoTextField extends MdComponent {
                                 .actions="${[{ icon: "image" }]}"
                             ></md-text-field>
                         </div>
-
                         <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
                             <md-text-field
                                 name="text6"
@@ -109,7 +113,6 @@ class DemoTextField extends MdComponent {
                                 .actions="${[{ icon: "image" }]}"
                             ></md-text-field>
                         </div>
-
                         <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
                             <md-text-field
                                 variant="filled"
@@ -160,7 +163,6 @@ class DemoTextField extends MdComponent {
                                 .actions="${[{ icon: "image" }]}"
                             ></md-text-field>
                         </div>
-
                         <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
                             <md-text-field
                                 variant="filled"
@@ -218,7 +220,6 @@ class DemoTextField extends MdComponent {
                                 .actions="${[{ icon: "image" }]}"
                             ></md-text-field>
                         </div>
-
                         <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
                             <md-text-field
                                 variant="outlined"
@@ -269,7 +270,6 @@ class DemoTextField extends MdComponent {
                                 .actions="${[{ icon: "image" }]}"
                             ></md-text-field>
                         </div>
-
                         <div class="md-layout__column--expanded4 md-layout__column--medium4 md-layout__column--compact4">
                             <md-text-field
                                 variant="outlined"
@@ -327,7 +327,6 @@ class DemoTextField extends MdComponent {
                                 .actions="${[{ icon: "image" }]}"
                             ></md-text-field>
                         </div>
-
                         <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                             <md-button
                                 variant="filled-tonal"

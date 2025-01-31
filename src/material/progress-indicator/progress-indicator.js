@@ -1,11 +1,12 @@
 import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
+
 /**
- *
+ * @class MdProgressIndicatorComponent
+ * @extends MdComponent
  */
 class MdProgressIndicatorComponent extends MdComponent {
     /**
-     *
      * @property {String} [variant]
      * @property {Number} [max]
      * @property {Number} [value]
@@ -15,14 +16,9 @@ class MdProgressIndicatorComponent extends MdComponent {
         max: { type: Number },
         value: { type: Number },
     };
-
-    /* prettier-ignore */
-    variants=[
-        'circular'
-    ]
+    variants = ["circular"];
 
     /**
-     *
      */
     constructor() {
         super();
@@ -34,14 +30,13 @@ class MdProgressIndicatorComponent extends MdComponent {
      * @private
      */
     renderProgressIndicatorNative() {
-        /* prettier-ignore */
         return html`
-            <progress 
+            <progress
                 class="md-progress-indicator__native"
                 max="${this.max}"
                 value="${this.value}"
             ></progress>
-        `
+        `;
     }
 
     /**
@@ -52,30 +47,36 @@ class MdProgressIndicatorComponent extends MdComponent {
         this.strokeWidth = (4 / 40) * 100;
         this.strokeDasharray = 2 * Math.PI * this.r;
         this.strokeDashoffset = this.strokeDasharray * (1 - this.value / 100);
-
-        /* prettier-ignore */
         return html`
             <div class="md-progress-indicator__wrapper">
-                <svg class="md-progress-indicator__track" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <circle 
-                        cx="50" 
-                        cy="50" 
-                        r="${this.r}" 
-                        fill="transparent" 
-                        stroke="var(--md-sys-color-secondary-container)" 
+                <svg
+                    class="md-progress-indicator__track"
+                    viewBox="0 0 100 100"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <circle
+                        cx="50"
+                        cy="50"
+                        r="${this.r}"
+                        fill="transparent"
+                        stroke="var(--md-sys-color-secondary-container)"
                         stroke-width="${this.strokeWidth}"
                         stroke-linecap="round"
                         stroke-dasharray="${this.strokeDasharray}"
                         stroke-dashoffset="0"
                     />
                 </svg>
-                <svg class="md-progress-indicator__indicator" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <circle 
-                        cx="50" 
-                        cy="50" 
-                        r="${this.r}" 
-                        fill="transparent" 
-                        stroke="var(--md-sys-color-primary)" 
+                <svg
+                    class="md-progress-indicator__indicator"
+                    viewBox="0 0 100 100"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <circle
+                        cx="50"
+                        cy="50"
+                        r="${this.r}"
+                        fill="transparent"
+                        stroke="var(--md-sys-color-primary)"
                         stroke-width="${this.strokeWidth}"
                         stroke-linecap="round"
                         stroke-dasharray="${this.strokeDasharray}"
@@ -83,7 +84,7 @@ class MdProgressIndicatorComponent extends MdComponent {
                     />
                 </svg>
             </div>
-        `
+        `;
     }
 
     /**
@@ -104,7 +105,7 @@ class MdProgressIndicatorComponent extends MdComponent {
 
     /**
      * @private
-     * @param {Object} changedProperties
+     * @param {String} [changedProperties]
      */
     updated(changedProperties) {
         super.updated(changedProperties);

@@ -1,11 +1,12 @@
 import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
+
 /**
- *
+ * @class MdBadgeComponent
+ * @extends MdComponent
  */
 class MdBadgeComponent extends MdComponent {
     /**
-     *
      * @property {Number} [label]
      * @property {Number} [max]
      */
@@ -15,7 +16,6 @@ class MdBadgeComponent extends MdComponent {
     };
 
     /**
-     *
      */
     constructor() {
         super();

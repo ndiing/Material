@@ -43,11 +43,8 @@
 .md-datetime-picker__header {
     display: flex;
     align-items: center;
-    
     padding: 20px 16px;
     gap: 0 16px;
-
-    
 }
 
 .md-datetime-picker__icons {
@@ -98,17 +95,13 @@
 
 .md-datetime-picker__body {
     flex: 1;
-    
     @include mixins.typescale-body-medium();
     color: var(--md-sys-color-on-surface-variant);
-
-    
 }
 
 .md-datetime-picker__footer {
     display: flex;
     align-items: center;
-    
     padding: 12px 16px;
 }
 
@@ -283,7 +276,6 @@
     width: 48px;
     border-radius: 24px;
     @include mixins.ripple();
-    
     @include mixins.ripple-trigger();
 
     &:focus {
@@ -335,8 +327,6 @@
 
 .md-datetime-picker__circle--hours {
     .md-datetime-picker__circle-item {
-        
-
         @for $i from 1 through 12 {
             &:nth-child(#{$i}) {
                 left: calc(100px * cos((($i - 4) / 12) * 2 * pi) + 104px);

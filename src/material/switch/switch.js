@@ -2,12 +2,15 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { RippleController } from "../ripple/ripple";
+
 /**
- *
+ * @class MdSwitchComponent
+ * @extends MdComponent
+ * @fires MdSwitchComponent#onSwitchNativeInput - {"detail":{"event":{}}}
+ * @fires MdSwitchComponent#onSwitchNativeReset - {"detail":{"event":{}}}
  */
 class MdSwitchComponent extends MdComponent {
     /**
-     *
      * @property {String} [name]
      * @property {String} [value]
      * @property {Boolean} [indeterminate]
@@ -23,7 +26,6 @@ class MdSwitchComponent extends MdComponent {
     };
 
     /**
-     *
      */
     constructor() {
         super();
@@ -40,10 +42,9 @@ class MdSwitchComponent extends MdComponent {
      * @private
      */
     render() {
-        /* prettier-ignore */
         return html`
-            <input 
-                type="checkbox" 
+            <input
+                type="checkbox"
                 .name="${ifDefined(this.name)}"
                 .value="${ifDefined(this.value)}"
                 .indeterminate="${ifDefined(this.indeterminate)}"
@@ -54,11 +55,11 @@ class MdSwitchComponent extends MdComponent {
                 class="md-switch__native"
                 @input="${this.handleSwitchNativeInput}"
                 @reset="${this.handleSwitchNativeReset}"
-            >
+            />
             <div class="md-switch__track">
-                <div class="md-switch__thumb">${this.icons?.length?html`<md-icon class="md-switch__icon">${this.icons[~~this.checked]}</md-icon>`:nothing}</div>
+                <div class="md-switch__thumb">${this.icons?.length ? html`<md-icon class="md-switch__icon">${this.icons[~~this.checked]}</md-icon>` : nothing}</div>
             </div>
-        `
+        `;
     }
 
     /**
@@ -75,7 +76,7 @@ class MdSwitchComponent extends MdComponent {
 
     /**
      * @private
-     * @param {Object} event
+     * @param {Object} [event]
      */
     handleSwitchNativeInput(event) {
         this.style.removeProperty("--md-comp-switch-thumb-transition-property");
@@ -87,13 +88,12 @@ class MdSwitchComponent extends MdComponent {
 
     /**
      * @private
-     * @param {Object} event
+     * @param {Object} [event]
      */
     handleSwitchNativeReset(event) {
         this.value = this.defaultValue;
         this.indeterminate = this.defaultIndeterminate;
         this.checked = this.defaultChecked;
-
         this.emit("onSwitchNativeReset", { event });
     }
 }

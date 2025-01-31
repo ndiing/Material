@@ -1,8 +1,12 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
+
+/**
+ * @class DemoTree
+ * @extends MdComponent
+ */
 class DemoTree extends MdComponent {
     /**
-     * @private
      */
     constructor() {
         super();

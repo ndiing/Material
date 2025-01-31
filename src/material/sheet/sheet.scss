@@ -11,7 +11,6 @@
     align-items: center;
     padding: 24px;
     gap: 0 16px;
-    
 }
 
 .md-sheet__icons {
@@ -62,9 +61,7 @@
 
 .md-sheet__body {
     flex: 1;
-    
     overflow: auto;
-    
 }
 
 .md-sheet__footer {
@@ -164,7 +161,6 @@
 }
 
 .md-sheet--modal {
-    
     background-color: var(--md-sys-color-surface-container-low);
     box-shadow: var(--md-sys-elevation-level1);
     position: absolute;

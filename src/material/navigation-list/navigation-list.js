@@ -1,12 +1,14 @@
 import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
+
 /**
- *
+ * @class MdNavigationListComponent
+ * @extends MdComponent
+ * @fires MdNavigationListComponent#onNavigationListItemClick - {"detail":{"event":{}}}
  */
 class MdNavigationListComponent extends MdComponent {
     /**
-     *
      * @property {Array} [items]
      * @property {Object} [rippleOptions]
      */
@@ -16,7 +18,6 @@ class MdNavigationListComponent extends MdComponent {
     };
 
     /**
-     *
      */
     constructor() {
         super();
@@ -25,10 +26,9 @@ class MdNavigationListComponent extends MdComponent {
 
     /**
      * @private
-     * @param {String} item
+     * @param {String} [item]
      */
     renderNavigationListItem(item) {
-        /* prettier-ignore */
         return html`
             <md-navigation-list-row>
                 <md-navigation-list-item
@@ -38,21 +38,19 @@ class MdNavigationListComponent extends MdComponent {
                     .selected="${ifDefined(item.selected)}"
                     .disabled="${ifDefined(item.disabled)}"
                     .routerLink="${ifDefined(item.routerLink)}"
-                    .rippleOptions="${ifDefined(item.rippleOptions||this.rippleOptions)}"
+                    .rippleOptions="${ifDefined(item.rippleOptions || this.rippleOptions)}"
                     .badge="${ifDefined(item.badge)}"
                     @click="${this.handleNavigationListItemClick}"
-                    
                 ></md-navigation-list-item>
             </md-navigation-list-row>
-        `
+        `;
     }
 
     /**
      * @private
      */
     render() {
-        /* prettier-ignore */
-        return this.items.map(item=>this.renderNavigationListItem(item))
+        return this.items.map((item) => this.renderNavigationListItem(item));
     }
 
     /**
@@ -66,7 +64,7 @@ class MdNavigationListComponent extends MdComponent {
 
     /**
      * @private
-     * @param {Object} event
+     * @param {Object} [event]
      */
     handleNavigationListItemClick(event) {
         this.style.removeProperty("--md-comp-navigation-list-icon-animation");
@@ -77,8 +75,7 @@ class MdNavigationListComponent extends MdComponent {
     }
 
     /**
-     *
-     * @param {Object} data
+     * @param {Object} [data]
      */
     singleSelect(data) {
         this.items.forEach((item) => {

@@ -2,12 +2,14 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { RippleController } from "../ripple/ripple";
 import { ifDefined } from "lit/directives/if-defined.js";
+
 /**
- *
+ * @class MdIconButtonComponent
+ * @extends MdComponent
+ * @fires MdIconButtonComponent#onIconButtonClick - {"detail":{"event":{}}}
  */
 class MdIconButtonComponent extends MdComponent {
     /**
-     *
      * @property {String} [icon]
      * @property {String} [variant]
      * @property {String} [type]
@@ -23,16 +25,9 @@ class MdIconButtonComponent extends MdComponent {
         selected: { type: Boolean, reflect: true },
         disabled: { type: Boolean, reflect: true },
     };
-
-    /* prettier-ignore */
-    variants=[
-        'filled',
-        'filled-tonal',
-        'outlined',
-    ]
+    variants = ["filled", "filled-tonal", "outlined"];
 
     /**
-     *
      */
     constructor() {
         super();
@@ -43,14 +38,15 @@ class MdIconButtonComponent extends MdComponent {
      * @private
      */
     render() {
-        /* prettier-ignore */
         return html`
-            <button 
+            <button
                 class="md-icon-button__native"
                 .type="${ifDefined(this.type)}"
-            >icon-button</button>
-            ${this.icon?html`<md-icon class="md-icon-button__icon">${this.icon}</md-icon>`:nothing}
-        `
+            >
+                icon-button
+            </button>
+            ${this.icon ? html`<md-icon class="md-icon-button__icon">${this.icon}</md-icon>` : nothing}
+        `;
     }
 
     /**
@@ -80,7 +76,7 @@ class MdIconButtonComponent extends MdComponent {
 
     /**
      * @private
-     * @param {Object} changedProperties
+     * @param {String} [changedProperties]
      */
     updated(changedProperties) {
         super.updated(changedProperties);
@@ -93,7 +89,7 @@ class MdIconButtonComponent extends MdComponent {
 
     /**
      * @private
-     * @param {Object} event
+     * @param {Object} [event]
      */
     handleIconButtonClick(event) {
         if (this.toggle) {

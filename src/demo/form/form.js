@@ -1,5 +1,10 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
+
+/**
+ * @class DemoForm
+ * @extends MdComponent
+ */
 class DemoForm extends MdComponent {
     /**
      * @private
@@ -30,7 +35,6 @@ class DemoForm extends MdComponent {
                                         checked
                                     ></md-checkbox>
                                 </div>
-
                                 <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                                     <md-radio-button
                                         name="radio-button"
@@ -44,7 +48,6 @@ class DemoForm extends MdComponent {
                                         checked
                                     ></md-radio-button>
                                 </div>
-
                                 <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                                     <md-switch name="switch0"></md-switch>
                                 </div>
@@ -67,7 +70,6 @@ class DemoForm extends MdComponent {
                                         checked
                                     ></md-switch>
                                 </div>
-
                                 <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                                     <md-slider
                                         name="slider0"
@@ -90,7 +92,6 @@ class DemoForm extends MdComponent {
                                         value="[25,75]"
                                     ></md-slider>
                                 </div>
-
                                 <!-- <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4"><md-text-field variant="filled" label="Color" name="color" type="color"></md-text-field></div> -->
                                 <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                                     <md-text-field
@@ -189,7 +190,6 @@ class DemoForm extends MdComponent {
                                         type="week"
                                     ></md-text-field>
                                 </div>
-
                                 <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                                     <md-button
                                         variant="filled-tonal"

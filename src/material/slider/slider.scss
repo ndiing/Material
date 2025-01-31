@@ -5,7 +5,6 @@
     align-items: center;
     width: 100%;
     height: 56px;
-
     position: relative;
 }
 
@@ -15,7 +14,6 @@
     width: 100%;
     height: 16px;
     border-radius: 8px;
-    
     background: linear-gradient(to right, var(--md-sys-color-primary) 0% calc(1% * var(--md-comp-slider-value0) * 100), var(--md-sys-color-secondary-container) calc(1% * var(--md-comp-slider-value0) * 100) 100%);
     position: absolute;
 }
@@ -23,7 +21,6 @@
 .md-slider__native {
     appearance: none;
     width: 100%;
-    
     background: transparent;
     z-index: 1;
 
@@ -115,6 +112,7 @@
     .md-slider__wrapper {
         &:first-of-type {
             background: linear-gradient(to right, var(--md-sys-color-primary-container) 0% calc(1% * var(--md-comp-slider-value0) * 100), var(--md-sys-color-primary) calc(1% * var(--md-comp-slider-value0) * 100) calc(1% * var(--md-comp-slider-value1) * 100), var(--md-sys-color-secondary-container) calc(1% * var(--md-comp-slider-value1) * 100) 100%);
+
             .md-slider__native {
                 clip-path: inset(0 calc(100% - (44px / 2 + (100% - 44px) * (var(--md-comp-slider-value0) + (var(--md-comp-slider-value1) - var(--md-comp-slider-value0)) / 2))) 0 0);
             }
@@ -122,6 +120,7 @@
 
         &:last-of-type {
             background: transparent;
+
             .md-slider__native {
                 clip-path: inset(0 0 0 calc(44px / 2 + (100% - 44px) * (var(--md-comp-slider-value0) + (var(--md-comp-slider-value1) - var(--md-comp-slider-value0)) / 2)));
             }

@@ -3,10 +3,16 @@ import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 
 /**
- *
- *
+ * @class MdDataTableComponent
+ * @extends MdComponent
  */
 class MdDataTableComponent extends MdComponent {
+    /**
+     * @property {Array} [headers]
+     * @property {Array} [bodies]
+     * @property {Array} [data]
+     * @property {Array} [footers]
+     */
     static properties = {
         headers: { type: Array },
         bodies: { type: Array },
@@ -14,6 +20,8 @@ class MdDataTableComponent extends MdComponent {
         footers: { type: Array },
     };
 
+    /**
+     */
     constructor() {
         super();
         this.headers = [];
@@ -22,76 +30,89 @@ class MdDataTableComponent extends MdComponent {
         this.footers = [];
     }
 
+    /**
+     * @private
+     * @param {String} [tr]
+     */
     renderDataTableHeaderRow(tr) {
-        /* prettier-ignore */
         return html`
             <tr>
-                ${tr.map(th => html`
-                    <th 
-                        .data="${th}"
-                    >
-                        <md-data-table-cell
-                            .label="${ifDefined(th.label)}"
-                            .checkbox="${ifDefined(th.checkbox)}"
-                            .action="${ifDefined(th.action)}"
-                        ></md-data-table-cell>
-                    </th>
-                `)}
+                ${tr.map(
+                    (th) => html`
+                        <th .data="${th}">
+                            <md-data-table-cell
+                                .label="${ifDefined(th.label)}"
+                                .checkbox="${ifDefined(th.checkbox)}"
+                                .action="${ifDefined(th.action)}"
+                            ></md-data-table-cell>
+                        </th>
+                    `,
+                )}
             </tr>
         `;
     }
 
+    /**
+     * @private
+     * @param {String} [item]
+     */
     renderDataTableBodyRow(item) {
-        /* prettier-ignore */
         return html`
             <tbody>
-                ${this.bodies.map(tr => html`
-                    <tr>
-                        ${tr.map(td => html`
-                            <td 
-                                .data="${td}"
-                            >
-                                <md-data-table-cell
-                                    .label="${ifDefined(item[td.name])}"
-                                    .checkbox="${ifDefined(td.checkbox)}"
-                                    .action="${ifDefined(td.action)}"
-                                ></md-data-table-cell>
-                            </td>
-                        `)}
-                    </tr>
-                `)}
+                ${this.bodies.map(
+                    (tr) => html`
+                        <tr>
+                            ${tr.map(
+                                (td) => html`
+                                    <td .data="${td}">
+                                        <md-data-table-cell
+                                            .label="${ifDefined(item[td.name])}"
+                                            .checkbox="${ifDefined(td.checkbox)}"
+                                            .action="${ifDefined(td.action)}"
+                                        ></md-data-table-cell>
+                                    </td>
+                                `,
+                            )}
+                        </tr>
+                    `,
+                )}
             </tbody>
         `;
     }
 
+    /**
+     * @private
+     * @param {String} [tr]
+     */
     renderDataTableFooterRow(tr) {
-        /* prettier-ignore */
         return html`
             <tr>
-                ${tr.map(td => html`
-                    <td 
-                        .data="${td}"
-                    >
-                        <md-data-table-cell></md-data-table-cell>
-                    </td>
-                `)}
+                ${tr.map(
+                    (td) => html`
+                        <td .data="${td}">
+                            <md-data-table-cell></md-data-table-cell>
+                        </td>
+                    `,
+                )}
             </tr>
         `;
     }
 
+    /**
+     * @private
+     */
     render() {
-        /* prettier-ignore */
         return html`
             <table class="md-data-table__native">
                 <thead>
-                    ${this.headers.map(tr=>this.renderDataTableHeaderRow(tr))}
+                    ${this.headers.map((tr) => this.renderDataTableHeaderRow(tr))}
                 </thead>
-                ${this.data.map(item=>this.renderDataTableBodyRow(item))}
+                ${this.data.map((item) => this.renderDataTableBodyRow(item))}
                 <tfoot>
-                    ${this.footers.map(tr=>this.renderDataTableFooterRow(tr))}
+                    ${this.footers.map((tr) => this.renderDataTableFooterRow(tr))}
                 </tfoot>
             </table>
-        `
+        `;
     }
 
     /**
@@ -104,6 +125,8 @@ class MdDataTableComponent extends MdComponent {
 
     /**
      * @private
+     * @async
+     * @param {String} [changedProperties]
      */
     async updated(changedProperties) {
         super.updated(changedProperties);

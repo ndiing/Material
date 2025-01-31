@@ -1,11 +1,11 @@
 /**
- *
+ * @class RippleController
+ * @extends undefined
  */
 class RippleController {
     /**
-     * @private
-     * @param {String} host
-     * @param {String} options
+     * @param {String} [host]
+     * @param {String} [options]
      */
     constructor(host, options) {
         (this.host = host).addController(this);
@@ -21,6 +21,10 @@ class RippleController {
             ...options,
         };
     }
+
+    /**
+     * @async
+     */
     async hostConnected() {
         await this.host.updateComplete;
         this.container = this.host;
@@ -60,6 +64,10 @@ class RippleController {
         this.trigger.addEventListener("focus", this.handleFocus);
         this.trigger.addEventListener("blur", this.handleBlur);
     }
+
+    /**
+     * @async
+     */
     async hostDisconnected() {
         await this.host.updateComplete;
         this.container.classList.remove("md-ripple");
@@ -75,7 +83,7 @@ class RippleController {
 
     /**
      * @private
-     * @param {Object} event
+     * @param {Object} [event]
      */
     handlePointerenter(event) {
         this.container.classList.add("md-ripple--hover");
@@ -83,7 +91,7 @@ class RippleController {
 
     /**
      * @private
-     * @param {Object} event
+     * @param {Object} [event]
      */
     handlePointerleave(event) {
         this.container.classList.remove("md-ripple--hover");
@@ -91,7 +99,7 @@ class RippleController {
 
     /**
      * @private
-     * @param {Object} event
+     * @param {Object} [event]
      */
     handlePointerdown(event) {
         window.addEventListener("pointerup", this.handlePointerup);
@@ -112,7 +120,7 @@ class RippleController {
 
     /**
      * @private
-     * @param {Object} event
+     * @param {Object} [event]
      */
     handlePointerup(event) {
         this.container.classList.remove("md-ripple--press");
@@ -121,7 +129,7 @@ class RippleController {
 
     /**
      * @private
-     * @param {Object} event
+     * @param {Object} [event]
      */
     handleFocus(event) {
         this.container.classList.add("md-ripple--focus");
@@ -129,7 +137,7 @@ class RippleController {
 
     /**
      * @private
-     * @param {Object} event
+     * @param {Object} [event]
      */
     handleBlur(event) {
         this.container.classList.remove("md-ripple--focus");

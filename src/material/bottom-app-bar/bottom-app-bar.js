@@ -2,12 +2,15 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { choose } from "lit/directives/choose.js";
+
 /**
- *
+ * @class MdBottomAppBarComponent
+ * @extends MdComponent
+ * @fires MdBottomAppBarComponent#onBottomAppBarIconButtonClick - {"detail":{"event":{}}}
+ * @fires MdBottomAppBarComponent#onBottomAppBarFabClick - {"detail":{"event":{}}}
  */
 class MdBottomAppBarComponent extends MdComponent {
     /**
-     *
      * @property {Array} [actions]
      * @property {String} [fab]
      * @property {Boolean} [open]
@@ -19,7 +22,6 @@ class MdBottomAppBarComponent extends MdComponent {
     };
 
     /**
-     *
      */
     constructor() {
         super();
@@ -27,10 +29,9 @@ class MdBottomAppBarComponent extends MdComponent {
 
     /**
      * @private
-     * @param {String} item
+     * @param {String} [item]
      */
     renderIconButton(item) {
-        /* prettier-ignore */
         return html`
             <md-icon-button
                 class="md-bottom-app-bar__action"
@@ -43,43 +44,39 @@ class MdBottomAppBarComponent extends MdComponent {
                 .disabled="${ifDefined(item.disabled)}"
                 @click="${this.handleBottomAppBarIconButtonClick}"
             ></md-icon-button>
-        `
+        `;
     }
 
     /**
      * @private
-     * @param {String} item
+     * @param {String} [item]
      */
     renderFab(item) {
-        /* prettier-ignore */
         return html`
             <md-fab
                 class="md-bottom-app-bar__fab"
                 .data="${item}"
-                .icon="${ifDefined(item?.icon??item)}"
+                .icon="${ifDefined(item?.icon ?? item)}"
                 .label="${ifDefined(item?.label)}"
                 .type="${ifDefined(item?.type)}"
                 .size="${ifDefined(item?.size)}"
-                .variant="${ifDefined(item?.variant??'unelevated')}"
+                .variant="${ifDefined(item?.variant ?? "unelevated")}"
                 @click="${this.handleBottomAppBarFabClick}"
             ></md-fab>
-        `
+        `;
     }
 
     /**
      * @private
      */
     render() {
-        /* prettier-ignore */
-        return html`
-            ${this.actions?.length?html`
-                <div class="md-bottom-app-bar__actions">
-                    ${this.actions.map(action=>this.renderIconButton(action))}
-                </div>    
-            `:nothing}
-            ${this.fab?this.renderFab(this.fab):nothing}
-        `
+        return html` ${this.actions?.length ? html` <div class="md-bottom-app-bar__actions">${this.actions.map((action) => this.renderIconButton(action))}</div> ` : nothing} ${this.fab ? this.renderFab(this.fab) : nothing} `;
     }
+
+    /**
+     * @private
+     * @async
+     */
     async connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-bottom-app-bar");
@@ -100,7 +97,7 @@ class MdBottomAppBarComponent extends MdComponent {
 
     /**
      * @private
-     * @param {Object} changedProperties
+     * @param {String} [changedProperties]
      */
     updated(changedProperties) {
         super.updated(changedProperties);
@@ -108,7 +105,7 @@ class MdBottomAppBarComponent extends MdComponent {
 
     /**
      * @private
-     * @param {Object} event
+     * @param {Object} [event]
      */
     handleBottomAppBarIconButtonClick(event) {
         this.emit("onBottomAppBarIconButtonClick", { event });
@@ -116,14 +113,13 @@ class MdBottomAppBarComponent extends MdComponent {
 
     /**
      * @private
-     * @param {Object} event
+     * @param {Object} [event]
      */
     handleBottomAppBarFabClick(event) {
         this.emit("onBottomAppBarFabClick", { event });
     }
 
     /**
-     *
      */
     show() {
         this.style.removeProperty("--md-comp-sheet-animation");
@@ -132,7 +128,6 @@ class MdBottomAppBarComponent extends MdComponent {
     }
 
     /**
-     *
      */
     close() {
         this.style.removeProperty("--md-comp-sheet-animation");
@@ -141,7 +136,6 @@ class MdBottomAppBarComponent extends MdComponent {
     }
 
     /**
-     *
      */
     toggle() {
         if (this.open) this.close();

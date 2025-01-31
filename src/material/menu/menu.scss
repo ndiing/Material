@@ -10,9 +10,7 @@
     background-color: var(--md-sys-color-surface-container);
     box-shadow: var(--md-sys-elevation-level2);
     position: absolute;
-    
     z-index: 11;
-    
     opacity: 0;
     pointer-events: none;
     --md-comp-menu-animation: menu-in;

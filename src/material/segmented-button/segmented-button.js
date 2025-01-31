@@ -1,12 +1,14 @@
 import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
+
 /**
- *
+ * @class MdSegmentedButtonComponent
+ * @extends MdComponent
+ * @fires MdSegmentedButtonComponent#onSegmentedButtonItemClick - {"detail":{"event":{}}}
  */
 class MdSegmentedButtonComponent extends MdComponent {
     /**
-     *
      * @property {Array} [items]
      * @property {String} [type]
      */
@@ -14,15 +16,9 @@ class MdSegmentedButtonComponent extends MdComponent {
         items: { type: Array },
         type: { type: String },
     };
-
-    /* prettier-ignore */
-    types=[
-        'single-select',
-        'multi-select',
-    ]
+    types = ["single-select", "multi-select"];
 
     /**
-     *
      */
     constructor() {
         super();
@@ -32,15 +28,14 @@ class MdSegmentedButtonComponent extends MdComponent {
 
     /**
      * @private
-     * @param {String} item
+     * @param {String} [item]
      */
     renderButton(item) {
-        /* prettier-ignore */
         return html`
-            <md-button 
+            <md-button
                 .data="${item}"
                 class="md-segmented-button__button"
-                .icon="${ifDefined(item.icon||item.selected&&'check')}"
+                .icon="${ifDefined(item.icon || (item.selected && "check"))}"
                 .label="${ifDefined(item.label)}"
                 variant="outlined"
                 .type="${ifDefined(item.type)}"
@@ -48,7 +43,7 @@ class MdSegmentedButtonComponent extends MdComponent {
                 .disabled="${ifDefined(item.disabled)}"
                 @click="${this.handleSegmentedButtonItemClick}"
             ></md-button>
-        `
+        `;
     }
 
     /**
@@ -68,7 +63,7 @@ class MdSegmentedButtonComponent extends MdComponent {
 
     /**
      * @private
-     * @param {Object} event
+     * @param {Object} [event]
      */
     handleSegmentedButtonItemClick(event) {
         const data = event.currentTarget.data;

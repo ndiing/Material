@@ -2,7 +2,6 @@
 
 .md-snackbar {
     display: inline-flex;
-    
     flex-wrap: wrap;
     width: 344px;
     min-height: 48px;
@@ -14,7 +13,6 @@
     left: 8px;
     bottom: 8px;
     z-index: 11;
-    
     opacity: 0;
     pointer-events: none;
     --md-comp-snackbar-animation: snackbar-in;
@@ -43,13 +41,11 @@
 }
 
 .md-snackbar__body {
-    
     width: 72%;
     padding: 0 16px;
     margin: 14px 0 14px 0;
     overflow: auto;
     @include mixins.typescale-body-medium();
-    
 }
 
 .md-snackbar__footer {
@@ -64,6 +60,7 @@
     display: flex;
     align-items: center;
     gap: 0 8px;
+
     .md-button {
         color: var(--md-sys-color-inverse-primary);
     }

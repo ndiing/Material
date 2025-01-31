@@ -26,7 +26,6 @@
     align-items: center;
     padding: 24px;
     gap: 0 16px;
-    
 }
 
 .md-navigation-drawer__icons {
@@ -77,15 +76,11 @@
 
 .md-navigation-drawer__body {
     flex: 1;
-    
     overflow: auto;
-    
 }
 
 .md-navigation-drawer {
     .md-navigation-list {
-        
-
         .md-navigation-list__row {
             margin: 0 12px;
         }
@@ -102,7 +97,6 @@
 }
 
 .md-navigation-drawer--modal {
-    
     background-color: var(--md-sys-color-surface-container-low);
     box-shadow: var(--md-sys-elevation-level1);
     position: absolute;

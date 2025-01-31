@@ -1,5 +1,10 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
+
+/**
+ * @class DemoError
+ * @extends MdComponent
+ */
 class DemoError extends MdComponent {
     /**
      * @private

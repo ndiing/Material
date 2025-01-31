@@ -1,6 +1,13 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
+
+/**
+ * @class DemoDataTable
+ * @extends MdComponent
+ */
 class DemoDataTable extends MdComponent {
+    /**
+     */
     constructor() {
         super();
         this.headers = [
@@ -614,6 +621,7 @@ class DemoDataTable extends MdComponent {
             },
         ].slice(0, 50);
     }
+
     /**
      * @private
      */

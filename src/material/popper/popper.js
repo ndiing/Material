@@ -1,5 +1,6 @@
 /**
- *
+ * @class PopperController
+ * @extends undefined
  */
 class PopperController {
     methods = {
@@ -22,8 +23,7 @@ class PopperController {
     };
 
     /**
-     *
-     * @param {String} options
+     * @param {Object} [options={}]
      */
     show(options = {}) {
         const { container = undefined, trigger = undefined, boundary = this.closestScrollable(container), offset = 0, placements = ["top-end", "top", "top-start", "top-right", "right-end", "right", "right-start", "bottom-right", "bottom-start", "bottom", "bottom-end", "bottom-left", "left-start", "left", "left-end", "top-left"] } = options;
@@ -45,8 +45,7 @@ class PopperController {
     }
 
     /**
-     *
-     * @param {String} element
+     * @param {String} [element]
      */
     closestScrollable(element) {
         let current = element;

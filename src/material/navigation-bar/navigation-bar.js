@@ -2,12 +2,13 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { choose } from "lit/directives/choose.js";
+
 /**
- *
+ * @class MdNavigationBarComponent
+ * @extends MdComponent
  */
 class MdNavigationBarComponent extends MdComponent {
     /**
-     *
      * @property {Boolean} [open]
      * @property {Array} [items]
      */
@@ -17,7 +18,6 @@ class MdNavigationBarComponent extends MdComponent {
     };
 
     /**
-     *
      */
     constructor() {
         super();
@@ -29,14 +29,18 @@ class MdNavigationBarComponent extends MdComponent {
      * @private
      */
     render() {
-        /* prettier-ignore */
         return html`
             <md-navigation-list
                 .rippleOptions="${this.rippleOptions}"
                 .items="${this.items}"
             ></md-navigation-list>
-        `
+        `;
     }
+
+    /**
+     * @private
+     * @async
+     */
     async connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-navigation-bar");
@@ -57,14 +61,13 @@ class MdNavigationBarComponent extends MdComponent {
 
     /**
      * @private
-     * @param {Object} changedProperties
+     * @param {String} [changedProperties]
      */
     updated(changedProperties) {
         super.updated(changedProperties);
     }
 
     /**
-     *
      */
     show() {
         this.style.removeProperty("--md-comp-sheet-animation");
@@ -73,7 +76,6 @@ class MdNavigationBarComponent extends MdComponent {
     }
 
     /**
-     *
      */
     close() {
         this.style.removeProperty("--md-comp-sheet-animation");
@@ -82,7 +84,6 @@ class MdNavigationBarComponent extends MdComponent {
     }
 
     /**
-     *
      */
     toggle() {
         if (this.open) this.close();

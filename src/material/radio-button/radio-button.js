@@ -2,12 +2,15 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { RippleController } from "../ripple/ripple";
+
 /**
- *
+ * @class MdRadioButtonComponent
+ * @extends MdComponent
+ * @fires MdRadioButtonComponent#onRadioButtonNativeInput - {"detail":{"event":{}}}
+ * @fires MdRadioButtonComponent#onRadioButtonNativeReset - {"detail":{"event":{}}}
  */
 class MdRadioButtonComponent extends MdComponent {
     /**
-     *
      * @property {String} [name]
      * @property {String} [value]
      * @property {Boolean} [indeterminate]
@@ -21,7 +24,6 @@ class MdRadioButtonComponent extends MdComponent {
     };
 
     /**
-     *
      */
     constructor() {
         super();
@@ -37,10 +39,9 @@ class MdRadioButtonComponent extends MdComponent {
      * @private
      */
     render() {
-        /* prettier-ignore */
         return html`
-            <input 
-                type="radio" 
+            <input
+                type="radio"
                 .name="${ifDefined(this.name)}"
                 .value="${ifDefined(this.value)}"
                 .indeterminate="${ifDefined(this.indeterminate)}"
@@ -51,11 +52,11 @@ class MdRadioButtonComponent extends MdComponent {
                 class="md-radio-button__native"
                 @input="${this.handleRadioButtonNativeInput}"
                 @reset="${this.handleRadioButtonNativeReset}"
-            >
+            />
             <div class="md-radio-button__track">
                 <div class="md-radio-button__thumb"></div>
             </div>
-        `
+        `;
     }
 
     /**
@@ -64,7 +65,6 @@ class MdRadioButtonComponent extends MdComponent {
     connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-radio-button");
-
         this.defaultValue = this.value;
         this.defaultIndeterminate = this.indeterminate;
         this.defaultChecked = this.checked;
@@ -72,26 +72,23 @@ class MdRadioButtonComponent extends MdComponent {
 
     /**
      * @private
-     * @param {Object} event
+     * @param {Object} [event]
      */
     handleRadioButtonNativeInput(event) {
         const native = event.currentTarget;
-
         this.indeterminate = native.indeterminate;
         this.checked = native.checked;
-
         this.emit("onRadioButtonNativeInput", { event });
     }
 
     /**
      * @private
-     * @param {Object} event
+     * @param {Object} [event]
      */
     handleRadioButtonNativeReset(event) {
         this.value = this.defaultValue;
         this.indeterminate = this.defaultIndeterminate;
         this.checked = this.defaultChecked;
-
         this.emit("onRadioButtonNativeReset", { event });
     }
 }

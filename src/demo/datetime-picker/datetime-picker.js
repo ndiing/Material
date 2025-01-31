@@ -1,5 +1,10 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
+
+/**
+ * @class DemoDatetimePicker
+ * @extends MdComponent
+ */
 class DemoDatetimePicker extends MdComponent {
     /**
      * @private

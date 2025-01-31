@@ -1,11 +1,13 @@
 import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
+
 /**
- *
+ * @class MdScrimComponent
+ * @extends MdComponent
+ * @fires MdScrimComponent#onScrimClick - {"detail":{"event":{}}}
  */
 class MdScrimComponent extends MdComponent {
     /**
-     *
      * @property {Boolean} [open]
      */
     static properties = {
@@ -32,7 +34,6 @@ class MdScrimComponent extends MdComponent {
     }
 
     /**
-     *
      */
     show() {
         this.open = true;
@@ -40,7 +41,6 @@ class MdScrimComponent extends MdComponent {
     }
 
     /**
-     *
      */
     close() {
         this.open = false;
@@ -48,7 +48,6 @@ class MdScrimComponent extends MdComponent {
     }
 
     /**
-     *
      */
     toggle() {
         if (this.open) this.close();
@@ -57,7 +56,7 @@ class MdScrimComponent extends MdComponent {
 
     /**
      * @private
-     * @param {Object} event
+     * @param {Object} [event]
      */
     handleScrimClick(event) {
         this.close();

@@ -6,6 +6,7 @@
     flex-wrap: wrap;
     gap: 16px 8px;
 }
+
 .md-chip {
     display: inline-flex;
     align-items: center;
@@ -36,24 +37,29 @@
         border-color: var(--md-sys-color-on-surface12);
     }
 }
+
 .md-chip__icon {
     width: 18px;
     height: 18px;
     font-size: 18px;
     margin-left: -4px;
 }
+
 .md-chip__label {
     @include mixins.typescale-label-large();
 }
+
 .md-chip__avatar {
     width: 24px;
     height: 24px;
     margin-left: -8px;
 }
+
 .md-chip__action {
     width: 18px;
     height: 18px;
     margin-right: -4px;
+
     .md-icon-button__icon {
         width: 18px;
         height: 18px;

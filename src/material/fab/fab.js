@@ -2,12 +2,13 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { RippleController } from "../ripple/ripple";
 import { ifDefined } from "lit/directives/if-defined.js";
+
 /**
- *
+ * @class MdFabComponent
+ * @extends MdComponent
  */
 class MdFabComponent extends MdComponent {
     /**
-     *
      * @property {String} [icon]
      * @property {String} [label]
      * @property {String} [type]
@@ -21,25 +22,11 @@ class MdFabComponent extends MdComponent {
         size: { type: String },
         variant: { type: String },
     };
-
-    /* prettier-ignore */
-    sizes=[
-        'small',
-        'large',
-    ]
-
-    /* prettier-ignore */
-    types=[
-        'extended',
-    ]
-
-    /* prettier-ignore */
-    variants=[
-        'unelevated',
-    ]
+    sizes = ["small", "large"];
+    types = ["extended"];
+    variants = ["unelevated"];
 
     /**
-     *
      */
     constructor() {
         super();
@@ -50,11 +37,7 @@ class MdFabComponent extends MdComponent {
      * @private
      */
     render() {
-        /* prettier-ignore */
-        return html`
-            ${this.icon?html`<md-icon class="md-fab__icon">${this.icon}</md-icon>`:nothing}
-            ${this.label?html`<div class="md-fab__label">${this.label}</div>`:nothing}
-        `
+        return html` ${this.icon ? html`<md-icon class="md-fab__icon">${this.icon}</md-icon>` : nothing} ${this.label ? html`<div class="md-fab__label">${this.label}</div>` : nothing} `;
     }
 
     /**
@@ -67,7 +50,7 @@ class MdFabComponent extends MdComponent {
 
     /**
      * @private
-     * @param {Object} changedProperties
+     * @param {String} [changedProperties]
      */
     updated(changedProperties) {
         super.updated(changedProperties);

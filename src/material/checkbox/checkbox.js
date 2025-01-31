@@ -2,12 +2,15 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { RippleController } from "../ripple/ripple";
+
 /**
- *
+ * @class MdCheckboxComponent
+ * @extends MdComponent
+ * @fires MdCheckboxComponent#onCheckboxNativeInput - {"detail":{"event":{}}}
+ * @fires MdCheckboxComponent#onCheckboxNativeReset - {"detail":{"event":{}}}
  */
 class MdCheckboxComponent extends MdComponent {
     /**
-     *
      * @property {String} [name]
      * @property {String} [value]
      * @property {Boolean} [indeterminate]
@@ -21,7 +24,6 @@ class MdCheckboxComponent extends MdComponent {
     };
 
     /**
-     *
      */
     constructor() {
         super();
@@ -37,10 +39,9 @@ class MdCheckboxComponent extends MdComponent {
      * @private
      */
     render() {
-        /* prettier-ignore */
         return html`
-            <input 
-                type="checkbox" 
+            <input
+                type="checkbox"
                 .name="${ifDefined(this.name)}"
                 .value="${ifDefined(this.value)}"
                 .indeterminate="${ifDefined(this.indeterminate)}"
@@ -51,11 +52,11 @@ class MdCheckboxComponent extends MdComponent {
                 class="md-checkbox__native"
                 @input="${this.handleCheckboxNativeInput}"
                 @reset="${this.handleCheckboxNativeReset}"
-            >
+            />
             <div class="md-checkbox__track">
                 <div class="md-checkbox__thumb"></div>
             </div>
-        `
+        `;
     }
 
     /**
@@ -71,26 +72,23 @@ class MdCheckboxComponent extends MdComponent {
 
     /**
      * @private
-     * @param {Object} event
+     * @param {Object} [event]
      */
     handleCheckboxNativeInput(event) {
         const native = event.currentTarget;
-
         this.indeterminate = native.indeterminate;
         this.checked = native.checked;
-
         this.emit("onCheckboxNativeInput", { event });
     }
 
     /**
      * @private
-     * @param {Object} event
+     * @param {Object} [event]
      */
     handleCheckboxNativeReset(event) {
         this.value = this.defaultValue;
         this.indeterminate = this.defaultIndeterminate;
         this.checked = this.defaultChecked;
-
         this.emit("onCheckboxNativeReset", { event });
     }
 }

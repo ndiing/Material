@@ -79,7 +79,9 @@
             }
         }
     }
+
     // tfoot{}
+
     // tr{}
 
     th {
@@ -99,14 +101,18 @@
     color: var(--md-sys-color-on-surface);
     border-bottom: 1px solid var(--md-sys-color-outline);
     position: relative;
-
     // @include mixins.ripple();
     // @include mixins.ripple-bounded();
     // @include mixins.ripple-trigger();
+
     // &:focus {@include mixins.ripple-focus();}
+
     // &:active {@include mixins.ripple-press()}
+
     // &:hover {@include mixins.ripple-hover()}
+
     // &:-moz-drag-over {@include mixins.ripple-drag()}
+
     // &:disabled {@include mixins.ripple-disabled()}
 
     &[selected] {
@@ -149,7 +155,6 @@
 
 .md-data-table__sublabel {
     @include mixins.typescale-body-medium();
-    
     height: var(--md-sys-typescale-body-medium-line-height);
     overflow: hidden;
     color: var(--md-sys-color-on-surface-variant);

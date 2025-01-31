@@ -26,7 +26,6 @@
     align-items: center;
     padding: 24px;
     gap: 0 16px;
-    
 }
 
 .md-navigation-rail__icons {
@@ -77,9 +76,7 @@
 
 .md-navigation-rail__body {
     flex: 1;
-    
     overflow: auto;
-    
 }
 
 .md-navigation-rail {
@@ -96,7 +93,6 @@
 
             &[selected] {
                 background-color: inherit;
-                
 
                 .md-navigation-list__icon {
                     background-color: var(--md-sys-color-secondary-container);
@@ -135,7 +131,6 @@
         .md-navigation-list__icon {
             ~ .md-navigation-list__labels {
                 ~ .md-navigation-list__badge {
-                    
                     margin-top: -20px;
                 }
             }

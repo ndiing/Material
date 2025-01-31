@@ -1,5 +1,10 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
+
+/**
+ * @class DemoSnackbar
+ * @extends MdComponent
+ */
 class DemoSnackbar extends MdComponent {
     /**
      * @private
@@ -22,7 +27,6 @@ class DemoSnackbar extends MdComponent {
                             @click="${() => snackbar1.show()}"
                         ></md-button>
                     </div>
-
                     <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <md-snackbar
                             id="snackbar2"
@@ -38,7 +42,6 @@ class DemoSnackbar extends MdComponent {
                             @click="${() => snackbar2.show()}"
                         ></md-button>
                     </div>
-
                     <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <md-snackbar
                             id="snackbar3"
@@ -54,7 +57,6 @@ class DemoSnackbar extends MdComponent {
                             @click="${() => snackbar3.show()}"
                         ></md-button>
                     </div>
-
                     <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <md-snackbar
                             id="snackbar4"
@@ -71,7 +73,6 @@ class DemoSnackbar extends MdComponent {
                             @click="${() => snackbar4.show()}"
                         ></md-button>
                     </div>
-
                     <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                         <md-snackbar
                             id="snackbar0"

@@ -2,12 +2,13 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
+
 /**
- *
+ * @class MdImageComponent
+ * @extends MdComponent
  */
 class MdImageComponent extends MdComponent {
     /**
-     *
      * @property {String} [src]
      * @property {String} [alt]
      * @property {String} [ratio]
@@ -21,11 +22,13 @@ class MdImageComponent extends MdComponent {
     };
 
     /**
-     *
      */
     constructor() {
         super();
     }
+
+    /**
+     */
     get styleInfo() {
         const style = {};
         if (this.ratio) style["aspect-ratio"] = this.ratio;
@@ -44,15 +47,14 @@ class MdImageComponent extends MdComponent {
      * @private
      */
     render() {
-        /* prettier-ignore */
         return html`
-            <img 
-                .src="${ifDefined(this.src)}" 
-                .alt="${ifDefined(this.alt)}" 
+            <img
+                .src="${ifDefined(this.src)}"
+                .alt="${ifDefined(this.alt)}"
                 class="md-image__native"
                 style="${styleMap(this.styleInfo)}"
-            >
-        `
+            />
+        `;
     }
 
     /**

@@ -2,7 +2,6 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { choose } from "lit/directives/choose.js";
-
 const task = (() => {
     let pending = Promise.resolve();
     let execute = async (callback) => {
@@ -16,15 +15,15 @@ const task = (() => {
 })();
 
 /**
- *
+ * @class MdSnackbarComponent
+ * @extends MdComponent
+ * @fires MdSnackbarComponent#onSnackbarIconButtonClick - {"detail":{"event":{}}}
+ * @fires MdSnackbarComponent#onSnackbarButtonClick - {"detail":{"event":{}}}
  */
 class MdSnackbarComponent extends MdComponent {
     /**
-     *
      * @property {Array} [icons]
      * @property {Array} [actions]
-     * @property {String} [label]
-     * @property {String} [sublabel]
      * @property {Array} [buttons]
      * @property {Boolean} [open]
      */
@@ -36,7 +35,6 @@ class MdSnackbarComponent extends MdComponent {
     };
 
     /**
-     *
      */
     constructor() {
         super();
@@ -45,23 +43,17 @@ class MdSnackbarComponent extends MdComponent {
 
     /**
      * @private
-     * @param {String} item
+     * @param {String} [item]
      */
     renderIcon(item) {
-        /* prettier-ignore */
-        return html`
-            <md-icon
-                .data="${item}"
-            >${item.icon}</md-icon>
-        `
+        return html` <md-icon .data="${item}">${item.icon}</md-icon> `;
     }
 
     /**
      * @private
-     * @param {String} item
+     * @param {String} [item]
      */
     renderIconButton(item) {
-        /* prettier-ignore */
         return html`
             <md-icon-button
                 .data="${item}"
@@ -73,15 +65,14 @@ class MdSnackbarComponent extends MdComponent {
                 .disabled="${ifDefined(item.disabled)}"
                 @click="${this.handleSnackbarIconButtonClick}"
             ></md-icon-button>
-        `
+        `;
     }
 
     /**
      * @private
-     * @param {String} item
+     * @param {String} [item]
      */
     renderButton(item) {
-        /* prettier-ignore */
         return html`
             <md-button
                 .data="${item}"
@@ -93,53 +84,46 @@ class MdSnackbarComponent extends MdComponent {
                 .selected="${ifDefined(item.selected)}"
                 @click="${this.handleSnackbarButtonClick}"
             ></md-button>
-        `
+        `;
     }
 
     /**
      * @private
-     * @param {String} item
+     * @param {String} [item]
      */
     renderSpacer(item) {
-        /* prettier-ignore */
-        return html`
-            <div class="md-snackbar__spacer"></div>
-        `
+        return html` <div class="md-snackbar__spacer"></div> `;
     }
 
     /**
      * @private
-     * @param {String} item
-     * @param {String} component
+     * @param {String} [item]
+     * @param {String} [component=icon]
      */
     renderItem(item, component = "icon") {
-        /* prettier-ignore */
-        return choose(item.component||component,[
-            ['icon',() => this.renderIcon(item)],
-            ['icon-button',() => this.renderIconButton(item)],
-            ['button',() => this.renderButton(item)],
-            ['spacer',() => this.renderSpacer(item)],
-        ],() => nothing)
+        return choose(
+            item.component || component,
+            [
+                ["icon", () => this.renderIcon(item)],
+                ["icon-button", () => this.renderIconButton(item)],
+                ["button", () => this.renderButton(item)],
+                ["spacer", () => this.renderSpacer(item)],
+            ],
+            () => nothing,
+        );
     }
 
     /**
      * @private
      */
     render() {
-        /* prettier-ignore */
-        return html`
-            ${this.body?.length?html`<div class="md-snackbar__body">${this.body}</div>`:nothing}
-            ${this.buttons?.length?html`
-                <div class="md-snackbar__footer">
-                    ${this.buttons?.length?html`
-                        <div class="md-snackbar__buttons">
-                            ${this.buttons.map(button=>this.renderItem(button,'button'))}
-                        </div>    
-                    `:nothing}
-                </div>
-            `:nothing}
-        `
+        return html` ${this.body?.length ? html`<div class="md-snackbar__body">${this.body}</div>` : nothing} ${this.buttons?.length ? html` <div class="md-snackbar__footer">${this.buttons?.length ? html` <div class="md-snackbar__buttons">${this.buttons.map((button) => this.renderItem(button, "button"))}</div> ` : nothing}</div> ` : nothing} `;
     }
+
+    /**
+     * @private
+     * @async
+     */
     async connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-snackbar");
@@ -159,7 +143,7 @@ class MdSnackbarComponent extends MdComponent {
 
     /**
      * @private
-     * @param {Object} event
+     * @param {Object} [event]
      */
     handleSnackbarIconButtonClick(event) {
         this.emit("onSnackbarIconButtonClick", { event });
@@ -167,14 +151,13 @@ class MdSnackbarComponent extends MdComponent {
 
     /**
      * @private
-     * @param {Object} event
+     * @param {Object} [event]
      */
     handleSnackbarButtonClick(event) {
         this.emit("onSnackbarButtonClick", { event });
     }
 
     /**
-     *
      */
     show() {
         task(() => {
@@ -197,7 +180,6 @@ class MdSnackbarComponent extends MdComponent {
     }
 
     /**
-     *
      */
     close() {
         this.style.removeProperty("--md-comp-snackbar-animation");
@@ -212,7 +194,6 @@ class MdSnackbarComponent extends MdComponent {
     }
 
     /**
-     *
      */
     toggle() {
         if (this.open) this.close();

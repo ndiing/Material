@@ -1,12 +1,17 @@
 import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
+
 /**
- *
+ * @class MdListComponent
+ * @extends MdComponent
+ * @fires MdListComponent#onListItemClick - {"detail":{"event":{}}}
+ * @fires MdListComponent#onListItemCheckboxNativeInput - {"detail":{"event":{}}}
+ * @fires MdListComponent#onListItemRadioButtonNativeInput - {"detail":{"event":{}}}
+ * @fires MdListComponent#onListItemSwitchNativeInput - {"detail":{"event":{}}}
  */
 class MdListComponent extends MdComponent {
     /**
-     *
      * @property {Array} [items]
      * @property {String} [type]
      * @property {Object} [rippleOptions]
@@ -16,15 +21,9 @@ class MdListComponent extends MdComponent {
         type: { type: String },
         rippleOptions: { type: Object },
     };
-
-    /* prettier-ignore */
-    types=[
-        'single-select',
-        'multi-select',
-    ]
+    types = ["single-select", "multi-select"];
 
     /**
-     *
      */
     constructor() {
         super();
@@ -34,10 +33,9 @@ class MdListComponent extends MdComponent {
 
     /**
      * @private
-     * @param {String} item
+     * @param {String} [item]
      */
     renderListItem(item) {
-        /* prettier-ignore */
         return html`
             <md-list-row>
                 <md-list-item
@@ -58,7 +56,7 @@ class MdListComponent extends MdComponent {
                     .selected="${ifDefined(item.selected)}"
                     .disabled="${ifDefined(item.disabled)}"
                     .routerLink="${ifDefined(item.routerLink)}"
-                    .rippleOptions="${ifDefined(item.rippleOptions||this.rippleOptions)}"
+                    .rippleOptions="${ifDefined(item.rippleOptions || this.rippleOptions)}"
                     .badge="${ifDefined(item.badge)}"
                     @click="${this.handleListItemClick}"
                     @onCheckboxNativeInput="${this.handleListItemCheckboxNativeInput}"
@@ -66,15 +64,14 @@ class MdListComponent extends MdComponent {
                     @onSwitchNativeInput="${this.handleListItemSwitchNativeInput}"
                 ></md-list-item>
             </md-list-row>
-        `
+        `;
     }
 
     /**
      * @private
      */
     render() {
-        /* prettier-ignore */
-        return this.items.map(item=>this.renderListItem(item))
+        return this.items.map((item) => this.renderListItem(item));
     }
 
     /**
@@ -87,7 +84,7 @@ class MdListComponent extends MdComponent {
 
     /**
      * @private
-     * @param {Object} event
+     * @param {Object} [event]
      */
     handleListItemClick(event) {
         const action = event.target.closest(".md-list__checkbox,.md-list__radio-button,.md-list__switch");
@@ -103,16 +100,14 @@ class MdListComponent extends MdComponent {
     }
 
     /**
-     *
-     * @param {Object} data
+     * @param {Object} [data]
      */
     multiSelect(data) {
         data.selected = !data.selected;
     }
 
     /**
-     *
-     * @param {Object} data
+     * @param {Object} [data]
      */
     singleSelect(data) {
         this.items.forEach((item) => {
@@ -122,7 +117,7 @@ class MdListComponent extends MdComponent {
 
     /**
      * @private
-     * @param {Object} event
+     * @param {Object} [event]
      */
     handleListItemCheckboxNativeInput(event) {
         const data = event.currentTarget.data;
@@ -133,7 +128,7 @@ class MdListComponent extends MdComponent {
 
     /**
      * @private
-     * @param {Object} event
+     * @param {Object} [event]
      */
     handleListItemRadioButtonNativeInput(event) {
         const data = event.currentTarget.data;
@@ -144,7 +139,7 @@ class MdListComponent extends MdComponent {
 
     /**
      * @private
-     * @param {Object} event
+     * @param {Object} [event]
      */
     handleListItemSwitchNativeInput(event) {
         const data = event.currentTarget.data;

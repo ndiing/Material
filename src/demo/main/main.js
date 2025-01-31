@@ -1,9 +1,13 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
 import { Router } from "../../material/router/router";
+
+/**
+ * @class DemoMain
+ * @extends MdComponent
+ */
 class DemoMain extends MdComponent {
     /**
-     * @private
      */
     constructor() {
         super();

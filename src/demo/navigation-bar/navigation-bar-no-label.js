@@ -1,5 +1,10 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
+
+/**
+ * @class DemoNavigationBarNoLabel
+ * @extends MdComponent
+ */
 class DemoNavigationBarNoLabel extends MdComponent {
     /**
      * @private

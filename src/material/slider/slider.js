@@ -2,16 +2,22 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { classMap } from "lit/directives/class-map.js";
+
 /**
- *
+ * @class MdSliderComponent
+ * @extends MdComponent
+ * @fires MdSliderComponent#onSliderNativeInput - {"detail":{"event":{}}}
+ * @fires MdSliderComponent#onSliderNativeReset - {"detail":{"event":{}}}
  */
 class MdSliderComponent extends MdComponent {
     /**
-     *
      * @property {Number} [min]
      * @property {Number} [max]
      * @property {Number} [step]
      * @property {String} [variant]
+     * @property {String} [name]
+     * @property {undefined} [value]
+     * @property {undefined} [converter]
      */
     static properties = {
         min: { type: Number },
@@ -31,17 +37,9 @@ class MdSliderComponent extends MdComponent {
             },
         },
     };
-
-    /* prettier-ignore */
-    variants=[
-        'centered',
-        'continuous',
-        'discrete',
-        'range-selection',
-    ]
+    variants = ["centered", "continuous", "discrete", "range-selection"];
 
     /**
-     *
      */
     constructor() {
         super();
@@ -49,6 +47,9 @@ class MdSliderComponent extends MdComponent {
         this.max = 100;
         this.step = 1;
     }
+
+    /**
+     */
     get indicators() {
         if (this.variant === "centered") return 3;
         else if (this.variant === "continuous") return 1;
@@ -58,17 +59,16 @@ class MdSliderComponent extends MdComponent {
 
     /**
      * @private
-     * @param {String} value
-     * @param {String} index
+     * @param {String} [value]
+     * @param {String} [index]
      */
     renderSliderWrapper(value, index) {
-        /* prettier-ignore */
         return html`
             <div class="md-slider__wrapper">
-                <input 
-                    type="range" 
+                <input
+                    type="range"
                     class="md-slider__native"
-                    .data="${{index}}"
+                    .data="${{ index }}"
                     .min="${ifDefined(this.min)}"
                     .max="${ifDefined(this.max)}"
                     .step="${ifDefined(this.step)}"
@@ -76,33 +76,38 @@ class MdSliderComponent extends MdComponent {
                     .defaultValue="${ifDefined(this.defaultValue[index])}"
                     @input="${this.handleSliderNativeInput}"
                     @reset="${this.handleSliderNativeReset}"
-                >
+                />
                 <div class="md-slider__indicators">
-                    ${Array.from({length:this.indicators},(v,k) => html`
-                        <div class="${classMap({
-                            'md-slider__indicator':true,
-                            'md-slider__indicator--activated':value>=(this.step*k),
-                        })}"></div>
-                    `)}
+                    ${Array.from(
+                        { length: this.indicators },
+                        (v, k) => html`
+                            <div
+                                class="${classMap({
+                                    "md-slider__indicator": true,
+                                    "md-slider__indicator--activated": value >= this.step * k,
+                                })}"
+                            ></div>
+                        `,
+                    )}
                 </div>
                 <output class="md-slider__value">${value}</output>
             </div>
-        `
+        `;
     }
 
     /**
      * @private
      */
     render() {
-        /* prettier-ignore */
         return html`
-            ${this.value.map((value,index)=>this.renderSliderWrapper(value,index))}
-            <input 
-                type="hidden" class="md-slider__hidden"
+            ${this.value.map((value, index) => this.renderSliderWrapper(value, index))}
+            <input
+                type="hidden"
+                class="md-slider__hidden"
                 .name="${this.name}"
                 .value="${this.value}"
-            >
-        `
+            />
+        `;
     }
 
     /**
@@ -124,7 +129,7 @@ class MdSliderComponent extends MdComponent {
 
     /**
      * @private
-     * @param {Object} changedProperties
+     * @param {String} [changedProperties]
      */
     updated(changedProperties) {
         super.updated(changedProperties);
@@ -134,13 +139,16 @@ class MdSliderComponent extends MdComponent {
             });
         }
     }
+
+    /**
+     */
     get sliderNatives() {
         return this.querySelectorAll(".md-slider__native");
     }
 
     /**
      * @private
-     * @param {Object} event
+     * @param {Object} [event]
      */
     handleSliderNativeInput(event) {
         const native = event.currentTarget;
@@ -158,7 +166,7 @@ class MdSliderComponent extends MdComponent {
 
     /**
      * @private
-     * @param {Object} event
+     * @param {Object} [event]
      */
     handleSliderNativeReset(event) {
         this.value = JSON.parse(JSON.stringify(this.defaultValue));
@@ -168,7 +176,6 @@ class MdSliderComponent extends MdComponent {
     }
 
     /**
-     *
      */
     updateValue() {
         this.value.forEach((value, index) => {
@@ -177,10 +184,9 @@ class MdSliderComponent extends MdComponent {
     }
 
     /**
-     *
-     * @param {String} value
-     * @param {String} min
-     * @param {String} max
+     * @param {String} [value]
+     * @param {undefined} [min=this.min]
+     * @param {undefined} [max=this.max]
      */
     percentage(value, min = this.min, max = this.max) {
         return (value - min) / (max - min);

@@ -2,12 +2,14 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { choose } from "lit/directives/choose.js";
+
 /**
- *
+ * @class MdNavigationRailComponent
+ * @extends MdComponent
+ * @fires MdNavigationRailComponent#onNavigationRailIconButtonClick - {"detail":{"event":{}}}
  */
 class MdNavigationRailComponent extends MdComponent {
     /**
-     *
      * @property {Array} [icons]
      * @property {Array} [actions]
      * @property {String} [label]
@@ -25,7 +27,6 @@ class MdNavigationRailComponent extends MdComponent {
     };
 
     /**
-     *
      */
     constructor() {
         super();
@@ -35,23 +36,17 @@ class MdNavigationRailComponent extends MdComponent {
 
     /**
      * @private
-     * @param {String} item
+     * @param {String} [item]
      */
     renderIcon(item) {
-        /* prettier-ignore */
-        return html`
-            <md-icon
-                .data="${item}"
-            >${item.icon}</md-icon>
-        `
+        return html` <md-icon .data="${item}">${item.icon}</md-icon> `;
     }
 
     /**
      * @private
-     * @param {String} item
+     * @param {String} [item]
      */
     renderIconButton(item) {
-        /* prettier-ignore */
         return html`
             <md-icon-button
                 .data="${item}"
@@ -63,48 +58,31 @@ class MdNavigationRailComponent extends MdComponent {
                 .disabled="${ifDefined(item.disabled)}"
                 @click="${this.handleNavigationRailIconButtonClick}"
             ></md-icon-button>
-        `
+        `;
     }
 
     /**
      * @private
-     * @param {String} item
-     * @param {String} component
+     * @param {String} [item]
+     * @param {String} [component=icon]
      */
     renderItem(item, component = "icon") {
-        /* prettier-ignore */
-        return choose(item.component||component,[
-            ['icon',() => this.renderIcon(item)],
-            ['icon-button',() => this.renderIconButton(item)],
-        ],() => nothing)
+        return choose(
+            item.component || component,
+            [
+                ["icon", () => this.renderIcon(item)],
+                ["icon-button", () => this.renderIconButton(item)],
+            ],
+            () => nothing,
+        );
     }
 
     /**
      * @private
      */
     render() {
-        /* prettier-ignore */
         return html`
-            ${this.icons?.length||this.label||this.sublabel||this.actions?.length?html`
-                <div class="md-navigation-rail__header">
-                    ${this.icons?.length?html`
-                        <div class="md-navigation-rail__icons">
-                            ${this.icons.map(icon=>this.renderItem(icon,'icon'))}
-                        </div>    
-                    `:nothing}
-                    ${this.label||this.sublabel?html`
-                        <div class="md-navigation-rail__labels">
-                            ${this.label?html`<div class="md-navigation-rail__label">${this.label}</div>`:nothing}
-                            ${this.sublabel?html`<div class="md-navigation-rail__sublabel">${this.sublabel}</div>`:nothing}
-                        </div>
-                    `:nothing}
-                    ${this.actions?.length?html`
-                        <div class="md-navigation-rail__actions">
-                            ${this.actions.map(action=>this.renderItem(action,'icon-button'))}
-                        </div>    
-                    `:nothing}
-                </div>
-            `:nothing}
+            ${this.icons?.length || this.label || this.sublabel || this.actions?.length ? html` <div class="md-navigation-rail__header">${this.icons?.length ? html` <div class="md-navigation-rail__icons">${this.icons.map((icon) => this.renderItem(icon, "icon"))}</div> ` : nothing} ${this.label || this.sublabel ? html` <div class="md-navigation-rail__labels">${this.label ? html`<div class="md-navigation-rail__label">${this.label}</div>` : nothing} ${this.sublabel ? html`<div class="md-navigation-rail__sublabel">${this.sublabel}</div>` : nothing}</div> ` : nothing} ${this.actions?.length ? html` <div class="md-navigation-rail__actions">${this.actions.map((action) => this.renderItem(action, "icon-button"))}</div> ` : nothing}</div> ` : nothing}
             <div class="md-navigation-rail__wrapper">
                 <div class="md-navigation-rail__body">
                     <md-navigation-list
@@ -113,8 +91,13 @@ class MdNavigationRailComponent extends MdComponent {
                     ></md-navigation-list>
                 </div>
             </div>
-        `
+        `;
     }
+
+    /**
+     * @private
+     * @async
+     */
     async connectedCallback() {
         super.connectedCallback();
         this.classList.add("md-navigation-rail");
@@ -135,7 +118,7 @@ class MdNavigationRailComponent extends MdComponent {
 
     /**
      * @private
-     * @param {Object} changedProperties
+     * @param {String} [changedProperties]
      */
     updated(changedProperties) {
         super.updated(changedProperties);
@@ -143,14 +126,13 @@ class MdNavigationRailComponent extends MdComponent {
 
     /**
      * @private
-     * @param {Object} event
+     * @param {Object} [event]
      */
     handleNavigationRailIconButtonClick(event) {
         this.emit("onNavigationRailIconButtonClick", { event });
     }
 
     /**
-     *
      */
     show() {
         this.style.removeProperty("--md-comp-sheet-animation");
@@ -159,7 +141,6 @@ class MdNavigationRailComponent extends MdComponent {
     }
 
     /**
-     *
      */
     close() {
         this.style.removeProperty("--md-comp-sheet-animation");
@@ -168,7 +149,6 @@ class MdNavigationRailComponent extends MdComponent {
     }
 
     /**
-     *
      */
     toggle() {
         if (this.open) this.close();

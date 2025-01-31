@@ -1,5 +1,10 @@
 import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
+
+/**
+ * @class DemoTextFieldTypes
+ * @extends MdComponent
+ */
 class DemoTextFieldTypes extends MdComponent {
     /**
      * @private
@@ -111,7 +116,6 @@ class DemoTextFieldTypes extends MdComponent {
                                 type="week"
                             ></md-text-field>
                         </div>
-
                         <div class="md-layout__column--expanded12 md-layout__column--medium4 md-layout__column--compact4">
                             <md-button
                                 variant="filled-tonal"

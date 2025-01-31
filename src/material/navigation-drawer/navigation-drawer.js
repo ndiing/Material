@@ -2,12 +2,15 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { choose } from "lit/directives/choose.js";
+
 /**
- *
+ * @class MdNavigationDrawerComponent
+ * @extends MdComponent
+ * @fires MdNavigationDrawerComponent#onNavigationDrawerIconButtonClick - {"detail":{"event":{}}}
+ * @fires MdNavigationDrawerComponent#onNavigationDrawerScrimClosed - {"detail":{"event":{}}}
  */
 class MdNavigationDrawerComponent extends MdComponent {
     /**
-     *
      * @property {Array} [icons]
      * @property {Array} [actions]
      * @property {String} [label]
@@ -27,15 +30,9 @@ class MdNavigationDrawerComponent extends MdComponent {
         modal: { type: Boolean, reflect: true },
         view: { type: String },
     };
-
-    /* prettier-ignore */
-    views=[
-        'flat',
-        'tree',
-    ]
+    views = ["flat", "tree"];
 
     /**
-     *
      */
     constructor() {
         super();
@@ -44,23 +41,17 @@ class MdNavigationDrawerComponent extends MdComponent {
 
     /**
      * @private
-     * @param {String} item
+     * @param {String} [item]
      */
     renderIcon(item) {
-        /* prettier-ignore */
-        return html`
-            <md-icon
-                .data="${item}"
-            >${item.icon}</md-icon>
-        `
+        return html` <md-icon .data="${item}">${item.icon}</md-icon> `;
     }
 
     /**
      * @private
-     * @param {String} item
+     * @param {String} [item]
      */
     renderIconButton(item) {
-        /* prettier-ignore */
         return html`
             <md-icon-button
                 .data="${item}"
@@ -72,59 +63,41 @@ class MdNavigationDrawerComponent extends MdComponent {
                 .disabled="${ifDefined(item.disabled)}"
                 @click="${this.handleNavigationDrawerIconButtonClick}"
             ></md-icon-button>
-        `
+        `;
     }
 
     /**
      * @private
-     * @param {String} item
-     * @param {String} component
+     * @param {String} [item]
+     * @param {String} [component=icon]
      */
     renderItem(item, component = "icon") {
-        /* prettier-ignore */
-        return choose(item.component||component,[
-            ['icon',() => this.renderIcon(item)],
-            ['icon-button',() => this.renderIconButton(item)],
-        ],() => nothing)
+        return choose(
+            item.component || component,
+            [
+                ["icon", () => this.renderIcon(item)],
+                ["icon-button", () => this.renderIconButton(item)],
+            ],
+            () => nothing,
+        );
     }
 
     /**
      * @private
      */
     render() {
-        /* prettier-ignore */
         return html`
-            ${this.icons?.length||this.label||this.sublabel||this.actions?.length?html`
-                <div class="md-navigation-drawer__header">
-                    ${this.icons?.length?html`
-                        <div class="md-navigation-drawer__icons">
-                            ${this.icons.map(icon=>this.renderItem(icon,'icon'))}
-                        </div>    
-                    `:nothing}
-                    ${this.label||this.sublabel?html`
-                        <div class="md-navigation-drawer__labels">
-                            ${this.label?html`<div class="md-navigation-drawer__label">${this.label}</div>`:nothing}
-                            ${this.sublabel?html`<div class="md-navigation-drawer__sublabel">${this.sublabel}</div>`:nothing}
-                        </div>
-                    `:nothing}
-                    ${this.actions?.length?html`
-                        <div class="md-navigation-drawer__actions">
-                            ${this.actions.map(action=>this.renderItem(action,'icon-button'))}
-                        </div>    
-                    `:nothing}
-                </div>
-            `:nothing}
+            ${this.icons?.length || this.label || this.sublabel || this.actions?.length ? html` <div class="md-navigation-drawer__header">${this.icons?.length ? html` <div class="md-navigation-drawer__icons">${this.icons.map((icon) => this.renderItem(icon, "icon"))}</div> ` : nothing} ${this.label || this.sublabel ? html` <div class="md-navigation-drawer__labels">${this.label ? html`<div class="md-navigation-drawer__label">${this.label}</div>` : nothing} ${this.sublabel ? html`<div class="md-navigation-drawer__sublabel">${this.sublabel}</div>` : nothing}</div> ` : nothing} ${this.actions?.length ? html` <div class="md-navigation-drawer__actions">${this.actions.map((action) => this.renderItem(action, "icon-button"))}</div> ` : nothing}</div> ` : nothing}
             <div class="md-navigation-drawer__wrapper">
-                <div class="md-navigation-drawer__body">
-                    ${this.view==='flat'?html`
-                        <md-navigation-list .items="${this.items}"></md-navigation-list>
-                    `:html`
-                        <md-tree .items="${this.items}"></md-tree>
-                    `}
-                </div>
+                <div class="md-navigation-drawer__body">${this.view === "flat" ? html` <md-navigation-list .items="${this.items}"></md-navigation-list> ` : html` <md-tree .items="${this.items}"></md-tree> `}</div>
             </div>
-        `
+        `;
     }
+
+    /**
+     * @private
+     * @async
+     */
     async connectedCallback() {
         super.connectedCallback();
         this.navigationDrawerScrim = document.createElement("md-scrim");
@@ -152,7 +125,7 @@ class MdNavigationDrawerComponent extends MdComponent {
 
     /**
      * @private
-     * @param {Object} changedProperties
+     * @param {String} [changedProperties]
      */
     updated(changedProperties) {
         super.updated(changedProperties);
@@ -168,14 +141,13 @@ class MdNavigationDrawerComponent extends MdComponent {
 
     /**
      * @private
-     * @param {Object} event
+     * @param {Object} [event]
      */
     handleNavigationDrawerIconButtonClick(event) {
         this.emit("onNavigationDrawerIconButtonClick", { event });
     }
 
     /**
-     *
      */
     show() {
         this.style.removeProperty("--md-comp-sheet-animation");
@@ -185,7 +157,6 @@ class MdNavigationDrawerComponent extends MdComponent {
     }
 
     /**
-     *
      */
     close() {
         this.style.removeProperty("--md-comp-sheet-animation");
@@ -195,7 +166,6 @@ class MdNavigationDrawerComponent extends MdComponent {
     }
 
     /**
-     *
      */
     toggle() {
         if (this.open) this.close();
@@ -204,7 +174,7 @@ class MdNavigationDrawerComponent extends MdComponent {
 
     /**
      * @private
-     * @param {Object} event
+     * @param {Object} [event]
      */
     handleNavigationDrawerScrimClosed(event) {
         if (this.open) this.close();

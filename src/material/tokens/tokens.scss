@@ -3,11 +3,9 @@
 @media (prefers-color-scheme: light) {
     :root {
         --md-sys-color-primary: #6750a4;
-
-        --md-sys-color-primary8: #f2eaf8; /* from rgba(primary, 8%) over surface */
-        --md-sys-color-primary10: #efe6f6; /* from rgba(primary, 10%) over surface */
-        --md-sys-color-primary16: #e6dcf0; /* from rgba(primary, 16%) over surface */
-
+        --md-sys-color-primary8: #f2eaf8;
+        --md-sys-color-primary10: #efe6f6;
+        --md-sys-color-primary16: #e6dcf0;
         --md-sys-color-on-primary: #ffffff;
         --md-sys-color-primary-container: #eaddff;
         --md-sys-color-on-primary-container: #4f378b;
@@ -23,13 +21,12 @@
         --md-sys-color-on-error: #ffffff;
         --md-sys-color-error-container: #f9dedc;
         --md-sys-color-on-error-container: #8c1d18;
-
         --md-sys-color-surface: #fef7ff;
         --md-sys-color-on-surface: #1d1b20;
 
         --md-sys-color-on-surface12: #{rgba(#1d1b20, 12%)};
-        --md-sys-color-on-surface38: #{rgba(#1d1b20, 38%)};
 
+        --md-sys-color-on-surface38: #{rgba(#1d1b20, 38%)};
         --md-sys-color-surface-variant: #e7e0ec;
         --md-sys-color-on-surface-variant: #49454f;
         --md-sys-color-surface-container-highest: #e6e0e9;
@@ -56,24 +53,24 @@
         --md-sys-color-on-tertiary-fixed: #31111d;
         --md-sys-color-on-tertiary-fixed-variant: #633b48;
         --md-sys-color-tertiary-fixed-dim: #efb8c8;
-
         --md-sys-color-background: #fef7ff;
         --md-sys-color-on-background: #1d1b20;
-
         --md-sys-color-surface-bright: #fef7ff;
         --md-sys-color-surface-dim: #ded8e1;
         --md-sys-color-scrim: #000000;
         --md-sys-color-shadow: #000000;
     }
 }
+
 @media (prefers-color-scheme: dark) {
     :root {
         --md-sys-color-primary: #d0bcff;
 
         --md-sys-color-primary8: #{rgba(#d0bcff, 8%)};
-        --md-sys-color-primary10: #{rgba(#d0bcff, 10%)};
-        --md-sys-color-primary16: #{rgba(#d0bcff, 16%)};
 
+        --md-sys-color-primary10: #{rgba(#d0bcff, 10%)};
+
+        --md-sys-color-primary16: #{rgba(#d0bcff, 16%)};
         --md-sys-color-on-primary: #381e72;
         --md-sys-color-primary-container: #4f378b;
         --md-sys-color-on-primary-container: #eaddff;
@@ -93,8 +90,8 @@
         --md-sys-color-on-surface: #e6e0e9;
 
         --md-sys-color-on-surface12: #{rgba(#e6e0e9, 12%)};
-        --md-sys-color-on-surface38: #{rgba(#e6e0e9, 38%)};
 
+        --md-sys-color-on-surface38: #{rgba(#e6e0e9, 38%)};
         --md-sys-color-surface-variant: #49454f;
         --md-sys-color-on-surface-variant: #cac4d0;
         --md-sys-color-surface-container-highest: #36343b;
