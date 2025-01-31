@@ -5,16 +5,12 @@ Date.prototype.setWeek = function (year, week) {
     this.setFullYear(date.getFullYear(), date.getMonth(), date.getDate());
     return this;
 };
-
 Date.prototype.getWeek = function () {
     const firstDayOfYear = new Date(this.getFullYear(), 0, 1);
-
     const days = Math.floor((this - firstDayOfYear) / (24 * 60 * 60 * 1000));
-
     const weekNumber = Math.ceil((days + 1) / 7);
     return weekNumber;
 };
-
 // const date=new Date()
 // date.setWeek(1990,42)
 // console.log(date.getWeek())

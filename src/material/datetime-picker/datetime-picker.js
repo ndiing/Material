@@ -3,6 +3,7 @@ import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { choose } from "lit/directives/choose.js";
 import { parseDatetimeLocal, stringifyDatetimeLocal } from "../util/util";
+import { PopperController } from "../popper/popper";
 
 /**
  * @extends MdComponent
@@ -17,6 +18,7 @@ import { parseDatetimeLocal, stringifyDatetimeLocal } from "../util/util";
  * @fires MdDatetimePickerComponent#onDatetimePickerMinuteItemClick - {"detail":{"event":{}}}
  * @fires MdDatetimePickerComponent#onDatetimePickerButtonCancelClick - {"detail":{"event":{}}}
  * @fires MdDatetimePickerComponent#onDatetimePickerButtonOkClick - {"detail":{"event":{}}}
+ * @fires MdDatetimePickerComponent#onDatetimePickerButtonLabelClick - {"detail":{"event":{}}}
  * @fires MdDatetimePickerComponent#onDatetimePickerButtonClick - {"detail":{"event":{}}}
  * @fires MdDatetimePickerComponent#onDatetimePickerScrimClosed - {"detail":{"event":{}}}
  */
@@ -28,7 +30,10 @@ class MdDatetimePickerComponent extends MdComponent {
      * @property {String} [sublabel]
      * @property {Array} [buttons]
      * @property {Boolean} [open]
+     * @property {Boolean} [modal]
      * @property {Number} [index]
+     * @property {undefined} [value]
+     * @property {undefined} [converter]
      */
     static properties = {
         icons: { type: Array },
@@ -37,6 +42,7 @@ class MdDatetimePickerComponent extends MdComponent {
         sublabel: { type: String },
         buttons: { type: Array },
         open: { type: Boolean, reflect: true },
+        modal: { type: Boolean },
         index: { type: Number },
         value: {
             // type: String,
@@ -152,13 +158,13 @@ class MdDatetimePickerComponent extends MdComponent {
             };
         });
     }
-
-    // /**
-    //  */
+    //
     // get label() {
     //     return stringifyDatetimeLocal(this.value)
     // }
 
+    /**
+     */
     get icons() {
         const map = {
             0: () => [this.years[0].label, this.years[this.years.length - 1].label].join(" - "),
@@ -184,7 +190,6 @@ class MdDatetimePickerComponent extends MdComponent {
         this.hourFormat = new Intl.DateTimeFormat(undefined, { hour: "numeric", hour12: false }).format;
         this.minuteFormat = new Intl.DateTimeFormat(undefined, { minute: "numeric", hour12: false }).format;
         this.index = 2;
-
         // this.icons = [{ component: "button", id: "label", label: stringifyDatetimeLocal(this.value) }];
         this.actions = [
             { id: "prev", icon: "keyboard_arrow_left" },
@@ -440,7 +445,7 @@ class MdDatetimePickerComponent extends MdComponent {
         this.parentElement.insertBefore(this.datetimePickerScrim, this.nextElementSibling);
         this.handleDatetimePickerScrimClosed = this.handleDatetimePickerScrimClosed.bind(this);
         this.datetimePickerScrim.addEventListener("onScrimClosed", this.handleDatetimePickerScrimClosed);
-        if (this.open) this.datetimePickerScrim.show();
+        if (this.modal && this.open) this.datetimePickerScrim.show();
         this.classList.add("md-datetime-picker");
         this.style.setProperty("--md-comp-datetime-picker-animation", "none");
         await this.updateComplete;
@@ -466,6 +471,9 @@ class MdDatetimePickerComponent extends MdComponent {
         super.updated(changedProperties);
         if (changedProperties.has("index")) {
             this.style.setProperty("--md-comp-datetime-picker-index", this.index);
+        }
+        if (changedProperties.has("modal")) {
+            this.classList.toggle(`md-datetime-picker--modal`, !!this.modal);
         }
         // if (changedProperties.has("value")) {
         // }
@@ -684,11 +692,19 @@ class MdDatetimePickerComponent extends MdComponent {
     }
 
     /**
+     * @param {String} [options]
      */
-    show() {
+    show(options) {
         this.style.removeProperty("--md-comp-datetime-picker-animation");
-        this.datetimePickerScrim.show();
+        if (this.modal) this.datetimePickerScrim.show();
         this.open = true;
+        options = {
+            container: this,
+            placements: ["bottom-start", "bottom-end", "bottom", "top-start", "top-end", "top", "right-start", "right-end", "right", "left-start", "left-end", "left"],
+            ...options,
+        };
+        this.popper = new PopperController();
+        this.popper.show(options);
         this.emit("onDatetimePickerShown");
     }
 
@@ -702,10 +718,11 @@ class MdDatetimePickerComponent extends MdComponent {
     }
 
     /**
+     * @param {String} [options]
      */
-    toggle() {
+    toggle(options) {
         if (this.open) this.close();
-        else this.show();
+        else this.show(options);
     }
 }
 customElements.define("md-datetime-picker", MdDatetimePickerComponent);

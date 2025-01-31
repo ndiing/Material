@@ -19,12 +19,13 @@
     height: var(--md-comp-datetime-picker-height);
     border-radius: var(--md-sys-shape-corner-large);
     background-color: var(--md-sys-color-surface-container-high);
-    box-shadow: var(--md-sys-elevation-level3);
+    // box-shadow: var(--md-sys-elevation-level3);
     position: absolute;
-    left: 50%;
-    top: 50%;
+    // left: 50%;
+    // top: 50%;
     z-index: 11;
-    transform: translate3d(-50%, -50%, 0);
+    // transform: translate3d(0%, 0%, 0);
+    // transform-origin: 0% 0%;
     opacity: 0;
     pointer-events: none;
     --md-comp-datetime-picker-animation: datetime-picker-in;

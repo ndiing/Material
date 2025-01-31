@@ -288,19 +288,17 @@
     }
 }
 
-
-
 @keyframes datetime-picker-out {
     0% {
         height: var(--md-comp-datetime-picker-container-height);
         opacity: 0;
-        transform: translate3d(-50%, -50%, 0);
+        transform: translate3d(0%, calc((var(--md-comp-datetime-picker-height) - var(--md-comp-datetime-picker-container-height)) / 2), 0);
     }
 
     100% {
         height: var(--md-comp-datetime-picker-height);
         opacity: 1;
-        transform: translate3d(-50%, -50%, 0);
+        transform: translate3d(0%, 0%, 0);
     }
 }
 
@@ -308,13 +306,13 @@
     0% {
         height: var(--md-comp-datetime-picker-height);
         opacity: 1;
-        transform: translate3d(-50%, -50%, 0);
+        transform: translate3d(0%, 0%, 0);
     }
 
     100% {
         height: var(--md-comp-datetime-picker-container-height);
         opacity: 0;
-        transform: translate3d(-50%, -50%, 0);
+        transform: translate3d(0%, calc((var(--md-comp-datetime-picker-height) - var(--md-comp-datetime-picker-container-height)) / 2), 0);
     }
 }
 
