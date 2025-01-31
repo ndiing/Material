@@ -1,1543 +1,2347 @@
-# Material 3
-
-## Index
-- [MdBadgeComponent](#MdBadgeComponent)
-- [MdBottomAppBarComponent](#MdBottomAppBarComponent)
-- [MdBottomSheetComponent](#MdBottomSheetComponent)
-- [MdButtonComponent](#MdButtonComponent)
-- [MdCardComponent](#MdCardComponent)
-- [MdCheckboxComponent](#MdCheckboxComponent)
-- [MdChipComponent](#MdChipComponent)
-- [MdComponent](#MdComponent)
-- [MdDataTableCellComponent](#MdDataTableCellComponent)
-- [MdDataTableComponent](#MdDataTableComponent)
-- [MdDatetimePickerComponent](#MdDatetimePickerComponent)
-- [MdDialogComponent](#MdDialogComponent)
-- [MdDividerComponent](#MdDividerComponent)
-- [Dragger](#Dragger)
-- [MdFabComponent](#MdFabComponent)
-- [MdFormComponent](#MdFormComponent)
-- [MdIconComponent](#MdIconComponent)
-- [MdIconButtonComponent](#MdIconButtonComponent)
-- [MdImageComponent](#MdImageComponent)
-- [MdListItemComponent](#MdListItemComponent)
-- [MdListRowComponent](#MdListRowComponent)
-- [MdListComponent](#MdListComponent)
-- [undefined](#undefined)
-- [MdMenuComponent](#MdMenuComponent)
-- [MdNavigationBarComponent](#MdNavigationBarComponent)
-- [MdNavigationDrawerComponent](#MdNavigationDrawerComponent)
-- [MdNavigationListItemComponent](#MdNavigationListItemComponent)
-- [MdNavigationListRowComponent](#MdNavigationListRowComponent)
-- [MdNavigationListComponent](#MdNavigationListComponent)
-- [MdNavigationRailComponent](#MdNavigationRailComponent)
-- [PopperController](#PopperController)
-- [MdProgressIndicatorComponent](#MdProgressIndicatorComponent)
-- [MdRadioButtonComponent](#MdRadioButtonComponent)
-- [RippleController](#RippleController)
-- [Router](#Router)
-- [MdScrimComponent](#MdScrimComponent)
-- [MdSegmentedButtonComponent](#MdSegmentedButtonComponent)
-- [MdSheetComponent](#MdSheetComponent)
-- [MdSideSheetComponent](#MdSideSheetComponent)
-- [MdSliderComponent](#MdSliderComponent)
-- [MdSnackbarComponent](#MdSnackbarComponent)
-- [Store](#Store)
-- [MdSwitchComponent](#MdSwitchComponent)
-- [MdTabComponent](#MdTabComponent)
-- [MdTabsComponent](#MdTabsComponent)
-- [MdTextFieldComponent](#MdTextFieldComponent)
-- [MdTooltipComponent](#MdTooltipComponent)
-- [MdTopAppBarComponent](#MdTopAppBarComponent)
-- [MdTreeItemComponent](#MdTreeItemComponent)
-- [MdTreeRowComponent](#MdTreeRowComponent)
-- [MdTreeComponent](#MdTreeComponent)
-
----
-### MdBadgeComponent
-
-#### Instance properties
-
-name|type
----|---
-<code>label</code>|Number
-<code>max</code>|Number
+## Classes
+
+<dl>
+<dt><a href="#MdBadgeComponent">MdBadgeComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdBottomAppBarComponent">MdBottomAppBarComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdBottomSheetComponent">MdBottomSheetComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdButtonComponent">MdButtonComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdCardComponent">MdCardComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdCheckboxComponent">MdCheckboxComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdChipComponent">MdChipComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdChipComponent">MdChipComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdComponent">MdComponent</a> ⇐ <code>LitElement</code></dt>
+<dd></dd>
+<dt><a href="#MdDataTableCellComponent">MdDataTableCellComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdDataTableComponent">MdDataTableComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdDatetimePickerComponent">MdDatetimePickerComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdDialogComponent">MdDialogComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdDividerComponent">MdDividerComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#Dragger">Dragger</a></dt>
+<dd></dd>
+<dt><a href="#MdFabComponent">MdFabComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdFormComponent">MdFormComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdIconButtonComponent">MdIconButtonComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdIconComponent">MdIconComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdImageComponent">MdImageComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdListItemComponent">MdListItemComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdListRowComponent">MdListRowComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdListComponent">MdListComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdMenuComponent">MdMenuComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdNavigationBarComponent">MdNavigationBarComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdNavigationDrawerComponent">MdNavigationDrawerComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdNavigationListItemComponent">MdNavigationListItemComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdNavigationListRowComponent">MdNavigationListRowComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdNavigationListComponent">MdNavigationListComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdNavigationRailComponent">MdNavigationRailComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#PopperController">PopperController</a></dt>
+<dd></dd>
+<dt><a href="#MdProgressIndicatorComponent">MdProgressIndicatorComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdRadioButtonComponent">MdRadioButtonComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#RippleController">RippleController</a></dt>
+<dd></dd>
+<dt><a href="#Router">Router</a></dt>
+<dd></dd>
+<dt><a href="#MdScrimComponent">MdScrimComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdSegmentedButtonComponent">MdSegmentedButtonComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdSheetComponent">MdSheetComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdSideSheetComponent">MdSideSheetComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdSliderComponent">MdSliderComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdSnackbarComponent">MdSnackbarComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#Store">Store</a></dt>
+<dd></dd>
+<dt><a href="#MdSwitchComponent">MdSwitchComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdTabComponent">MdTabComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdTabsComponent">MdTabsComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdTextFieldComponent">MdTextFieldComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdTooltipComponent">MdTooltipComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdTopAppBarComponent">MdTopAppBarComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdTreeItemComponent">MdTreeItemComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdTreeRowComponent">MdTreeRowComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+<dt><a href="#MdTreeComponent">MdTreeComponent</a> ⇐ <code><a href="#MdComponent">MdComponent</a></code></dt>
+<dd></dd>
+</dl>
+
+<a name="MdBadgeComponent"></a>
 
-#### Instance methods
+## MdBadgeComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+
+* [MdBadgeComponent](#MdBadgeComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdBadgeComponent+properties)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdBadgeComponent+properties"></a>
+
+### mdBadgeComponent.properties
+**Kind**: instance property of [<code>MdBadgeComponent</code>](#MdBadgeComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [label] | <code>Number</code> | 
+| [max] | <code>Number</code> | 
+
+<a name="MdComponent+emit"></a>
+
+### mdBadgeComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdBadgeComponent</code>](#MdBadgeComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdBottomAppBarComponent"></a>
+
+## MdBottomAppBarComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+**Emits**: <code>MdBottomAppBarComponent#event:onBottomAppBarIconButtonClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdBottomAppBarComponent#event:onBottomAppBarFabClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>  
+
+* [MdBottomAppBarComponent](#MdBottomAppBarComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdBottomAppBarComponent+properties)
+    * [.show()](#MdBottomAppBarComponent+show)
+    * [.close()](#MdBottomAppBarComponent+close)
+    * [.toggle()](#MdBottomAppBarComponent+toggle)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdBottomAppBarComponent+properties"></a>
+
+### mdBottomAppBarComponent.properties
+**Kind**: instance property of [<code>MdBottomAppBarComponent</code>](#MdBottomAppBarComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [actions] | <code>Array</code> | 
+| [fab] | <code>String</code> | 
+| [open] | <code>Boolean</code> | 
+
+<a name="MdBottomAppBarComponent+show"></a>
+
+### mdBottomAppBarComponent.show()
+**Kind**: instance method of [<code>MdBottomAppBarComponent</code>](#MdBottomAppBarComponent)  
+<a name="MdBottomAppBarComponent+close"></a>
+
+### mdBottomAppBarComponent.close()
+**Kind**: instance method of [<code>MdBottomAppBarComponent</code>](#MdBottomAppBarComponent)  
+<a name="MdBottomAppBarComponent+toggle"></a>
+
+### mdBottomAppBarComponent.toggle()
+**Kind**: instance method of [<code>MdBottomAppBarComponent</code>](#MdBottomAppBarComponent)  
+<a name="MdComponent+emit"></a>
+
+### mdBottomAppBarComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdBottomAppBarComponent</code>](#MdBottomAppBarComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdBottomSheetComponent"></a>
+
+## MdBottomSheetComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+**Emits**: <code>MdBottomSheetComponent#event:onBottomSheetIconButtonClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdBottomSheetComponent#event:onBottomSheetButtonClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdBottomSheetComponent#event:onBottomSheetScrimClosed - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>  
+
+* [MdBottomSheetComponent](#MdBottomSheetComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdBottomSheetComponent+properties)
+    * [.show()](#MdBottomSheetComponent+show)
+    * [.close()](#MdBottomSheetComponent+close)
+    * [.toggle()](#MdBottomSheetComponent+toggle)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdBottomSheetComponent+properties"></a>
+
+### mdBottomSheetComponent.properties
+**Kind**: instance property of [<code>MdBottomSheetComponent</code>](#MdBottomSheetComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [icons] | <code>Array</code> | 
+| [actions] | <code>Array</code> | 
+| [label] | <code>String</code> | 
+| [sublabel] | <code>String</code> | 
+| [buttons] | <code>Array</code> | 
+| [open] | <code>Boolean</code> | 
+| [modal] | <code>Boolean</code> | 
+
+<a name="MdBottomSheetComponent+show"></a>
+
+### mdBottomSheetComponent.show()
+**Kind**: instance method of [<code>MdBottomSheetComponent</code>](#MdBottomSheetComponent)  
+<a name="MdBottomSheetComponent+close"></a>
+
+### mdBottomSheetComponent.close()
+**Kind**: instance method of [<code>MdBottomSheetComponent</code>](#MdBottomSheetComponent)  
+<a name="MdBottomSheetComponent+toggle"></a>
+
+### mdBottomSheetComponent.toggle()
+**Kind**: instance method of [<code>MdBottomSheetComponent</code>](#MdBottomSheetComponent)  
+<a name="MdComponent+emit"></a>
+
+### mdBottomSheetComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdBottomSheetComponent</code>](#MdBottomSheetComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdButtonComponent"></a>
+
+## MdButtonComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+
+* [MdButtonComponent](#MdButtonComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdButtonComponent+properties)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdButtonComponent+properties"></a>
+
+### mdButtonComponent.properties
+**Kind**: instance property of [<code>MdButtonComponent</code>](#MdButtonComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [icon] | <code>String</code> | 
+| [label] | <code>String</code> | 
+| [variant] | <code>String</code> | 
+| [type] | <code>String</code> | 
+| [disabled] | <code>Boolean</code> | 
+| [selected] | <code>Boolean</code> | 
+
+<a name="MdComponent+emit"></a>
+
+### mdButtonComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdButtonComponent</code>](#MdButtonComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdCardComponent"></a>
+
+## MdCardComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+**Emits**: <code>MdCardComponent#event:onCardIconButtonClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdCardComponent#event:onCardButtonClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>  
+
+* [MdCardComponent](#MdCardComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdCardComponent+properties)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdCardComponent+properties"></a>
+
+### mdCardComponent.properties
+**Kind**: instance property of [<code>MdCardComponent</code>](#MdCardComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [icons] | <code>Array</code> | 
+| [actions] | <code>Array</code> | 
+| [label] | <code>String</code> | 
+| [sublabel] | <code>String</code> | 
+| [buttons] | <code>Array</code> | 
+
+<a name="MdComponent+emit"></a>
+
+### mdCardComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdCardComponent</code>](#MdCardComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdCheckboxComponent"></a>
+
+## MdCheckboxComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+**Emits**: <code>MdCheckboxComponent#event:onCheckboxNativeInput - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdCheckboxComponent#event:onCheckboxNativeReset - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>  
+
+* [MdCheckboxComponent](#MdCheckboxComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdCheckboxComponent+properties)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdCheckboxComponent+properties"></a>
+
+### mdCheckboxComponent.properties
+**Kind**: instance property of [<code>MdCheckboxComponent</code>](#MdCheckboxComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [name] | <code>String</code> | 
+| [value] | <code>String</code> | 
+| [indeterminate] | <code>Boolean</code> | 
+| [checked] | <code>Boolean</code> | 
+
+<a name="MdComponent+emit"></a>
+
+### mdCheckboxComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdCheckboxComponent</code>](#MdCheckboxComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdChipComponent"></a>
+
+## MdChipComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+**Emits**: <code>MdChipComponent#event:onChipActionClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>  
+
+* [MdChipComponent](#MdChipComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdChipComponent+properties)
+    * [.properties](#MdChipComponent+properties)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdChipComponent+properties"></a>
+
+### mdChipComponent.properties
+**Kind**: instance property of [<code>MdChipComponent</code>](#MdChipComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [icon] | <code>String</code> | 
+| [avatar] | <code>String</code> | 
+| [label] | <code>String</code> | 
+| [action] | <code>String</code> | 
+| [selected] | <code>Boolean</code> | 
+| [disabled] | <code>Boolean</code> | 
+
+<a name="MdChipComponent+properties"></a>
+
+### mdChipComponent.properties
+**Kind**: instance property of [<code>MdChipComponent</code>](#MdChipComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [items] | <code>Array</code> | 
+| [type] | <code>String</code> | 
+
+<a name="MdComponent+emit"></a>
+
+### mdChipComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdChipComponent</code>](#MdChipComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdChipComponent"></a>
+
+## MdChipComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+**Emits**: <code>MdChipComponent#event:onChipClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>  
+
+* [MdChipComponent](#MdChipComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdChipComponent+properties)
+    * [.properties](#MdChipComponent+properties)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdChipComponent+properties"></a>
+
+### mdChipComponent.properties
+**Kind**: instance property of [<code>MdChipComponent</code>](#MdChipComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [icon] | <code>String</code> | 
+| [avatar] | <code>String</code> | 
+| [label] | <code>String</code> | 
+| [action] | <code>String</code> | 
+| [selected] | <code>Boolean</code> | 
+| [disabled] | <code>Boolean</code> | 
+
+<a name="MdChipComponent+properties"></a>
+
+### mdChipComponent.properties
+**Kind**: instance property of [<code>MdChipComponent</code>](#MdChipComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [items] | <code>Array</code> | 
+| [type] | <code>String</code> | 
+
+<a name="MdComponent+emit"></a>
+
+### mdChipComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdChipComponent</code>](#MdChipComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdComponent"></a>
+
+## MdComponent ⇐ <code>LitElement</code>
+**Kind**: global class  
+**Extends**: <code>LitElement</code>  
+<a name="MdComponent+emit"></a>
+
+### mdComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdComponent</code>](#MdComponent)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdDataTableCellComponent"></a>
+
+## MdDataTableCellComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+
+* [MdDataTableCellComponent](#MdDataTableCellComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdDataTableCellComponent+properties)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdDataTableCellComponent+properties"></a>
+
+### mdDataTableCellComponent.properties
+**Kind**: instance property of [<code>MdDataTableCellComponent</code>](#MdDataTableCellComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [checkbox] | <code>Boolean</code> | 
+| [avatar] | <code>String</code> | 
+| [icon] | <code>String</code> | 
+| [label] | <code>String</code> | 
+| [sublabel] | <code>String</code> | 
+| [action] | <code>String</code> | 
+
+<a name="MdComponent+emit"></a>
+
+### mdDataTableCellComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdDataTableCellComponent</code>](#MdDataTableCellComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdDataTableComponent"></a>
+
+## MdDataTableComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+
+* [MdDataTableComponent](#MdDataTableComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdDataTableComponent+properties)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdDataTableComponent+properties"></a>
+
+### mdDataTableComponent.properties
+**Kind**: instance property of [<code>MdDataTableComponent</code>](#MdDataTableComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [headers] | <code>Array</code> | 
+| [bodies] | <code>Array</code> | 
+| [data] | <code>Array</code> | 
+| [footers] | <code>Array</code> | 
+
+<a name="MdComponent+emit"></a>
+
+### mdDataTableComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdDataTableComponent</code>](#MdDataTableComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdDatetimePickerComponent"></a>
+
+## MdDatetimePickerComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+**Emits**: <code>MdDatetimePickerComponent#event:onDatetimePickerLabelClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdDatetimePickerComponent#event:onDatetimePickerIconButtonPrevClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdDatetimePickerComponent#event:onDatetimePickerIconButtonNextClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdDatetimePickerComponent#event:onDatetimePickerIconButtonClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdDatetimePickerComponent#event:onDatetimePickerYearItemClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdDatetimePickerComponent#event:onDatetimePickerMonthItemClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdDatetimePickerComponent#event:onDatetimePickerDayItemClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdDatetimePickerComponent#event:onDatetimePickerHourItemClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdDatetimePickerComponent#event:onDatetimePickerMinuteItemClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdDatetimePickerComponent#event:onDatetimePickerButtonCancelClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdDatetimePickerComponent#event:onDatetimePickerButtonOkClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdDatetimePickerComponent#event:onDatetimePickerButtonClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdDatetimePickerComponent#event:onDatetimePickerScrimClosed - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>  
+
+* [MdDatetimePickerComponent](#MdDatetimePickerComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdDatetimePickerComponent+properties)
+    * [.startOfDay](#MdDatetimePickerComponent+startOfDay)
+    * [.years](#MdDatetimePickerComponent+years)
+    * [.months](#MdDatetimePickerComponent+months)
+    * [.weekdays](#MdDatetimePickerComponent+weekdays)
+    * [.days](#MdDatetimePickerComponent+days)
+    * [.hours](#MdDatetimePickerComponent+hours)
+    * [.minutes](#MdDatetimePickerComponent+minutes)
+    * [.label](#MdDatetimePickerComponent+label)
+    * [.show()](#MdDatetimePickerComponent+show)
+    * [.close()](#MdDatetimePickerComponent+close)
+    * [.toggle()](#MdDatetimePickerComponent+toggle)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdDatetimePickerComponent+properties"></a>
+
+### mdDatetimePickerComponent.properties
+**Kind**: instance property of [<code>MdDatetimePickerComponent</code>](#MdDatetimePickerComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [icons] | <code>Array</code> | 
+| [actions] | <code>Array</code> | 
+| [label] | <code>String</code> | 
+| [sublabel] | <code>String</code> | 
+| [buttons] | <code>Array</code> | 
+| [open] | <code>Boolean</code> | 
+| [index] | <code>Number</code> | 
+
+<a name="MdDatetimePickerComponent+startOfDay"></a>
+
+### mdDatetimePickerComponent.startOfDay
+**Kind**: instance property of [<code>MdDatetimePickerComponent</code>](#MdDatetimePickerComponent)  
+<a name="MdDatetimePickerComponent+years"></a>
+
+### mdDatetimePickerComponent.years
+**Kind**: instance property of [<code>MdDatetimePickerComponent</code>](#MdDatetimePickerComponent)  
+<a name="MdDatetimePickerComponent+months"></a>
+
+### mdDatetimePickerComponent.months
+**Kind**: instance property of [<code>MdDatetimePickerComponent</code>](#MdDatetimePickerComponent)  
+<a name="MdDatetimePickerComponent+weekdays"></a>
+
+### mdDatetimePickerComponent.weekdays
+**Kind**: instance property of [<code>MdDatetimePickerComponent</code>](#MdDatetimePickerComponent)  
+<a name="MdDatetimePickerComponent+days"></a>
+
+### mdDatetimePickerComponent.days
+**Kind**: instance property of [<code>MdDatetimePickerComponent</code>](#MdDatetimePickerComponent)  
+<a name="MdDatetimePickerComponent+hours"></a>
+
+### mdDatetimePickerComponent.hours
+**Kind**: instance property of [<code>MdDatetimePickerComponent</code>](#MdDatetimePickerComponent)  
+<a name="MdDatetimePickerComponent+minutes"></a>
+
+### mdDatetimePickerComponent.minutes
+**Kind**: instance property of [<code>MdDatetimePickerComponent</code>](#MdDatetimePickerComponent)  
+<a name="MdDatetimePickerComponent+label"></a>
+
+### mdDatetimePickerComponent.label
+**Kind**: instance property of [<code>MdDatetimePickerComponent</code>](#MdDatetimePickerComponent)  
+<a name="MdDatetimePickerComponent+show"></a>
+
+### mdDatetimePickerComponent.show()
+**Kind**: instance method of [<code>MdDatetimePickerComponent</code>](#MdDatetimePickerComponent)  
+<a name="MdDatetimePickerComponent+close"></a>
+
+### mdDatetimePickerComponent.close()
+**Kind**: instance method of [<code>MdDatetimePickerComponent</code>](#MdDatetimePickerComponent)  
+<a name="MdDatetimePickerComponent+toggle"></a>
+
+### mdDatetimePickerComponent.toggle()
+**Kind**: instance method of [<code>MdDatetimePickerComponent</code>](#MdDatetimePickerComponent)  
+<a name="MdComponent+emit"></a>
+
+### mdDatetimePickerComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdDatetimePickerComponent</code>](#MdDatetimePickerComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdDialogComponent"></a>
+
+## MdDialogComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+**Emits**: <code>MdDialogComponent#event:onDialogIconButtonClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdDialogComponent#event:onDialogButtonClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdDialogComponent#event:onDialogScrimClosed - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>  
+
+* [MdDialogComponent](#MdDialogComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdDialogComponent+properties)
+    * [.show()](#MdDialogComponent+show)
+    * [.close()](#MdDialogComponent+close)
+    * [.toggle()](#MdDialogComponent+toggle)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdDialogComponent+properties"></a>
+
+### mdDialogComponent.properties
+**Kind**: instance property of [<code>MdDialogComponent</code>](#MdDialogComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [icons] | <code>Array</code> | 
+| [actions] | <code>Array</code> | 
+| [label] | <code>String</code> | 
+| [sublabel] | <code>String</code> | 
+| [buttons] | <code>Array</code> | 
+| [open] | <code>Boolean</code> | 
+
+<a name="MdDialogComponent+show"></a>
+
+### mdDialogComponent.show()
+**Kind**: instance method of [<code>MdDialogComponent</code>](#MdDialogComponent)  
+<a name="MdDialogComponent+close"></a>
+
+### mdDialogComponent.close()
+**Kind**: instance method of [<code>MdDialogComponent</code>](#MdDialogComponent)  
+<a name="MdDialogComponent+toggle"></a>
+
+### mdDialogComponent.toggle()
+**Kind**: instance method of [<code>MdDialogComponent</code>](#MdDialogComponent)  
+<a name="MdComponent+emit"></a>
+
+### mdDialogComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdDialogComponent</code>](#MdDialogComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdDividerComponent"></a>
+
+## MdDividerComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+<a name="MdComponent+emit"></a>
+
+### mdDividerComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdDividerComponent</code>](#MdDividerComponent)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="Dragger"></a>
+
+## Dragger
+**Kind**: global class  
+<a name="MdFabComponent"></a>
+
+## MdFabComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+
+* [MdFabComponent](#MdFabComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdFabComponent+properties)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdFabComponent+properties"></a>
+
+### mdFabComponent.properties
+**Kind**: instance property of [<code>MdFabComponent</code>](#MdFabComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [icon] | <code>String</code> | 
+| [label] | <code>String</code> | 
+| [type] | <code>String</code> | 
+| [size] | <code>String</code> | 
+| [variant] | <code>String</code> | 
+
+<a name="MdComponent+emit"></a>
+
+### mdFabComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdFabComponent</code>](#MdFabComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdFormComponent"></a>
+
+## MdFormComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+**Emits**: <code>MdFormComponent#event:onFormNativeFormdata - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdFormComponent#event:onFormNativeReset - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdFormComponent#event:onFormNativeSubmit - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>  
+
+* [MdFormComponent](#MdFormComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdFormComponent+properties)
+    * [.formNative](#MdFormComponent+formNative)
+    * [.reset()](#MdFormComponent+reset)
+    * [.submit([submitButton])](#MdFormComponent+submit)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdFormComponent+properties"></a>
+
+### mdFormComponent.properties
+**Kind**: instance property of [<code>MdFormComponent</code>](#MdFormComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [acceptCharset] | <code>String</code> | 
+| [action] | <code>String</code> | 
+| [autocomplete] | <code>String</code> | 
+| [enctype] | <code>String</code> | 
+| [method] | <code>String</code> | 
+| [name] | <code>String</code> | 
+| [noValidate] | <code>Boolean</code> | 
+
+<a name="MdFormComponent+formNative"></a>
+
+### mdFormComponent.formNative
+**Kind**: instance property of [<code>MdFormComponent</code>](#MdFormComponent)  
+<a name="MdFormComponent+reset"></a>
+
+### mdFormComponent.reset()
+**Kind**: instance method of [<code>MdFormComponent</code>](#MdFormComponent)  
+<a name="MdFormComponent+submit"></a>
+
+### mdFormComponent.submit([submitButton])
+**Kind**: instance method of [<code>MdFormComponent</code>](#MdFormComponent)  
+
+| Param | Type |
+| --- | --- |
+| [submitButton] | <code>String</code> | 
+
+<a name="MdComponent+emit"></a>
+
+### mdFormComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdFormComponent</code>](#MdFormComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdIconButtonComponent"></a>
+
+## MdIconButtonComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+**Emits**: <code>MdIconButtonComponent#event:onIconButtonClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>  
+
+* [MdIconButtonComponent](#MdIconButtonComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdIconButtonComponent+properties)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdIconButtonComponent+properties"></a>
+
+### mdIconButtonComponent.properties
+**Kind**: instance property of [<code>MdIconButtonComponent</code>](#MdIconButtonComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [icon] | <code>String</code> | 
+| [variant] | <code>String</code> | 
+| [type] | <code>String</code> | 
+| [toggle] | <code>Boolean</code> | 
+| [selected] | <code>Boolean</code> | 
+| [disabled] | <code>Boolean</code> | 
+
+<a name="MdComponent+emit"></a>
+
+### mdIconButtonComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdIconButtonComponent</code>](#MdIconButtonComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdIconComponent"></a>
+
+## MdIconComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+<a name="MdComponent+emit"></a>
+
+### mdIconComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdIconComponent</code>](#MdIconComponent)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdImageComponent"></a>
+
+## MdImageComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+
+* [MdImageComponent](#MdImageComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdImageComponent+properties)
+    * [.styleInfo](#MdImageComponent+styleInfo)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdImageComponent+properties"></a>
+
+### mdImageComponent.properties
+**Kind**: instance property of [<code>MdImageComponent</code>](#MdImageComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [src] | <code>String</code> | 
+| [alt] | <code>String</code> | 
+| [ratio] | <code>String</code> | 
+| [circular] | <code>Boolean</code> | 
+
+<a name="MdImageComponent+styleInfo"></a>
+
+### mdImageComponent.styleInfo
+**Kind**: instance property of [<code>MdImageComponent</code>](#MdImageComponent)  
+<a name="MdComponent+emit"></a>
+
+### mdImageComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdImageComponent</code>](#MdImageComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdListItemComponent"></a>
+
+## MdListItemComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+**Emits**: <code>MdListItemComponent#event:onListItemSelected - {&quot;detail&quot;:{&quot;listItem&quot;:&quot;this&quot;}}</code>  
+
+* [MdListItemComponent](#MdListItemComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdListItemComponent+properties)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdListItemComponent+properties"></a>
+
+### mdListItemComponent.properties
+**Kind**: instance property of [<code>MdListItemComponent</code>](#MdListItemComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [leadingCheckbox] | <code>Boolean</code> | 
+| [leadingRadioButton] | <code>Boolean</code> | 
+| [leadingSwitch] | <code>Boolean</code> | 
+| [avatar] | <code>String</code> | 
+| [image] | <code>String</code> | 
+| [video] | <code>String</code> | 
+| [icon] | <code>String</code> | 
+| [label] | <code>String</code> | 
+| [sublabel] | <code>String</code> | 
+| [text] | <code>String</code> | 
+| [trailingCheckbox] | <code>Boolean</code> | 
+| [trailingRadioButton] | <code>Boolean</code> | 
+| [trailingSwitch] | <code>Boolean</code> | 
+| [selected] | <code>Boolean</code> | 
+| [disabled] | <code>Boolean</code> | 
+| [routerLink] | <code>String</code> | 
+| [rippleOptions] | <code>Object</code> | 
+| [badge] | <code>Number</code> | 
+
+<a name="MdComponent+emit"></a>
+
+### mdListItemComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdListItemComponent</code>](#MdListItemComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdListRowComponent"></a>
+
+## MdListRowComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+<a name="MdComponent+emit"></a>
+
+### mdListRowComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdListRowComponent</code>](#MdListRowComponent)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdListComponent"></a>
+
+## MdListComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+**Emits**: <code>MdListComponent#event:onListItemClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdListComponent#event:onListItemCheckboxNativeInput - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdListComponent#event:onListItemRadioButtonNativeInput - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdListComponent#event:onListItemSwitchNativeInput - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>  
+
+* [MdListComponent](#MdListComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdListComponent+properties)
+    * [.multiSelect([data])](#MdListComponent+multiSelect)
+    * [.singleSelect([data])](#MdListComponent+singleSelect)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdListComponent+properties"></a>
+
+### mdListComponent.properties
+**Kind**: instance property of [<code>MdListComponent</code>](#MdListComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [items] | <code>Array</code> | 
+| [type] | <code>String</code> | 
+| [rippleOptions] | <code>Object</code> | 
+
+<a name="MdListComponent+multiSelect"></a>
+
+### mdListComponent.multiSelect([data])
+**Kind**: instance method of [<code>MdListComponent</code>](#MdListComponent)  
+
+| Param | Type |
+| --- | --- |
+| [data] | <code>Object</code> | 
+
+<a name="MdListComponent+singleSelect"></a>
+
+### mdListComponent.singleSelect([data])
+**Kind**: instance method of [<code>MdListComponent</code>](#MdListComponent)  
+
+| Param | Type |
+| --- | --- |
+| [data] | <code>Object</code> | 
+
+<a name="MdComponent+emit"></a>
+
+### mdListComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdListComponent</code>](#MdListComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdMenuComponent"></a>
+
+## MdMenuComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+
+* [MdMenuComponent](#MdMenuComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdMenuComponent+properties)
+    * [.show([options])](#MdMenuComponent+show)
+    * [.close()](#MdMenuComponent+close)
+    * [.toggle([options])](#MdMenuComponent+toggle)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdMenuComponent+properties"></a>
+
+### mdMenuComponent.properties
+**Kind**: instance property of [<code>MdMenuComponent</code>](#MdMenuComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [open] | <code>Boolean</code> | 
+| [items] | <code>Array</code> | 
+
+<a name="MdMenuComponent+show"></a>
+
+### mdMenuComponent.show([options])
+**Kind**: instance method of [<code>MdMenuComponent</code>](#MdMenuComponent)  
+
+| Param | Type | Default |
+| --- | --- | --- |
+| [options] | <code>Object</code> | <code>{}</code> | 
+
+<a name="MdMenuComponent+close"></a>
+
+### mdMenuComponent.close()
+**Kind**: instance method of [<code>MdMenuComponent</code>](#MdMenuComponent)  
+<a name="MdMenuComponent+toggle"></a>
+
+### mdMenuComponent.toggle([options])
+**Kind**: instance method of [<code>MdMenuComponent</code>](#MdMenuComponent)  
+
+| Param | Type |
+| --- | --- |
+| [options] | <code>String</code> | 
+
+<a name="MdComponent+emit"></a>
+
+### mdMenuComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdMenuComponent</code>](#MdMenuComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdNavigationBarComponent"></a>
+
+## MdNavigationBarComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+
+* [MdNavigationBarComponent](#MdNavigationBarComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdNavigationBarComponent+properties)
+    * [.show()](#MdNavigationBarComponent+show)
+    * [.close()](#MdNavigationBarComponent+close)
+    * [.toggle()](#MdNavigationBarComponent+toggle)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdNavigationBarComponent+properties"></a>
+
+### mdNavigationBarComponent.properties
+**Kind**: instance property of [<code>MdNavigationBarComponent</code>](#MdNavigationBarComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [open] | <code>Boolean</code> | 
+| [items] | <code>Array</code> | 
+
+<a name="MdNavigationBarComponent+show"></a>
+
+### mdNavigationBarComponent.show()
+**Kind**: instance method of [<code>MdNavigationBarComponent</code>](#MdNavigationBarComponent)  
+<a name="MdNavigationBarComponent+close"></a>
+
+### mdNavigationBarComponent.close()
+**Kind**: instance method of [<code>MdNavigationBarComponent</code>](#MdNavigationBarComponent)  
+<a name="MdNavigationBarComponent+toggle"></a>
+
+### mdNavigationBarComponent.toggle()
+**Kind**: instance method of [<code>MdNavigationBarComponent</code>](#MdNavigationBarComponent)  
+<a name="MdComponent+emit"></a>
+
+### mdNavigationBarComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdNavigationBarComponent</code>](#MdNavigationBarComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdNavigationDrawerComponent"></a>
+
+## MdNavigationDrawerComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+**Emits**: <code>MdNavigationDrawerComponent#event:onNavigationDrawerIconButtonClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdNavigationDrawerComponent#event:onNavigationDrawerScrimClosed - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>  
+
+* [MdNavigationDrawerComponent](#MdNavigationDrawerComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdNavigationDrawerComponent+properties)
+    * [.show()](#MdNavigationDrawerComponent+show)
+    * [.close()](#MdNavigationDrawerComponent+close)
+    * [.toggle()](#MdNavigationDrawerComponent+toggle)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdNavigationDrawerComponent+properties"></a>
+
+### mdNavigationDrawerComponent.properties
+**Kind**: instance property of [<code>MdNavigationDrawerComponent</code>](#MdNavigationDrawerComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [icons] | <code>Array</code> | 
+| [actions] | <code>Array</code> | 
+| [label] | <code>String</code> | 
+| [sublabel] | <code>String</code> | 
+| [items] | <code>Array</code> | 
+| [open] | <code>Boolean</code> | 
+| [modal] | <code>Boolean</code> | 
+| [view] | <code>String</code> | 
+
+<a name="MdNavigationDrawerComponent+show"></a>
+
+### mdNavigationDrawerComponent.show()
+**Kind**: instance method of [<code>MdNavigationDrawerComponent</code>](#MdNavigationDrawerComponent)  
+<a name="MdNavigationDrawerComponent+close"></a>
+
+### mdNavigationDrawerComponent.close()
+**Kind**: instance method of [<code>MdNavigationDrawerComponent</code>](#MdNavigationDrawerComponent)  
+<a name="MdNavigationDrawerComponent+toggle"></a>
+
+### mdNavigationDrawerComponent.toggle()
+**Kind**: instance method of [<code>MdNavigationDrawerComponent</code>](#MdNavigationDrawerComponent)  
+<a name="MdComponent+emit"></a>
+
+### mdNavigationDrawerComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdNavigationDrawerComponent</code>](#MdNavigationDrawerComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdNavigationListItemComponent"></a>
+
+## MdNavigationListItemComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+**Emits**: <code>MdNavigationListItemComponent#event:onNavigationListItemSelected - {&quot;detail&quot;:{&quot;navigationListItem&quot;:&quot;this&quot;}}</code>  
+
+* [MdNavigationListItemComponent](#MdNavigationListItemComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdNavigationListItemComponent+properties)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdNavigationListItemComponent+properties"></a>
+
+### mdNavigationListItemComponent.properties
+**Kind**: instance property of [<code>MdNavigationListItemComponent</code>](#MdNavigationListItemComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [icon] | <code>String</code> | 
+| [label] | <code>String</code> | 
+| [sublabel] | <code>String</code> | 
+| [selected] | <code>Boolean</code> | 
+| [disabled] | <code>Boolean</code> | 
+| [routerLink] | <code>String</code> | 
+| [rippleOptions] | <code>Object</code> | 
+| [badge] | <code>Number</code> | 
+
+<a name="MdComponent+emit"></a>
+
+### mdNavigationListItemComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdNavigationListItemComponent</code>](#MdNavigationListItemComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdNavigationListRowComponent"></a>
+
+## MdNavigationListRowComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+<a name="MdComponent+emit"></a>
+
+### mdNavigationListRowComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdNavigationListRowComponent</code>](#MdNavigationListRowComponent)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdNavigationListComponent"></a>
+
+## MdNavigationListComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+**Emits**: <code>MdNavigationListComponent#event:onNavigationListItemClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>  
+
+* [MdNavigationListComponent](#MdNavigationListComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdNavigationListComponent+properties)
+    * [.singleSelect([data])](#MdNavigationListComponent+singleSelect)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdNavigationListComponent+properties"></a>
+
+### mdNavigationListComponent.properties
+**Kind**: instance property of [<code>MdNavigationListComponent</code>](#MdNavigationListComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [items] | <code>Array</code> | 
+| [rippleOptions] | <code>Object</code> | 
+
+<a name="MdNavigationListComponent+singleSelect"></a>
+
+### mdNavigationListComponent.singleSelect([data])
+**Kind**: instance method of [<code>MdNavigationListComponent</code>](#MdNavigationListComponent)  
+
+| Param | Type |
+| --- | --- |
+| [data] | <code>Object</code> | 
+
+<a name="MdComponent+emit"></a>
+
+### mdNavigationListComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdNavigationListComponent</code>](#MdNavigationListComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdNavigationRailComponent"></a>
+
+## MdNavigationRailComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+**Emits**: <code>MdNavigationRailComponent#event:onNavigationRailIconButtonClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>  
+
+* [MdNavigationRailComponent](#MdNavigationRailComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdNavigationRailComponent+properties)
+    * [.show()](#MdNavigationRailComponent+show)
+    * [.close()](#MdNavigationRailComponent+close)
+    * [.toggle()](#MdNavigationRailComponent+toggle)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdNavigationRailComponent+properties"></a>
+
+### mdNavigationRailComponent.properties
+**Kind**: instance property of [<code>MdNavigationRailComponent</code>](#MdNavigationRailComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [icons] | <code>Array</code> | 
+| [actions] | <code>Array</code> | 
+| [label] | <code>String</code> | 
+| [sublabel] | <code>String</code> | 
+| [items] | <code>Array</code> | 
+| [open] | <code>Boolean</code> | 
+
+<a name="MdNavigationRailComponent+show"></a>
+
+### mdNavigationRailComponent.show()
+**Kind**: instance method of [<code>MdNavigationRailComponent</code>](#MdNavigationRailComponent)  
+<a name="MdNavigationRailComponent+close"></a>
+
+### mdNavigationRailComponent.close()
+**Kind**: instance method of [<code>MdNavigationRailComponent</code>](#MdNavigationRailComponent)  
+<a name="MdNavigationRailComponent+toggle"></a>
+
+### mdNavigationRailComponent.toggle()
+**Kind**: instance method of [<code>MdNavigationRailComponent</code>](#MdNavigationRailComponent)  
+<a name="MdComponent+emit"></a>
+
+### mdNavigationRailComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdNavigationRailComponent</code>](#MdNavigationRailComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="PopperController"></a>
+
+## PopperController
+**Kind**: global class  
+
+* [PopperController](#PopperController)
+    * [.show([options])](#PopperController+show)
+    * [.closestScrollable([element])](#PopperController+closestScrollable)
+
+<a name="PopperController+show"></a>
+
+### popperController.show([options])
+**Kind**: instance method of [<code>PopperController</code>](#PopperController)  
+
+| Param | Type | Default |
+| --- | --- | --- |
+| [options] | <code>Object</code> | <code>{}</code> | 
+
+<a name="PopperController+closestScrollable"></a>
+
+### popperController.closestScrollable([element])
+**Kind**: instance method of [<code>PopperController</code>](#PopperController)  
+
+| Param | Type |
+| --- | --- |
+| [element] | <code>String</code> | 
+
+<a name="MdProgressIndicatorComponent"></a>
+
+## MdProgressIndicatorComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+
+* [MdProgressIndicatorComponent](#MdProgressIndicatorComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdProgressIndicatorComponent+properties)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdProgressIndicatorComponent+properties"></a>
+
+### mdProgressIndicatorComponent.properties
+**Kind**: instance property of [<code>MdProgressIndicatorComponent</code>](#MdProgressIndicatorComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [variant] | <code>String</code> | 
+| [max] | <code>Number</code> | 
+| [value] | <code>Number</code> | 
+
+<a name="MdComponent+emit"></a>
+
+### mdProgressIndicatorComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdProgressIndicatorComponent</code>](#MdProgressIndicatorComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdRadioButtonComponent"></a>
+
+## MdRadioButtonComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+**Emits**: <code>MdRadioButtonComponent#event:onRadioButtonNativeInput - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdRadioButtonComponent#event:onRadioButtonNativeReset - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>  
+
+* [MdRadioButtonComponent](#MdRadioButtonComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdRadioButtonComponent+properties)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdRadioButtonComponent+properties"></a>
+
+### mdRadioButtonComponent.properties
+**Kind**: instance property of [<code>MdRadioButtonComponent</code>](#MdRadioButtonComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [name] | <code>String</code> | 
+| [value] | <code>String</code> | 
+| [indeterminate] | <code>Boolean</code> | 
+| [checked] | <code>Boolean</code> | 
+
+<a name="MdComponent+emit"></a>
+
+### mdRadioButtonComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdRadioButtonComponent</code>](#MdRadioButtonComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
 
-- <code>constructor()</code>
+<a name="RippleController"></a>
 
+## RippleController
+**Kind**: global class  
 
-#### Inheritance
+* [RippleController](#RippleController)
+    * [new RippleController([host], [options])](#new_RippleController_new)
+    * [.hostConnected()](#RippleController+hostConnected)
+    * [.hostDisconnected()](#RippleController+hostDisconnected)
 
-<code>MdComponent</code>
+<a name="new_RippleController_new"></a>
 
----
-### MdBottomAppBarComponent
+### new RippleController([host], [options])
 
-#### Instance properties
+| Param | Type |
+| --- | --- |
+| [host] | <code>String</code> | 
+| [options] | <code>String</code> | 
 
-name|type
----|---
-<code>actions</code>|Array
-<code>fab</code>|String
-<code>open</code>|Boolean
+<a name="RippleController+hostConnected"></a>
 
-#### Instance methods
+### rippleController.hostConnected()
+**Kind**: instance method of [<code>RippleController</code>](#RippleController)  
+<a name="RippleController+hostDisconnected"></a>
 
-- <code>constructor()</code>
+### rippleController.hostDisconnected()
+**Kind**: instance method of [<code>RippleController</code>](#RippleController)  
+<a name="Router"></a>
 
-- <code>show()</code>
+## Router
+**Kind**: global class  
 
-- <code>close()</code>
+* [Router](#Router)
+    * [.pathname](#Router.pathname)
+    * [.get([pathname], [routes], [parent], [result])](#Router.get)
+    * [.removeComponent([routes])](#Router.removeComponent)
+    * [.getOutlet([container], [route])](#Router.getOutlet)
+    * [.setContainer([route])](#Router.setContainer)
+    * [.loadComponent([route])](#Router.loadComponent)
+    * [.setController()](#Router.setController)
+    * [.navigate([url])](#Router.navigate)
+    * [.emit([type], [detail])](#Router.emit)
+    * [.use([routes], [options])](#Router.use)
 
-- <code>toggle()</code>
+<a name="Router.pathname"></a>
 
+### Router.pathname
+**Kind**: static property of [<code>Router</code>](#Router)  
+<a name="Router.get"></a>
 
-#### Events
+### Router.get([pathname], [routes], [parent], [result])
+**Kind**: static method of [<code>Router</code>](#Router)  
 
-name|event
----|---
-<code>onBottomAppBarIconButtonClick</code>|{"detail":{"event":{}}}
-<code>onBottomAppBarFabClick</code>|{"detail":{"event":{}}}
+| Param | Type | Default |
+| --- | --- | --- |
+| [pathname] | <code>undefined</code> | <code>this.pathname</code> | 
+| [routes] | <code>undefined</code> | <code>this.routes</code> | 
+| [parent] | <code>String</code> | <code></code> | 
+| [result] | <code>Array</code> | <code>[]</code> | 
 
-#### Inheritance
+<a name="Router.removeComponent"></a>
 
-<code>MdComponent</code>
+### Router.removeComponent([routes])
+**Kind**: static method of [<code>Router</code>](#Router)  
 
----
-### MdBottomSheetComponent
+| Param | Type |
+| --- | --- |
+| [routes] | <code>String</code> | 
 
-#### Instance properties
+<a name="Router.getOutlet"></a>
 
-name|type
----|---
-<code>icons</code>|Array
-<code>actions</code>|Array
-<code>label</code>|String
-<code>sublabel</code>|String
-<code>buttons</code>|Array
-<code>open</code>|Boolean
-<code>modal</code>|Boolean
+### Router.getOutlet([container], [route])
+**Kind**: static method of [<code>Router</code>](#Router)  
 
-#### Instance methods
+| Param | Type |
+| --- | --- |
+| [container] | <code>String</code> | 
+| [route] | <code>String</code> | 
 
-- <code>constructor()</code>
+<a name="Router.setContainer"></a>
 
-- <code>show()</code>
+### Router.setContainer([route])
+**Kind**: static method of [<code>Router</code>](#Router)  
 
-- <code>close()</code>
+| Param | Type |
+| --- | --- |
+| [route] | <code>String</code> | 
 
-- <code>toggle()</code>
+<a name="Router.loadComponent"></a>
 
+### Router.loadComponent([route])
+**Kind**: static method of [<code>Router</code>](#Router)  
 
-#### Events
+| Param | Type |
+| --- | --- |
+| [route] | <code>String</code> | 
 
-name|event
----|---
-<code>onBottomSheetIconButtonClick</code>|{"detail":{"event":{}}}
-<code>onBottomSheetButtonClick</code>|{"detail":{"event":{}}}
-<code>onBottomSheetScrimClosed</code>|{"detail":{"event":{}}}
+<a name="Router.setController"></a>
 
-#### Inheritance
+### Router.setController()
+**Kind**: static method of [<code>Router</code>](#Router)  
+<a name="Router.navigate"></a>
 
-<code>MdComponent</code>
+### Router.navigate([url])
+**Kind**: static method of [<code>Router</code>](#Router)  
 
----
-### MdButtonComponent
+| Param | Type |
+| --- | --- |
+| [url] | <code>String</code> | 
 
-#### Instance properties
+<a name="Router.emit"></a>
 
-name|type
----|---
-<code>icon</code>|String
-<code>label</code>|String
-<code>variant</code>|String
-<code>type</code>|String
-<code>disabled</code>|Boolean
-<code>selected</code>|Boolean
+### Router.emit([type], [detail])
+**Kind**: static method of [<code>Router</code>](#Router)  
 
-#### Instance methods
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
 
-- <code>constructor()</code>
+<a name="Router.use"></a>
 
+### Router.use([routes], [options])
+**Kind**: static method of [<code>Router</code>](#Router)  
 
-#### Inheritance
+| Param | Type | Default |
+| --- | --- | --- |
+| [routes] | <code>Array</code> | <code>[]</code> | 
+| [options] | <code>Object</code> | <code>{}</code> | 
 
-<code>MdComponent</code>
+<a name="MdScrimComponent"></a>
 
----
-### MdCardComponent
+## MdScrimComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+**Emits**: <code>MdScrimComponent#event:onScrimClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>  
 
-#### Instance properties
+* [MdScrimComponent](#MdScrimComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdScrimComponent+properties)
+    * [.show()](#MdScrimComponent+show)
+    * [.close()](#MdScrimComponent+close)
+    * [.toggle()](#MdScrimComponent+toggle)
+    * [.emit([type], [detail])](#MdComponent+emit)
 
-name|type
----|---
-<code>icons</code>|Array
-<code>actions</code>|Array
-<code>label</code>|String
-<code>sublabel</code>|String
-<code>buttons</code>|Array
+<a name="MdScrimComponent+properties"></a>
 
-#### Instance methods
+### mdScrimComponent.properties
+**Kind**: instance property of [<code>MdScrimComponent</code>](#MdScrimComponent)  
+**Properties**
 
-- <code>constructor()</code>
+| Name | Type |
+| --- | --- |
+| [open] | <code>Boolean</code> | 
 
+<a name="MdScrimComponent+show"></a>
 
-#### Events
+### mdScrimComponent.show()
+**Kind**: instance method of [<code>MdScrimComponent</code>](#MdScrimComponent)  
+<a name="MdScrimComponent+close"></a>
 
-name|event
----|---
-<code>onCardIconButtonClick</code>|{"detail":{"event":{}}}
-<code>onCardButtonClick</code>|{"detail":{"event":{}}}
+### mdScrimComponent.close()
+**Kind**: instance method of [<code>MdScrimComponent</code>](#MdScrimComponent)  
+<a name="MdScrimComponent+toggle"></a>
 
-#### Inheritance
+### mdScrimComponent.toggle()
+**Kind**: instance method of [<code>MdScrimComponent</code>](#MdScrimComponent)  
+<a name="MdComponent+emit"></a>
 
-<code>MdComponent</code>
+### mdScrimComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdScrimComponent</code>](#MdScrimComponent)  
 
----
-### MdCheckboxComponent
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
 
-#### Instance properties
+<a name="MdSegmentedButtonComponent"></a>
 
-name|type
----|---
-<code>name</code>|String
-<code>value</code>|String
-<code>indeterminate</code>|Boolean
-<code>checked</code>|Boolean
+## MdSegmentedButtonComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+**Emits**: <code>MdSegmentedButtonComponent#event:onSegmentedButtonItemClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>  
 
-#### Instance methods
+* [MdSegmentedButtonComponent](#MdSegmentedButtonComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdSegmentedButtonComponent+properties)
+    * [.emit([type], [detail])](#MdComponent+emit)
 
-- <code>constructor()</code>
+<a name="MdSegmentedButtonComponent+properties"></a>
 
+### mdSegmentedButtonComponent.properties
+**Kind**: instance property of [<code>MdSegmentedButtonComponent</code>](#MdSegmentedButtonComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [items] | <code>Array</code> | 
+| [type] | <code>String</code> | 
 
-#### Events
+<a name="MdComponent+emit"></a>
 
-name|event
----|---
-<code>onCheckboxNativeInput</code>|{"detail":{"event":{}}}
-<code>onCheckboxNativeReset</code>|{"detail":{"event":{}}}
+### mdSegmentedButtonComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdSegmentedButtonComponent</code>](#MdSegmentedButtonComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
 
-#### Inheritance
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
 
-<code>MdComponent</code>
+<a name="MdSheetComponent"></a>
+
+## MdSheetComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+**Emits**: <code>MdSheetComponent#event:onSheetIconButtonClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdSheetComponent#event:onSheetButtonClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdSheetComponent#event:onSheetScrimClosed - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>  
+
+* [MdSheetComponent](#MdSheetComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdSheetComponent+properties)
+    * [.show()](#MdSheetComponent+show)
+    * [.close()](#MdSheetComponent+close)
+    * [.toggle()](#MdSheetComponent+toggle)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdSheetComponent+properties"></a>
 
----
-### MdChipComponent
+### mdSheetComponent.properties
+**Kind**: instance property of [<code>MdSheetComponent</code>](#MdSheetComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [icons] | <code>Array</code> | 
+| [actions] | <code>Array</code> | 
+| [label] | <code>String</code> | 
+| [sublabel] | <code>String</code> | 
+| [buttons] | <code>Array</code> | 
+| [open] | <code>Boolean</code> | 
+| [region] | <code>String</code> | 
+| [modal] | <code>Boolean</code> | 
+
+<a name="MdSheetComponent+show"></a>
+
+### mdSheetComponent.show()
+**Kind**: instance method of [<code>MdSheetComponent</code>](#MdSheetComponent)  
+<a name="MdSheetComponent+close"></a>
+
+### mdSheetComponent.close()
+**Kind**: instance method of [<code>MdSheetComponent</code>](#MdSheetComponent)  
+<a name="MdSheetComponent+toggle"></a>
+
+### mdSheetComponent.toggle()
+**Kind**: instance method of [<code>MdSheetComponent</code>](#MdSheetComponent)  
+<a name="MdComponent+emit"></a>
+
+### mdSheetComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdSheetComponent</code>](#MdSheetComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdSideSheetComponent"></a>
+
+## MdSideSheetComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+**Emits**: <code>MdSideSheetComponent#event:onSideSheetIconButtonClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdSideSheetComponent#event:onSideSheetButtonClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdSideSheetComponent#event:onSideSheetScrimClosed - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>  
+
+* [MdSideSheetComponent](#MdSideSheetComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdSideSheetComponent+properties)
+    * [.show()](#MdSideSheetComponent+show)
+    * [.close()](#MdSideSheetComponent+close)
+    * [.toggle()](#MdSideSheetComponent+toggle)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdSideSheetComponent+properties"></a>
+
+### mdSideSheetComponent.properties
+**Kind**: instance property of [<code>MdSideSheetComponent</code>](#MdSideSheetComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [icons] | <code>Array</code> | 
+| [actions] | <code>Array</code> | 
+| [label] | <code>String</code> | 
+| [sublabel] | <code>String</code> | 
+| [buttons] | <code>Array</code> | 
+| [open] | <code>Boolean</code> | 
+| [modal] | <code>Boolean</code> | 
+
+<a name="MdSideSheetComponent+show"></a>
+
+### mdSideSheetComponent.show()
+**Kind**: instance method of [<code>MdSideSheetComponent</code>](#MdSideSheetComponent)  
+<a name="MdSideSheetComponent+close"></a>
+
+### mdSideSheetComponent.close()
+**Kind**: instance method of [<code>MdSideSheetComponent</code>](#MdSideSheetComponent)  
+<a name="MdSideSheetComponent+toggle"></a>
+
+### mdSideSheetComponent.toggle()
+**Kind**: instance method of [<code>MdSideSheetComponent</code>](#MdSideSheetComponent)  
+<a name="MdComponent+emit"></a>
+
+### mdSideSheetComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdSideSheetComponent</code>](#MdSideSheetComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdSliderComponent"></a>
+
+## MdSliderComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+**Emits**: <code>MdSliderComponent#event:onSliderNativeInput - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdSliderComponent#event:onSliderNativeReset - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>  
+
+* [MdSliderComponent](#MdSliderComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdSliderComponent+properties)
+    * [.indicators](#MdSliderComponent+indicators)
+    * [.sliderNatives](#MdSliderComponent+sliderNatives)
+    * [.updateValue()](#MdSliderComponent+updateValue)
+    * [.percentage([value], [min], [max])](#MdSliderComponent+percentage)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdSliderComponent+properties"></a>
+
+### mdSliderComponent.properties
+**Kind**: instance property of [<code>MdSliderComponent</code>](#MdSliderComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [min] | <code>Number</code> | 
+| [max] | <code>Number</code> | 
+| [step] | <code>Number</code> | 
+| [variant] | <code>String</code> | 
+| [name] | <code>String</code> | 
+| [value] | <code>undefined</code> | 
+| [converter] | <code>undefined</code> | 
+
+<a name="MdSliderComponent+indicators"></a>
+
+### mdSliderComponent.indicators
+**Kind**: instance property of [<code>MdSliderComponent</code>](#MdSliderComponent)  
+<a name="MdSliderComponent+sliderNatives"></a>
+
+### mdSliderComponent.sliderNatives
+**Kind**: instance property of [<code>MdSliderComponent</code>](#MdSliderComponent)  
+<a name="MdSliderComponent+updateValue"></a>
+
+### mdSliderComponent.updateValue()
+**Kind**: instance method of [<code>MdSliderComponent</code>](#MdSliderComponent)  
+<a name="MdSliderComponent+percentage"></a>
+
+### mdSliderComponent.percentage([value], [min], [max])
+**Kind**: instance method of [<code>MdSliderComponent</code>](#MdSliderComponent)  
+
+| Param | Type | Default |
+| --- | --- | --- |
+| [value] | <code>String</code> |  | 
+| [min] | <code>undefined</code> | <code>this.min</code> | 
+| [max] | <code>undefined</code> | <code>this.max</code> | 
+
+<a name="MdComponent+emit"></a>
+
+### mdSliderComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdSliderComponent</code>](#MdSliderComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdSnackbarComponent"></a>
+
+## MdSnackbarComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+**Emits**: <code>MdSnackbarComponent#event:onSnackbarIconButtonClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdSnackbarComponent#event:onSnackbarButtonClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>  
+
+* [MdSnackbarComponent](#MdSnackbarComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdSnackbarComponent+properties)
+    * [.show()](#MdSnackbarComponent+show)
+    * [.close()](#MdSnackbarComponent+close)
+    * [.toggle()](#MdSnackbarComponent+toggle)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdSnackbarComponent+properties"></a>
 
-#### Instance properties
+### mdSnackbarComponent.properties
+**Kind**: instance property of [<code>MdSnackbarComponent</code>](#MdSnackbarComponent)  
+**Properties**
 
-name|type
----|---
-<code>items</code>|Array
-<code>type</code>|String
+| Name | Type |
+| --- | --- |
+| [icons] | <code>Array</code> | 
+| [actions] | <code>Array</code> | 
+| [buttons] | <code>Array</code> | 
+| [open] | <code>Boolean</code> | 
 
-#### Instance methods
+<a name="MdSnackbarComponent+show"></a>
 
-- <code>constructor()</code>
+### mdSnackbarComponent.show()
+**Kind**: instance method of [<code>MdSnackbarComponent</code>](#MdSnackbarComponent)  
+<a name="MdSnackbarComponent+close"></a>
 
+### mdSnackbarComponent.close()
+**Kind**: instance method of [<code>MdSnackbarComponent</code>](#MdSnackbarComponent)  
+<a name="MdSnackbarComponent+toggle"></a>
 
-#### Events
+### mdSnackbarComponent.toggle()
+**Kind**: instance method of [<code>MdSnackbarComponent</code>](#MdSnackbarComponent)  
+<a name="MdComponent+emit"></a>
 
-name|event
----|---
-<code>onChipClick</code>|{"detail":{"event":{}}}
+### mdSnackbarComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdSnackbarComponent</code>](#MdSnackbarComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
 
-#### Inheritance
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
 
-<code>MdComponent</code>
+<a name="Store"></a>
 
----
-### MdComponent
+## Store
+**Kind**: global class  
 
-#### Instance methods
+* [Store](#Store)
+    * [new Store([data], [options])](#new_Store_new)
+    * [.sort([data], [sorters])](#Store+sort)
+    * [.deepSearch([item], [q])](#Store+deepSearch)
+    * [.search([data], [q])](#Store+search)
+    * [.getNestedValue([item], [name])](#Store+getNestedValue)
+    * [.filter([data], [filters])](#Store+filter)
+    * [.range([data], [_start], [_end])](#Store+range)
+    * [.paginate([data], [_page], [_limit])](#Store+paginate)
+    * [.get([options])](#Store+get)
 
-- <code>emit(type, detail)</code>
+<a name="new_Store_new"></a>
 
-name|type|default
----|---|---
-<code>type</code>|String|undefined
-<code>detail</code>|String|undefined
+### new Store([data], [options])
 
-#### Inheritance
+| Param | Type | Default |
+| --- | --- | --- |
+| [data] | <code>Object</code> | <code>[]</code> | 
+| [options] | <code>Object</code> | <code>{}</code> | 
 
-<code>LitElement</code>
+<a name="Store+sort"></a>
 
----
-### MdDataTableCellComponent
+### store.sort([data], [sorters])
+**Kind**: instance method of [<code>Store</code>](#Store)  
 
-#### Instance properties
+| Param | Type |
+| --- | --- |
+| [data] | <code>Object</code> | 
+| [sorters] | <code>String</code> | 
 
-name|type
----|---
-<code>checkbox</code>|Boolean
-<code>avatar</code>|String
-<code>icon</code>|String
-<code>label</code>|String
-<code>sublabel</code>|String
-<code>action</code>|String
+<a name="Store+deepSearch"></a>
 
-#### Instance methods
+### store.deepSearch([item], [q])
+**Kind**: instance method of [<code>Store</code>](#Store)  
 
-- <code>constructor()</code>
+| Param | Type |
+| --- | --- |
+| [item] | <code>String</code> | 
+| [q] | <code>String</code> | 
 
+<a name="Store+search"></a>
 
-#### Inheritance
+### store.search([data], [q])
+**Kind**: instance method of [<code>Store</code>](#Store)  
 
-<code>MdComponent</code>
+| Param | Type |
+| --- | --- |
+| [data] | <code>Object</code> | 
+| [q] | <code>String</code> | 
 
----
-### MdDataTableComponent
+<a name="Store+getNestedValue"></a>
 
-#### Instance properties
+### store.getNestedValue([item], [name])
+**Kind**: instance method of [<code>Store</code>](#Store)  
 
-name|type
----|---
-<code>headers</code>|Array
-<code>bodies</code>|Array
-<code>data</code>|Array
-<code>footers</code>|Array
+| Param | Type |
+| --- | --- |
+| [item] | <code>String</code> | 
+| [name] | <code>String</code> | 
 
-#### Instance methods
+<a name="Store+filter"></a>
 
-- <code>constructor()</code>
+### store.filter([data], [filters])
+**Kind**: instance method of [<code>Store</code>](#Store)  
 
+| Param | Type |
+| --- | --- |
+| [data] | <code>Object</code> | 
+| [filters] | <code>String</code> | 
 
-#### Inheritance
+<a name="Store+range"></a>
 
-<code>MdComponent</code>
+### store.range([data], [_start], [_end])
+**Kind**: instance method of [<code>Store</code>](#Store)  
 
----
-### MdDatetimePickerComponent
+| Param | Type |
+| --- | --- |
+| [data] | <code>Object</code> | 
+| [_start] | <code>String</code> | 
+| [_end] | <code>String</code> | 
 
-#### Instance properties
+<a name="Store+paginate"></a>
 
-name|type
----|---
-<code>icons</code>|Array
-<code>actions</code>|Array
-<code>label</code>|String
-<code>sublabel</code>|String
-<code>buttons</code>|Array
-<code>open</code>|Boolean
-<code>index</code>|Number
+### store.paginate([data], [_page], [_limit])
+**Kind**: instance method of [<code>Store</code>](#Store)  
 
-#### Instance methods
+| Param | Type |
+| --- | --- |
+| [data] | <code>Object</code> | 
+| [_page] | <code>String</code> | 
+| [_limit] | <code>String</code> | 
 
-- <code>startOfDay()</code>
+<a name="Store+get"></a>
 
-- <code>years()</code>
+### store.get([options])
+**Kind**: instance method of [<code>Store</code>](#Store)  
 
-- <code>months()</code>
+| Param | Type | Default |
+| --- | --- | --- |
+| [options] | <code>Object</code> | <code>{}</code> | 
 
-- <code>weekdays()</code>
+<a name="MdSwitchComponent"></a>
 
-- <code>days()</code>
+## MdSwitchComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+**Emits**: <code>MdSwitchComponent#event:onSwitchNativeInput - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdSwitchComponent#event:onSwitchNativeReset - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>  
 
-- <code>hours()</code>
+* [MdSwitchComponent](#MdSwitchComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdSwitchComponent+properties)
+    * [.emit([type], [detail])](#MdComponent+emit)
 
-- <code>minutes()</code>
+<a name="MdSwitchComponent+properties"></a>
 
-- <code>label()</code>
+### mdSwitchComponent.properties
+**Kind**: instance property of [<code>MdSwitchComponent</code>](#MdSwitchComponent)  
+**Properties**
 
-- <code>constructor()</code>
+| Name | Type |
+| --- | --- |
+| [name] | <code>String</code> | 
+| [value] | <code>String</code> | 
+| [indeterminate] | <code>Boolean</code> | 
+| [checked] | <code>Boolean</code> | 
+| [icons] | <code>Array</code> | 
 
-- <code>show()</code>
+<a name="MdComponent+emit"></a>
 
-- <code>close()</code>
+### mdSwitchComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdSwitchComponent</code>](#MdSwitchComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
 
-- <code>toggle()</code>
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
 
+<a name="MdTabComponent"></a>
 
-#### Events
+## MdTabComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+**Emits**: <code>MdTabComponent#event:onTabSelected - {&quot;detail&quot;:{&quot;tab&quot;:&quot;this&quot;}}</code>  
 
-name|event
----|---
-<code>onDatetimePickerLabelClick</code>|{"detail":{"event":{}}}
-<code>onDatetimePickerIconButtonPrevClick</code>|{"detail":{"event":{}}}
-<code>onDatetimePickerIconButtonNextClick</code>|{"detail":{"event":{}}}
-<code>onDatetimePickerIconButtonClick</code>|{"detail":{"event":{}}}
-<code>onDatetimePickerYearItemClick</code>|{"detail":{"event":{}}}
-<code>onDatetimePickerMonthItemClick</code>|{"detail":{"event":{}}}
-<code>onDatetimePickerDayItemClick</code>|{"detail":{"event":{}}}
-<code>onDatetimePickerHourItemClick</code>|{"detail":{"event":{}}}
-<code>onDatetimePickerMinuteItemClick</code>|{"detail":{"event":{}}}
-<code>onDatetimePickerButtonCancelClick</code>|{"detail":{"event":{}}}
-<code>onDatetimePickerButtonOkClick</code>|{"detail":{"event":{}}}
-<code>onDatetimePickerButtonClick</code>|{"detail":{"event":{}}}
-<code>onDatetimePickerScrimClosed</code>|{"detail":{"event":{}}}
+* [MdTabComponent](#MdTabComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdTabComponent+properties)
+    * [.emit([type], [detail])](#MdComponent+emit)
 
-#### Inheritance
+<a name="MdTabComponent+properties"></a>
 
-<code>MdComponent</code>
+### mdTabComponent.properties
+**Kind**: instance property of [<code>MdTabComponent</code>](#MdTabComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [icon] | <code>String</code> | 
+| [label] | <code>String</code> | 
+| [sublabel] | <code>String</code> | 
+| [selected] | <code>Boolean</code> | 
+| [disabled] | <code>Boolean</code> | 
+| [routerLink] | <code>String</code> | 
+| [rippleOptions] | <code>Object</code> | 
+| [badge] | <code>Number</code> | 
+
+<a name="MdComponent+emit"></a>
+
+### mdTabComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdTabComponent</code>](#MdTabComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdTabsComponent"></a>
+
+## MdTabsComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+**Emits**: <code>MdTabsComponent#event:onTabClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>  
+
+* [MdTabsComponent](#MdTabsComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdTabsComponent+properties)
+    * [.singleSelect([data])](#MdTabsComponent+singleSelect)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdTabsComponent+properties"></a>
+
+### mdTabsComponent.properties
+**Kind**: instance property of [<code>MdTabsComponent</code>](#MdTabsComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [items] | <code>Array</code> | 
+| [rippleOptions] | <code>Object</code> | 
+| [variant] | <code>String</code> | 
+
+<a name="MdTabsComponent+singleSelect"></a>
+
+### mdTabsComponent.singleSelect([data])
+**Kind**: instance method of [<code>MdTabsComponent</code>](#MdTabsComponent)  
+
+| Param | Type |
+| --- | --- |
+| [data] | <code>Object</code> | 
+
+<a name="MdComponent+emit"></a>
+
+### mdTabsComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdTabsComponent</code>](#MdTabsComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdTextFieldComponent"></a>
+
+## MdTextFieldComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+**Emits**: <code>MdTextFieldComponent#event:onTextFieldFocus - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdTextFieldComponent#event:onTextFieldBlur - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdTextFieldComponent#event:onTextFieldInput - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdTextFieldComponent#event:onTextFieldSearch - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdTextFieldComponent#event:onTextFieldInvalid - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdTextFieldComponent#event:onTextFieldReset - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdTextFieldComponent#event:onTextFieldIconButtonClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>  
+
+* [MdTextFieldComponent](#MdTextFieldComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdTextFieldComponent+properties)
+    * [.actions2](#MdTextFieldComponent+actions2)
+    * [.textFieldNative](#MdTextFieldComponent+textFieldNative)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdTextFieldComponent+properties"></a>
+
+### mdTextFieldComponent.properties
+**Kind**: instance property of [<code>MdTextFieldComponent</code>](#MdTextFieldComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [label] | <code>String</code> | 
+| [separateLabel] | <code>Boolean</code> | 
+| [icons] | <code>Array</code> | 
+| [prefix] | <code>String</code> | 
+| [suffix] | <code>String</code> | 
+| [actions] | <code>Array</code> | 
+| [text] | <code>String</code> | 
+| [error] | <code>String</code> | 
+| [counter] | <code>String</code> | 
+| [name] | <code>String</code> | 
+| [type] | <code>String</code> | 
+| [value] | <code>String</code> | 
+| [placeholder] | <code>String</code> | 
+| [title] | <code>String</code> | 
+| [autocomplete] | <code>String</code> | 
+| [required] | <code>Boolean</code> | 
+| [readOnly] | <code>Boolean</code> | 
+| [variant] | <code>String</code> | 
+| [disabled] | <code>Boolean</code> | 
+
+<a name="MdTextFieldComponent+actions2"></a>
+
+### mdTextFieldComponent.actions2
+**Kind**: instance property of [<code>MdTextFieldComponent</code>](#MdTextFieldComponent)  
+<a name="MdTextFieldComponent+textFieldNative"></a>
+
+### mdTextFieldComponent.textFieldNative
+**Kind**: instance property of [<code>MdTextFieldComponent</code>](#MdTextFieldComponent)  
+<a name="MdComponent+emit"></a>
+
+### mdTextFieldComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdTextFieldComponent</code>](#MdTextFieldComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdTooltipComponent"></a>
+
+## MdTooltipComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+**Emits**: <code>MdTooltipComponent#event:onTooltipIconButtonClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>, <code>MdTooltipComponent#event:onTooltipButtonClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>  
+
+* [MdTooltipComponent](#MdTooltipComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdTooltipComponent+properties)
+    * [.show([options])](#MdTooltipComponent+show)
+    * [.close()](#MdTooltipComponent+close)
+    * [.toggle([options])](#MdTooltipComponent+toggle)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdTooltipComponent+properties"></a>
+
+### mdTooltipComponent.properties
+**Kind**: instance property of [<code>MdTooltipComponent</code>](#MdTooltipComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [icons] | <code>Array</code> | 
+| [actions] | <code>Array</code> | 
+| [label] | <code>String</code> | 
+| [sublabel] | <code>String</code> | 
+| [buttons] | <code>Array</code> | 
+| [open] | <code>Boolean</code> | 
+
+<a name="MdTooltipComponent+show"></a>
+
+### mdTooltipComponent.show([options])
+**Kind**: instance method of [<code>MdTooltipComponent</code>](#MdTooltipComponent)  
+
+| Param | Type |
+| --- | --- |
+| [options] | <code>String</code> | 
+
+<a name="MdTooltipComponent+close"></a>
+
+### mdTooltipComponent.close()
+**Kind**: instance method of [<code>MdTooltipComponent</code>](#MdTooltipComponent)  
+<a name="MdTooltipComponent+toggle"></a>
+
+### mdTooltipComponent.toggle([options])
+**Kind**: instance method of [<code>MdTooltipComponent</code>](#MdTooltipComponent)  
+
+| Param | Type |
+| --- | --- |
+| [options] | <code>String</code> | 
+
+<a name="MdComponent+emit"></a>
+
+### mdTooltipComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdTooltipComponent</code>](#MdTooltipComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdTopAppBarComponent"></a>
+
+## MdTopAppBarComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+**Emits**: <code>MdTopAppBarComponent#event:onTopAppBarIconButtonClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>  
+
+* [MdTopAppBarComponent](#MdTopAppBarComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdTopAppBarComponent+properties)
+    * [.show()](#MdTopAppBarComponent+show)
+    * [.close()](#MdTopAppBarComponent+close)
+    * [.toggle()](#MdTopAppBarComponent+toggle)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdTopAppBarComponent+properties"></a>
+
+### mdTopAppBarComponent.properties
+**Kind**: instance property of [<code>MdTopAppBarComponent</code>](#MdTopAppBarComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [leadingActions] | <code>Array</code> | 
+| [label] | <code>String</code> | 
+| [sublabel] | <code>String</code> | 
+| [trailingActions] | <code>Array</code> | 
+| [open] | <code>Boolean</code> | 
+
+<a name="MdTopAppBarComponent+show"></a>
+
+### mdTopAppBarComponent.show()
+**Kind**: instance method of [<code>MdTopAppBarComponent</code>](#MdTopAppBarComponent)  
+<a name="MdTopAppBarComponent+close"></a>
+
+### mdTopAppBarComponent.close()
+**Kind**: instance method of [<code>MdTopAppBarComponent</code>](#MdTopAppBarComponent)  
+<a name="MdTopAppBarComponent+toggle"></a>
+
+### mdTopAppBarComponent.toggle()
+**Kind**: instance method of [<code>MdTopAppBarComponent</code>](#MdTopAppBarComponent)  
+<a name="MdComponent+emit"></a>
+
+### mdTopAppBarComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdTopAppBarComponent</code>](#MdTopAppBarComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdTreeItemComponent"></a>
+
+## MdTreeItemComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+**Emits**: <code>MdTreeItemComponent#event:onTreeItemSelected - {&quot;detail&quot;:{&quot;treeItem&quot;:&quot;this&quot;}}</code>  
+
+* [MdTreeItemComponent](#MdTreeItemComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdTreeItemComponent+properties)
+    * [.action](#MdTreeItemComponent+action)
+    * [.icon](#MdTreeItemComponent+icon)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdTreeItemComponent+properties"></a>
+
+### mdTreeItemComponent.properties
+**Kind**: instance property of [<code>MdTreeItemComponent</code>](#MdTreeItemComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [selected] | <code>Boolean</code> | 
+| [expanded] | <code>Boolean</code> | 
+| [indent] | <code>String</code> | 
+| [actions] | <code>Array</code> | 
+| [nodeIcons] | <code>Array</code> | 
+| [leafIcons] | <code>Array</code> | 
+| [label] | <code>String</code> | 
+| [routerLink] | <code>String</code> | 
+
+<a name="MdTreeItemComponent+action"></a>
+
+### mdTreeItemComponent.action
+**Kind**: instance property of [<code>MdTreeItemComponent</code>](#MdTreeItemComponent)  
+<a name="MdTreeItemComponent+icon"></a>
+
+### mdTreeItemComponent.icon
+**Kind**: instance property of [<code>MdTreeItemComponent</code>](#MdTreeItemComponent)  
+<a name="MdComponent+emit"></a>
+
+### mdTreeItemComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdTreeItemComponent</code>](#MdTreeItemComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdTreeRowComponent"></a>
+
+## MdTreeRowComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+<a name="MdComponent+emit"></a>
+
+### mdTreeRowComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdTreeRowComponent</code>](#MdTreeRowComponent)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
+
+<a name="MdTreeComponent"></a>
+
+## MdTreeComponent ⇐ [<code>MdComponent</code>](#MdComponent)
+**Kind**: global class  
+**Extends**: [<code>MdComponent</code>](#MdComponent)  
+**Emits**: <code>MdTreeComponent#event:onTreeItemClick - {&quot;detail&quot;:{&quot;event&quot;:{}}}</code>  
+
+* [MdTreeComponent](#MdTreeComponent) ⇐ [<code>MdComponent</code>](#MdComponent)
+    * [.properties](#MdTreeComponent+properties)
+    * [.flatten([items], [parent], [indent])](#MdTreeComponent+flatten)
+    * [.toggle([data])](#MdTreeComponent+toggle)
+    * [.emit([type], [detail])](#MdComponent+emit)
+
+<a name="MdTreeComponent+properties"></a>
+
+### mdTreeComponent.properties
+**Kind**: instance property of [<code>MdTreeComponent</code>](#MdTreeComponent)  
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [items] | <code>Array</code> | 
+| [items2] | <code>Array</code> | 
+
+<a name="MdTreeComponent+flatten"></a>
+
+### mdTreeComponent.flatten([items], [parent], [indent])
+**Kind**: instance method of [<code>MdTreeComponent</code>](#MdTreeComponent)  
+
+| Param | Type | Default |
+| --- | --- | --- |
+| [items] | <code>Array</code> |  | 
+| [parent] | <code>String</code> |  | 
+| [indent] | <code>Number</code> | <code>0</code> | 
+
+<a name="MdTreeComponent+toggle"></a>
+
+### mdTreeComponent.toggle([data])
+**Kind**: instance method of [<code>MdTreeComponent</code>](#MdTreeComponent)  
+
+| Param | Type |
+| --- | --- |
+| [data] | <code>Object</code> | 
+
+<a name="MdComponent+emit"></a>
+
+### mdTreeComponent.emit([type], [detail])
+**Kind**: instance method of [<code>MdTreeComponent</code>](#MdTreeComponent)  
+**Overrides**: [<code>emit</code>](#MdComponent+emit)  
+
+| Param | Type |
+| --- | --- |
+| [type] | <code>String</code> | 
+| [detail] | <code>String</code> | 
 
----
-### MdDialogComponent
-
-#### Instance properties
-
-name|type
----|---
-<code>icons</code>|Array
-<code>actions</code>|Array
-<code>label</code>|String
-<code>sublabel</code>|String
-<code>buttons</code>|Array
-<code>open</code>|Boolean
-
-#### Instance methods
-
-- <code>constructor()</code>
-
-- <code>show()</code>
-
-- <code>close()</code>
-
-- <code>toggle()</code>
-
-
-#### Events
-
-name|event
----|---
-<code>onDialogIconButtonClick</code>|{"detail":{"event":{}}}
-<code>onDialogButtonClick</code>|{"detail":{"event":{}}}
-<code>onDialogScrimClosed</code>|{"detail":{"event":{}}}
-
-#### Inheritance
-
-<code>MdComponent</code>
-
----
-### MdDividerComponent
-
-#### Instance methods
-
-
-#### Inheritance
-
-<code>MdComponent</code>
-
----
-### Dragger
-
-### MdFabComponent
-
-#### Instance properties
-
-name|type
----|---
-<code>icon</code>|String
-<code>label</code>|String
-<code>type</code>|String
-<code>size</code>|String
-<code>variant</code>|String
-
-#### Instance methods
-
-- <code>constructor()</code>
-
-
-#### Inheritance
-
-<code>MdComponent</code>
-
----
-### MdFormComponent
-
-#### Instance properties
-
-name|type
----|---
-<code>acceptCharset</code>|String
-<code>action</code>|String
-<code>autocomplete</code>|String
-<code>enctype</code>|String
-<code>method</code>|String
-<code>name</code>|String
-<code>noValidate</code>|Boolean
-
-#### Instance methods
-
-- <code>constructor()</code>
-
-- <code>formNative()</code>
-
-- <code>reset()</code>
-
-- <code>submit(submitButton)</code>
-
-name|type|default
----|---|---
-<code>submitButton</code>|String|undefined
-
-#### Events
-
-name|event
----|---
-<code>onFormNativeFormdata</code>|{"detail":{"event":{}}}
-<code>onFormNativeReset</code>|{"detail":{"event":{}}}
-<code>onFormNativeSubmit</code>|{"detail":{"event":{}}}
-
-#### Inheritance
-
-<code>MdComponent</code>
-
----
-### MdIconComponent
-
-#### Instance methods
-
-
-#### Inheritance
-
-<code>MdComponent</code>
-
----
-### MdIconButtonComponent
-
-#### Instance properties
-
-name|type
----|---
-<code>icon</code>|String
-<code>variant</code>|String
-<code>type</code>|String
-<code>toggle</code>|Boolean
-<code>selected</code>|Boolean
-<code>disabled</code>|Boolean
-
-#### Instance methods
-
-- <code>constructor()</code>
-
-
-#### Events
-
-name|event
----|---
-<code>onIconButtonClick</code>|{"detail":{"event":{}}}
-
-#### Inheritance
-
-<code>MdComponent</code>
-
----
-### MdImageComponent
-
-#### Instance properties
-
-name|type
----|---
-<code>src</code>|String
-<code>alt</code>|String
-<code>ratio</code>|String
-<code>circular</code>|Boolean
-
-#### Instance methods
-
-- <code>constructor()</code>
-
-- <code>styleInfo()</code>
-
-
-#### Inheritance
-
-<code>MdComponent</code>
-
----
-### MdListItemComponent
-
-#### Instance properties
-
-name|type
----|---
-<code>leadingCheckbox</code>|Boolean
-<code>leadingRadioButton</code>|Boolean
-<code>leadingSwitch</code>|Boolean
-<code>avatar</code>|String
-<code>image</code>|String
-<code>video</code>|String
-<code>icon</code>|String
-<code>label</code>|String
-<code>sublabel</code>|String
-<code>text</code>|String
-<code>trailingCheckbox</code>|Boolean
-<code>trailingRadioButton</code>|Boolean
-<code>trailingSwitch</code>|Boolean
-<code>selected</code>|Boolean
-<code>disabled</code>|Boolean
-<code>routerLink</code>|String
-<code>rippleOptions</code>|Object
-<code>badge</code>|Number
-
-#### Instance methods
-
-- <code>constructor()</code>
-
-
-#### Events
-
-name|event
----|---
-<code>onListItemSelected</code>|{"detail":{"listItem":"this"}}
-
-#### Inheritance
-
-<code>MdComponent</code>
-
----
-### MdListRowComponent
-
-#### Instance methods
-
-
-#### Inheritance
-
-<code>MdComponent</code>
-
----
-### MdListComponent
-
-#### Instance properties
-
-name|type
----|---
-<code>items</code>|Array
-<code>type</code>|String
-<code>rippleOptions</code>|Object
-
-#### Instance methods
-
-- <code>constructor()</code>
-
-- <code>multiSelect(data)</code>
-
-name|type|default
----|---|---
-<code>data</code>|Object|undefined
-- <code>singleSelect(data)</code>
-
-name|type|default
----|---|---
-<code>data</code>|Object|undefined
-
-#### Events
-
-name|event
----|---
-<code>onListItemClick</code>|{"detail":{"event":{}}}
-<code>onListItemCheckboxNativeInput</code>|{"detail":{"event":{}}}
-<code>onListItemRadioButtonNativeInput</code>|{"detail":{"event":{}}}
-<code>onListItemSwitchNativeInput</code>|{"detail":{"event":{}}}
-
-#### Inheritance
-
-<code>MdComponent</code>
-
----
-### undefined
-
-### MdMenuComponent
-
-#### Instance properties
-
-name|type
----|---
-<code>open</code>|Boolean
-<code>items</code>|Array
-
-#### Instance methods
-
-- <code>constructor()</code>
-
-- <code>show(options)</code>
-
-name|type|default
----|---|---
-<code>options</code>|Object|{}
-- <code>close()</code>
-
-- <code>toggle(options)</code>
-
-name|type|default
----|---|---
-<code>options</code>|String|undefined
-
-#### Inheritance
-
-<code>MdComponent</code>
-
----
-### MdNavigationBarComponent
-
-#### Instance properties
-
-name|type
----|---
-<code>open</code>|Boolean
-<code>items</code>|Array
-
-#### Instance methods
-
-- <code>constructor()</code>
-
-- <code>show()</code>
-
-- <code>close()</code>
-
-- <code>toggle()</code>
-
-
-#### Inheritance
-
-<code>MdComponent</code>
-
----
-### MdNavigationDrawerComponent
-
-#### Instance properties
-
-name|type
----|---
-<code>icons</code>|Array
-<code>actions</code>|Array
-<code>label</code>|String
-<code>sublabel</code>|String
-<code>items</code>|Array
-<code>open</code>|Boolean
-<code>modal</code>|Boolean
-<code>view</code>|String
-
-#### Instance methods
-
-- <code>constructor()</code>
-
-- <code>show()</code>
-
-- <code>close()</code>
-
-- <code>toggle()</code>
-
-
-#### Events
-
-name|event
----|---
-<code>onNavigationDrawerIconButtonClick</code>|{"detail":{"event":{}}}
-<code>onNavigationDrawerScrimClosed</code>|{"detail":{"event":{}}}
-
-#### Inheritance
-
-<code>MdComponent</code>
-
----
-### MdNavigationListItemComponent
-
-#### Instance properties
-
-name|type
----|---
-<code>icon</code>|String
-<code>label</code>|String
-<code>sublabel</code>|String
-<code>selected</code>|Boolean
-<code>disabled</code>|Boolean
-<code>routerLink</code>|String
-<code>rippleOptions</code>|Object
-<code>badge</code>|Number
-
-#### Instance methods
-
-- <code>constructor()</code>
-
-
-#### Events
-
-name|event
----|---
-<code>onNavigationListItemSelected</code>|{"detail":{"navigationListItem":"this"}}
-
-#### Inheritance
-
-<code>MdComponent</code>
-
----
-### MdNavigationListRowComponent
-
-#### Instance methods
-
-
-#### Inheritance
-
-<code>MdComponent</code>
-
----
-### MdNavigationListComponent
-
-#### Instance properties
-
-name|type
----|---
-<code>items</code>|Array
-<code>rippleOptions</code>|Object
-
-#### Instance methods
-
-- <code>constructor()</code>
-
-- <code>singleSelect(data)</code>
-
-name|type|default
----|---|---
-<code>data</code>|Object|undefined
-
-#### Events
-
-name|event
----|---
-<code>onNavigationListItemClick</code>|{"detail":{"event":{}}}
-
-#### Inheritance
-
-<code>MdComponent</code>
-
----
-### MdNavigationRailComponent
-
-#### Instance properties
-
-name|type
----|---
-<code>icons</code>|Array
-<code>actions</code>|Array
-<code>label</code>|String
-<code>sublabel</code>|String
-<code>items</code>|Array
-<code>open</code>|Boolean
-
-#### Instance methods
-
-- <code>constructor()</code>
-
-- <code>show()</code>
-
-- <code>close()</code>
-
-- <code>toggle()</code>
-
-
-#### Events
-
-name|event
----|---
-<code>onNavigationRailIconButtonClick</code>|{"detail":{"event":{}}}
-
-#### Inheritance
-
-<code>MdComponent</code>
-
----
-### PopperController
-
-#### Instance methods
-
-- <code>show(options)</code>
-
-name|type|default
----|---|---
-<code>options</code>|Object|{}
-- <code>closestScrollable(element)</code>
-
-name|type|default
----|---|---
-<code>element</code>|String|undefined
-
-### MdProgressIndicatorComponent
-
-#### Instance properties
-
-name|type
----|---
-<code>variant</code>|String
-<code>max</code>|Number
-<code>value</code>|Number
-
-#### Instance methods
-
-- <code>constructor()</code>
-
-
-#### Inheritance
-
-<code>MdComponent</code>
-
----
-### MdRadioButtonComponent
-
-#### Instance properties
-
-name|type
----|---
-<code>name</code>|String
-<code>value</code>|String
-<code>indeterminate</code>|Boolean
-<code>checked</code>|Boolean
-
-#### Instance methods
-
-- <code>constructor()</code>
-
-
-#### Events
-
-name|event
----|---
-<code>onRadioButtonNativeInput</code>|{"detail":{"event":{}}}
-<code>onRadioButtonNativeReset</code>|{"detail":{"event":{}}}
-
-#### Inheritance
-
-<code>MdComponent</code>
-
----
-### RippleController
-
-#### Instance methods
-
-- <code>constructor(host, options)</code>
-
-name|type|default
----|---|---
-<code>host</code>|String|undefined
-<code>options</code>|String|undefined
-- <code>hostConnected()</code>
-
-- <code>hostDisconnected()</code>
-
-
-### Router
-
-#### Instance methods
-
-- <code>get(pathname, routes, parent, result)</code>
-
-name|type|default
----|---|---
-<code>pathname</code>|undefined|this.pathname
-<code>routes</code>|undefined|this.routes
-<code>parent</code>|String|null
-<code>result</code>|Array|[]
-- <code>pathname()</code>
-
-- <code>removeComponent(routes)</code>
-
-name|type|default
----|---|---
-<code>routes</code>|String|undefined
-- <code>getOutlet(container, route)</code>
-
-name|type|default
----|---|---
-<code>container</code>|String|undefined
-<code>route</code>|String|undefined
-- <code>setContainer(route)</code>
-
-name|type|default
----|---|---
-<code>route</code>|String|undefined
-- <code>loadComponent(route)</code>
-
-name|type|default
----|---|---
-<code>route</code>|String|undefined
-- <code>setController()</code>
-
-- <code>navigate(url)</code>
-
-name|type|default
----|---|---
-<code>url</code>|String|undefined
-- <code>emit(type, detail)</code>
-
-name|type|default
----|---|---
-<code>type</code>|String|undefined
-<code>detail</code>|String|undefined
-- <code>use(routes, options)</code>
-
-name|type|default
----|---|---
-<code>routes</code>|Array|[]
-<code>options</code>|Object|{}
-
-### MdScrimComponent
-
-#### Instance properties
-
-name|type
----|---
-<code>open</code>|Boolean
-
-#### Instance methods
-
-- <code>show()</code>
-
-- <code>close()</code>
-
-- <code>toggle()</code>
-
-
-#### Events
-
-name|event
----|---
-<code>onScrimClick</code>|{"detail":{"event":{}}}
-
-#### Inheritance
-
-<code>MdComponent</code>
-
----
-### MdSegmentedButtonComponent
-
-#### Instance properties
-
-name|type
----|---
-<code>items</code>|Array
-<code>type</code>|String
-
-#### Instance methods
-
-- <code>constructor()</code>
-
-
-#### Events
-
-name|event
----|---
-<code>onSegmentedButtonItemClick</code>|{"detail":{"event":{}}}
-
-#### Inheritance
-
-<code>MdComponent</code>
-
----
-### MdSheetComponent
-
-#### Instance properties
-
-name|type
----|---
-<code>icons</code>|Array
-<code>actions</code>|Array
-<code>label</code>|String
-<code>sublabel</code>|String
-<code>buttons</code>|Array
-<code>open</code>|Boolean
-<code>region</code>|String
-<code>modal</code>|Boolean
-
-#### Instance methods
-
-- <code>constructor()</code>
-
-- <code>show()</code>
-
-- <code>close()</code>
-
-- <code>toggle()</code>
-
-
-#### Events
-
-name|event
----|---
-<code>onSheetIconButtonClick</code>|{"detail":{"event":{}}}
-<code>onSheetButtonClick</code>|{"detail":{"event":{}}}
-<code>onSheetScrimClosed</code>|{"detail":{"event":{}}}
-
-#### Inheritance
-
-<code>MdComponent</code>
-
----
-### MdSideSheetComponent
-
-#### Instance properties
-
-name|type
----|---
-<code>icons</code>|Array
-<code>actions</code>|Array
-<code>label</code>|String
-<code>sublabel</code>|String
-<code>buttons</code>|Array
-<code>open</code>|Boolean
-<code>modal</code>|Boolean
-
-#### Instance methods
-
-- <code>constructor()</code>
-
-- <code>show()</code>
-
-- <code>close()</code>
-
-- <code>toggle()</code>
-
-
-#### Events
-
-name|event
----|---
-<code>onSideSheetIconButtonClick</code>|{"detail":{"event":{}}}
-<code>onSideSheetButtonClick</code>|{"detail":{"event":{}}}
-<code>onSideSheetScrimClosed</code>|{"detail":{"event":{}}}
-
-#### Inheritance
-
-<code>MdComponent</code>
-
----
-### MdSliderComponent
-
-#### Instance properties
-
-name|type
----|---
-<code>min</code>|Number
-<code>max</code>|Number
-<code>step</code>|Number
-<code>variant</code>|String
-<code>name</code>|String
-<code>value</code>|undefined
-<code>converter</code>|undefined
-
-#### Instance methods
-
-- <code>constructor()</code>
-
-- <code>indicators()</code>
-
-- <code>sliderNatives()</code>
-
-- <code>updateValue()</code>
-
-- <code>percentage(value, min, max)</code>
-
-name|type|default
----|---|---
-<code>value</code>|String|undefined
-<code>min</code>|undefined|this.min
-<code>max</code>|undefined|this.max
-
-#### Events
-
-name|event
----|---
-<code>onSliderNativeInput</code>|{"detail":{"event":{}}}
-<code>onSliderNativeReset</code>|{"detail":{"event":{}}}
-
-#### Inheritance
-
-<code>MdComponent</code>
-
----
-### MdSnackbarComponent
-
-#### Instance properties
-
-name|type
----|---
-<code>icons</code>|Array
-<code>actions</code>|Array
-<code>buttons</code>|Array
-<code>open</code>|Boolean
-
-#### Instance methods
-
-- <code>constructor()</code>
-
-- <code>show()</code>
-
-- <code>close()</code>
-
-- <code>toggle()</code>
-
-
-#### Events
-
-name|event
----|---
-<code>onSnackbarIconButtonClick</code>|{"detail":{"event":{}}}
-<code>onSnackbarButtonClick</code>|{"detail":{"event":{}}}
-
-#### Inheritance
-
-<code>MdComponent</code>
-
----
-### Store
-
-#### Instance methods
-
-- <code>constructor(data, options)</code>
-
-name|type|default
----|---|---
-<code>data</code>|Object|[]
-<code>options</code>|Object|{}
-- <code>sort(data, sorters)</code>
-
-name|type|default
----|---|---
-<code>data</code>|Object|undefined
-<code>sorters</code>|String|undefined
-- <code>deepSearch(item, q)</code>
-
-name|type|default
----|---|---
-<code>item</code>|String|undefined
-<code>q</code>|String|undefined
-- <code>search(data, q)</code>
-
-name|type|default
----|---|---
-<code>data</code>|Object|undefined
-<code>q</code>|String|undefined
-- <code>getNestedValue(item, name)</code>
-
-name|type|default
----|---|---
-<code>item</code>|String|undefined
-<code>name</code>|String|undefined
-- <code>filter(data, filters)</code>
-
-name|type|default
----|---|---
-<code>data</code>|Object|undefined
-<code>filters</code>|String|undefined
-- <code>range(data, _start, _end)</code>
-
-name|type|default
----|---|---
-<code>data</code>|Object|undefined
-<code>_start</code>|String|undefined
-<code>_end</code>|String|undefined
-- <code>paginate(data, _page, _limit)</code>
-
-name|type|default
----|---|---
-<code>data</code>|Object|undefined
-<code>_page</code>|String|undefined
-<code>_limit</code>|String|undefined
-- <code>get(options)</code>
-
-name|type|default
----|---|---
-<code>options</code>|Object|{}
-
-### MdSwitchComponent
-
-#### Instance properties
-
-name|type
----|---
-<code>name</code>|String
-<code>value</code>|String
-<code>indeterminate</code>|Boolean
-<code>checked</code>|Boolean
-<code>icons</code>|Array
-
-#### Instance methods
-
-- <code>constructor()</code>
-
-
-#### Events
-
-name|event
----|---
-<code>onSwitchNativeInput</code>|{"detail":{"event":{}}}
-<code>onSwitchNativeReset</code>|{"detail":{"event":{}}}
-
-#### Inheritance
-
-<code>MdComponent</code>
-
----
-### MdTabComponent
-
-#### Instance properties
-
-name|type
----|---
-<code>icon</code>|String
-<code>label</code>|String
-<code>sublabel</code>|String
-<code>selected</code>|Boolean
-<code>disabled</code>|Boolean
-<code>routerLink</code>|String
-<code>rippleOptions</code>|Object
-<code>badge</code>|Number
-
-#### Instance methods
-
-- <code>constructor()</code>
-
-
-#### Events
-
-name|event
----|---
-<code>onTabSelected</code>|{"detail":{"tab":"this"}}
-
-#### Inheritance
-
-<code>MdComponent</code>
-
----
-### MdTabsComponent
-
-#### Instance properties
-
-name|type
----|---
-<code>items</code>|Array
-<code>rippleOptions</code>|Object
-<code>variant</code>|String
-
-#### Instance methods
-
-- <code>constructor()</code>
-
-- <code>singleSelect(data)</code>
-
-name|type|default
----|---|---
-<code>data</code>|Object|undefined
-
-#### Events
-
-name|event
----|---
-<code>onTabClick</code>|{"detail":{"event":{}}}
-
-#### Inheritance
-
-<code>MdComponent</code>
-
----
-### MdTextFieldComponent
-
-#### Instance properties
-
-name|type
----|---
-<code>label</code>|String
-<code>separateLabel</code>|Boolean
-<code>icons</code>|Array
-<code>prefix</code>|String
-<code>suffix</code>|String
-<code>actions</code>|Array
-<code>text</code>|String
-<code>error</code>|String
-<code>counter</code>|String
-<code>name</code>|String
-<code>type</code>|String
-<code>value</code>|String
-<code>placeholder</code>|String
-<code>title</code>|String
-<code>autocomplete</code>|String
-<code>required</code>|Boolean
-<code>readOnly</code>|Boolean
-<code>variant</code>|String
-<code>disabled</code>|Boolean
-
-#### Instance methods
-
-- <code>constructor()</code>
-
-- <code>actions2()</code>
-
-- <code>textFieldNative()</code>
-
-
-#### Events
-
-name|event
----|---
-<code>onTextFieldFocus</code>|{"detail":{"event":{}}}
-<code>onTextFieldBlur</code>|{"detail":{"event":{}}}
-<code>onTextFieldInput</code>|{"detail":{"event":{}}}
-<code>onTextFieldSearch</code>|{"detail":{"event":{}}}
-<code>onTextFieldInvalid</code>|{"detail":{"event":{}}}
-<code>onTextFieldReset</code>|{"detail":{"event":{}}}
-<code>onTextFieldIconButtonClick</code>|{"detail":{"event":{}}}
-
-#### Inheritance
-
-<code>MdComponent</code>
-
----
-### MdTooltipComponent
-
-#### Instance properties
-
-name|type
----|---
-<code>icons</code>|Array
-<code>actions</code>|Array
-<code>label</code>|String
-<code>sublabel</code>|String
-<code>buttons</code>|Array
-<code>open</code>|Boolean
-
-#### Instance methods
-
-- <code>constructor()</code>
-
-- <code>show(options)</code>
-
-name|type|default
----|---|---
-<code>options</code>|String|undefined
-- <code>close()</code>
-
-- <code>toggle(options)</code>
-
-name|type|default
----|---|---
-<code>options</code>|String|undefined
-
-#### Events
-
-name|event
----|---
-<code>onTooltipIconButtonClick</code>|{"detail":{"event":{}}}
-<code>onTooltipButtonClick</code>|{"detail":{"event":{}}}
-
-#### Inheritance
-
-<code>MdComponent</code>
-
----
-### MdTopAppBarComponent
-
-#### Instance properties
-
-name|type
----|---
-<code>leadingActions</code>|Array
-<code>label</code>|String
-<code>sublabel</code>|String
-<code>trailingActions</code>|Array
-<code>open</code>|Boolean
-
-#### Instance methods
-
-- <code>constructor()</code>
-
-- <code>show()</code>
-
-- <code>close()</code>
-
-- <code>toggle()</code>
-
-
-#### Events
-
-name|event
----|---
-<code>onTopAppBarIconButtonClick</code>|{"detail":{"event":{}}}
-
-#### Inheritance
-
-<code>MdComponent</code>
-
----
-### MdTreeItemComponent
-
-#### Instance properties
-
-name|type
----|---
-<code>selected</code>|Boolean
-<code>expanded</code>|Boolean
-<code>indent</code>|String
-<code>actions</code>|Array
-<code>nodeIcons</code>|Array
-<code>leafIcons</code>|Array
-<code>label</code>|String
-<code>routerLink</code>|String
-
-#### Instance methods
-
-- <code>constructor()</code>
-
-- <code>action()</code>
-
-- <code>icon()</code>
-
-
-#### Events
-
-name|event
----|---
-<code>onTreeItemSelected</code>|{"detail":{"treeItem":"this"}}
-
-#### Inheritance
-
-<code>MdComponent</code>
-
----
-### MdTreeRowComponent
-
-#### Instance methods
-
-
-#### Inheritance
-
-<code>MdComponent</code>
-
----
-### MdTreeComponent
-
-#### Instance properties
-
-name|type
----|---
-<code>items</code>|Array
-<code>items2</code>|Array
-
-#### Instance methods
-
-- <code>constructor()</code>
-
-- <code>flatten(items, parent, indent)</code>
-
-name|type|default
----|---|---
-<code>items</code>|Array|undefined
-<code>parent</code>|String|undefined
-<code>indent</code>|Number|0
-- <code>toggle(data)</code>
-
-name|type|default
----|---|---
-<code>data</code>|Object|undefined
-
-#### Events
-
-name|event
----|---
-<code>onTreeItemClick</code>|{"detail":{"event":{}}}
-
-#### Inheritance
-
-<code>MdComponent</code>
-
----
