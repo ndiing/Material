@@ -1,24 +1,78 @@
-# MdBadgeComponent
+## 
+- MdBadgeComponent
+- MdBottomAppBarComponent
+- MdBottomSheetComponent
+- MdButtonComponent
+- MdCardComponent
+- MdCheckboxComponent
+- MdChipComponent
+- MdComponent
+- MdDataTableCellComponent
+- MdDataTableComponent
+- MdDatetimePickerComponent
+- MdDialogComponent
+- MdDividerComponent
+- Dragger
+- MdFabComponent
+- MdFormComponent
+- MdIconComponent
+- MdIconButtonComponent
+- MdImageComponent
+- MdListItemComponent
+- MdListRowComponent
+- MdListComponent
+- undefined
+- MdMenuComponent
+- MdNavigationBarComponent
+- MdNavigationDrawerComponent
+- MdNavigationListItemComponent
+- MdNavigationListRowComponent
+- MdNavigationListComponent
+- MdNavigationRailComponent
+- PopperController
+- MdProgressIndicatorComponent
+- MdRadioButtonComponent
+- RippleController
+- Router
+- MdScrimComponent
+- MdSegmentedButtonComponent
+- MdSheetComponent
+- MdSideSheetComponent
+- MdSliderComponent
+- MdSnackbarComponent
+- Store
+- MdSwitchComponent
+- MdTabComponent
+- MdTabsComponent
+- MdTextFieldComponent
+- MdTooltipComponent
+- MdTopAppBarComponent
+- MdTreeItemComponent
+- MdTreeRowComponent
+- MdTreeComponent
 
-## Instance properties
+---
+### MdBadgeComponent
+
+#### Instance properties
 
 name|type
 ---|---
 <code>label</code>|Number
 <code>max</code>|Number
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
+##### <code>constructor()</code>
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdBottomAppBarComponent
+### MdBottomAppBarComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
@@ -26,28 +80,28 @@ name|type
 <code>fab</code>|String
 <code>open</code>|Boolean
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
-### <code>show()</code>
-### <code>close()</code>
-### <code>toggle()</code>
+##### <code>constructor()</code>
+##### <code>show()</code>
+##### <code>close()</code>
+##### <code>toggle()</code>
 
-## Events
+#### Events
 
 name|event
 ---|---
 <code>onBottomAppBarIconButtonClick</code>|{"detail":{"event":{}}}
 <code>onBottomAppBarFabClick</code>|{"detail":{"event":{}}}
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdBottomSheetComponent
+### MdBottomSheetComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
@@ -59,14 +113,14 @@ name|type
 <code>open</code>|Boolean
 <code>modal</code>|Boolean
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
-### <code>show()</code>
-### <code>close()</code>
-### <code>toggle()</code>
+##### <code>constructor()</code>
+##### <code>show()</code>
+##### <code>close()</code>
+##### <code>toggle()</code>
 
-## Events
+#### Events
 
 name|event
 ---|---
@@ -74,14 +128,14 @@ name|event
 <code>onBottomSheetButtonClick</code>|{"detail":{"event":{}}}
 <code>onBottomSheetScrimClosed</code>|{"detail":{"event":{}}}
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdButtonComponent
+### MdButtonComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
@@ -92,18 +146,18 @@ name|type
 <code>disabled</code>|Boolean
 <code>selected</code>|Boolean
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
+##### <code>constructor()</code>
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdCardComponent
+### MdCardComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
@@ -113,25 +167,25 @@ name|type
 <code>sublabel</code>|String
 <code>buttons</code>|Array
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
+##### <code>constructor()</code>
 
-## Events
+#### Events
 
 name|event
 ---|---
 <code>onCardIconButtonClick</code>|{"detail":{"event":{}}}
 <code>onCardButtonClick</code>|{"detail":{"event":{}}}
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdCheckboxComponent
+### MdCheckboxComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
@@ -140,64 +194,64 @@ name|type
 <code>indeterminate</code>|Boolean
 <code>checked</code>|Boolean
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
+##### <code>constructor()</code>
 
-## Events
+#### Events
 
 name|event
 ---|---
 <code>onCheckboxNativeInput</code>|{"detail":{"event":{}}}
 <code>onCheckboxNativeReset</code>|{"detail":{"event":{}}}
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdChipComponent
+### MdChipComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
 <code>items</code>|Array
 <code>type</code>|String
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
+##### <code>constructor()</code>
 
-## Events
+#### Events
 
 name|event
 ---|---
 <code>onChipClick</code>|{"detail":{"event":{}}}
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdComponent
+### MdComponent
 
-## Instance methods
+#### Instance methods
 
-### <code>emit(type, detail)</code>
+##### <code>emit(type, detail)</code>
 name|type|default
 ---|---|---
 type|String|undefined
 detail|String|undefined
 
-## Inheritance
+#### Inheritance
 
 <code>LitElement</code>
 
 ---
-# MdDataTableCellComponent
+### MdDataTableCellComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
@@ -208,18 +262,18 @@ name|type
 <code>sublabel</code>|String
 <code>action</code>|String
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
+##### <code>constructor()</code>
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdDataTableComponent
+### MdDataTableComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
@@ -228,18 +282,18 @@ name|type
 <code>data</code>|Array
 <code>footers</code>|Array
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
+##### <code>constructor()</code>
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdDatetimePickerComponent
+### MdDatetimePickerComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
@@ -251,22 +305,22 @@ name|type
 <code>open</code>|Boolean
 <code>index</code>|Number
 
-## Instance methods
+#### Instance methods
 
-### <code>startOfDay()</code>
-### <code>years()</code>
-### <code>months()</code>
-### <code>weekdays()</code>
-### <code>days()</code>
-### <code>hours()</code>
-### <code>minutes()</code>
-### <code>label()</code>
-### <code>constructor()</code>
-### <code>show()</code>
-### <code>close()</code>
-### <code>toggle()</code>
+##### <code>startOfDay()</code>
+##### <code>years()</code>
+##### <code>months()</code>
+##### <code>weekdays()</code>
+##### <code>days()</code>
+##### <code>hours()</code>
+##### <code>minutes()</code>
+##### <code>label()</code>
+##### <code>constructor()</code>
+##### <code>show()</code>
+##### <code>close()</code>
+##### <code>toggle()</code>
 
-## Events
+#### Events
 
 name|event
 ---|---
@@ -284,14 +338,14 @@ name|event
 <code>onDatetimePickerButtonClick</code>|{"detail":{"event":{}}}
 <code>onDatetimePickerScrimClosed</code>|{"detail":{"event":{}}}
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdDialogComponent
+### MdDialogComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
@@ -302,14 +356,14 @@ name|type
 <code>buttons</code>|Array
 <code>open</code>|Boolean
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
-### <code>show()</code>
-### <code>close()</code>
-### <code>toggle()</code>
+##### <code>constructor()</code>
+##### <code>show()</code>
+##### <code>close()</code>
+##### <code>toggle()</code>
 
-## Events
+#### Events
 
 name|event
 ---|---
@@ -317,26 +371,26 @@ name|event
 <code>onDialogButtonClick</code>|{"detail":{"event":{}}}
 <code>onDialogScrimClosed</code>|{"detail":{"event":{}}}
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdDividerComponent
+### MdDividerComponent
 
-## Instance methods
+#### Instance methods
 
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# Dragger
+### Dragger
 
-# MdFabComponent
+### MdFabComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
@@ -346,18 +400,18 @@ name|type
 <code>size</code>|String
 <code>variant</code>|String
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
+##### <code>constructor()</code>
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdFormComponent
+### MdFormComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
@@ -369,17 +423,17 @@ name|type
 <code>name</code>|String
 <code>noValidate</code>|Boolean
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
-### <code>formNative()</code>
-### <code>reset()</code>
-### <code>submit(submitButton)</code>
+##### <code>constructor()</code>
+##### <code>formNative()</code>
+##### <code>reset()</code>
+##### <code>submit(submitButton)</code>
 name|type|default
 ---|---|---
 submitButton|String|undefined
 
-## Events
+#### Events
 
 name|event
 ---|---
@@ -387,24 +441,24 @@ name|event
 <code>onFormNativeReset</code>|{"detail":{"event":{}}}
 <code>onFormNativeSubmit</code>|{"detail":{"event":{}}}
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdIconComponent
+### MdIconComponent
 
-## Instance methods
+#### Instance methods
 
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdIconButtonComponent
+### MdIconButtonComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
@@ -415,24 +469,24 @@ name|type
 <code>selected</code>|Boolean
 <code>disabled</code>|Boolean
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
+##### <code>constructor()</code>
 
-## Events
+#### Events
 
 name|event
 ---|---
 <code>onIconButtonClick</code>|{"detail":{"event":{}}}
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdImageComponent
+### MdImageComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
@@ -441,19 +495,19 @@ name|type
 <code>ratio</code>|String
 <code>circular</code>|Boolean
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
-### <code>styleInfo()</code>
+##### <code>constructor()</code>
+##### <code>styleInfo()</code>
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdListItemComponent
+### MdListItemComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
@@ -476,34 +530,34 @@ name|type
 <code>rippleOptions</code>|Object
 <code>badge</code>|Number
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
+##### <code>constructor()</code>
 
-## Events
+#### Events
 
 name|event
 ---|---
 <code>onListItemSelected</code>|{"detail":{"listItem":"this"}}
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdListRowComponent
+### MdListRowComponent
 
-## Instance methods
+#### Instance methods
 
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdListComponent
+### MdListComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
@@ -511,19 +565,19 @@ name|type
 <code>type</code>|String
 <code>rippleOptions</code>|Object
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
-### <code>multiSelect(data)</code>
+##### <code>constructor()</code>
+##### <code>multiSelect(data)</code>
 name|type|default
 ---|---|---
 data|Object|undefined
-### <code>singleSelect(data)</code>
+##### <code>singleSelect(data)</code>
 name|type|default
 ---|---|---
 data|Object|undefined
 
-## Events
+#### Events
 
 name|event
 ---|---
@@ -532,64 +586,64 @@ name|event
 <code>onListItemRadioButtonNativeInput</code>|{"detail":{"event":{}}}
 <code>onListItemSwitchNativeInput</code>|{"detail":{"event":{}}}
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# undefined
+### undefined
 
-# MdMenuComponent
+### MdMenuComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
 <code>open</code>|Boolean
 <code>items</code>|Array
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
-### <code>show(options)</code>
+##### <code>constructor()</code>
+##### <code>show(options)</code>
 name|type|default
 ---|---|---
 options|Object|{}
-### <code>close()</code>
-### <code>toggle(options)</code>
+##### <code>close()</code>
+##### <code>toggle(options)</code>
 name|type|default
 ---|---|---
 options|String|undefined
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdNavigationBarComponent
+### MdNavigationBarComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
 <code>open</code>|Boolean
 <code>items</code>|Array
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
-### <code>show()</code>
-### <code>close()</code>
-### <code>toggle()</code>
+##### <code>constructor()</code>
+##### <code>show()</code>
+##### <code>close()</code>
+##### <code>toggle()</code>
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdNavigationDrawerComponent
+### MdNavigationDrawerComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
@@ -602,28 +656,28 @@ name|type
 <code>modal</code>|Boolean
 <code>view</code>|String
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
-### <code>show()</code>
-### <code>close()</code>
-### <code>toggle()</code>
+##### <code>constructor()</code>
+##### <code>show()</code>
+##### <code>close()</code>
+##### <code>toggle()</code>
 
-## Events
+#### Events
 
 name|event
 ---|---
 <code>onNavigationDrawerIconButtonClick</code>|{"detail":{"event":{}}}
 <code>onNavigationDrawerScrimClosed</code>|{"detail":{"event":{}}}
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdNavigationListItemComponent
+### MdNavigationListItemComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
@@ -636,62 +690,62 @@ name|type
 <code>rippleOptions</code>|Object
 <code>badge</code>|Number
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
+##### <code>constructor()</code>
 
-## Events
+#### Events
 
 name|event
 ---|---
 <code>onNavigationListItemSelected</code>|{"detail":{"navigationListItem":"this"}}
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdNavigationListRowComponent
+### MdNavigationListRowComponent
 
-## Instance methods
+#### Instance methods
 
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdNavigationListComponent
+### MdNavigationListComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
 <code>items</code>|Array
 <code>rippleOptions</code>|Object
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
-### <code>singleSelect(data)</code>
+##### <code>constructor()</code>
+##### <code>singleSelect(data)</code>
 name|type|default
 ---|---|---
 data|Object|undefined
 
-## Events
+#### Events
 
 name|event
 ---|---
 <code>onNavigationListItemClick</code>|{"detail":{"event":{}}}
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdNavigationRailComponent
+### MdNavigationRailComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
@@ -702,40 +756,40 @@ name|type
 <code>items</code>|Array
 <code>open</code>|Boolean
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
-### <code>show()</code>
-### <code>close()</code>
-### <code>toggle()</code>
+##### <code>constructor()</code>
+##### <code>show()</code>
+##### <code>close()</code>
+##### <code>toggle()</code>
 
-## Events
+#### Events
 
 name|event
 ---|---
 <code>onNavigationRailIconButtonClick</code>|{"detail":{"event":{}}}
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# PopperController
+### PopperController
 
-## Instance methods
+#### Instance methods
 
-### <code>show(options)</code>
+##### <code>show(options)</code>
 name|type|default
 ---|---|---
 options|Object|{}
-### <code>closestScrollable(element)</code>
+##### <code>closestScrollable(element)</code>
 name|type|default
 ---|---|---
 element|String|undefined
 
-# MdProgressIndicatorComponent
+### MdProgressIndicatorComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
@@ -743,18 +797,18 @@ name|type
 <code>max</code>|Number
 <code>value</code>|Number
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
+##### <code>constructor()</code>
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdRadioButtonComponent
+### MdRadioButtonComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
@@ -763,131 +817,131 @@ name|type
 <code>indeterminate</code>|Boolean
 <code>checked</code>|Boolean
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
+##### <code>constructor()</code>
 
-## Events
+#### Events
 
 name|event
 ---|---
 <code>onRadioButtonNativeInput</code>|{"detail":{"event":{}}}
 <code>onRadioButtonNativeReset</code>|{"detail":{"event":{}}}
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# RippleController
+### RippleController
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor(host, options)</code>
+##### <code>constructor(host, options)</code>
 name|type|default
 ---|---|---
 host|String|undefined
 options|String|undefined
-### <code>hostConnected()</code>
-### <code>hostDisconnected()</code>
+##### <code>hostConnected()</code>
+##### <code>hostDisconnected()</code>
 
-# Router
+### Router
 
-## Instance methods
+#### Instance methods
 
-### <code>get(pathname, routes, parent, result)</code>
+##### <code>get(pathname, routes, parent, result)</code>
 name|type|default
 ---|---|---
 pathname|undefined|this.pathname
 routes|undefined|this.routes
 parent|String|null
 result|Array|[]
-### <code>pathname()</code>
-### <code>removeComponent(routes)</code>
+##### <code>pathname()</code>
+##### <code>removeComponent(routes)</code>
 name|type|default
 ---|---|---
 routes|String|undefined
-### <code>getOutlet(container, route)</code>
+##### <code>getOutlet(container, route)</code>
 name|type|default
 ---|---|---
 container|String|undefined
 route|String|undefined
-### <code>setContainer(route)</code>
+##### <code>setContainer(route)</code>
 name|type|default
 ---|---|---
 route|String|undefined
-### <code>loadComponent(route)</code>
+##### <code>loadComponent(route)</code>
 name|type|default
 ---|---|---
 route|String|undefined
-### <code>setController()</code>
-### <code>navigate(url)</code>
+##### <code>setController()</code>
+##### <code>navigate(url)</code>
 name|type|default
 ---|---|---
 url|String|undefined
-### <code>emit(type, detail)</code>
+##### <code>emit(type, detail)</code>
 name|type|default
 ---|---|---
 type|String|undefined
 detail|String|undefined
-### <code>use(routes, options)</code>
+##### <code>use(routes, options)</code>
 name|type|default
 ---|---|---
 routes|Array|[]
 options|Object|{}
 
-# MdScrimComponent
+### MdScrimComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
 <code>open</code>|Boolean
 
-## Instance methods
+#### Instance methods
 
-### <code>show()</code>
-### <code>close()</code>
-### <code>toggle()</code>
+##### <code>show()</code>
+##### <code>close()</code>
+##### <code>toggle()</code>
 
-## Events
+#### Events
 
 name|event
 ---|---
 <code>onScrimClick</code>|{"detail":{"event":{}}}
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdSegmentedButtonComponent
+### MdSegmentedButtonComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
 <code>items</code>|Array
 <code>type</code>|String
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
+##### <code>constructor()</code>
 
-## Events
+#### Events
 
 name|event
 ---|---
 <code>onSegmentedButtonItemClick</code>|{"detail":{"event":{}}}
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdSheetComponent
+### MdSheetComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
@@ -900,14 +954,14 @@ name|type
 <code>region</code>|String
 <code>modal</code>|Boolean
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
-### <code>show()</code>
-### <code>close()</code>
-### <code>toggle()</code>
+##### <code>constructor()</code>
+##### <code>show()</code>
+##### <code>close()</code>
+##### <code>toggle()</code>
 
-## Events
+#### Events
 
 name|event
 ---|---
@@ -915,14 +969,14 @@ name|event
 <code>onSheetButtonClick</code>|{"detail":{"event":{}}}
 <code>onSheetScrimClosed</code>|{"detail":{"event":{}}}
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdSideSheetComponent
+### MdSideSheetComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
@@ -934,14 +988,14 @@ name|type
 <code>open</code>|Boolean
 <code>modal</code>|Boolean
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
-### <code>show()</code>
-### <code>close()</code>
-### <code>toggle()</code>
+##### <code>constructor()</code>
+##### <code>show()</code>
+##### <code>close()</code>
+##### <code>toggle()</code>
 
-## Events
+#### Events
 
 name|event
 ---|---
@@ -949,14 +1003,14 @@ name|event
 <code>onSideSheetButtonClick</code>|{"detail":{"event":{}}}
 <code>onSideSheetScrimClosed</code>|{"detail":{"event":{}}}
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdSliderComponent
+### MdSliderComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
@@ -968,34 +1022,34 @@ name|type
 <code>value</code>|undefined
 <code>converter</code>|undefined
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
-### <code>indicators()</code>
-### <code>sliderNatives()</code>
-### <code>updateValue()</code>
-### <code>percentage(value, min, max)</code>
+##### <code>constructor()</code>
+##### <code>indicators()</code>
+##### <code>sliderNatives()</code>
+##### <code>updateValue()</code>
+##### <code>percentage(value, min, max)</code>
 name|type|default
 ---|---|---
 value|String|undefined
 min|undefined|this.min
 max|undefined|this.max
 
-## Events
+#### Events
 
 name|event
 ---|---
 <code>onSliderNativeInput</code>|{"detail":{"event":{}}}
 <code>onSliderNativeReset</code>|{"detail":{"event":{}}}
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdSnackbarComponent
+### MdSnackbarComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
@@ -1004,79 +1058,79 @@ name|type
 <code>buttons</code>|Array
 <code>open</code>|Boolean
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
-### <code>show()</code>
-### <code>close()</code>
-### <code>toggle()</code>
+##### <code>constructor()</code>
+##### <code>show()</code>
+##### <code>close()</code>
+##### <code>toggle()</code>
 
-## Events
+#### Events
 
 name|event
 ---|---
 <code>onSnackbarIconButtonClick</code>|{"detail":{"event":{}}}
 <code>onSnackbarButtonClick</code>|{"detail":{"event":{}}}
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# Store
+### Store
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor(data, options)</code>
+##### <code>constructor(data, options)</code>
 name|type|default
 ---|---|---
 data|Object|[]
 options|Object|{}
-### <code>sort(data, sorters)</code>
+##### <code>sort(data, sorters)</code>
 name|type|default
 ---|---|---
 data|Object|undefined
 sorters|String|undefined
-### <code>deepSearch(item, q)</code>
+##### <code>deepSearch(item, q)</code>
 name|type|default
 ---|---|---
 item|String|undefined
 q|String|undefined
-### <code>search(data, q)</code>
+##### <code>search(data, q)</code>
 name|type|default
 ---|---|---
 data|Object|undefined
 q|String|undefined
-### <code>getNestedValue(item, name)</code>
+##### <code>getNestedValue(item, name)</code>
 name|type|default
 ---|---|---
 item|String|undefined
 name|String|undefined
-### <code>filter(data, filters)</code>
+##### <code>filter(data, filters)</code>
 name|type|default
 ---|---|---
 data|Object|undefined
 filters|String|undefined
-### <code>range(data, _start, _end)</code>
+##### <code>range(data, _start, _end)</code>
 name|type|default
 ---|---|---
 data|Object|undefined
 _start|String|undefined
 _end|String|undefined
-### <code>paginate(data, _page, _limit)</code>
+##### <code>paginate(data, _page, _limit)</code>
 name|type|default
 ---|---|---
 data|Object|undefined
 _page|String|undefined
 _limit|String|undefined
-### <code>get(options)</code>
+##### <code>get(options)</code>
 name|type|default
 ---|---|---
 options|Object|{}
 
-# MdSwitchComponent
+### MdSwitchComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
@@ -1086,25 +1140,25 @@ name|type
 <code>checked</code>|Boolean
 <code>icons</code>|Array
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
+##### <code>constructor()</code>
 
-## Events
+#### Events
 
 name|event
 ---|---
 <code>onSwitchNativeInput</code>|{"detail":{"event":{}}}
 <code>onSwitchNativeReset</code>|{"detail":{"event":{}}}
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdTabComponent
+### MdTabComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
@@ -1117,24 +1171,24 @@ name|type
 <code>rippleOptions</code>|Object
 <code>badge</code>|Number
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
+##### <code>constructor()</code>
 
-## Events
+#### Events
 
 name|event
 ---|---
 <code>onTabSelected</code>|{"detail":{"tab":"this"}}
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdTabsComponent
+### MdTabsComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
@@ -1142,28 +1196,28 @@ name|type
 <code>rippleOptions</code>|Object
 <code>variant</code>|String
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
-### <code>singleSelect(data)</code>
+##### <code>constructor()</code>
+##### <code>singleSelect(data)</code>
 name|type|default
 ---|---|---
 data|Object|undefined
 
-## Events
+#### Events
 
 name|event
 ---|---
 <code>onTabClick</code>|{"detail":{"event":{}}}
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdTextFieldComponent
+### MdTextFieldComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
@@ -1187,13 +1241,13 @@ name|type
 <code>variant</code>|String
 <code>disabled</code>|Boolean
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
-### <code>actions2()</code>
-### <code>textFieldNative()</code>
+##### <code>constructor()</code>
+##### <code>actions2()</code>
+##### <code>textFieldNative()</code>
 
-## Events
+#### Events
 
 name|event
 ---|---
@@ -1205,14 +1259,14 @@ name|event
 <code>onTextFieldReset</code>|{"detail":{"event":{}}}
 <code>onTextFieldIconButtonClick</code>|{"detail":{"event":{}}}
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdTooltipComponent
+### MdTooltipComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
@@ -1223,34 +1277,34 @@ name|type
 <code>buttons</code>|Array
 <code>open</code>|Boolean
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
-### <code>show(options)</code>
+##### <code>constructor()</code>
+##### <code>show(options)</code>
 name|type|default
 ---|---|---
 options|String|undefined
-### <code>close()</code>
-### <code>toggle(options)</code>
+##### <code>close()</code>
+##### <code>toggle(options)</code>
 name|type|default
 ---|---|---
 options|String|undefined
 
-## Events
+#### Events
 
 name|event
 ---|---
 <code>onTooltipIconButtonClick</code>|{"detail":{"event":{}}}
 <code>onTooltipButtonClick</code>|{"detail":{"event":{}}}
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdTopAppBarComponent
+### MdTopAppBarComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
@@ -1260,27 +1314,27 @@ name|type
 <code>trailingActions</code>|Array
 <code>open</code>|Boolean
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
-### <code>show()</code>
-### <code>close()</code>
-### <code>toggle()</code>
+##### <code>constructor()</code>
+##### <code>show()</code>
+##### <code>close()</code>
+##### <code>toggle()</code>
 
-## Events
+#### Events
 
 name|event
 ---|---
 <code>onTopAppBarIconButtonClick</code>|{"detail":{"event":{}}}
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdTreeItemComponent
+### MdTreeItemComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
@@ -1293,63 +1347,63 @@ name|type
 <code>label</code>|String
 <code>routerLink</code>|String
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
-### <code>action()</code>
-### <code>icon()</code>
+##### <code>constructor()</code>
+##### <code>action()</code>
+##### <code>icon()</code>
 
-## Events
+#### Events
 
 name|event
 ---|---
 <code>onTreeItemSelected</code>|{"detail":{"treeItem":"this"}}
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdTreeRowComponent
+### MdTreeRowComponent
 
-## Instance methods
+#### Instance methods
 
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
 ---
-# MdTreeComponent
+### MdTreeComponent
 
-## Instance properties
+#### Instance properties
 
 name|type
 ---|---
 <code>items</code>|Array
 <code>items2</code>|Array
 
-## Instance methods
+#### Instance methods
 
-### <code>constructor()</code>
-### <code>flatten(items, parent, indent)</code>
+##### <code>constructor()</code>
+##### <code>flatten(items, parent, indent)</code>
 name|type|default
 ---|---|---
 items|Array|undefined
 parent|String|undefined
 indent|Number|0
-### <code>toggle(data)</code>
+##### <code>toggle(data)</code>
 name|type|default
 ---|---|---
 data|Object|undefined
 
-## Events
+#### Events
 
 name|event
 ---|---
 <code>onTreeItemClick</code>|{"detail":{"event":{}}}
 
-## Inheritance
+#### Inheritance
 
 <code>MdComponent</code>
 
