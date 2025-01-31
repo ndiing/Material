@@ -2,7 +2,6 @@ import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
 
 /**
- * @class DemoDialog
  * @extends MdComponent
  */
 class DemoDialog extends MdComponent {

@@ -3,7 +3,6 @@ import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 
 /**
- * @class MdListComponent
  * @extends MdComponent
  * @fires MdListComponent#onListItemClick - {"detail":{"event":{}}}
  * @fires MdListComponent#onListItemCheckboxNativeInput - {"detail":{"event":{}}}

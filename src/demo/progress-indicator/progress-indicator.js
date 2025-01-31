@@ -2,7 +2,6 @@ import { html } from "lit";
 import { MdComponent } from "../../material/component/component";
 
 /**
- * @class DemoProgressIndicator
  * @extends MdComponent
  */
 class DemoProgressIndicator extends MdComponent {

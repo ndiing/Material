@@ -4,7 +4,6 @@ import { RippleController } from "../ripple/ripple";
 import { ifDefined } from "lit/directives/if-defined.js";
 
 /**
- * @class MdIconButtonComponent
  * @extends MdComponent
  * @fires MdIconButtonComponent#onIconButtonClick - {"detail":{"event":{}}}
  */

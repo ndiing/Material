@@ -1,5 +1,4 @@
 /**
- * @class Router
  * @extends undefined
  */
 class Router {

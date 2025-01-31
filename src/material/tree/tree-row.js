@@ -2,7 +2,6 @@ import { html, nothing } from "lit";
 import { MdComponent } from "../component/component";
 
 /**
- * @class MdTreeRowComponent
  * @extends MdComponent
  */
 class MdTreeRowComponent extends MdComponent {

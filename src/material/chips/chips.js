@@ -4,7 +4,6 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { RippleController } from "../ripple/ripple";
 
 /**
- * @class MdChipComponent
  * @extends MdComponent
  * @fires MdChipComponent#onChipClick - {"detail":{"event":{}}}
  */

@@ -4,7 +4,6 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { classMap } from "lit/directives/class-map.js";
 
 /**
- * @class MdSliderComponent
  * @extends MdComponent
  * @fires MdSliderComponent#onSliderNativeInput - {"detail":{"event":{}}}
  * @fires MdSliderComponent#onSliderNativeReset - {"detail":{"event":{}}}

@@ -5,7 +5,6 @@ import { choose } from "lit/directives/choose.js";
 import { classMap } from "lit/directives/class-map.js";
 
 /**
- * @class MdTextFieldComponent
  * @extends MdComponent
  * @fires MdTextFieldComponent#onTextFieldFocus - {"detail":{"event":{}}}
  * @fires MdTextFieldComponent#onTextFieldBlur - {"detail":{"event":{}}}

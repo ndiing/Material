@@ -4,7 +4,6 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { RippleController } from "../ripple/ripple";
 
 /**
- * @class MdSwitchComponent
  * @extends MdComponent
  * @fires MdSwitchComponent#onSwitchNativeInput - {"detail":{"event":{}}}
  * @fires MdSwitchComponent#onSwitchNativeReset - {"detail":{"event":{}}}

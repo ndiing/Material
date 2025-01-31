@@ -1,5 +1,4 @@
 /**
- * @class Dragger
  * @extends undefined
  */
 class Dragger {}

@@ -4,7 +4,6 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { RippleController } from "../ripple/ripple";
 
 /**
- * @class MdRadioButtonComponent
  * @extends MdComponent
  * @fires MdRadioButtonComponent#onRadioButtonNativeInput - {"detail":{"event":{}}}
  * @fires MdRadioButtonComponent#onRadioButtonNativeReset - {"detail":{"event":{}}}

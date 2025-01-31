@@ -4,7 +4,6 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { RippleController } from "../ripple/ripple";
 
 /**
- * @class MdCheckboxComponent
  * @extends MdComponent
  * @fires MdCheckboxComponent#onCheckboxNativeInput - {"detail":{"event":{}}}
  * @fires MdCheckboxComponent#onCheckboxNativeReset - {"detail":{"event":{}}}

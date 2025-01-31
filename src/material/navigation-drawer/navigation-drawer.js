@@ -4,7 +4,6 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { choose } from "lit/directives/choose.js";
 
 /**
- * @class MdNavigationDrawerComponent
  * @extends MdComponent
  * @fires MdNavigationDrawerComponent#onNavigationDrawerIconButtonClick - {"detail":{"event":{}}}
  * @fires MdNavigationDrawerComponent#onNavigationDrawerScrimClosed - {"detail":{"event":{}}}

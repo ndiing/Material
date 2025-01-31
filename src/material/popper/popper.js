@@ -1,5 +1,4 @@
 /**
- * @class PopperController
  * @extends undefined
  */
 class PopperController {

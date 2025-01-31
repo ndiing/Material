@@ -5,7 +5,6 @@ import { choose } from "lit/directives/choose.js";
 import { PopperController } from "../popper/popper";
 
 /**
- * @class MdTooltipComponent
  * @extends MdComponent
  * @fires MdTooltipComponent#onTooltipIconButtonClick - {"detail":{"event":{}}}
  * @fires MdTooltipComponent#onTooltipButtonClick - {"detail":{"event":{}}}

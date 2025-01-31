@@ -5,7 +5,6 @@ import { choose } from "lit/directives/choose.js";
 import { PopperController } from "../popper/popper";
 
 /**
- * @class MdMenuComponent
  * @extends MdComponent
  */
 class MdMenuComponent extends MdComponent {

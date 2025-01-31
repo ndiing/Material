@@ -4,7 +4,6 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { choose } from "lit/directives/choose.js";
 
 /**
- * @class MdDatetimePickerComponent
  * @extends MdComponent
  * @fires MdDatetimePickerComponent#onDatetimePickerLabelClick - {"detail":{"event":{}}}
  * @fires MdDatetimePickerComponent#onDatetimePickerIconButtonPrevClick - {"detail":{"event":{}}}

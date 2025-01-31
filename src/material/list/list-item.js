@@ -4,7 +4,6 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { RippleController } from "../ripple/ripple";
 
 /**
- * @class MdListItemComponent
  * @extends MdComponent
  * @fires MdListItemComponent#onListItemSelected - {"detail":{"listItem":"this"}}
  */

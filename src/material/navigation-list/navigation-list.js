@@ -3,7 +3,6 @@ import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 
 /**
- * @class MdNavigationListComponent
  * @extends MdComponent
  * @fires MdNavigationListComponent#onNavigationListItemClick - {"detail":{"event":{}}}
  */

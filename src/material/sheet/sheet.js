@@ -4,7 +4,6 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { choose } from "lit/directives/choose.js";
 
 /**
- * @class MdSheetComponent
  * @extends MdComponent
  * @fires MdSheetComponent#onSheetIconButtonClick - {"detail":{"event":{}}}
  * @fires MdSheetComponent#onSheetButtonClick - {"detail":{"event":{}}}

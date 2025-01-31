@@ -3,7 +3,6 @@ import { MdComponent } from "../component/component";
 import { RippleController } from "../ripple/ripple";
 
 /**
- * @class MdChipComponent
  * @extends MdComponent
  * @fires MdChipComponent#onChipActionClick - {"detail":{"event":{}}}
  */

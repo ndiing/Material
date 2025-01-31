@@ -3,7 +3,6 @@ import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 
 /**
- * @class MdTabsComponent
  * @extends MdComponent
  * @fires MdTabsComponent#onTabClick - {"detail":{"event":{}}}
  */

@@ -4,7 +4,6 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { RippleController } from "../ripple/ripple";
 
 /**
- * @class MdTabComponent
  * @extends MdComponent
  * @fires MdTabComponent#onTabSelected - {"detail":{"tab":"this"}}
  */

@@ -4,7 +4,6 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { choose } from "lit/directives/choose.js";
 
 /**
- * @class MdBottomAppBarComponent
  * @extends MdComponent
  * @fires MdBottomAppBarComponent#onBottomAppBarIconButtonClick - {"detail":{"event":{}}}
  * @fires MdBottomAppBarComponent#onBottomAppBarFabClick - {"detail":{"event":{}}}

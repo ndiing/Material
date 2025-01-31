@@ -3,7 +3,6 @@ import { MdComponent } from "../component/component";
 import { ifDefined } from "lit/directives/if-defined.js";
 
 /**
- * @class MdDataTableComponent
  * @extends MdComponent
  */
 class MdDataTableComponent extends MdComponent {
