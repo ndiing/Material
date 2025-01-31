@@ -67,6 +67,7 @@ name|type
 
 - <code>constructor()</code>
 
+
 #### Inheritance
 
 <code>MdComponent</code>
@@ -85,9 +86,13 @@ name|type
 #### Instance methods
 
 - <code>constructor()</code>
+
 - <code>show()</code>
+
 - <code>close()</code>
+
 - <code>toggle()</code>
+
 
 #### Events
 
@@ -118,9 +123,13 @@ name|type
 #### Instance methods
 
 - <code>constructor()</code>
+
 - <code>show()</code>
+
 - <code>close()</code>
+
 - <code>toggle()</code>
+
 
 #### Events
 
@@ -152,6 +161,7 @@ name|type
 
 - <code>constructor()</code>
 
+
 #### Inheritance
 
 <code>MdComponent</code>
@@ -172,6 +182,7 @@ name|type
 #### Instance methods
 
 - <code>constructor()</code>
+
 
 #### Events
 
@@ -200,6 +211,7 @@ name|type
 
 - <code>constructor()</code>
 
+
 #### Events
 
 name|event
@@ -225,6 +237,7 @@ name|type
 
 - <code>constructor()</code>
 
+
 #### Events
 
 name|event
@@ -241,6 +254,7 @@ name|event
 #### Instance methods
 
 - <code>emit(type, detail)</code>
+
 name|type|default
 ---|---|---
 <code>type</code>|String|undefined
@@ -268,6 +282,7 @@ name|type
 
 - <code>constructor()</code>
 
+
 #### Inheritance
 
 <code>MdComponent</code>
@@ -287,6 +302,7 @@ name|type
 #### Instance methods
 
 - <code>constructor()</code>
+
 
 #### Inheritance
 
@@ -310,17 +326,29 @@ name|type
 #### Instance methods
 
 - <code>startOfDay()</code>
+
 - <code>years()</code>
+
 - <code>months()</code>
+
 - <code>weekdays()</code>
+
 - <code>days()</code>
+
 - <code>hours()</code>
+
 - <code>minutes()</code>
+
 - <code>label()</code>
+
 - <code>constructor()</code>
+
 - <code>show()</code>
+
 - <code>close()</code>
+
 - <code>toggle()</code>
+
 
 #### Events
 
@@ -361,9 +389,13 @@ name|type
 #### Instance methods
 
 - <code>constructor()</code>
+
 - <code>show()</code>
+
 - <code>close()</code>
+
 - <code>toggle()</code>
+
 
 #### Events
 
@@ -406,6 +438,7 @@ name|type
 
 - <code>constructor()</code>
 
+
 #### Inheritance
 
 <code>MdComponent</code>
@@ -428,9 +461,13 @@ name|type
 #### Instance methods
 
 - <code>constructor()</code>
+
 - <code>formNative()</code>
+
 - <code>reset()</code>
+
 - <code>submit(submitButton)</code>
+
 name|type|default
 ---|---|---
 <code>submitButton</code>|String|undefined
@@ -475,6 +512,7 @@ name|type
 
 - <code>constructor()</code>
 
+
 #### Events
 
 name|event
@@ -500,7 +538,9 @@ name|type
 #### Instance methods
 
 - <code>constructor()</code>
+
 - <code>styleInfo()</code>
+
 
 #### Inheritance
 
@@ -536,6 +576,7 @@ name|type
 
 - <code>constructor()</code>
 
+
 #### Events
 
 name|event
@@ -570,11 +611,14 @@ name|type
 #### Instance methods
 
 - <code>constructor()</code>
+
 - <code>multiSelect(data)</code>
+
 name|type|default
 ---|---|---
 <code>data</code>|Object|undefined
 - <code>singleSelect(data)</code>
+
 name|type|default
 ---|---|---
 <code>data</code>|Object|undefined
@@ -607,12 +651,16 @@ name|type
 #### Instance methods
 
 - <code>constructor()</code>
+
 - <code>show(options)</code>
+
 name|type|default
 ---|---|---
 <code>options</code>|Object|{}
 - <code>close()</code>
+
 - <code>toggle(options)</code>
+
 name|type|default
 ---|---|---
 <code>options</code>|String|undefined
@@ -634,9 +682,13 @@ name|type
 #### Instance methods
 
 - <code>constructor()</code>
+
 - <code>show()</code>
+
 - <code>close()</code>
+
 - <code>toggle()</code>
+
 
 #### Inheritance
 
@@ -661,9 +713,13 @@ name|type
 #### Instance methods
 
 - <code>constructor()</code>
+
 - <code>show()</code>
+
 - <code>close()</code>
+
 - <code>toggle()</code>
+
 
 #### Events
 
@@ -695,6 +751,7 @@ name|type
 #### Instance methods
 
 - <code>constructor()</code>
+
 
 #### Events
 
@@ -729,7 +786,9 @@ name|type
 #### Instance methods
 
 - <code>constructor()</code>
+
 - <code>singleSelect(data)</code>
+
 name|type|default
 ---|---|---
 <code>data</code>|Object|undefined
@@ -761,9 +820,13 @@ name|type
 #### Instance methods
 
 - <code>constructor()</code>
+
 - <code>show()</code>
+
 - <code>close()</code>
+
 - <code>toggle()</code>
+
 
 #### Events
 
@@ -781,10 +844,12 @@ name|event
 #### Instance methods
 
 - <code>show(options)</code>
+
 name|type|default
 ---|---|---
 <code>options</code>|Object|{}
 - <code>closestScrollable(element)</code>
+
 name|type|default
 ---|---|---
 <code>element</code>|String|undefined
@@ -802,6 +867,7 @@ name|type
 #### Instance methods
 
 - <code>constructor()</code>
+
 
 #### Inheritance
 
@@ -823,6 +889,7 @@ name|type
 
 - <code>constructor()</code>
 
+
 #### Events
 
 name|event
@@ -840,18 +907,22 @@ name|event
 #### Instance methods
 
 - <code>constructor(host, options)</code>
+
 name|type|default
 ---|---|---
 <code>host</code>|String|undefined
 <code>options</code>|String|undefined
 - <code>hostConnected()</code>
+
 - <code>hostDisconnected()</code>
+
 
 ### Router
 
 #### Instance methods
 
 - <code>get(pathname, routes, parent, result)</code>
+
 name|type|default
 ---|---|---
 <code>pathname</code>|undefined|this.pathname
@@ -859,34 +930,43 @@ name|type|default
 <code>parent</code>|String|null
 <code>result</code>|Array|[]
 - <code>pathname()</code>
+
 - <code>removeComponent(routes)</code>
+
 name|type|default
 ---|---|---
 <code>routes</code>|String|undefined
 - <code>getOutlet(container, route)</code>
+
 name|type|default
 ---|---|---
 <code>container</code>|String|undefined
 <code>route</code>|String|undefined
 - <code>setContainer(route)</code>
+
 name|type|default
 ---|---|---
 <code>route</code>|String|undefined
 - <code>loadComponent(route)</code>
+
 name|type|default
 ---|---|---
 <code>route</code>|String|undefined
 - <code>setController()</code>
+
 - <code>navigate(url)</code>
+
 name|type|default
 ---|---|---
 <code>url</code>|String|undefined
 - <code>emit(type, detail)</code>
+
 name|type|default
 ---|---|---
 <code>type</code>|String|undefined
 <code>detail</code>|String|undefined
 - <code>use(routes, options)</code>
+
 name|type|default
 ---|---|---
 <code>routes</code>|Array|[]
@@ -903,8 +983,11 @@ name|type
 #### Instance methods
 
 - <code>show()</code>
+
 - <code>close()</code>
+
 - <code>toggle()</code>
+
 
 #### Events
 
@@ -929,6 +1012,7 @@ name|type
 #### Instance methods
 
 - <code>constructor()</code>
+
 
 #### Events
 
@@ -959,9 +1043,13 @@ name|type
 #### Instance methods
 
 - <code>constructor()</code>
+
 - <code>show()</code>
+
 - <code>close()</code>
+
 - <code>toggle()</code>
+
 
 #### Events
 
@@ -993,9 +1081,13 @@ name|type
 #### Instance methods
 
 - <code>constructor()</code>
+
 - <code>show()</code>
+
 - <code>close()</code>
+
 - <code>toggle()</code>
+
 
 #### Events
 
@@ -1027,10 +1119,15 @@ name|type
 #### Instance methods
 
 - <code>constructor()</code>
+
 - <code>indicators()</code>
+
 - <code>sliderNatives()</code>
+
 - <code>updateValue()</code>
+
 - <code>percentage(value, min, max)</code>
+
 name|type|default
 ---|---|---
 <code>value</code>|String|undefined
@@ -1063,9 +1160,13 @@ name|type
 #### Instance methods
 
 - <code>constructor()</code>
+
 - <code>show()</code>
+
 - <code>close()</code>
+
 - <code>toggle()</code>
+
 
 #### Events
 
@@ -1084,48 +1185,57 @@ name|event
 #### Instance methods
 
 - <code>constructor(data, options)</code>
+
 name|type|default
 ---|---|---
 <code>data</code>|Object|[]
 <code>options</code>|Object|{}
 - <code>sort(data, sorters)</code>
+
 name|type|default
 ---|---|---
 <code>data</code>|Object|undefined
 <code>sorters</code>|String|undefined
 - <code>deepSearch(item, q)</code>
+
 name|type|default
 ---|---|---
 <code>item</code>|String|undefined
 <code>q</code>|String|undefined
 - <code>search(data, q)</code>
+
 name|type|default
 ---|---|---
 <code>data</code>|Object|undefined
 <code>q</code>|String|undefined
 - <code>getNestedValue(item, name)</code>
+
 name|type|default
 ---|---|---
 <code>item</code>|String|undefined
 <code>name</code>|String|undefined
 - <code>filter(data, filters)</code>
+
 name|type|default
 ---|---|---
 <code>data</code>|Object|undefined
 <code>filters</code>|String|undefined
 - <code>range(data, _start, _end)</code>
+
 name|type|default
 ---|---|---
 <code>data</code>|Object|undefined
 <code>_start</code>|String|undefined
 <code>_end</code>|String|undefined
 - <code>paginate(data, _page, _limit)</code>
+
 name|type|default
 ---|---|---
 <code>data</code>|Object|undefined
 <code>_page</code>|String|undefined
 <code>_limit</code>|String|undefined
 - <code>get(options)</code>
+
 name|type|default
 ---|---|---
 <code>options</code>|Object|{}
@@ -1145,6 +1255,7 @@ name|type
 #### Instance methods
 
 - <code>constructor()</code>
+
 
 #### Events
 
@@ -1177,6 +1288,7 @@ name|type
 
 - <code>constructor()</code>
 
+
 #### Events
 
 name|event
@@ -1201,7 +1313,9 @@ name|type
 #### Instance methods
 
 - <code>constructor()</code>
+
 - <code>singleSelect(data)</code>
+
 name|type|default
 ---|---|---
 <code>data</code>|Object|undefined
@@ -1246,8 +1360,11 @@ name|type
 #### Instance methods
 
 - <code>constructor()</code>
+
 - <code>actions2()</code>
+
 - <code>textFieldNative()</code>
+
 
 #### Events
 
@@ -1282,12 +1399,16 @@ name|type
 #### Instance methods
 
 - <code>constructor()</code>
+
 - <code>show(options)</code>
+
 name|type|default
 ---|---|---
 <code>options</code>|String|undefined
 - <code>close()</code>
+
 - <code>toggle(options)</code>
+
 name|type|default
 ---|---|---
 <code>options</code>|String|undefined
@@ -1319,9 +1440,13 @@ name|type
 #### Instance methods
 
 - <code>constructor()</code>
+
 - <code>show()</code>
+
 - <code>close()</code>
+
 - <code>toggle()</code>
+
 
 #### Events
 
@@ -1352,8 +1477,11 @@ name|type
 #### Instance methods
 
 - <code>constructor()</code>
+
 - <code>action()</code>
+
 - <code>icon()</code>
+
 
 #### Events
 
@@ -1388,13 +1516,16 @@ name|type
 #### Instance methods
 
 - <code>constructor()</code>
+
 - <code>flatten(items, parent, indent)</code>
+
 name|type|default
 ---|---|---
 <code>items</code>|Array|undefined
 <code>parent</code>|String|undefined
 <code>indent</code>|Number|0
 - <code>toggle(data)</code>
+
 name|type|default
 ---|---|---
 <code>data</code>|Object|undefined
