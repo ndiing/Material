@@ -11,7 +11,7 @@ max|Number
 
 name|params
 ---|---
-constructor|{}
+constructor|[]
 
 ## Inheritance
 
@@ -32,10 +32,10 @@ open|Boolean
 
 name|params
 ---|---
-constructor|{}
-show|{}
-close|{}
-toggle|{}
+constructor|[]
+show|[]
+close|[]
+toggle|[]
 
 ## Events
 
@@ -67,10 +67,10 @@ modal|Boolean
 
 name|params
 ---|---
-constructor|{}
-show|{}
-close|{}
-toggle|{}
+constructor|[]
+show|[]
+close|[]
+toggle|[]
 
 ## Events
 
@@ -102,7 +102,7 @@ selected|Boolean
 
 name|params
 ---|---
-constructor|{}
+constructor|[]
 
 ## Inheritance
 
@@ -125,7 +125,7 @@ buttons|Array
 
 name|params
 ---|---
-constructor|{}
+constructor|[]
 
 ## Events
 
@@ -154,7 +154,7 @@ checked|Boolean
 
 name|params
 ---|---
-constructor|{}
+constructor|[]
 
 ## Events
 
@@ -181,7 +181,7 @@ type|String
 
 name|params
 ---|---
-constructor|{}
+constructor|[]
 
 ## Events
 
@@ -200,7 +200,7 @@ MdComponent
 
 name|params
 ---|---
-emit|{"type":{"type":"String"},"detail":{"type":"String"}}
+emit|["type","detail"]
 
 ## Inheritance
 
@@ -224,7 +224,7 @@ action|String
 
 name|params
 ---|---
-constructor|{}
+constructor|[]
 
 ## Inheritance
 
@@ -246,7 +246,7 @@ footers|Array
 
 name|params
 ---|---
-constructor|{}
+constructor|[]
 
 ## Inheritance
 
@@ -271,18 +271,18 @@ index|Number
 
 name|params
 ---|---
-startOfDay|{}
-years|{}
-months|{}
-weekdays|{}
-days|{}
-hours|{}
-minutes|{}
-label|{}
-constructor|{}
-show|{}
-close|{}
-toggle|{}
+startOfDay|[]
+years|[]
+months|[]
+weekdays|[]
+days|[]
+hours|[]
+minutes|[]
+label|[]
+constructor|[]
+show|[]
+close|[]
+toggle|[]
 
 ## Events
 
@@ -324,10 +324,10 @@ open|Boolean
 
 name|params
 ---|---
-constructor|{}
-show|{}
-close|{}
-toggle|{}
+constructor|[]
+show|[]
+close|[]
+toggle|[]
 
 ## Events
 
@@ -372,7 +372,7 @@ variant|String
 
 name|params
 ---|---
-constructor|{}
+constructor|[]
 
 ## Inheritance
 
@@ -397,10 +397,10 @@ noValidate|Boolean
 
 name|params
 ---|---
-constructor|{}
-formNative|{}
-reset|{}
-submit|{"submitButton":{"type":"String"}}
+constructor|[]
+formNative|[]
+reset|[]
+submit|["submitButton"]
 
 ## Events
 
@@ -444,7 +444,7 @@ disabled|Boolean
 
 name|params
 ---|---
-constructor|{}
+constructor|[]
 
 ## Events
 
@@ -472,8 +472,8 @@ circular|Boolean
 
 name|params
 ---|---
-constructor|{}
-styleInfo|{}
+constructor|[]
+styleInfo|[]
 
 ## Inheritance
 
@@ -509,7 +509,7 @@ badge|Number
 
 name|params
 ---|---
-constructor|{}
+constructor|[]
 
 ## Events
 
@@ -548,9 +548,9 @@ rippleOptions|Object
 
 name|params
 ---|---
-constructor|{}
-multiSelect|{"data":{"type":"Object"}}
-singleSelect|{"data":{"type":"Object"}}
+constructor|[]
+multiSelect|["data"]
+singleSelect|["data"]
 
 ## Events
 
@@ -581,10 +581,10 @@ items|Array
 
 name|params
 ---|---
-constructor|{}
-show|{"options":{"type":"Object","value":"{}"}}
-close|{}
-toggle|{"options":{"type":"String"}}
+constructor|[]
+show|["options"]
+close|[]
+toggle|["options"]
 
 ## Inheritance
 
@@ -604,10 +604,10 @@ items|Array
 
 name|params
 ---|---
-constructor|{}
-show|{}
-close|{}
-toggle|{}
+constructor|[]
+show|[]
+close|[]
+toggle|[]
 
 ## Inheritance
 
@@ -633,10 +633,10 @@ view|String
 
 name|params
 ---|---
-constructor|{}
-show|{}
-close|{}
-toggle|{}
+constructor|[]
+show|[]
+close|[]
+toggle|[]
 
 ## Events
 
@@ -669,7 +669,7 @@ badge|Number
 
 name|params
 ---|---
-constructor|{}
+constructor|[]
 
 ## Events
 
@@ -707,8 +707,8 @@ rippleOptions|Object
 
 name|params
 ---|---
-constructor|{}
-singleSelect|{"data":{"type":"Object"}}
+constructor|[]
+singleSelect|["data"]
 
 ## Events
 
@@ -738,10 +738,10 @@ open|Boolean
 
 name|params
 ---|---
-constructor|{}
-show|{}
-close|{}
-toggle|{}
+constructor|[]
+show|[]
+close|[]
+toggle|[]
 
 ## Events
 
@@ -760,8 +760,8 @@ MdComponent
 
 name|params
 ---|---
-show|{"options":{"type":"Object","value":"{}"}}
-closestScrollable|{"element":{"type":"String"}}
+show|["options"]
+closestScrollable|["element"]
 
 # MdProgressIndicatorComponent
 
@@ -777,7 +777,7 @@ value|Number
 
 name|params
 ---|---
-constructor|{}
+constructor|[]
 
 ## Inheritance
 
@@ -799,7 +799,7 @@ checked|Boolean
 
 name|params
 ---|---
-constructor|{}
+constructor|[]
 
 ## Events
 
@@ -819,9 +819,9 @@ MdComponent
 
 name|params
 ---|---
-constructor|{"host":{"type":"String"},"options":{"type":"String"}}
-hostConnected|{}
-hostDisconnected|{}
+constructor|["host","options"]
+hostConnected|[]
+hostDisconnected|[]
 
 # Router
 
@@ -829,16 +829,16 @@ hostDisconnected|{}
 
 name|params
 ---|---
-get|{"pathname":{"value":"this.pathname"},"routes":{"value":"this.routes"},"parent":{"type":"String","value":"null"},"result":{"type":"Array","value":"[]"}}
-pathname|{}
-removeComponent|{"routes":{"type":"String"}}
-getOutlet|{"container":{"type":"String"},"route":{"type":"String"}}
-setContainer|{"route":{"type":"String"}}
-loadComponent|{"route":{"type":"String"}}
-setController|{}
-navigate|{"url":{"type":"String"}}
-emit|{"type":{"type":"String"},"detail":{"type":"String"}}
-use|{"routes":{"type":"Array","value":"[]"},"options":{"type":"Object","value":"{}"}}
+get|["pathname","routes","parent","result"]
+pathname|[]
+removeComponent|["routes"]
+getOutlet|["container","route"]
+setContainer|["route"]
+loadComponent|["route"]
+setController|[]
+navigate|["url"]
+emit|["type","detail"]
+use|["routes","options"]
 
 # MdScrimComponent
 
@@ -852,9 +852,9 @@ open|Boolean
 
 name|params
 ---|---
-show|{}
-close|{}
-toggle|{}
+show|[]
+close|[]
+toggle|[]
 
 ## Events
 
@@ -880,7 +880,7 @@ type|String
 
 name|params
 ---|---
-constructor|{}
+constructor|[]
 
 ## Events
 
@@ -912,10 +912,10 @@ modal|Boolean
 
 name|params
 ---|---
-constructor|{}
-show|{}
-close|{}
-toggle|{}
+constructor|[]
+show|[]
+close|[]
+toggle|[]
 
 ## Events
 
@@ -948,10 +948,10 @@ modal|Boolean
 
 name|params
 ---|---
-constructor|{}
-show|{}
-close|{}
-toggle|{}
+constructor|[]
+show|[]
+close|[]
+toggle|[]
 
 ## Events
 
@@ -984,11 +984,11 @@ converter|undefined
 
 name|params
 ---|---
-constructor|{}
-indicators|{}
-sliderNatives|{}
-updateValue|{}
-percentage|{"value":{"type":"String"},"min":{"value":"this.min"},"max":{"value":"this.max"}}
+constructor|[]
+indicators|[]
+sliderNatives|[]
+updateValue|[]
+percentage|["value","min","max"]
 
 ## Events
 
@@ -1017,10 +1017,10 @@ open|Boolean
 
 name|params
 ---|---
-constructor|{}
-show|{}
-close|{}
-toggle|{}
+constructor|[]
+show|[]
+close|[]
+toggle|[]
 
 ## Events
 
@@ -1040,15 +1040,15 @@ MdComponent
 
 name|params
 ---|---
-constructor|{"data":{"type":"Object","value":"[]"},"options":{"type":"Object","value":"{}"}}
-sort|{"data":{"type":"Object"},"sorters":{"type":"String"}}
-deepSearch|{"item":{"type":"String"},"q":{"type":"String"}}
-search|{"data":{"type":"Object"},"q":{"type":"String"}}
-getNestedValue|{"item":{"type":"String"},"name":{"type":"String"}}
-filter|{"data":{"type":"Object"},"filters":{"type":"String"}}
-range|{"data":{"type":"Object"},"_start":{"type":"String"},"_end":{"type":"String"}}
-paginate|{"data":{"type":"Object"},"_page":{"type":"String"},"_limit":{"type":"String"}}
-get|{"options":{"type":"Object","value":"{}"}}
+constructor|["data","options"]
+sort|["data","sorters"]
+deepSearch|["item","q"]
+search|["data","q"]
+getNestedValue|["item","name"]
+filter|["data","filters"]
+range|["data","_start","_end"]
+paginate|["data","_page","_limit"]
+get|["options"]
 
 # MdSwitchComponent
 
@@ -1066,7 +1066,7 @@ icons|Array
 
 name|params
 ---|---
-constructor|{}
+constructor|[]
 
 ## Events
 
@@ -1099,7 +1099,7 @@ badge|Number
 
 name|params
 ---|---
-constructor|{}
+constructor|[]
 
 ## Events
 
@@ -1126,8 +1126,8 @@ variant|String
 
 name|params
 ---|---
-constructor|{}
-singleSelect|{"data":{"type":"Object"}}
+constructor|[]
+singleSelect|["data"]
 
 ## Events
 
@@ -1170,9 +1170,9 @@ disabled|Boolean
 
 name|params
 ---|---
-constructor|{}
-actions2|{}
-textFieldNative|{}
+constructor|[]
+actions2|[]
+textFieldNative|[]
 
 ## Events
 
@@ -1208,10 +1208,10 @@ open|Boolean
 
 name|params
 ---|---
-constructor|{}
-show|{"options":{"type":"String"}}
-close|{}
-toggle|{"options":{"type":"String"}}
+constructor|[]
+show|["options"]
+close|[]
+toggle|["options"]
 
 ## Events
 
@@ -1241,10 +1241,10 @@ open|Boolean
 
 name|params
 ---|---
-constructor|{}
-show|{}
-close|{}
-toggle|{}
+constructor|[]
+show|[]
+close|[]
+toggle|[]
 
 ## Events
 
@@ -1276,9 +1276,9 @@ routerLink|String
 
 name|params
 ---|---
-constructor|{}
-action|{}
-icon|{}
+constructor|[]
+action|[]
+icon|[]
 
 ## Events
 
@@ -1316,9 +1316,9 @@ items2|Array
 
 name|params
 ---|---
-constructor|{}
-flatten|{"items":{"type":"Array"},"parent":{"type":"String"},"indent":{"type":"Number","value":"0"}}
-toggle|{"data":{"type":"Object"}}
+constructor|[]
+flatten|["items","parent","indent"]
+toggle|["data"]
 
 ## Events
 
