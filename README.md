@@ -243,8 +243,8 @@ name|event
 ##### <code>emit(type, detail)</code>
 name|type|default
 ---|---|---
-type|String|undefined
-detail|String|undefined
+<code>type</code>|String|undefined
+<code>detail</code>|String|undefined
 
 #### Inheritance
 
@@ -433,7 +433,7 @@ name|type
 ##### <code>submit(submitButton)</code>
 name|type|default
 ---|---|---
-submitButton|String|undefined
+<code>submitButton</code>|String|undefined
 
 #### Events
 
@@ -573,11 +573,11 @@ name|type
 ##### <code>multiSelect(data)</code>
 name|type|default
 ---|---|---
-data|Object|undefined
+<code>data</code>|Object|undefined
 ##### <code>singleSelect(data)</code>
 name|type|default
 ---|---|---
-data|Object|undefined
+<code>data</code>|Object|undefined
 
 #### Events
 
@@ -610,12 +610,12 @@ name|type
 ##### <code>show(options)</code>
 name|type|default
 ---|---|---
-options|Object|{}
+<code>options</code>|Object|{}
 ##### <code>close()</code>
 ##### <code>toggle(options)</code>
 name|type|default
 ---|---|---
-options|String|undefined
+<code>options</code>|String|undefined
 
 #### Inheritance
 
@@ -732,7 +732,7 @@ name|type
 ##### <code>singleSelect(data)</code>
 name|type|default
 ---|---|---
-data|Object|undefined
+<code>data</code>|Object|undefined
 
 #### Events
 
@@ -783,11 +783,11 @@ name|event
 ##### <code>show(options)</code>
 name|type|default
 ---|---|---
-options|Object|{}
+<code>options</code>|Object|{}
 ##### <code>closestScrollable(element)</code>
 name|type|default
 ---|---|---
-element|String|undefined
+<code>element</code>|String|undefined
 
 ### MdProgressIndicatorComponent
 
@@ -842,8 +842,8 @@ name|event
 ##### <code>constructor(host, options)</code>
 name|type|default
 ---|---|---
-host|String|undefined
-options|String|undefined
+<code>host</code>|String|undefined
+<code>options</code>|String|undefined
 ##### <code>hostConnected()</code>
 ##### <code>hostDisconnected()</code>
 
@@ -854,43 +854,43 @@ options|String|undefined
 ##### <code>get(pathname, routes, parent, result)</code>
 name|type|default
 ---|---|---
-pathname|undefined|this.pathname
-routes|undefined|this.routes
-parent|String|null
-result|Array|[]
+<code>pathname</code>|undefined|this.pathname
+<code>routes</code>|undefined|this.routes
+<code>parent</code>|String|null
+<code>result</code>|Array|[]
 ##### <code>pathname()</code>
 ##### <code>removeComponent(routes)</code>
 name|type|default
 ---|---|---
-routes|String|undefined
+<code>routes</code>|String|undefined
 ##### <code>getOutlet(container, route)</code>
 name|type|default
 ---|---|---
-container|String|undefined
-route|String|undefined
+<code>container</code>|String|undefined
+<code>route</code>|String|undefined
 ##### <code>setContainer(route)</code>
 name|type|default
 ---|---|---
-route|String|undefined
+<code>route</code>|String|undefined
 ##### <code>loadComponent(route)</code>
 name|type|default
 ---|---|---
-route|String|undefined
+<code>route</code>|String|undefined
 ##### <code>setController()</code>
 ##### <code>navigate(url)</code>
 name|type|default
 ---|---|---
-url|String|undefined
+<code>url</code>|String|undefined
 ##### <code>emit(type, detail)</code>
 name|type|default
 ---|---|---
-type|String|undefined
-detail|String|undefined
+<code>type</code>|String|undefined
+<code>detail</code>|String|undefined
 ##### <code>use(routes, options)</code>
 name|type|default
 ---|---|---
-routes|Array|[]
-options|Object|{}
+<code>routes</code>|Array|[]
+<code>options</code>|Object|{}
 
 ### MdScrimComponent
 
@@ -1033,9 +1033,9 @@ name|type
 ##### <code>percentage(value, min, max)</code>
 name|type|default
 ---|---|---
-value|String|undefined
-min|undefined|this.min
-max|undefined|this.max
+<code>value</code>|String|undefined
+<code>min</code>|undefined|this.min
+<code>max</code>|undefined|this.max
 
 #### Events
 
@@ -1086,49 +1086,49 @@ name|event
 ##### <code>constructor(data, options)</code>
 name|type|default
 ---|---|---
-data|Object|[]
-options|Object|{}
+<code>data</code>|Object|[]
+<code>options</code>|Object|{}
 ##### <code>sort(data, sorters)</code>
 name|type|default
 ---|---|---
-data|Object|undefined
-sorters|String|undefined
+<code>data</code>|Object|undefined
+<code>sorters</code>|String|undefined
 ##### <code>deepSearch(item, q)</code>
 name|type|default
 ---|---|---
-item|String|undefined
-q|String|undefined
+<code>item</code>|String|undefined
+<code>q</code>|String|undefined
 ##### <code>search(data, q)</code>
 name|type|default
 ---|---|---
-data|Object|undefined
-q|String|undefined
+<code>data</code>|Object|undefined
+<code>q</code>|String|undefined
 ##### <code>getNestedValue(item, name)</code>
 name|type|default
 ---|---|---
-item|String|undefined
-name|String|undefined
+<code>item</code>|String|undefined
+<code>name</code>|String|undefined
 ##### <code>filter(data, filters)</code>
 name|type|default
 ---|---|---
-data|Object|undefined
-filters|String|undefined
+<code>data</code>|Object|undefined
+<code>filters</code>|String|undefined
 ##### <code>range(data, _start, _end)</code>
 name|type|default
 ---|---|---
-data|Object|undefined
-_start|String|undefined
-_end|String|undefined
+<code>data</code>|Object|undefined
+<code>_start</code>|String|undefined
+<code>_end</code>|String|undefined
 ##### <code>paginate(data, _page, _limit)</code>
 name|type|default
 ---|---|---
-data|Object|undefined
-_page|String|undefined
-_limit|String|undefined
+<code>data</code>|Object|undefined
+<code>_page</code>|String|undefined
+<code>_limit</code>|String|undefined
 ##### <code>get(options)</code>
 name|type|default
 ---|---|---
-options|Object|{}
+<code>options</code>|Object|{}
 
 ### MdSwitchComponent
 
@@ -1204,7 +1204,7 @@ name|type
 ##### <code>singleSelect(data)</code>
 name|type|default
 ---|---|---
-data|Object|undefined
+<code>data</code>|Object|undefined
 
 #### Events
 
@@ -1285,12 +1285,12 @@ name|type
 ##### <code>show(options)</code>
 name|type|default
 ---|---|---
-options|String|undefined
+<code>options</code>|String|undefined
 ##### <code>close()</code>
 ##### <code>toggle(options)</code>
 name|type|default
 ---|---|---
-options|String|undefined
+<code>options</code>|String|undefined
 
 #### Events
 
@@ -1391,13 +1391,13 @@ name|type
 ##### <code>flatten(items, parent, indent)</code>
 name|type|default
 ---|---|---
-items|Array|undefined
-parent|String|undefined
-indent|Number|0
+<code>items</code>|Array|undefined
+<code>parent</code>|String|undefined
+<code>indent</code>|Number|0
 ##### <code>toggle(data)</code>
 name|type|default
 ---|---|---
-data|Object|undefined
+<code>data</code>|Object|undefined
 
 #### Events
 
