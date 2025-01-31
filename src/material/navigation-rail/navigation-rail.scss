@@ -26,9 +26,7 @@
     align-items: center;
     padding: 24px;
     gap: 0 16px;
-    // + .md-navigation-rail__wrapper {
-    //     margin-top: -32px;
-    // }
+    
 }
 
 .md-navigation-rail__icons {
@@ -79,14 +77,9 @@
 
 .md-navigation-rail__body {
     flex: 1;
-    // padding: 0 24px;
-    // margin: 24px 0;
+    
     overflow: auto;
-    // @include mixins.typescale-body-medium();
-    // color: var(--md-sys-color-on-surface-variant);
-    // + .md-navigation-rail__footer {
-    //     margin-top: -24px;
-    // }
+    
 }
 
 .md-navigation-rail {
@@ -103,7 +96,7 @@
 
             &[selected] {
                 background-color: inherit;
-                // color: inherit;
+                
 
                 .md-navigation-list__icon {
                     background-color: var(--md-sys-color-secondary-container);
@@ -142,7 +135,7 @@
         .md-navigation-list__icon {
             ~ .md-navigation-list__labels {
                 ~ .md-navigation-list__badge {
-                    // margin-top: -12px;
+                    
                     margin-top: -20px;
                 }
             }

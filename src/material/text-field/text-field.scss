@@ -201,7 +201,7 @@
 
             &::before {
                 content: "";
-                // width: 100%;
+                
                 width: 0;
                 height: 100%;
                 background-color: var(--md-sys-color-surface);
@@ -231,8 +231,7 @@
                 margin-left: calc(16px - 4px);
                 margin-right: calc(16px - 4px);
 
-                // 56-16 = 40/2 = 20
-                // 16/2 = 8
+                
                 top: -8px;
                 @include mixins.typescale-body-small();
 

@@ -72,7 +72,7 @@
 
 .md-list__sublabel {
     @include mixins.typescale-body-medium();
-    // height: calc(var(--md-sys-typescale-body-medium-line-height) * 2);
+    
     height: var(--md-sys-typescale-body-medium-line-height);
     overflow: hidden;
     color: var(--md-sys-color-on-surface-variant);

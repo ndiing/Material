@@ -2,7 +2,7 @@
 
 .md-snackbar {
     display: inline-flex;
-    // flex-direction: column;
+    
     flex-wrap: wrap;
     width: 344px;
     min-height: 48px;
@@ -14,7 +14,7 @@
     left: 8px;
     bottom: 8px;
     z-index: 11;
-    // transform: translate3d(-50%, -50%, 0);
+    
     opacity: 0;
     pointer-events: none;
     --md-comp-snackbar-animation: snackbar-in;
@@ -43,16 +43,13 @@
 }
 
 .md-snackbar__body {
-    // flex: 1;
+    
     width: 72%;
     padding: 0 16px;
     margin: 14px 0 14px 0;
     overflow: auto;
     @include mixins.typescale-body-medium();
-    // color: var(--md-sys-color-on-surface-variant);
-    // + .md-snackbar__footer {
-    //     margin-top: -16px;
-    // }
+    
 }
 
 .md-snackbar__footer {
