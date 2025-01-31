@@ -9,9 +9,7 @@ max|Number
 
 ## Instance methods
 
-name|params
----|---
-constructor|
+### constructor()
 
 ## Inheritance
 
@@ -30,12 +28,10 @@ open|Boolean
 
 ## Instance methods
 
-name|params
----|---
-constructor|
-show|
-close|
-toggle|
+### constructor()
+### show()
+### close()
+### toggle()
 
 ## Events
 
@@ -65,12 +61,10 @@ modal|Boolean
 
 ## Instance methods
 
-name|params
----|---
-constructor|
-show|
-close|
-toggle|
+### constructor()
+### show()
+### close()
+### toggle()
 
 ## Events
 
@@ -100,9 +94,7 @@ selected|Boolean
 
 ## Instance methods
 
-name|params
----|---
-constructor|
+### constructor()
 
 ## Inheritance
 
@@ -123,9 +115,7 @@ buttons|Array
 
 ## Instance methods
 
-name|params
----|---
-constructor|
+### constructor()
 
 ## Events
 
@@ -152,9 +142,7 @@ checked|Boolean
 
 ## Instance methods
 
-name|params
----|---
-constructor|
+### constructor()
 
 ## Events
 
@@ -179,9 +167,7 @@ type|String
 
 ## Instance methods
 
-name|params
----|---
-constructor|
+### constructor()
 
 ## Events
 
@@ -198,9 +184,11 @@ MdComponent
 
 ## Instance methods
 
-name|params
----|---
-emit|type, detail
+### emit(type, detail)
+name|type|default
+---|---|---
+type|String|undefined
+detail|String|undefined
 
 ## Inheritance
 
@@ -222,9 +210,7 @@ action|String
 
 ## Instance methods
 
-name|params
----|---
-constructor|
+### constructor()
 
 ## Inheritance
 
@@ -244,9 +230,7 @@ footers|Array
 
 ## Instance methods
 
-name|params
----|---
-constructor|
+### constructor()
 
 ## Inheritance
 
@@ -269,20 +253,18 @@ index|Number
 
 ## Instance methods
 
-name|params
----|---
-startOfDay|
-years|
-months|
-weekdays|
-days|
-hours|
-minutes|
-label|
-constructor|
-show|
-close|
-toggle|
+### startOfDay()
+### years()
+### months()
+### weekdays()
+### days()
+### hours()
+### minutes()
+### label()
+### constructor()
+### show()
+### close()
+### toggle()
 
 ## Events
 
@@ -322,12 +304,10 @@ open|Boolean
 
 ## Instance methods
 
-name|params
----|---
-constructor|
-show|
-close|
-toggle|
+### constructor()
+### show()
+### close()
+### toggle()
 
 ## Events
 
@@ -346,8 +326,6 @@ MdComponent
 
 ## Instance methods
 
-name|params
----|---
 
 ## Inheritance
 
@@ -370,9 +348,7 @@ variant|String
 
 ## Instance methods
 
-name|params
----|---
-constructor|
+### constructor()
 
 ## Inheritance
 
@@ -395,12 +371,13 @@ noValidate|Boolean
 
 ## Instance methods
 
-name|params
----|---
-constructor|
-formNative|
-reset|
-submit|submitButton
+### constructor()
+### formNative()
+### reset()
+### submit(submitButton)
+name|type|default
+---|---|---
+submitButton|String|undefined
 
 ## Events
 
@@ -419,8 +396,6 @@ MdComponent
 
 ## Instance methods
 
-name|params
----|---
 
 ## Inheritance
 
@@ -442,9 +417,7 @@ disabled|Boolean
 
 ## Instance methods
 
-name|params
----|---
-constructor|
+### constructor()
 
 ## Events
 
@@ -470,10 +443,8 @@ circular|Boolean
 
 ## Instance methods
 
-name|params
----|---
-constructor|
-styleInfo|
+### constructor()
+### styleInfo()
 
 ## Inheritance
 
@@ -507,9 +478,7 @@ badge|Number
 
 ## Instance methods
 
-name|params
----|---
-constructor|
+### constructor()
 
 ## Events
 
@@ -526,8 +495,6 @@ MdComponent
 
 ## Instance methods
 
-name|params
----|---
 
 ## Inheritance
 
@@ -546,11 +513,15 @@ rippleOptions|Object
 
 ## Instance methods
 
-name|params
----|---
-constructor|
-multiSelect|data
-singleSelect|data
+### constructor()
+### multiSelect(data)
+name|type|default
+---|---|---
+data|Object|undefined
+### singleSelect(data)
+name|type|default
+---|---|---
+data|Object|undefined
 
 ## Events
 
@@ -579,12 +550,16 @@ items|Array
 
 ## Instance methods
 
-name|params
----|---
-constructor|
-show|options
-close|
-toggle|options
+### constructor()
+### show(options)
+name|type|default
+---|---|---
+options|Object|{}
+### close()
+### toggle(options)
+name|type|default
+---|---|---
+options|String|undefined
 
 ## Inheritance
 
@@ -602,12 +577,10 @@ items|Array
 
 ## Instance methods
 
-name|params
----|---
-constructor|
-show|
-close|
-toggle|
+### constructor()
+### show()
+### close()
+### toggle()
 
 ## Inheritance
 
@@ -631,12 +604,10 @@ view|String
 
 ## Instance methods
 
-name|params
----|---
-constructor|
-show|
-close|
-toggle|
+### constructor()
+### show()
+### close()
+### toggle()
 
 ## Events
 
@@ -667,9 +638,7 @@ badge|Number
 
 ## Instance methods
 
-name|params
----|---
-constructor|
+### constructor()
 
 ## Events
 
@@ -686,8 +655,6 @@ MdComponent
 
 ## Instance methods
 
-name|params
----|---
 
 ## Inheritance
 
@@ -705,10 +672,11 @@ rippleOptions|Object
 
 ## Instance methods
 
-name|params
----|---
-constructor|
-singleSelect|data
+### constructor()
+### singleSelect(data)
+name|type|default
+---|---|---
+data|Object|undefined
 
 ## Events
 
@@ -736,12 +704,10 @@ open|Boolean
 
 ## Instance methods
 
-name|params
----|---
-constructor|
-show|
-close|
-toggle|
+### constructor()
+### show()
+### close()
+### toggle()
 
 ## Events
 
@@ -758,10 +724,14 @@ MdComponent
 
 ## Instance methods
 
-name|params
----|---
-show|options
-closestScrollable|element
+### show(options)
+name|type|default
+---|---|---
+options|Object|{}
+### closestScrollable(element)
+name|type|default
+---|---|---
+element|String|undefined
 
 # MdProgressIndicatorComponent
 
@@ -775,9 +745,7 @@ value|Number
 
 ## Instance methods
 
-name|params
----|---
-constructor|
+### constructor()
 
 ## Inheritance
 
@@ -797,9 +765,7 @@ checked|Boolean
 
 ## Instance methods
 
-name|params
----|---
-constructor|
+### constructor()
 
 ## Events
 
@@ -817,28 +783,58 @@ MdComponent
 
 ## Instance methods
 
-name|params
----|---
-constructor|host, options
-hostConnected|
-hostDisconnected|
+### constructor(host, options)
+name|type|default
+---|---|---
+host|String|undefined
+options|String|undefined
+### hostConnected()
+### hostDisconnected()
 
 # Router
 
 ## Instance methods
 
-name|params
----|---
-get|pathname, routes, parent, result
-pathname|
-removeComponent|routes
-getOutlet|container, route
-setContainer|route
-loadComponent|route
-setController|
-navigate|url
-emit|type, detail
-use|routes, options
+### get(pathname, routes, parent, result)
+name|type|default
+---|---|---
+pathname|undefined|this.pathname
+routes|undefined|this.routes
+parent|String|null
+result|Array|[]
+### pathname()
+### removeComponent(routes)
+name|type|default
+---|---|---
+routes|String|undefined
+### getOutlet(container, route)
+name|type|default
+---|---|---
+container|String|undefined
+route|String|undefined
+### setContainer(route)
+name|type|default
+---|---|---
+route|String|undefined
+### loadComponent(route)
+name|type|default
+---|---|---
+route|String|undefined
+### setController()
+### navigate(url)
+name|type|default
+---|---|---
+url|String|undefined
+### emit(type, detail)
+name|type|default
+---|---|---
+type|String|undefined
+detail|String|undefined
+### use(routes, options)
+name|type|default
+---|---|---
+routes|Array|[]
+options|Object|{}
 
 # MdScrimComponent
 
@@ -850,11 +846,9 @@ open|Boolean
 
 ## Instance methods
 
-name|params
----|---
-show|
-close|
-toggle|
+### show()
+### close()
+### toggle()
 
 ## Events
 
@@ -878,9 +872,7 @@ type|String
 
 ## Instance methods
 
-name|params
----|---
-constructor|
+### constructor()
 
 ## Events
 
@@ -910,12 +902,10 @@ modal|Boolean
 
 ## Instance methods
 
-name|params
----|---
-constructor|
-show|
-close|
-toggle|
+### constructor()
+### show()
+### close()
+### toggle()
 
 ## Events
 
@@ -946,12 +936,10 @@ modal|Boolean
 
 ## Instance methods
 
-name|params
----|---
-constructor|
-show|
-close|
-toggle|
+### constructor()
+### show()
+### close()
+### toggle()
 
 ## Events
 
@@ -982,13 +970,16 @@ converter|undefined
 
 ## Instance methods
 
-name|params
----|---
-constructor|
-indicators|
-sliderNatives|
-updateValue|
-percentage|value, min, max
+### constructor()
+### indicators()
+### sliderNatives()
+### updateValue()
+### percentage(value, min, max)
+name|type|default
+---|---|---
+value|String|undefined
+min|undefined|this.min
+max|undefined|this.max
 
 ## Events
 
@@ -1015,12 +1006,10 @@ open|Boolean
 
 ## Instance methods
 
-name|params
----|---
-constructor|
-show|
-close|
-toggle|
+### constructor()
+### show()
+### close()
+### toggle()
 
 ## Events
 
@@ -1038,17 +1027,52 @@ MdComponent
 
 ## Instance methods
 
-name|params
----|---
-constructor|data, options
-sort|data, sorters
-deepSearch|item, q
-search|data, q
-getNestedValue|item, name
-filter|data, filters
-range|data, _start, _end
-paginate|data, _page, _limit
-get|options
+### constructor(data, options)
+name|type|default
+---|---|---
+data|Object|[]
+options|Object|{}
+### sort(data, sorters)
+name|type|default
+---|---|---
+data|Object|undefined
+sorters|String|undefined
+### deepSearch(item, q)
+name|type|default
+---|---|---
+item|String|undefined
+q|String|undefined
+### search(data, q)
+name|type|default
+---|---|---
+data|Object|undefined
+q|String|undefined
+### getNestedValue(item, name)
+name|type|default
+---|---|---
+item|String|undefined
+name|String|undefined
+### filter(data, filters)
+name|type|default
+---|---|---
+data|Object|undefined
+filters|String|undefined
+### range(data, _start, _end)
+name|type|default
+---|---|---
+data|Object|undefined
+_start|String|undefined
+_end|String|undefined
+### paginate(data, _page, _limit)
+name|type|default
+---|---|---
+data|Object|undefined
+_page|String|undefined
+_limit|String|undefined
+### get(options)
+name|type|default
+---|---|---
+options|Object|{}
 
 # MdSwitchComponent
 
@@ -1064,9 +1088,7 @@ icons|Array
 
 ## Instance methods
 
-name|params
----|---
-constructor|
+### constructor()
 
 ## Events
 
@@ -1097,9 +1119,7 @@ badge|Number
 
 ## Instance methods
 
-name|params
----|---
-constructor|
+### constructor()
 
 ## Events
 
@@ -1124,10 +1144,11 @@ variant|String
 
 ## Instance methods
 
-name|params
----|---
-constructor|
-singleSelect|data
+### constructor()
+### singleSelect(data)
+name|type|default
+---|---|---
+data|Object|undefined
 
 ## Events
 
@@ -1168,11 +1189,9 @@ disabled|Boolean
 
 ## Instance methods
 
-name|params
----|---
-constructor|
-actions2|
-textFieldNative|
+### constructor()
+### actions2()
+### textFieldNative()
 
 ## Events
 
@@ -1206,12 +1225,16 @@ open|Boolean
 
 ## Instance methods
 
-name|params
----|---
-constructor|
-show|options
-close|
-toggle|options
+### constructor()
+### show(options)
+name|type|default
+---|---|---
+options|String|undefined
+### close()
+### toggle(options)
+name|type|default
+---|---|---
+options|String|undefined
 
 ## Events
 
@@ -1239,12 +1262,10 @@ open|Boolean
 
 ## Instance methods
 
-name|params
----|---
-constructor|
-show|
-close|
-toggle|
+### constructor()
+### show()
+### close()
+### toggle()
 
 ## Events
 
@@ -1274,11 +1295,9 @@ routerLink|String
 
 ## Instance methods
 
-name|params
----|---
-constructor|
-action|
-icon|
+### constructor()
+### action()
+### icon()
 
 ## Events
 
@@ -1295,8 +1314,6 @@ MdComponent
 
 ## Instance methods
 
-name|params
----|---
 
 ## Inheritance
 
@@ -1314,11 +1331,17 @@ items2|Array
 
 ## Instance methods
 
-name|params
----|---
-constructor|
-flatten|items, parent, indent
-toggle|data
+### constructor()
+### flatten(items, parent, indent)
+name|type|default
+---|---|---
+items|Array|undefined
+parent|String|undefined
+indent|Number|0
+### toggle(data)
+name|type|default
+---|---|---
+data|Object|undefined
 
 ## Events
 
